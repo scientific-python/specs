@@ -28,6 +28,7 @@ jobs:
           name: Embed specs in scientific-python.org
           command: |
             git -C /tmp/scientific-python.org submodule update --init
+            rm -f /tmp/scientific-python.org/content/specs/*
             cp ./* /tmp/scientific-python.org/content/specs
 
       - run:
