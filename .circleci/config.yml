@@ -25,7 +25,7 @@ jobs:
             git clone https://github.com/scientific-python/scientific-python.org.git /tmp/scientific-python.org
 
       - run:
-          name: Setup specs in scientific-python.org
+          name: Embed specs in scientific-python.org
           command: |
             git -C /tmp/scientific-python.org submodule update --init
             cp ./* /tmp/scientific-python.org/content/specs
