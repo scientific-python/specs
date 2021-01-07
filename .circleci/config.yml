@@ -1,0 +1,41 @@
+version: 2.0
+
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      # Docker image with Go pre-installed to make hugo install easier
+      - image: cimg/go:1.15.6
+
+    steps:
+      - checkout
+
+      - run:
+          name: Update apt-get
+          command: sudo apt-get update
+
+      - run:
+          name: Install hugo
+          command: sudo apt-get install hugo
+
+      - run:
+          name: Get latest scientific-python.org
+          command: |
+            mkdir -p /tmp
+            git clone https://github.com/scientific-python/scientific-python.org.git /tmp/scientific-python.org
+
+      - run:
+          name: Setup specs in scientific-python.org
+          command: |
+            git -C /tmp/scientific-python.org submodule update --init
+            cp ./* /tmp/scientific-python.org/content/specs
+
+      - run:
+          # TODO: include --buildDrafts?
+          name: Build site
+          command: |
+            cd /tmp/scientific-python.org
+            hugo
+
+      - store_artifacts:
+          path: /tmp/scientific-python.org/public/
