@@ -13,6 +13,8 @@ summary: |
 
 # Description
 
+- what is a SPEC 
+
 The SPEC author is responsible for building consensus within the
 community and documenting dissenting opinions.
 
@@ -20,17 +22,22 @@ Because the SPECs are maintained as text files in a versioned
 repository, their revision history is the historical record of the
 feature proposal[^1].
 
+## audience
+
 ## Types
+
+### MetaSPEC
+
+### SPEC
 
 # Implementation
 
-## Workflow
+## Review and Resolution
 
-### Review and Resolution
+## How a SPEC becomes Accepted
 
-### How a SPEC becomes Accepted
+## Maintenance
 
-### Maintenance
 
 
 ## Format and Template

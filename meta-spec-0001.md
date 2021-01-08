@@ -25,24 +25,27 @@ summary: |
 - yet for specs to be meaningful they need to be adopted by several projects
 - and this adoption has to be approved by those projects independently
 
+  - this means the spec process must be tightly integrated w/ core projects
+  - and flexible enough that different projects can implement / adopt according
+    to their specific constraints and schedules
+
 ## Steering Committee
 
-we will start with 
+The SPEC Steering Committee (SSC) is composed of representatives from the NumPy,
+SciPy, Matplotlib, pandas, statsmodels, scikit-image, scikit-learn, and
+NetworkX projects as well as two general community members.
 
-- numpy, scipy, matplotlib, pandas, statsmodels, scikit-image, scikit-learn, networkx
 
-we hope other projects will join
+the SSC is responsiblities include
 
-each project should appoint 1 representative to serve on the spec steering committtee
+- maintain and approve specs including the process specs
+  - metaspecs vs specs
+  - it is up to each project to decide how they will determine whether their
+    project adopts a spec or not
 
-the spec sc is responsible for
-- serving as a communication channel to and from their projects 
-- proposing new specs,
-- accepting new projects to provide members to the spec steering committtee
-- maintaining and approving specs including the process specs
+- serve as a communication channel to and from their projects
 
-it is up to each project to decide how they will determine whether their
-project adopts a spec or not
+- accept new projects to provide members to the spec steering committtee
 
 ## Contributors
 
@@ -55,11 +58,29 @@ Contributors should read our [Code of Conduct]({{< ref
 
 # Implementation
 
+## Membership
+
+- how are members selected?  do they have term limits?
+
+- how is the list of members expanded?
+
+## MetaSPEC
+
+- consensus of SSC 
+
+## SPEC
+
 for projects that already have an ep process in place, we recommend they
 create a new ep to list the specs they have adopted including links to their
 project discussions leading to adoption.
 
 they should also add their project to the spec_adopted_by tag for the spec.
+
+- email list
+
+  - specs@python.org ?
+    - https://mail.python.org/mailman3/lists/?count=200
+  - specs@groups.io ?
 
 # Discussion
 
