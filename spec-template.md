@@ -3,7 +3,7 @@ title: "SPEC X --- Template and Instructions"
 author: "<list of authors' real names and optionally, email addresses>"
 date: 2020-12-17T20:40:16-08:00
 draft: false
-spec_status: '< Draft | Active | Accepted | Deferred | Rejected | Withdrawn | Final | Superseded >'
+spec_status: '< Draft | Accepted | Withdrawn >'
 spec_type: '< Standard | Process >'
 summary: |
   The summary should be a short, one-sentence statement explaining
