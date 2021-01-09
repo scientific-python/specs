@@ -1,85 +1,108 @@
 from datetime import datetime, timedelta
-from tabulate import tabulate
-
-data = """Jun 27, 2018: Python 3.7
-Oct 14, 2019: Python 3.8
-Oct 5, 2020: Python 3.9
-Jul 23, 2018: NumPy 1.15
-Jan 13, 2019: NumPy 1.16
-Jul 26, 2019: NumPy 1.17
-Dec 22, 2019: NumPy 1.18
-Jun 20, 2020: NumPy 1.19
-Dec 17, 2018: SciPy 1.2
-May 17, 2019: SciPy 1.3
-Dec 16, 2019: SciPy 1.4
-Jun 21, 2020: SciPy 1.5
-Dec 31, 2020: SciPy 1.6
-Sep 18, 2018: Matplotlib 3.0
-May 18, 2019: Matplotlib 3.1
-Mar 4, 2020: Matplotlib 3.2
-Jul 16, 2020: Matplotlib 3.3
-"""
-
-releases = []
 
 plus42 = timedelta(days=int(365 * 3.5 + 1))
 plus24 = timedelta(days=int(365 * 2 + 1))
 
-for line in data.splitlines():
-    date, project_version = line.split(":")
-    project, version = project_version.strip().split(" ")
-    release = datetime.strptime(date, "%b %d, %Y")
-    if project.lower() == "python":
-        drop = release + plus42
-    else:
-        drop = release + plus24
-    releases.append((drop, project, version, release))
+# Release data
 
-releases = sorted(releases, key=lambda x: x[0])
+py_releases = {
+    3.7: "Jun 27, 2018",
+    3.8: "Oct 14, 2019",
+    3.9: "Oct 5, 2020",
+}
 
+np_releases = {
+    1.17: "Jul 26, 2019",
+    1.18: "Dec 22, 2019",
+    1.19: "Jun 20, 2020",
+}
 
-def version_numbers(release):
-    return [int(num) for num in release[2].split(".")]
+sp_releases = {
+    1.3: "May 17, 2019",
+    1.4: "Dec 16, 2019",
+    1.5: "Jun 21, 2020",
+    1.6: "Dec 31, 2020",
+}
 
+mpl_releases = {
+    3.1: "May 18, 2019",
+    3.2: "Mar 4, 2020",
+    3.3: "Jul 16, 2020",
+}
 
-py_versions = sorted(version_numbers(r) for r in releases if r[1] == "Python")
-py_major, py_minor = py_versions[-1]
-py_min = f"{py_major}.{py_minor+1}+"
-
-np_versions = sorted(version_numbers(r) for r in releases if r[1] == "NumPy")
-np_major, np_minor = np_versions[-1]
-np_min = f"{np_major}.{np_minor+1}+"
-
-sp_versions = sorted(version_numbers(r) for r in releases if r[1] == "SciPy")
-sp_major, sp_minor = sp_versions[-1]
-sp_min = f"{sp_major}.{sp_minor+1}+"
-
-mpl_versions = sorted(version_numbers(r) for r in releases if r[1] == "Matplotlib")
-mpl_major, mpl_minor = mpl_versions[-1]
-mpl_min = f"{mpl_major}.{mpl_minor+1}+"
+# Get support window
 
 
-drop_dates = [""]
-support_table = []
-for d, p, v, r in releases[::-1]:
-    df = d.strftime("%b %d, %Y")
-    drop_dates.append(
-        f"On {df} drop support for {p} {v} "
-        f"(initially released on {r.strftime('%b %d, %Y')})"
+def support_window(project, releases, support_time):
+    windows = []
+    for version, release_date in releases.items():
+        release = datetime.strptime(release_date, "%b %d, %Y")
+        drop = release + support_time
+        windows.append((project, version, release, drop))
+    return windows
+
+
+py_support_window = support_window("Python", py_releases, plus42)
+np_support_window = support_window("NumPy", np_releases, plus24)
+sp_support_window = support_window("SciPy", sp_releases, plus24)
+mpl_support_window = support_window("Matplotlib", mpl_releases, plus24)
+
+
+# Print Gantt chart
+
+
+def gantt_section(window, prefix):
+    section = ""
+    for project, version, release, drop in window:
+        version_name = prefix + str(version).replace(".", "")
+        release_date = release.strftime("%Y-%m-%d")
+        drop_date = drop.strftime("%Y-%m-%d")
+        section += f"{version}  :     {version_name}, {release_date},{drop_date}\n"
+    return section
+
+
+py_gantt_section = gantt_section(py_support_window, "py")
+np_gantt_section = gantt_section(np_support_window, "np")
+sp_gantt_section = gantt_section(sp_support_window, "sp")
+mpl_gantt_section = gantt_section(mpl_support_window, "mpl")
+
+gantt = f"""
+{{{{<mermaid>}}}}
+gantt
+dateFormat  YYYY-MM-DD
+axisFormat  %m / %Y
+title Support Window
+
+section Python
+{py_gantt_section}
+section NumPy
+{np_gantt_section}
+section SciPy
+{sp_gantt_section}
+section Matplotlib
+{mpl_gantt_section}
+{{{{</mermaid>}}}}
+"""
+
+print(gantt)
+
+# Print drop schedule
+
+
+def get_drop_dates(window):
+    return {" ".join([proj, str(ver)]): [rel, drop] for proj, ver, rel, drop in window}
+
+
+py_drop = get_drop_dates(py_support_window)
+np_drop = get_drop_dates(np_support_window)
+sp_drop = get_drop_dates(sp_support_window)
+mpl_drop = get_drop_dates(mpl_support_window)
+
+releases = py_drop | np_drop | sp_drop | mpl_drop
+releases = dict(sorted(releases.items(), key=lambda item: item[1][1]))
+
+for package, dates in releases.items():
+    print(
+        f"On {dates[1].strftime('%b %d, %Y')} drop support for {package} "
+        f"(initially released on {dates[0].strftime('%b %d, %Y')})"
     )
-    support_table.append([df, py_min, np_min, sp_min, mpl_min])
-    if p == "Python":
-        py_min = v + "+"
-    elif p == "NumPy":
-        np_min = v + "+"
-    elif p == "SciPy":
-        sp_min = v + "+"
-    elif p == "Matplotlib":
-        mpl_min = v + "+"
-
-for e in drop_dates[-4::-1]:
-    print(e)
-
-headers = ["Date", "Python", "NumPy", "SciPy", "Matplotlib"]
-support_table.reverse()
-print(tabulate(support_table, headers, tablefmt="github"))
