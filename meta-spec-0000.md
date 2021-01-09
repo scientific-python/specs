@@ -1,14 +1,11 @@
 ---
 title: "MetaSPEC 0 — Purpose and Process"
-date: 2020-12-17T19:53:08-08:00
+date: 2020-12-17
 draft: false
-author: 'Jarrod Millman <millman@berkeley.edu>'
-spec_status: Draft
-spec_type: meta
-summary: |
-  The Scientific Python Ecosystem Coordination (SPEC) mechanism
-  is used to recommend project policies, coding conventions,
-  and standard tooling.
+author: "Jarrod Millman <millman@berkeley.edu>"
+spec_status: draft
+spec_discussion: https://github.com/scientific-python/specs/discussions/1
+spec_projects:
 ---
 
 {{< notice note >}}
@@ -84,8 +81,6 @@ Every SPEC is assigned a status, which is either ``draft``, ``accepted``, or ``w
 #### How a SPEC becomes Accepted
 
 #### How a SPEC becomes Withdrawn
-
-# Discussion
 
 # Notes
 

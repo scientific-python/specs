@@ -14,7 +14,8 @@ number = input("Enter the SPEC number: ")
 title = input("Enter the SPEC title: ")
 discussion = input("Enter the discussion number: ")
 
-template = f"""---
+filename = f"spec-000{number}.md"
+text = f"""---
 title: "SPEC {number} — {title}"
 date: {now.strftime("%Y-%m-%d")}
 draft: false
@@ -47,5 +48,5 @@ information as needed.
 -->
 """
 
-with open(f"spec-000{number}.md", "w") as file:
-    file.write(template)
+with open(filename, "w") as file:
+    file.write(text)
