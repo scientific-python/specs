@@ -29,8 +29,6 @@ SPECs are UTF-8 encoded text files using
 [Markdown](https://www.markdownguide.org/) format.
 We use [Hugo](https://gohugo.io/) to convert SPECs to HTML for viewing on the
 web [^2].
-Please see the [spec-template]({{< ref "/specs/spec-template.md" >}})
-file and for more information.
 Because the SPECs are maintained as text files in a versioned
 repository, their revision history is the historical record of the
 feature proposal[^1].
