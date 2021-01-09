@@ -2,79 +2,65 @@
 title: MetaSPEC 1 — Governance and Decision Making
 date: 2021-01-06T09:11:39-08:00
 draft: false
-author: 'Jarrod Millman <millman@berkeley.edu>'
+author:
+  - 'Jarrod Millman <millman@berkeley.edu>'
+  - 'Stéfan van der Walt <stefanv@berkeley.edu>'
 spec_status: Draft
-spec_type: meta
 summary: |
-  Governance and decision making for the Scientific Python Ecosystem Coordination project.
+  Governance and decision making for the Scientific Python Ecosystem Coordination (SPEC) process.
 ---
 
 # Description
 
-- projects have separate enhancement proposal processes and development contraints
-- specs are cross-project recommendations to better coordinate the ecosystem and
-  provide a more unified experience for users.
+Scientific Python Ecosystem Coordination documents or SPECs, for short, provide operational guidelines for projects in the Scientific Python ecosystem.  Their goal is to coordinate the ecosystem and to provide a more unified experience for users.
 
-- ep are debated / accepted by the projects themselves often using something
-  like consensus
-- specs are different in that  
+Projects in the ecosystem have an existing, diverse set of proposal processes and development constraints.  SPECs, therefore, are not meant to be prescriptive: rather, they are a mechanism to encourage shared practices and improve uniformity of experience.  SPECs may, for example, capture established practices so that new projects can learn from them; or they may propose a new practice that the authors believe will benefit the ecosystem as a whole.
 
-  - we don't expect every spec will be immdediately adopted by all projects
-  - some will never be adopted by all projects
+Projects decide for themselves whether to adopt any given SPEC—often, this would be through team consensus.  A SPECs may not be a good fit for every single project, and thus there is no expectation that all SPECs must be adopted by all projects.  That said, SPECs only serve a meaningful purpose if they are adopted by several projects—and their authority largely stems from the extent to which they are.
 
-- yet for specs to be meaningful they need to be adopted by several projects
-- and this adoption has to be approved by those projects independently
-
-  - this means the spec process must be tightly integrated w/ core projects
-  - and flexible enough that different projects can implement / adopt according
-    to their specific constraints and schedules
+In practice, this means that SPECs will be tightly integrated with core projects, but remain flexible enough for projects to implement them according to their own constraints.
 
 ## Steering Committee
 
-The SPEC Steering Committee (SSC) is composed of representatives from the NumPy,
-SciPy, Matplotlib, pandas, statsmodels, scikit-image, scikit-learn, and
-NetworkX projects as well as two general community members.
+The initial SPEC Steering Committee (SSC) is composed of representatives from the NumPy, SciPy, Matplotlib, pandas, statsmodels, scikit-image, scikit-learn, and NetworkX projects as well as two general community members.
 
+As mentioned above, the steering project does not decide which SPECs are adopted—that choice resides with individual projects.  They do, however, have control over whether SPECs are accepted in the first place.
 
-the SSC is responsiblities include
+The SSC will:
 
-- maintain and approve specs including the process specs
-  - metaspecs vs specs
-  - it is up to each project to decide how they will determine whether their
-    project adopts a spec or not
-
-- serve as a communication channel to and from their projects
-
-- accept new projects to provide members to the spec steering committtee
+- Maintain and approve SPECs, including SPECs related to the SPEC
+  process (MetaSPECs);
+- serve as a communication channel to and from their projects; and
+- accept new projects into the SSC.
 
 ## Contributors
 
-who can submit a new SPEC?
-
-Any community member can propose a new SPEC by following the procedure...
+Any community member can propose a new SPEC by making a pull request to the [SPEC repository](https://github.com/scientific-python/specs).  However, we recommend first discussing ideas in the [online forum](https://github.com/scientific-python/specs/discussions/categories/ideas).
 
 Contributors should read our [Code of Conduct]({{< ref
 "/about/code_of_conduct.md" >}}).
 
 # Implementation
 
+## Decision making and communication
+
+The SSC makes decisions through group consensus and, in the very rare instance where no consensus can be reached, by two-thirds majority vote of those available to cast a vote within ten days.
+
+Communication within the SSC takes place via the email group at ...  SSC members are expected to be aware of conversations on this list to lean validity to consensus seeking and voting.
+
 ## Membership
 
-- how are members selected?  do they have term limits?
+There are no term limits to the SPEC Steering Committee (SSC)—projects may replace their representatives at will, or choose not to participate.  New projects are invited by the SSC.
 
-- how is the list of members expanded?
+## MetaSPECs
 
-## MetaSPEC
+Alterations to MetaSPECs have to be approved by the SSC.
 
-- consensus of SSC 
+## Enhancement Proposals and SPECs 
 
-## SPEC
+For projects with an existing enhancement proposal process in place, we recommend creating a new proposal to list the SPECs adopted along with links to project discussions leading to adoption.
 
-for projects that already have an ep process in place, we recommend they
-create a new ep to list the specs they have adopted including links to their
-project discussions leading to adoption.
-
-they should also add their project to the spec_adopted_by tag for the spec.
+Once a project adopts a SPEC, they should add their project name to the `spec_adopted_by` field in the SPEC header.
 
 - email list
 
