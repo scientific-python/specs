@@ -29,7 +29,7 @@ jobs:
           command: |
             git -C /tmp/scientific-python.org submodule update --init
             rm -f /tmp/scientific-python.org/content/specs/*
-            cp ./* /tmp/scientific-python.org/content/specs
+            cp -r ./* /tmp/scientific-python.org/content/specs
 
       - run:
           # TODO: include --buildDrafts?
