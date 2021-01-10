@@ -1,13 +1,13 @@
 ---
-title: MetaSPEC 1 — Governance and Decision Making
-date: 2021-01-06T09:11:39-08:00
+title: "MetaSPEC 1 — Governance and Decision Making"
+date: 2021-01-06
 draft: false
 author:
-  - 'Jarrod Millman <millman@berkeley.edu>'
-  - 'Stéfan van der Walt <stefanv@berkeley.edu>'
-spec_status: Draft
-summary: |
-  Governance and decision making for the Scientific Python Ecosystem Coordination (SPEC) process.
+  - "Jarrod Millman <millman@berkeley.edu>"
+  - "Stéfan van der Walt <stefanv@berkeley.edu>"
+spec_status: draft
+spec_discussion: https://github.com/scientific-python/specs/discussions/12
+spec_projects:
 ---
 
 # Description
@@ -67,7 +67,5 @@ Once a project adopts a SPEC, they should add their project name to the `spec_ad
   - specs@python.org ?
     - https://mail.python.org/mailman3/lists/?count=200
   - specs@groups.io ?
-
-# Discussion
 
 # Notes

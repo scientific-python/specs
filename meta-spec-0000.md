@@ -2,9 +2,11 @@
 title: "MetaSPEC 0 — Purpose and Process"
 date: 2020-12-17
 draft: false
-author: "Jarrod Millman <millman@berkeley.edu>"
+author:
+  - "Jarrod Millman <millman@berkeley.edu>"
+  - "Stéfan van der Walt <stefanv@berkeley.edu>"
 spec_status: draft
-spec_discussion: https://github.com/scientific-python/specs/discussions/1
+spec_discussion: https://github.com/scientific-python/specs/discussions/9
 spec_projects:
 ---
 
