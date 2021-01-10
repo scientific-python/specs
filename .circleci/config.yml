@@ -4,19 +4,10 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      # Docker image with Go pre-installed to make hugo install easier
-      - image: cimg/go:1.15.6
+      - image: cibuilds/hugo:latest
 
     steps:
       - checkout
-
-      - run:
-          name: Update apt-get
-          command: sudo apt-get update
-
-      - run:
-          name: Install hugo
-          command: sudo apt-get install hugo
 
       - run:
           name: Get latest scientific-python.org
@@ -28,7 +19,7 @@ jobs:
           name: Embed specs in scientific-python.org
           command: |
             git -C /tmp/scientific-python.org submodule update --init
-            rm -f /tmp/scientific-python.org/content/specs/*
+            rm -rf /tmp/scientific-python.org/content/specs/*
             cp -r ./* /tmp/scientific-python.org/content/specs
 
       - run:
@@ -36,6 +27,12 @@ jobs:
           name: Build site
           command: |
             cd /tmp/scientific-python.org
+            sed -i '/theme/a uglyurls = true' config.toml
+            sed -i 's/\"\/\"/\"\/index.html\"/g' config.toml
+            sed -i 's/\/about/\/about.html/g' config.toml
+            sed -i 's/\/posts/\/posts.html/g' config.toml
+            sed -i 's/\/specs/\/specs.html/g' config.toml
+            sed -i 's/\/summits/\/summits.html/g' config.toml
             hugo
 
       - store_artifacts:

@@ -19,7 +19,8 @@ text = f"""---
 title: "SPEC {number} — {title}"
 date: {now.strftime("%Y-%m-%d")}
 draft: false
-author: "{author} <{email}>"
+author:
+  - "{author} <{email}>"
 spec_status: draft
 spec_discussion: https://github.com/scientific-python/specs/discussions/{discussion}
 spec_projects:
