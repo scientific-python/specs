@@ -5,24 +5,37 @@ draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
-spec_status: draft
 spec_discussion: https://github.com/scientific-python/specs/discussions/9
-spec_projects:
+spec_adopted_by:
 ---
-
-{{< notice note >}}
-This SPEC is an example of a MetaSPEC (i.e., a SPEC about SPECs).
-{{< /notice >}} 
 
 # Description
 
-A Scientific Python Ecosystem Coordination (SPEC) document is a mechanism for
-recommending project policies, coding conventions, and standard tooling for
-coordinating projects in the scientific Python ecosystem.
-A SPEC should provide a concise technical specification of the feature and a
-rationale for the feature.
-The SPEC author is responsible for building consensus within the community and
-documenting dissenting opinions.
+Scientific Python Ecosystem Coordination documents or SPECs, for short, provide
+operational guidelines for projects in the Scientific Python ecosystem.
+Their goal is to coordinate the ecosystem and to provide a more unified
+experience for users.
+
+Projects in the ecosystem have an existing, diverse set of proposal processes
+and development constraints.
+SPECs, therefore, are not meant to be prescriptive: rather, they are a
+mechanism to encourage shared practices and improve uniformity of experience.
+SPECs may, for example, capture established practices so that new projects can
+learn from them; or they may propose a new practice that the authors believe
+will benefit the ecosystem as a whole.
+
+Projects decide for themselves whether to adopt any given SPEC—often, this
+would be through team consensus.
+A SPECs may not be a good fit for every single project, and thus there is no
+expectation that all SPECs must be adopted by all projects.
+That said, SPECs only serve a meaningful purpose if they are adopted by several
+projects—and their authority largely stems from the extent to which they are.
+
+In practice, this means that SPECs will be tightly integrated with core
+projects, but remain flexible enough for projects to implement them according
+to their own constraints.
+
+## Format
 
 SPECs are UTF-8 encoded text files using
 [Markdown](https://www.markdownguide.org/) format.
@@ -32,31 +45,83 @@ Because the SPECs are maintained as text files in a versioned
 repository, their revision history is the historical record of the
 feature proposal[^1].
 
-The SPEC process begins with a new idea for coordinating projects in the
-scientific Python ecosystem.  It is highly recommended that a single SPEC
-contain a single key proposal or new idea.  The more focused the SPEC, the more
-successful it tends to be.
+# Implementation
 
-Each SPEC has one or more authors who write the SPEC, shepherd the discussions
-in the appropriate forums, and build community support for the idea.
-The SPEC author must first attempt to ascertain whether the
-idea is suitable for a SPEC.
+Any community member can propose a new SPEC by making making a pull request to
+the [SPEC repository](https://github.com/scientific-python/specs).
+However, we highly recommended that new proposals should first be discussed
+in at least one important project in the ecosystem.
+Often it is helpful to have also drafted a proof of concept implementation
+for technical SPECS.
 
-Ideas often come from developers of projects in the ecosystem.
-In these cases, the idea should be discussed in those projects first.
+We also recommend creating a new
+[discussion](https://github.com/scientific-python/specs/discussions/new) and
+selecting the
+[Ideas](https://github.com/scientific-python/specs/discussions/categories/ideas)
+category as early in the process as possible.
+The discussion will be linked to the new SPEC using the ``spec_discussion``
+field in the SPEC header.
+
+Focus on a single key proposal or new idea for coordinating projects in
+the scientific Python ecosystem.
+
+Contributors must adhere to our [Code of Conduct]({{< ref
+"/about/code_of_conduct.md" >}}).
+
+## Create PR
+
+Use the ``quickstart.py`` script to create the PR.
+This script is located at the top-level of the [SPEC
+repository](https://github.com/scientific-python/specs).
+The script will ask you a few questions and then create new file
+appropriately named with a basic template for you to complete.
+
+For example,
+
+{{< highlight bash >}}
+$ python quickstart.py
+Enter your name: Jarrod Millman
+Enter your email address: millman@berkeley.edu
+Enter the SPEC number: 1
+Enter the SPEC title: Minimum Supported Versions
+Enter the discussion number: 13
+{{< / highlight >}}
+
+creates the file ``spec-0001.md`` containing
+
+{{< highlight markdown >}}
+---
+title: "SPEC 1 — Minimum Supported Versions"
+date: 2021-01-10
+draft: false
+author:
+  - "Jarrod Millman <millman@berkeley.edu>"
+spec_discussion: https://github.com/scientific-python/specs/discussions/13
+spec_adopted_by:
+---
+
+# Description
+
+<!--
+Briefly and clearly describe the proposal.
+Explain the general need and the advantages of this specific proposal.
+If relevant, include examples of how the new functionality would be
+used, intended use-cases, and pseudo-code illustrating its use.
+-->
 
 # Implementation
 
-Before submitting a new proposal, the SPEC author (there may be multiple authors)
-must start a discussion briefly explaining the basic idea:
-     
-  https://github.com/scientific-python/specs/discussions/new
+<!--
+Discuss how this would be implemented by projects.
+-->
 
-If there is interest the SPEC author will be requested to draft a proposed SPEC.
+# Notes
 
-- quickstart tool
-
-
+<!--
+Include a bulleted list of annotated links, comments, and other ancillary
+information as needed.
+-->
+{{< / highlight >}}
 <!--
 
 The proposal should be submitted as a draft SPEC via a `GitHub pull
@@ -66,16 +131,58 @@ where ``<n>`` is an appropriately assigned four-digit number (e.g.,
 
 -->
 
+When asked to enter the SPEC number, choose the next available number that
+has not yet been used.
+Before the PR is merged, the SCC may ask you to change the SPEC number so that
+it doesn't conflict with another PR.
+If so, just rename the file as appropriate and update the SPEC number in the
+``title`` field of the SPEC header.
+
+The script currently only supports adding one author.
+If you need to add additional authors, just edit the text file.
+
+For example, adding a second author the above template requires the following
+change to the SPEC header:
+
+{{< highlight markdown >}}
+---
+title: "SPEC 1 — Minimum Supported Versions"
+date: 2021-01-10
+draft: false
+author:
+  - "Jarrod Millman <millman@berkeley.edu>"
+  - "Ross Barnowski <rossbar@berkeley.edu>"
+spec_discussion: https://github.com/scientific-python/specs/discussions/13
+spec_adopted_by:
+---
+{{< / highlight >}}
+
+While it is recommended that you create a new discussion before creating the PR,
+you can just make up a number when asked to enter the discussion number.
+Before the PR is merged, you will be asked to verify that you've created a
+new discussion and that the ``spec_discussion`` field is correct.
 
 ## Review and Resolution
 
-Once you create a PR, the SPEC Steering Committee will do some basic checks on your PR.
+The SCC (see [MetaSPEC 1 — Governance and Decision Making]({{< ref
+"/specs/meta-spec-0001.md" >}}) for details) will consider the new idea and
+monitor the discussion.
+If there is interest, the SCC will convert the discussion to the
+[SPEC](https://github.com/scientific-python/specs/discussions/categories/specs)
+category and assign it a SPEC number.
+When it is ready the SCC will merge the PR.
+Additional PRs may be made to update or expand the SPEC.
 
-At the earliest convenience, the PR should be merged (regardless of
-whether it is accepted during discussion).  Additional PRs may be made
-by the Author to update or expand the SPEC, or by maintainers to set
-its status, discussion URL, etc.
+## Enhancement Proposals and SPECs
 
+For projects with an existing enhancement proposal process in place, we
+recommend creating a new proposal to list the SPECs adopted along with links to
+project discussions leading to adoption.
+
+Once a project adopts a SPEC, they should add their project name to the
+`spec_adopted_by` field in the SPEC header.
+
+<!--
 ### SPEC Status
 
 Every SPEC is assigned a status, which is either ``draft``, ``accepted``, or ``withdrawn``.
@@ -83,6 +190,7 @@ Every SPEC is assigned a status, which is either ``draft``, ``accepted``, or ``w
 #### How a SPEC becomes Accepted
 
 #### How a SPEC becomes Withdrawn
+-->
 
 # Notes
 
