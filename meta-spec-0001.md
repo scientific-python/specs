@@ -20,7 +20,7 @@ They do, however,
   [Discussions](https://github.com/scientific-python/specs/discussions/categories/ideas)
   forum,
 - determine which new ideas are assigned a SPEC number as described in
-  [MetaSPEC 0 — Purpose and Process]({{< ref "/specs/meta-spec-0000.md" >}}),
+  [MetaSPEC 0 — Purpose and Process]({{< relref "/specs/meta-spec-0000.md" >}}),
 - decide whether new MetaSPECS (i.e., SPECS about SPECS)
   are accepted and approve any changes to them, and
 - serve as a communication channel to and from their projects as well

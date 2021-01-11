@@ -65,7 +65,7 @@ field in the SPEC header.
 Focus on a single key proposal or new idea for coordinating projects in
 the scientific Python ecosystem.
 
-Contributors must adhere to our [Code of Conduct]({{< ref
+Contributors must adhere to our [Code of Conduct]({{< relref
 "/about/code_of_conduct.md" >}}).
 
 ## Create PR
@@ -164,7 +164,7 @@ new discussion and that the ``spec_discussion`` field is correct.
 
 ## Review and Resolution
 
-The SCC (see [MetaSPEC 1 — Governance and Decision Making]({{< ref
+The SCC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
 "/specs/meta-spec-0001.md" >}}) for details) will consider the new idea and
 monitor the discussion.
 If there is interest, the SCC will convert the discussion to the
