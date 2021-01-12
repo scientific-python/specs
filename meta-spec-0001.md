@@ -5,8 +5,7 @@ draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
-spec_discussion: https://github.com/scientific-python/specs/discussions/12
-spec_adopted_by:
+discussion: https://github.com/scientific-python/specs/discussions/12
 ---
 
 # Description

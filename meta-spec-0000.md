@@ -5,8 +5,7 @@ draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
-spec_discussion: https://github.com/scientific-python/specs/discussions/9
-spec_adopted_by:
+discussion: https://github.com/scientific-python/specs/discussions/9
 ---
 
 # Description
@@ -59,7 +58,7 @@ We also recommend creating a new
 selecting the
 [Ideas](https://github.com/scientific-python/specs/discussions/categories/ideas)
 category as early in the process as possible.
-The discussion will be linked to the new SPEC using the ``spec_discussion``
+The discussion will be linked to the new SPEC using the ``discussion``
 field in the SPEC header.
 
 Focus on a single key proposal or new idea for coordinating projects in
@@ -96,8 +95,8 @@ date: 2021-01-10
 draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
-spec_discussion: https://github.com/scientific-python/specs/discussions/13
-spec_adopted_by:
+discussion: https://github.com/scientific-python/specs/discussions/13
+adopted-by:
 ---
 
 # Description
@@ -152,15 +151,15 @@ draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
-spec_discussion: https://github.com/scientific-python/specs/discussions/13
-spec_adopted_by:
+discussion: https://github.com/scientific-python/specs/discussions/13
+adopted-by:
 ---
 {{< / highlight >}}
 
 While it is recommended that you create a new discussion before creating the PR,
 you can just make up a number when asked to enter the discussion number.
 Before the PR is merged, you will be asked to verify that you've created a
-new discussion and that the ``spec_discussion`` field is correct.
+new discussion and that the ``discussion`` field is correct.
 
 ## Review and Resolution
 
@@ -180,7 +179,7 @@ recommend creating a new proposal to list the SPECs adopted along with links to
 project discussions leading to adoption.
 
 Once a project adopts a SPEC, they should add their project name to the
-`spec_adopted_by` field in the SPEC header.
+``adopted-by`` field in the SPEC header.
 
 <!--
 ### SPEC Status
