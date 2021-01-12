@@ -21,8 +21,8 @@ date: {now.strftime("%Y-%m-%d")}
 draft: false
 author:
   - "{author} <{email}>"
-spec_discussion: https://github.com/scientific-python/specs/discussions/{discussion}
-spec_adopted_by:
+discussion: https://github.com/scientific-python/specs/discussions/{discussion}
+adopted-by:
 ---
 
 # Description
