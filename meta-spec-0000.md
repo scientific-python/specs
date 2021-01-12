@@ -26,7 +26,7 @@ will benefit the ecosystem as a whole.
 
 Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
-A SPECs may not be a good fit for every single project, and thus there is no
+A SPEC may not be a good fit for every single project, and thus there is no
 expectation that all SPECs must be adopted by all projects.
 That said, SPECs only serve a meaningful purpose if they are adopted by several
 projects—and their authority largely stems from the extent to which they are.
