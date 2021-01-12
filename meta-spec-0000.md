@@ -37,12 +37,21 @@ to their own constraints.
 ## Format
 
 SPECs are UTF-8 encoded text files using
-[Markdown](https://www.markdownguide.org/) format.
-We use [Hugo](https://gohugo.io/) to convert SPECs to HTML for viewing on the
-web [^2].
-Because the SPECs are maintained as text files in a versioned
-repository, their revision history is the historical record of the
-feature proposal[^1].
+[Markdown](https://www.markdownguide.org/) format and stored in the [SPEC
+repository](https://github.com/scientific-python/specs).
+The SPEC documents are converted to HTML by code in the [scientific-python.org
+repository](https://github.com/scientific-python/scientific-python.org/) using
+[Hugo](https://gohugo.io/) and deployed to
+[https://scientific-python.org/specs/](https://scientific-python.org/specs/).
+Each SPEC has a corresponding
+[discussion](https://github.com/scientific-python/specs/discussions/categories/specs)
+with the same title, where anyone can comment, ask questions, or vote on
+existing comments.
+Often conversations about SPECs will occur on individual project's communication
+channels (e.g., issues, pull requests, enhancement proposals, or commit messages).
+It is the project's responsibility to link to these discussions on the official
+[SPEC discussion](https://github.com/scientific-python/specs/discussions/categories/specs)
+when appropriate.
 
 # Implementation
 
@@ -125,15 +134,6 @@ information as needed.
 
 {{< /highlight >}}
 
-<!--
-
-The proposal should be submitted as a draft SPEC via a `GitHub pull
-request`_ to the ``doc/nxeps`` directory with the name ``nxep-<n>.rst``
-where ``<n>`` is an appropriately assigned four-digit number (e.g.,
-``spec-0000.rst``). The draft must use the :doc:`nxep-template` file.
-
--->
-
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
 Before the SPEC is merged, the SSC may ask you to change the SPEC number so that
@@ -189,21 +189,4 @@ project discussions leading to adoption.
 Once a project adopts a SPEC, they should add their project name to the
 ``adopted-by`` field in the SPEC header.
 
-<!--
-### SPEC Status
-
-Every SPEC is assigned a status, which is either ``draft``, ``accepted``, or ``withdrawn``.
-
-#### How a SPEC becomes Accepted
-
-#### How a SPEC becomes Withdrawn
--->
-
 # Notes
-
-[^1]: This historical record is available by the normal git commands for
-    retrieving older revisions, and can also be browsed on
-    [GitHub](https://github.com/scientific-python/specs).
-
-[^2]: The URL for viewing SPECs on the web is
-    <https://scientific-python.org/specs/>
