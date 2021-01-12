@@ -14,7 +14,7 @@ number = input("Enter the SPEC number: ")
 title = input("Enter the SPEC title: ")
 discussion = input("Enter the discussion number: ")
 
-filename = f"spec-000{number}.md"
+filename = f"spec-{number:04d}.md"
 text = f"""---
 title: "SPEC {number} — {title}"
 date: {now.strftime("%Y-%m-%d")}
