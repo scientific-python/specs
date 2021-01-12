@@ -31,7 +31,7 @@ That said, SPECs only serve a meaningful purpose if they are adopted by several
 projects—and their authority largely stems from the extent to which they are.
 
 In practice, this means that SPECs will be tightly integrated with core
-projects, but remain flexible enough for projects to implement them according
+projects, but have to remain flexible enough for projects to implement them according
 to their own constraints.
 
 ## Format
@@ -48,16 +48,16 @@ feature proposal[^1].
 
 Any community member can propose a new SPEC by making making a pull request to
 the [SPEC repository](https://github.com/scientific-python/specs).
-However, we highly recommended that new proposals should first be discussed
+However, we highly recommended that the new proposal should first be discussed
 in at least one important project in the ecosystem.
-Often it is helpful to have also drafted a proof of concept implementation
-for technical SPECS.
+Often it is helpful also to have drafted a proof of concept implementation
+for technical SPECs.
 
-We also recommend creating a new
-[discussion](https://github.com/scientific-python/specs/discussions/new) and
+To get feedback from the larger community, we also recommend creating a new
+[discussion](https://github.com/scientific-python/specs/discussions/new)—
 selecting the
 [Ideas](https://github.com/scientific-python/specs/discussions/categories/ideas)
-category as early in the process as possible.
+category—as early in the process as possible.
 The discussion will be linked to the new SPEC using the ``discussion``
 field in the SPEC header.
 
@@ -67,12 +67,14 @@ the scientific Python ecosystem.
 Contributors must adhere to our [Code of Conduct]({{< relref
 "/about/code_of_conduct.md" >}}).
 
-## Create PR
+## Create and submit a new SPEC
 
-Use the ``quickstart.py`` script to create the PR.
-This script is located at the top-level of the [SPEC
-repository](https://github.com/scientific-python/specs).
-The script will ask you a few questions and then create new file
+Creating a new SPEC requires (1) making a pull request with a new SPEC document (Markdown file) and (2) starting a related discussion.
+
+To create a new SPEC document, use the ``quickstart.py`` script.
+Located at the top-level of the [SPEC
+repository](https://github.com/scientific-python/specs),
+the script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to complete.
 
 For example,
@@ -81,12 +83,12 @@ For example,
 $ python quickstart.py
 Enter your name: Jarrod Millman
 Enter your email address: millman@berkeley.edu
-Enter the SPEC number: 1
+Enter the SPEC number: 8
 Enter the SPEC title: Minimum Supported Versions
 Enter the discussion number: 13
-{{< / highlight >}}
+{{< /highlight >}}
 
-creates the file ``spec-0001.md`` containing
+creates the file ``spec-0008.md`` containing:
 
 {{< highlight markdown >}}
 ---
@@ -120,7 +122,9 @@ Discuss how this would be implemented by projects.
 Include a bulleted list of annotated links, comments, and other ancillary
 information as needed.
 -->
-{{< / highlight >}}
+
+{{< /highlight >}}
+
 <!--
 
 The proposal should be submitted as a draft SPEC via a `GitHub pull
@@ -132,7 +136,7 @@ where ``<n>`` is an appropriately assigned four-digit number (e.g.,
 
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
-Before the PR is merged, the SCC may ask you to change the SPEC number so that
+Before the SPEC is merged, the SSC may ask you to change the SPEC number so that
 it doesn't conflict with another PR.
 If so, just rename the file as appropriate and update the SPEC number in the
 ``title`` field of the SPEC header.
@@ -161,15 +165,19 @@ you can just make up a number when asked to enter the discussion number.
 Before the PR is merged, you will be asked to verify that you've created a
 new discussion and that the ``discussion`` field is correct.
 
+Once the SPEC is in reasonable shape, file a pull request against the
+[scientific-python/specs](https://github.com/scientific-python/specs)
+repository.
+
 ## Review and Resolution
 
-The SCC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
-"/specs/meta-spec-0001.md" >}}) for details) will consider the new idea and
-monitor the discussion.
-If there is interest, the SCC will convert the discussion to the
+The SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
+"/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea fits as a SPEC and
+monitor subsequent discussion.
+If there is sufficient interest, the SSC will convert the discussion to the
 [SPEC](https://github.com/scientific-python/specs/discussions/categories/specs)
 category and assign it a SPEC number.
-When it is ready the SCC will merge the PR.
+When it is ready the SSC will merge the PR.
 Additional PRs may be made to update or expand the SPEC.
 
 ## Enhancement Proposals and SPECs
