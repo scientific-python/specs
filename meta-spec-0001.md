@@ -28,7 +28,92 @@ They do, however,
 
 ## Steering Committee
 
-**---INSERT TEAM GALLERY---**
+{{< gallery >}}
+
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="ipython"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="numpy"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="pandas"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="scikit-learn"
+>}}
+
+{{< /gallery >}}
+
+{{< gallery >}}
+
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="jupyter"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="scipy"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="statsmodels"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="NetworkX"
+>}}
+
+{{< /gallery >}}
+
+{{< gallery >}}
+
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="spyder"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="matplotlib"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="scikit-image"
+>}}
+{{< person
+      name="?"
+      github_handle=""
+      avatar=""
+      projects="community"
+>}}
+
+{{< /gallery >}}
 
 # Implementation
 
