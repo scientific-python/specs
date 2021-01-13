@@ -16,7 +16,7 @@ federation of projects that interact well with one another and that follow
 similar norms of development, documentation, testing, and so forth.
 More concretely, the AB projects are the projects that may appear in the
 ``adopted-by`` field of a SPEC header.
-And all AB projects are included in the ``adopted-by`` field of this MetaSPEC.
+All AB projects are included in the ``adopted-by`` field of this MetaSPEC.
 
 ## AB Projects
 
@@ -54,7 +54,7 @@ fear of breaking it.
 
 ### ✓ **are released with a liberal license**
 
-The About by packages have liberal open source licenses.
+The AB packages have liberal open source licenses.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
 Whatever license is chosen should adhere to the [Open Source
 Definition](https://opensource.org/osd-annotated).

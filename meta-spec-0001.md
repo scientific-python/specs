@@ -127,8 +127,8 @@ where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 
 Communication within the SSC takes place via the email group at ...  SSC
-members are expected to be aware of conversations on this list to lean validity
-to consensus seeking and voting.
+members are expected to be aware of conversations on this list to lend validity
+to consensus-seeking and voting.
 
 ## Who should be a member?
 
