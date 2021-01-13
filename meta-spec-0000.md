@@ -70,8 +70,8 @@ category—as early in the process as possible.
 The discussion will be linked to the new SPEC using the ``discussion``
 field in the SPEC header.
 
-Focus on a single key proposal or new idea for coordinating projects in
-the scientific Python ecosystem.
+Each new discussion should focus on a single key proposal or new idea for
+coordinating projects in the scientific Python ecosystem.
 
 Contributors must adhere to our [Code of Conduct]({{< relref
 "/about/code_of_conduct.md" >}}).
