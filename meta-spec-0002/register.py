@@ -31,22 +31,67 @@ def input_(
 
 now = datetime.now()
 project = input_("Project Name")
-pypi = input_("What name is it register under on https://pypi.org/project/")
+homepage = input_("Project Homepage")
+decision = input_("Adopted by approval URL")
+vcs = input_("Version control URL")
+pypi = input_("Project name on https://pypi.org/project/")
+coc = input_("Code of Conduct URL")
+contributor_guide = input_("Contributor Guide URL")
+roadmap = input_("Roadmap URL")
+mailing_list = input_("Mailing List URL")
+governance_guide = input_("Governance Guide URL")
+license = input_("License URL")
+license_type = input_("License (e.g., 3-clause BSD, GPL)")
+api_reference = input_("API Documentation URL")
+test_coverage = input_("Test Coverage URL")
+adopters = input_("List the github handles of developers who can adopt SPECs")
+# first_release =  # maybe just read from PyPI?
 discussion = input_("Discussion number",
                     optional=True, validate=lambda x: int(x))
 
 filename = f"{project.lower()}.md"
 text = f"""---
 project-name: "{project}"
+homepage: {homepage}
 date: {now.strftime("%Y-%m-%d")}
 draft: false
+decision: {decision}
+vcs: {vcs}
+pypi: {f'https://pypi.org/project/{pypi}'}
+coc: {coc}
+contributor_guide: {contributor_guide}
+roadmap: {roadmap}
+mailing_list: {mailing_list}
+governance_guide: {governance_guide}
+license: {license}
+license_type: {license_type}
+api_reference: {api_reference}
+test_coverage: {test_coverage}
+adopters: {adopters}
 discussion: {f'https://github.com/scientific-python/specs/discussions/{discussion}' if discussion else ''}
 ---
 
 # Use in scientific research
 
 <!--
-Briefly describe how this project is used in scientific research.
+In one or two paragraphs, describe how this project is used in scientific research.
+-->
+
+# Community development
+
+<!--
+In one or two paragraphs, describe your developer team.
+How many people are on the core developer team?
+Where do developers come from (e.g., do new contributors just show up or are they hired)?
+Is it all voluteers?
+How do new contributors become core developers?
+-->
+
+# Data exchange mechanism
+
+<!--
+Briefly describe how data is exchanged between your projects and other
+projects in the ecosystem.
 -->
 
 """
