@@ -54,7 +54,7 @@ fear of breaking it.
 
 ### ✓ **are released with a liberal license**
 
-The About by packages have liberal open source licenses.
+The AB packages have liberal open source licenses.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
 Whatever license is chosen should adhere to the [Open Source
 Definition](https://opensource.org/osd-annotated).
