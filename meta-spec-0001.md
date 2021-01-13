@@ -12,7 +12,7 @@ discussion: https://github.com/scientific-python/specs/discussions/12
 
 The Scientific Python Ecosystem Coordination (SPEC) process is managed by
 the SPEC Steering Committee (SSC).
-The SCC does not decide which SPECs are adopted—that choice resides with
+The SSC does not decide which SPECs are adopted—that choice resides with
 individual projects.
 They do, however, 
 - monitor and discuss new ideas for SPEC documents in the
@@ -116,9 +116,13 @@ They do, however,
 
 # Implementation
 
-## Decision making and communication
+To accept a SPEC proposal (i.e., to assign it a SPEC number and merge the PR)
+requires two members of the SSC to approve and no members objecting.
+Since the role of the SSC is to mainly ensure that SPEC proposals are
+appropriate, objections should be rare.
 
-The SSC makes decisions through group consensus and, in the very rare instance
+To add members, remove members, or modify the MetaSPECs, the SSC
+makes decisions through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 
@@ -126,14 +130,42 @@ Communication within the SSC takes place via the email group at ...  SSC
 members are expected to be aware of conversations on this list to lean validity
 to consensus seeking and voting.
 
-## Membership
+## Who should be a member?
 
-There are no term limits to the SPEC Steering Committee (SSC)—projects may
-replace their representatives at will, or choose not to participate.
-New projects are invited by the SSC.
+Members of the SSC should be active in the scientific Python ecosystem and
+should have a demonstrated interest in the SPECS.
+Examples of demonstrated interest include submitting SPECS, engaging in SPEC
+discussions, reviewing SPEC PRs, or advocating SPEC adoption in ecosystem
+projects.
+Individuals can request to join the SSC and the SSC can ask individuals
+if they are willing to serve on the SSC.
 
-## MetaSPECs
+## How many members should there be?
 
-Alterations to MetaSPECs have to be approved by the SSC.
+This is up to the SSC.
+However, if the SSC is unable to quickly handle new SPEC proposals and new ideas arising
+in the discussions aren't addressed in a timely manner, the SSC should try to
+recruit new members.
+
+## How do you add a member?
+
+Anyone on the SSC can propose inviting a new member to join the SSC.
+And, as previously mentioned, anyone can ask to join the SSC.
+
+If the SSC decides to admit a new member and that person agrees, then they
+should
+(1) be added to the SSC member listing above,
+(2) be added to the [SSC
+Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
+(3) be added to the SSC private mailing list.
+
+## How do you remove a member?
+
+If a member wishes to resign or if the SSC decides to remove a member, then
+they should
+(1) be moved to the list of Emeritus SSC members (below the list of active members),
+(2) be removed from the [SSC
+Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
+(3) be removed from the SSC private mailing list.
 
 # Notes
