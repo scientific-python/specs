@@ -16,7 +16,7 @@ federation of projects that interact well with one another and that follow
 similar norms of development, documentation, testing, and so forth.
 More concretely, the AB projects are the projects that may appear in the
 ``adopted-by`` field of a SPEC header.
-And all AB projects are included in the ``adopted-by`` field of this MetaSPEC.
+All AB projects are included in the ``adopted-by`` field of this MetaSPEC.
 
 ## AB Projects
 
