@@ -1,9 +1,10 @@
 ---
-title: "SPEC 0 — Adopted By Projects"
+title: "MetaSPEC 2 — Adopted By Field"
 date: 2021-01-12
 draft: false
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
+  - "Jarrod Millman <millman@berkeley.edu>"
 discussion: 
 adopted-by:
 ---
@@ -15,7 +16,7 @@ federation of projects that interact well with one another and that follow
 similar norms of development, documentation, testing, and so forth.
 More concretely, the AB projects are the projects that may appear in the
 ``adopted-by`` field of a SPEC header.
-And all AB projects are included in the ``adopted-by`` field of this SPEC.
+And all AB projects are included in the ``adopted-by`` field of this MetaSPEC.
 
 ## AB Projects
 
@@ -74,7 +75,7 @@ To register a project make a pull request to the
 ## Register a New Project
 
 To create your project registration file, change into the
-``spec-0000`` directory and use the ``register.py`` script.
+``meta-spec-0002`` directory and use the ``register.py`` script.
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to complete.
 
