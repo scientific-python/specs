@@ -161,7 +161,7 @@ adopted-by:
 {{< / highlight >}}
 
 While it is recommended that you create a new discussion before creating the PR,
-you can just make up a number when asked to enter the discussion number.
+you can also leave the discussion number blank.
 Before the PR is merged, you will be asked to verify that you've created a
 new discussion and that the ``discussion`` field is correct.
 

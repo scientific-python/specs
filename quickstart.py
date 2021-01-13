@@ -7,12 +7,35 @@ Quickly setup stub for new SPEC proposal.
 
 from datetime import datetime
 
+
+def input_(
+        prompt,
+        optional=False,
+        validate=lambda x: x if x else None
+):
+    def valid(s):
+        if optional and not s:
+            return ""
+        try:
+            return validate(s)
+        except (ValueError, TypeError):
+            print('Invalid input; please try again.')
+            return None
+
+    optional_flag = ' [optional]' if optional else ''
+    while (ans := valid(input(f'{prompt}{optional_flag}: '))) is None:
+        pass
+
+    return ans
+
+
 now = datetime.now()
-author = input("Enter your name: ")
-email = input("Enter your email address: ")
-number = input("Enter the SPEC number: ")
-title = input("Enter the SPEC title: ")
-discussion = input("Enter the discussion number: ")
+author = input_("Your Name")
+email = input_("Your Email Address")
+number = input_("SPEC number", validate=lambda x: int(x))
+title = input_("SPEC title")
+discussion = input_("Discussion number",
+                    optional=True, validate=lambda x: int(x))
 
 filename = f"spec-{number:04d}.md"
 text = f"""---
@@ -21,7 +44,7 @@ date: {now.strftime("%Y-%m-%d")}
 draft: false
 author:
   - "{author} <{email}>"
-discussion: https://github.com/scientific-python/specs/discussions/{discussion}
+discussion: {f'https://github.com/scientific-python/specs/discussions/{discussion}' if discussion else ''}
 adopted-by:
 ---
 
