@@ -51,7 +51,7 @@ discussion = input_("Discussion number",
 
 filename = f"{project.lower()}.md"
 text = f"""---
-project-name: "{project}"
+title: "{project}"
 homepage: {homepage}
 date: {now.strftime("%Y-%m-%d")}
 draft: false
@@ -71,13 +71,19 @@ adopters: {adopters}
 discussion: {f'https://github.com/scientific-python/specs/discussions/{discussion}' if discussion else ''}
 ---
 
-# Use in scientific research
+# What is {project}?
+
+<!--
+In one or two sentences, describe what your package does.
+-->
+
+# How is it used in scientific research?
 
 <!--
 In one or two paragraphs, describe how this project is used in scientific research.
 -->
 
-# Community development
+# What is the development community like? 
 
 <!--
 In one or two paragraphs, describe your developer team.
@@ -87,7 +93,7 @@ Is it all voluteers?
 How do new contributors become core developers?
 -->
 
-# Data exchange mechanism
+# How does it exchange data with projects in the ecosystem? 
 
 <!--
 Briefly describe how data is exchanged between your projects and other
