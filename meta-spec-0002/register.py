@@ -49,7 +49,7 @@ adopters = input_("List the github handles of developers who can adopt SPECs")
 discussion = input_("Discussion number",
                     optional=True, validate=lambda x: int(x))
 
-filename = f"{project.lower()}.md"
+filename = f"projects/{project.lower()}.md"
 text = f"""---
 title: "{project}"
 homepage: {homepage}
