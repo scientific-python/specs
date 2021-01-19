@@ -15,6 +15,43 @@ The Scientific Python Ecosystem (SPE), informally defined, is a loose
 federation of projects that interact well with one another and that follow
 similar norms of development, documentation, testing, and so forth.
 
+The ecosystem arose around a few core packages: SciPy, NumPy,
+matplotlib, and IPython. Because the developers of these packages
+spoke often, their efforts were well coordinated and they adopted
+similar policies, procedures, and tooling.  These core packages
+were then also examples after which smaller projects could model
+themselves.  However, as the ecosystem grew larger informal
+coordination processes became less effective than they once were.
+
+Conspicuously, there exists no single place where the community can
+coordinate changes that affect projects on a broad scale.  That is
+what the Scientific Python Ecosystem Coordination (SPEC) documents aim
+to address.  Earlier coordination efforts that would have fit well
+here include [The NumPy Documentation
+Format](https://numpydoc.readthedocs.io/en/latest/format.html) and
+[NEP 29— Recommend Python and NumPy version
+support](https://numpy.org/neps/nep-0029-deprecation_policy.html).
+
+It is worth noting that the current way for policies to propagate
+through the ecosystem is mostly one-directional: from core projects to
+smaller projects.  If a smaller project came up with a good idea, it
+may not be noticed by a core package for a long time.  The SPEC
+coordination mechanism allows for such ideas to be seen immediately by
+core projects—which, in turn, can accelerate their adoption.
+Primarily, then, the SPECs provide a mechanism for communicating ideas
+and their levels of adoption throughout the community.
+
+The list of core projects are shown in the the document header.  They
+appear based on having certain [core
+characteristics](#core-project-characteristics), described below. They
+also form the list of projects that can appear in the ``adopted-by``
+field of the SPEC headers.
+
+Having a core project adopt a SPEC signals to the community that the
+SPEC is vetted and is a community standard; the more projects that
+adopt it, the stronger that signal becomes.
+
+<!--
 - historically a loosely defined collection on core projects helped ensure
   this worked
 
@@ -36,7 +73,7 @@ similar norms of development, documentation, testing, and so forth.
 
   - the list of core projects can be found listed under the ``Core Projects``
     field in the header above.
-  
+
   - the core projects are the projects that may appear in the
   ``adopted-by`` field of a SPEC header.
 
@@ -50,8 +87,16 @@ similar norms of development, documentation, testing, and so forth.
 
 - this metaspec describes what the characteristics of the core projects are,
   and how that list can be amended
+-->
 
 ## Core Project Characteristics
+
+For coordination purposes, it is useful to formalize the definition of
+a "core project".  These are projects that are depended upon by most
+of the other projects, often providing basic data structures, drawing
+primitives, or implementations of fundamental algorithms.
+
+The core projects are:
 
 ### ✓ **widely used in scientific research**
 
@@ -69,7 +114,7 @@ and regular releases on the [Python Package Index](https://pypi.org/).
 
 ### ✓ **developed in the open by their communities**
 
-SPE packages are developed by their communities.  Development takes place in an
+Scientific Python Ecosystem packages are developed by their communities.  Development takes place in an
 online forum, and communications are public.  The developers of the project do
 not all reside at a single institution.
 
