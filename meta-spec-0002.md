@@ -1,5 +1,5 @@
 ---
-title: "MetaSPEC 2 — Adopted By Field"
+title: "MetaSPEC 2 — Core Projects"
 date: 2021-01-12
 draft: false
 author:
@@ -11,25 +11,58 @@ adopted-by:
 
 # Description
 
-The Adopted By (AB) projects, informally defined, are a loose
+The Scientific Python Ecosystem (SPE), informally defined, is a loose
 federation of projects that interact well with one another and that follow
 similar norms of development, documentation, testing, and so forth.
-More concretely, the AB projects are the projects that may appear in the
-``adopted-by`` field of a SPEC header.
-All AB projects are included in the ``adopted-by`` field of this MetaSPEC.
 
-## AB Projects
+- historically a loosely defined collection on core projects helped ensure
+  this worked
+
+  - these core projects provide the foundational data structures, libraries,
+    and tools depended on by many other projects in the ecosystem.
+
+  - this means policies, practices, and tooling used by the core projects
+    is widely seen by the community and impacts most other projects
+
+  - for instance, docstring standard, nep 29, etc...
+
+  - best practice have sometimes originated from the core and sometimes new
+    practices originated outside the core, but even then these new best practices
+    enjoy wider circulation once the core projects adopt and informally promote
+    these new ideas
+
+- SPECs aim, in part, to facilitate and formalize this process of both
+  top-down and bottom-up coordination
+
+  - the list of core projects can be found listed under the ``Core Projects``
+    field in the header above.
+  
+  - the core projects are the projects that may appear in the
+  ``adopted-by`` field of a SPEC header.
+
+  - having the core projects adopting a SPEC signals to the community
+    that this is a vetted and widely used standard, process, or ...
+
+  - it also provides a mechanism for new project to become widely
+    known and used.  by contributing a SPEC here smaller projects
+    can ensure that the core projects are made aware of new ideas
+    and can discuss adopting new ideas.
+
+- this metaspec describes what the characteristics of the core projects are,
+  and how that list can be amended
+
+## Core Project Characteristics
 
 ### ✓ **widely used in scientific research**
 
-The AB projects focus on packages with a scientific research purpose.
+The core projects focus on packages with a scientific research purpose.
 Of course, these tools are often used for other purposes too, and the SPE
 overlaps with the PyData ecosystem---which has a stronger focus on solving
 problems in industry.
 
 ### ✓ **developed using shared community practices**
 
-AB projects have a version control system, a bug tracker, a
+Core projects have a version control system, a bug tracker, a
 code of conduct, a contributors guide, a code review process, a public
 roadmap, a documented governance system, an enhancement proposal process,
 and regular releases on the [Python Package Index](https://pypi.org/).
@@ -42,17 +75,16 @@ not all reside at a single institution.
 
 ### ✓ **well documented and well tested**
 
-Packages must document their APIs, and have inline documentation (most often in
+Packages document their APIs, and have inline documentation (most often in
 the form of [numpydoc](https://numpydoc.readthedocs.io/) or
 [napoleon](https://sphinxcontrib-napoleon.readthedocs.io/)).
-
-Packages should have a high level of test coverage to ensure that a) the code
+Packages also have a high level of test coverage to ensure that a) the code
 does what it is intended to and b) new developers can modify the code without
 fear of breaking it.
 
 ### ✓ **released with a liberal license**
 
-The AB packages have liberal open source licenses.
+The core packages have liberal open source licenses.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
 Whatever license is chosen should adhere to the [Open Source
 Definition](https://opensource.org/osd-annotated).
@@ -76,32 +108,6 @@ To create your project registration file, change into the
 ``projects`` directory and use the ``register.py`` script.
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to complete.
-
-For example,
-
-{{< highlight bash >}}
-$ python register.py
-Project Name: NetworkX
-What name is it register under on https://pypi.org/project/: networkx
-Discussion number [optional]:
-{{< /highlight >}}
-
-creates the file ``networkx.md`` containing:
-
-{{< highlight markdown >}}
----
-project-name: "NetworkX"
-date: 2021-01-12
-draft: false
-discussion: https://github.com/scientific-python/specs/discussions/6
----
-
-# Use in scientific research
-
-<!--
-Briefly describe how this project is used in scientific research.
--->
-{{< /highlight >}}
 
 Once the registration file is in reasonable shape, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs)
