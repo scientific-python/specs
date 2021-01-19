@@ -73,7 +73,7 @@ To register a project make a pull request to the
 ## Register a New Project
 
 To create your project registration file, change into the
-``meta-spec-0002`` directory and use the ``register.py`` script.
+``projects`` directory and use the ``register.py`` script.
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to complete.
 
