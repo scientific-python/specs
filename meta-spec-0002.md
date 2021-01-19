@@ -20,46 +20,44 @@ All AB projects are included in the ``adopted-by`` field of this MetaSPEC.
 
 ## AB Projects
 
-### ✓ **are used in scientific research**
+### ✓ **widely used in scientific research**
 
 The AB projects focus on packages with a scientific research purpose.
 Of course, these tools are often used for other purposes too, and the SPE
 overlaps with the PyData ecosystem---which has a stronger focus on solving
 problems in industry.
 
-### ✓ **are mature Python packages**
+### ✓ **developed using shared community practices**
 
 AB projects have a version control system, a bug tracker, a
 code of conduct, a contributors guide, a code review process, a public
 roadmap, a documented governance system, an enhancement proposal process,
 and regular releases on the [Python Package Index](https://pypi.org/).
 
-### ✓ **are developed in the open by their communities**
+### ✓ **developed in the open by their communities**
 
 SPE packages are developed by their communities.  Development takes place in an
 online forum, and communications are public.  The developers of the project do
 not all reside at a single institution.
 
-### ✓ **are well documented**
+### ✓ **well documented and well tested**
 
 Packages must document their APIs, and have inline documentation (most often in
 the form of [numpydoc](https://numpydoc.readthedocs.io/) or
 [napoleon](https://sphinxcontrib-napoleon.readthedocs.io/)).
 
-### ✓ **are well tested**
-
 Packages should have a high level of test coverage to ensure that a) the code
 does what it is intended to and b) new developers can modify the code without
 fear of breaking it.
 
-### ✓ **are released with a liberal license**
+### ✓ **released with a liberal license**
 
 The AB packages have liberal open source licenses.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
 Whatever license is chosen should adhere to the [Open Source
 Definition](https://opensource.org/osd-annotated).
 
-### ✓ **Use common data exchange mechanisms**
+### ✓ **able to work together**
 
 Unless a package itself provides data exchange, it should support standard
 mechanisms for data exchange.
