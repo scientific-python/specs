@@ -1,3 +1,3 @@
 ---
-title: AB-Projects
+title: Core Projects
 ---
