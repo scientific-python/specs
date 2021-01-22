@@ -18,7 +18,9 @@ def prompt(
 
     """
     def valid(s):
-        s = s.strip()
+        if isinstance(s, str):
+            s = s.strip()
+
         if not s and (default is not None):
             return default
 
