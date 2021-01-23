@@ -14,7 +14,8 @@ The Scientific Python Ecosystem Coordination (SPEC) process is managed by
 the SPEC Steering Committee (SSC).
 The SSC does not decide which SPECs are adopted—that choice resides with
 individual projects.
-They do, however, 
+They do, however,
+
 - monitor and discuss new ideas for SPEC documents in the
   [Discussions](https://github.com/scientific-python/specs/discussions/categories/ideas)
   forum,
@@ -27,6 +28,7 @@ They do, however,
 
 ## Steering Committee
 
+<!-- prettier-ignore-start -->
 {{< gallery >}}
 
 {{< person
@@ -113,6 +115,7 @@ They do, however,
 >}}
 
 {{< /gallery >}}
+<!-- prettier-ignore-end -->
 
 # Implementation
 
@@ -126,7 +129,7 @@ makes decisions through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 
-Communication within the SSC takes place via the email group at ...  SSC
+Communication within the SSC takes place via the email group at ... SSC
 members are expected to be aware of conversations on this list to lend validity
 to consensus-seeking and voting.
 

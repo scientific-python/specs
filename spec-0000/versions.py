@@ -67,6 +67,7 @@ sp_gantt_section = gantt_section(sp_support_window, "sp")
 mpl_gantt_section = gantt_section(mpl_support_window, "mpl")
 
 gantt = f"""
+<!-- prettier-ignore-start -->
 {{{{<mermaid>}}}}
 gantt
 dateFormat  YYYY-MM-DD
@@ -82,6 +83,7 @@ section SciPy
 section Matplotlib
 {mpl_gantt_section}
 {{{{</mermaid>}}}}
+<!-- prettier-ignore-end -->
 """
 
 print(gantt)

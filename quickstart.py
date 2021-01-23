@@ -9,7 +9,8 @@ from datetime import datetime
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '.tools'))
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".tools"))
 from tools import prompt
 
 
@@ -18,11 +19,7 @@ author = prompt("Your Name")
 email = prompt("Your Email Address")
 number = prompt("SPEC number", validate=lambda x: int(x))
 title = prompt("SPEC title")
-discussion = prompt(
-    "Discussion number",
-    default="",
-    validate=lambda x: int(x)
-)
+discussion = prompt("Discussion number", default="", validate=lambda x: int(x))
 
 filename = f"spec-{number:04d}.md"
 text = f"""---
@@ -40,8 +37,8 @@ adopted-by:
 <!--
 Briefly and clearly describe the proposal.
 Explain the general need and the advantages of this specific proposal.
-If relevant, include examples of how the new functionality would be
-used, intended use-cases, and pseudo-code illustrating its use.
+If relevant, include examples of how the new functionality would be used,
+intended use-cases, and pseudo-code illustrating its use.
 -->
 
 # Implementation
@@ -53,8 +50,8 @@ Discuss how this would be implemented by projects.
 # Notes
 
 <!--
-Include a bulleted list of annotated links, comments, and other ancillary
-information as needed.
+Include a bulleted list of annotated links, comments,
+and other ancillary information as needed.
 -->
 """
 
