@@ -5,7 +5,7 @@ draft: false
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"
-discussion: 
+discussion:
 adopted-by:
 ---
 
@@ -18,15 +18,15 @@ similar norms of development, documentation, testing, and so forth.
 The ecosystem arose around a few core packages: SciPy, NumPy,
 matplotlib, and IPython. Because the developers of these packages
 spoke often, their efforts were well coordinated and they adopted
-similar policies, procedures, and tooling.  These core packages
+similar policies, procedures, and tooling. These core packages
 were then also examples after which smaller projects could model
-themselves.  However, as the ecosystem grew larger informal
+themselves. However, as the ecosystem grew larger informal
 coordination processes became less effective than they once were.
 
 Conspicuously, there exists no single place where the community can
-coordinate changes that affect projects on a broad scale.  That is
+coordinate changes that affect projects on a broad scale. That is
 what the Scientific Python Ecosystem Coordination (SPEC) documents aim
-to address.  Earlier coordination efforts that would have fit well
+to address. Earlier coordination efforts that would have fit well
 here include [The NumPy Documentation
 Format](https://numpydoc.readthedocs.io/en/latest/format.html) and
 [NEP 29— Recommend Python and NumPy version
@@ -34,17 +34,17 @@ support](https://numpy.org/neps/nep-0029-deprecation_policy.html).
 
 It is worth noting that the current way for policies to propagate
 through the ecosystem is mostly one-directional: from core projects to
-smaller projects.  If a smaller project came up with a good idea, it
-may not be noticed by a core package for a long time.  The SPEC
+smaller projects. If a smaller project came up with a good idea, it
+may not be noticed by a core package for a long time. The SPEC
 coordination mechanism allows for such ideas to be seen immediately by
 core projects—which, in turn, can accelerate their adoption.
 Primarily, then, the SPECs provide a mechanism for communicating ideas
 and their levels of adoption throughout the community.
 
-The list of core projects are shown in the the document header.  They
+The list of core projects are shown in the the document header. They
 appear based on having certain [core
 characteristics](#core-project-characteristics), described below. They
-also form the list of projects that can appear in the ``adopted-by``
+also form the list of projects that can appear in the `adopted-by`
 field of the SPEC headers.
 
 Having a core project adopt a SPEC signals to the community that the
@@ -92,7 +92,7 @@ adopt it, the stronger that signal becomes.
 ## Core Project Characteristics
 
 For coordination purposes, it is useful to formalize the definition of
-a "core project".  These are projects that are depended upon by most
+a "core project". These are projects that are depended upon by most
 of the other projects, often providing basic data structures, drawing
 primitives, or implementations of fundamental algorithms.
 
@@ -114,8 +114,8 @@ and regular releases on the [Python Package Index](https://pypi.org/).
 
 ### ✓ **developed in the open by their communities**
 
-Scientific Python Ecosystem packages are developed by their communities.  Development takes place in an
-online forum, and communications are public.  The developers of the project do
+Scientific Python Ecosystem packages are developed by their communities. Development takes place in an
+online forum, and communications are public. The developers of the project do
 not all reside at a single institution.
 
 ### ✓ **well documented and well tested**
@@ -141,7 +141,6 @@ mechanisms for data exchange.
 Array data, e.g., should support NumPy or similar.
 This ensures that core packages can "talk" to one another.
 
-
 # Implementation
 
 To register a project make a pull request to the
@@ -150,7 +149,7 @@ To register a project make a pull request to the
 ## Register a New Project
 
 To create your project registration file, change into the
-``projects`` directory and use the ``register.py`` script.
+`projects` directory and use the `register.py` script.
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to complete.
 

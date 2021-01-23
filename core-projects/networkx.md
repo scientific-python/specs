@@ -8,6 +8,5 @@ libraries-io: https://libraries.io/pypi/networkx
 license: https://networkx.org/documentation/stable/license.html
 license-type: 3-clause BSD
 adopters: jarrodmillman, stefanv
-discussion: 
+discussion:
 ---
-

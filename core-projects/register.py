@@ -7,7 +7,8 @@ Register your project as a SPE.
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../.tools'))
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.tools"))
 from tools import prompt
 
 

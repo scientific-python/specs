@@ -1,7 +1,7 @@
 def prompt(
-        prompt_text,
-        validate=lambda x: x if x else None,
-        default=None
+    prompt_text,
+    validate=lambda x: x if x else None,
+    default=None,
 ):
     """Prompt the user for input.
 
@@ -17,6 +17,7 @@ def prompt(
         that this value is not validated.
 
     """
+
     def valid(s):
         if isinstance(s, str):
             s = s.strip()
@@ -30,12 +31,12 @@ def prompt(
             value = None
 
         if value is None:
-            print('Invalid input; please try again.')
+            print("Invalid input; please try again.")
 
         return value
 
-    default_flag = f' [{default}]' if default is not None else ''
-    while (ans := valid(input(f'{prompt_text}{default_flag}: '))) is None:
+    default_flag = f" [{default}]" if default is not None else ""
+    while (ans := valid(input(f"{prompt_text}{default_flag}: "))) is None:
         pass
 
     return ans

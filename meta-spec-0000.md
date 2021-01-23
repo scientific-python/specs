@@ -67,7 +67,7 @@ To get feedback from the larger community, we also recommend creating a new
 selecting the
 [Ideas](https://github.com/scientific-python/specs/discussions/categories/ideas)
 category—as early in the process as possible.
-The discussion will be linked to the new SPEC using the ``discussion``
+The discussion will be linked to the new SPEC using the `discussion`
 field in the SPEC header.
 
 Each new discussion should focus on a single key proposal or new idea for
@@ -80,7 +80,7 @@ Contributors must adhere to our [Code of Conduct]({{< relref
 
 Creating a new SPEC requires (1) making a pull request with a new SPEC document (Markdown file) and (2) starting a related discussion.
 
-To create a new SPEC document, use the ``quickstart.py`` script.
+To create a new SPEC document, use the `quickstart.py` script.
 Located at the top-level of the [SPEC
 repository](https://github.com/scientific-python/specs),
 the script will ask you a few questions and then create a new file
@@ -88,6 +88,7 @@ appropriately named with a basic template for you to complete.
 
 For example,
 
+<!-- prettier-ignore-start -->
 {{< highlight bash >}}
 $ python quickstart.py
 Enter your name: Jarrod Millman
@@ -96,9 +97,11 @@ Enter the SPEC number: 8
 Enter the SPEC title: Minimum Supported Versions
 Enter the discussion number: 13
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
-creates the file ``spec-0008.md`` containing:
+creates the file `spec-0008.md` containing:
 
+<!-- prettier-ignore-start -->
 {{< highlight markdown >}}
 ---
 title: "SPEC 1 — Minimum Supported Versions"
@@ -133,13 +136,14 @@ information as needed.
 -->
 
 {{< /highlight >}}
+<!-- prettier-ignore-end -->
 
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
 Before the SPEC is merged, the SSC may ask you to change the SPEC number so that
 it doesn't conflict with another PR.
 If so, just rename the file as appropriate and update the SPEC number in the
-``title`` field of the SPEC header.
+`title` field of the SPEC header.
 
 The script currently only supports adding one author.
 If you need to add additional authors, just edit the text file.
@@ -147,6 +151,7 @@ If you need to add additional authors, just edit the text file.
 For example, adding a second author the above template requires the following
 change to the SPEC header:
 
+<!-- prettier-ignore-start -->
 {{< highlight markdown >}}
 ---
 title: "SPEC 1 — Minimum Supported Versions"
@@ -159,11 +164,12 @@ discussion: https://github.com/scientific-python/specs/discussions/13
 adopted-by:
 ---
 {{< / highlight >}}
+<!-- prettier-ignore-end -->
 
 While it is recommended that you create a new discussion before creating the PR,
 you can also leave the discussion number blank.
 Before the PR is merged, you will be asked to verify that you've created a
-new discussion and that the ``discussion`` field is correct.
+new discussion and that the `discussion` field is correct.
 
 Once the SPEC is in reasonable shape, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs)
@@ -187,6 +193,6 @@ recommend creating a new proposal to list the SPECs adopted along with links to
 project discussions leading to adoption.
 
 Once a project adopts a SPEC, they should add their project name to the
-``adopted-by`` field in the SPEC header.
+`adopted-by` field in the SPEC header.
 
 # Notes
