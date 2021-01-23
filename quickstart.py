@@ -7,35 +7,22 @@ Quickly setup stub for new SPEC proposal.
 
 from datetime import datetime
 
-
-def input_(
-        prompt,
-        optional=False,
-        validate=lambda x: x if x else None
-):
-    def valid(s):
-        if optional and not s:
-            return ""
-        try:
-            return validate(s)
-        except (ValueError, TypeError):
-            print('Invalid input; please try again.')
-            return None
-
-    optional_flag = ' [optional]' if optional else ''
-    while (ans := valid(input(f'{prompt}{optional_flag}: '))) is None:
-        pass
-
-    return ans
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '.tools'))
+from tools import prompt
 
 
 now = datetime.now()
-author = input_("Your Name")
-email = input_("Your Email Address")
-number = input_("SPEC number", validate=lambda x: int(x))
-title = input_("SPEC title")
-discussion = input_("Discussion number",
-                    optional=True, validate=lambda x: int(x))
+author = prompt("Your Name")
+email = prompt("Your Email Address")
+number = prompt("SPEC number", validate=lambda x: int(x))
+title = prompt("SPEC title")
+discussion = prompt(
+    "Discussion number",
+    default="",
+    validate=lambda x: int(x)
+)
 
 filename = f"spec-{number:04d}.md"
 text = f"""---
