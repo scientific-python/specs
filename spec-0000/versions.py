@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 
-plus42 = timedelta(days=int(365 * 3.5 + 1))
-plus24 = timedelta(days=int(365 * 2 + 1))
+plus36 = timedelta(days=int(365 * 3))
+plus24 = timedelta(days=int(365 * 2))
 
 # Release data
 
@@ -42,7 +42,7 @@ def support_window(project, releases, support_time):
     return windows
 
 
-py_support_window = support_window("Python", py_releases, plus42)
+py_support_window = support_window("Python", py_releases, plus36)
 np_support_window = support_window("NumPy", np_releases, plus24)
 sp_support_window = support_window("SciPy", sp_releases, plus24)
 mpl_support_window = support_window("Matplotlib", mpl_releases, plus24)
