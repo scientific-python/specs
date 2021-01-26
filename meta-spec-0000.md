@@ -78,7 +78,8 @@ Contributors must adhere to our [Code of Conduct]({{< relref
 
 ## Create and submit a new SPEC
 
-Creating a new SPEC requires (1) making a pull request with a new SPEC document (Markdown file) and (2) starting a related discussion.
+Creating a new SPEC requires (1) making a pull request with a new SPEC document
+(Markdown file) and (2) starting a related discussion.
 
 To create a new SPEC document, use the `quickstart.py` script.
 Located at the top-level of the [SPEC
@@ -178,21 +179,43 @@ repository.
 ## Review and Resolution
 
 The SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
-"/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea fits as a SPEC and
-monitor subsequent discussion.
+"/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea
+fits as a SPEC and monitor subsequent discussion.
 If there is sufficient interest, the SSC will convert the discussion to the
 [SPEC](https://github.com/scientific-python/specs/discussions/categories/specs)
 category and assign it a SPEC number.
 When it is ready the SSC will merge the PR.
 Additional PRs may be made to update or expand the SPEC.
 
-## Enhancement Proposals and SPECs
+## Planning SPEC
 
-For projects with an existing enhancement proposal process in place, we
-recommend creating a new proposal to list the SPECs adopted along with links to
-project discussions leading to adoption.
+- SPEC where things are being prototyped, not ready for adoption
+- a few Core Projects could test things out
 
-Once a project adopts a SPEC, they should add their project name to the
-`adopted-by` field in the SPEC header.
+## Core Project Adoption
 
-# Notes
+Core Projects (see [MetaSPEC 2 — Core Projects]({{< relref
+"/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and should
+provide feedback as early in the process as possible.
+They are also encouraged to consider adopting SPECs to help drive the ecosystem
+coordination process forward.
+
+For SPECs that are trivial to adopt, the Core Projects may discuss whether to
+adopt a SPEC on their mailing list, issue tracker, or on a pull request.
+SPECs that require more work to adopt may require more detailed consideration.
+For example, certain SPECs may require Core Projects create their own enhancement
+proposals to figure out whether and how to adopt a SPEC.
+
+Regardless, once a Core Project adopts a SPEC, they should add their project
+name to the `adopted-by` field in the SPEC header via a pull request against
+the [scientific-python/specs](https://github.com/scientific-python/specs)
+repository.
+
+## Larger Ecosystem Adoption
+
+The much larger ecosystem of scientific Python projects (outside the small set of
+specially designated "Core Projects") are encouraged to discuss and adopt SPECs.
+
+The SPEC adoption process for these projects is identical to the process for
+the Core Projects except that these projects will not be included in the list
+of Core Projects that have adopted the SPEC.
