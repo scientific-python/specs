@@ -111,7 +111,7 @@ draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://github.com/scientific-python/specs/discussions/13
-adopted-by:
+endorsed-by:
 ---
 
 # Description
@@ -162,7 +162,7 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
 discussion: https://github.com/scientific-python/specs/discussions/13
-adopted-by:
+endorsed-by:
 ---
 {{< / highlight >}}
 <!-- prettier-ignore-end -->
@@ -192,30 +192,34 @@ Additional PRs may be made to update or expand the SPEC.
 - SPEC where things are being prototyped, not ready for adoption
 - a few Core Projects could test things out
 
-## Core Project Adoption
+## Core Project Endorsement
 
 Core Projects (see [MetaSPEC 2 — Core Projects]({{< relref
 "/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and should
 provide feedback as early in the process as possible.
-They are also encouraged to consider adopting SPECs to help drive the ecosystem
+They are also encouraged to consider supporting SPECs to help drive the ecosystem
 coordination process forward.
 
-For SPECs that are trivial to adopt, the Core Projects may discuss whether to
-adopt a SPEC on their mailing list, issue tracker, or on a pull request.
-SPECs that require more work to adopt may require more detailed consideration.
-For example, certain SPECs may require Core Projects create their own enhancement
-proposals to figure out whether and how to adopt a SPEC.
+What endorsing a SPEC means exactly may depend on the situation and should
+be discussed in individual the SPECs.
+When appropriate endorsing a SPEC may mean merely that the project has
+adopted the SPEC itself and encourages other projects to do so as well.
+It may mean, for instance, providing infrastructure necessary for downstream
+projects that would like to adopt a SPEC.
 
-Regardless, once a Core Project adopts a SPEC, they should add their project
-name to the `adopted-by` field in the SPEC header via a pull request against
+Core Projects may discuss whether to endorse a SPEC on their mailing list,
+issue tracker, or on a pull request.
+Certain SPECs may require Core Projects create their own enhancement
+proposals to figure out whether and how to endorse a SPEC.
+
+Regardless, once a Core Project decideds to endorse a SPEC, they should add their project
+name to the `endorsed-by` field in the SPEC header via a pull request against
 the [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
 
-## Larger Ecosystem Adoption
+## Ecosystem Adoption
 
-The much larger ecosystem of scientific Python projects (outside the small set of
-specially designated "Core Projects") are encouraged to discuss and adopt SPECs.
+All projects in the ecosystem of scientific Python projects are encouraged to
+discuss and adopt SPECs.
 
-The SPEC adoption process for these projects is identical to the process for
-the Core Projects except that these projects will not be included in the list
-of Core Projects that have adopted the SPEC.
+The SPEC adoption process may vary be SPEC and should be specified in the SPEC.

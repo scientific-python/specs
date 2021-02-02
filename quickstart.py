@@ -29,7 +29,7 @@ draft: false
 author:
   - "{author} <{email}>"
 discussion: {f'https://github.com/scientific-python/specs/discussions/{discussion}' if discussion else ''}
-adopted-by:
+endorsed-by:
 ---
 
 # Description

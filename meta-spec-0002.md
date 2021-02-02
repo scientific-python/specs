@@ -6,7 +6,7 @@ author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion:
-adopted-by:
+endorsed-by:
 ---
 
 # Description
@@ -31,11 +31,11 @@ explains how to amend the list in the Implementation section below.
 These Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
 engage in the SPEC design and discussion process.
-Moreover, Core Projects may appear in the `adopted-by` field of a SPEC header.
+Moreover, Core Projects may appear in the `endorsed-by` field of a SPEC header.
 Having a Core project adopt a SPEC signals to the community that the SPEC has
 been vetted by a mature project with a healthy developer review process in-place.
 It also allows more specialized projects to easily see
-whether the Core Projects they depend on have adopted a given SPEC.
+whether the Core Projects they depend on have endorse a given SPEC.
 
 Since SPECs can be proposed by anyone including members of new or more
 specialized projects, having Core Projects consider these proposals
