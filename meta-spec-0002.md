@@ -53,7 +53,7 @@ Project being on list means
 
 SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
 "/specs/meta-spec-0001.md" >}})
-decides if a project should be removed (unlikely) or added (more possible)
+decides if a project is added (possible) or removed (unlikely).
 
 ## Criteria
 

@@ -57,8 +57,8 @@ when appropriate.
 
 Any community member can propose a new SPEC by making making a pull request to
 the [SPEC repository](https://github.com/scientific-python/specs).
-However, we highly recommended that the new proposal should first be discussed
-in at least one important project in the ecosystem.
+However, we highly recommended that the new proposal be discussed
+in at least one important project in the ecosystem first.
 Often it is helpful also to have drafted a proof of concept implementation
 for technical SPECs.
 
@@ -195,13 +195,13 @@ Additional PRs may be made to update or expand the SPEC.
 ## Core Project Endorsement
 
 Core Projects (see [MetaSPEC 2 — Core Projects]({{< relref
-"/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and should
-provide feedback as early in the process as possible.
+"/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and provide
+feedback as early in the process as possible.
 They are also encouraged to consider supporting SPECs to help drive the ecosystem
 coordination process forward.
 
-What endorsing a SPEC means exactly may depend on the situation and should
-be discussed in individual the SPECs.
+What endorsing a SPEC means exactly may depend on the situation and is
+discussed in individual the SPECs.
 When appropriate endorsing a SPEC may mean merely that the project has
 adopted the SPEC itself and encourages other projects to do so as well.
 It may mean, for instance, providing infrastructure necessary for downstream
@@ -212,7 +212,7 @@ issue tracker, or on a pull request.
 Certain SPECs may require Core Projects create their own enhancement
 proposals to figure out whether and how to endorse a SPEC.
 
-Regardless, once a Core Project decideds to endorse a SPEC, they should add their project
+Regardless, once a Core Project decideds to endorse a SPEC, they then add their project
 name to the `endorsed-by` field in the SPEC header via a pull request against
 the [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
@@ -222,4 +222,4 @@ repository.
 All projects in the ecosystem of scientific Python projects are encouraged to
 discuss and adopt SPECs.
 
-The SPEC adoption process may vary be SPEC and should be specified in the SPEC.
+The SPEC adoption process may vary be SPEC and is specified in the SPEC.
