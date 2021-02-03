@@ -57,8 +57,8 @@ when appropriate.
 
 Any community member can propose a new SPEC by making making a pull request to
 the [SPEC repository](https://github.com/scientific-python/specs).
-However, we highly recommended that the new proposal should first be discussed
-in at least one important project in the ecosystem.
+However, we highly recommended that the new proposal be discussed
+in at least one important project in the ecosystem first.
 Often it is helpful also to have drafted a proof of concept implementation
 for technical SPECs.
 
@@ -78,7 +78,8 @@ Contributors must adhere to our [Code of Conduct]({{< relref
 
 ## Create and submit a new SPEC
 
-Creating a new SPEC requires (1) making a pull request with a new SPEC document (Markdown file) and (2) starting a related discussion.
+Creating a new SPEC requires (1) making a pull request with a new SPEC document
+(Markdown file) and (2) starting a related discussion.
 
 To create a new SPEC document, use the `quickstart.py` script.
 Located at the top-level of the [SPEC
@@ -110,7 +111,7 @@ draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://github.com/scientific-python/specs/discussions/13
-adopted-by:
+endorsed-by:
 ---
 
 # Description
@@ -161,7 +162,7 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
 discussion: https://github.com/scientific-python/specs/discussions/13
-adopted-by:
+endorsed-by:
 ---
 {{< / highlight >}}
 <!-- prettier-ignore-end -->
@@ -178,21 +179,47 @@ repository.
 ## Review and Resolution
 
 The SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
-"/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea fits as a SPEC and
-monitor subsequent discussion.
+"/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea
+fits as a SPEC and monitor subsequent discussion.
 If there is sufficient interest, the SSC will convert the discussion to the
 [SPEC](https://github.com/scientific-python/specs/discussions/categories/specs)
 category and assign it a SPEC number.
 When it is ready the SSC will merge the PR.
 Additional PRs may be made to update or expand the SPEC.
 
-## Enhancement Proposals and SPECs
+## Planning SPEC
 
-For projects with an existing enhancement proposal process in place, we
-recommend creating a new proposal to list the SPECs adopted along with links to
-project discussions leading to adoption.
+- SPEC where things are being prototyped, not ready for adoption
+- a few Core Projects could test things out
 
-Once a project adopts a SPEC, they should add their project name to the
-`adopted-by` field in the SPEC header.
+## Core Project Endorsement
 
-# Notes
+Core Projects (see [MetaSPEC 2 — Core Projects]({{< relref
+"/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and provide
+feedback as early in the process as possible.
+They are also encouraged to consider supporting SPECs to help drive the ecosystem
+coordination process forward.
+
+What endorsing a SPEC means exactly may depend on the situation and is
+discussed in individual the SPECs.
+When appropriate endorsing a SPEC may mean merely that the project has
+adopted the SPEC itself and encourages other projects to do so as well.
+It may mean, for instance, providing infrastructure necessary for downstream
+projects that would like to adopt a SPEC.
+
+Core Projects may discuss whether to endorse a SPEC on their mailing list,
+issue tracker, or on a pull request.
+Certain SPECs may require Core Projects create their own enhancement
+proposals to figure out whether and how to endorse a SPEC.
+
+Regardless, once a Core Project decideds to endorse a SPEC, they then add their project
+name to the `endorsed-by` field in the SPEC header via a pull request against
+the [scientific-python/specs](https://github.com/scientific-python/specs)
+repository.
+
+## Ecosystem Adoption
+
+All projects in the ecosystem of scientific Python projects are encouraged to
+discuss and adopt SPECs.
+
+The SPEC adoption process may vary be SPEC and is specified in the SPEC.

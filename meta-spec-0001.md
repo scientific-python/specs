@@ -21,7 +21,7 @@ They do, however,
   forum,
 - determine which new ideas are assigned a SPEC number as described in
   [MetaSPEC 0 — Purpose and Process]({{< relref "/specs/meta-spec-0000.md" >}}),
-- decide whether new MetaSPECS (i.e., SPECS about SPECS)
+- decide whether new MetaSPECs (i.e., SPECs about SPECs)
   are accepted and approve any changes to them, and
 - serve as a communication channel to and from their projects as well
   as the larger ecosystem.
@@ -136,8 +136,8 @@ to consensus-seeking and voting.
 ## Who should be a member?
 
 Members of the SSC should be active in the scientific Python ecosystem and
-should have a demonstrated interest in the SPECS.
-Examples of demonstrated interest include submitting SPECS, engaging in SPEC
+should have a demonstrated interest in the SPECs.
+Examples of demonstrated interest include submitting SPECs, engaging in SPEC
 discussions, reviewing SPEC PRs, or advocating SPEC adoption in ecosystem
 projects.
 Individuals can request to join the SSC and the SSC can ask individuals
@@ -160,7 +160,7 @@ should
 (1) be added to the SSC member listing above,
 (2) be added to the [SSC
 Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
-(3) be added to the SSC private mailing list.
+(3) be added to the [SSC private mailing list](https://groups.io/g/spec-steering-committee/members).
 
 ## How do you remove a member?
 
@@ -169,6 +169,6 @@ they should
 (1) be moved to the list of Emeritus SSC members (below the list of active members),
 (2) be removed from the [SSC
 Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
-(3) be removed from the SSC private mailing list.
+(3) be removed from the [SSC private mailing list](https://groups.io/g/spec-steering-committee/members).
 
 # Notes
