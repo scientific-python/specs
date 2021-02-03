@@ -28,7 +28,7 @@ of Projects found in the the `Core Projects` field in the shaded box above.
 This MetaSPEC describes the criteria for being a Core Project and
 explains how to amend the list in the [implementation section](#implementation) below.
 
-These Core Projects play a special role in the SPEC process.
+The Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
 engage in the SPEC design and discussion process.
 Moreover, Core Projects may appear in the `endorsed-by` field of a SPEC header.
