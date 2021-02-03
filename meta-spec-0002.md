@@ -39,7 +39,7 @@ whether the Core Projects they depend on have endorsed a given SPEC.
 
 Since SPECs can be proposed by anyone including members of new or more
 specialized projects, having Core Projects consider these proposals
-provides a convenient mechanism for these projects and individuals
+provides a convenient mechanism for projects and individuals
 to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
