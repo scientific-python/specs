@@ -132,7 +132,7 @@ where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 
 Public communication takes place on this GitHub repository.
-Private ommunication within the SSC takes place on [SSC private mailing list](https://groups.io/g/spec-steering-committee/).
+Private communication within the SSC takes place on [SSC private mailing list](https://groups.io/g/spec-steering-committee/).
 SSC members are expected to be aware of conversations on this list to lend validity
 to consensus-seeking and voting.
 

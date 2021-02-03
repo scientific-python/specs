@@ -59,8 +59,7 @@ Often it is helpful also to have drafted a proof of concept implementation
 for technical SPECs.
 
 To get feedback from the larger community, we also recommend creating a new
-[discussion](https://github.com/scientific-python/specs/discussions/new)—
-selecting the
+[discussion](https://github.com/scientific-python/specs/discussions/new)—selecting the
 [Ideas](https://github.com/scientific-python/specs/discussions/categories/ideas)
 category—as early in the process as possible.
 The discussion will be linked to the new SPEC using the `discussion`
@@ -86,18 +85,18 @@ For example,
 <!-- prettier-ignore-start -->
 {{< highlight bash >}}
 $ python quickstart.py
-Enter your name: Jarrod Millman
-Enter your email address: millman@berkeley.edu
-Enter the SPEC number: 8
-Enter the SPEC title: Minimum Supported Versions
-Enter the discussion number: 13
+Your Name: Jarrod Millman
+Your Email Address: millman@berkeley.edu
+SPEC number: 8
+SPEC title: Minimum Supported Versions
+Discussion number []: 13
 {{< /highlight >}}
 <!-- prettier-ignore-end -->
 
 creates the file `spec-0008.md` containing:
 
 <!-- prettier-ignore-start -->
-{{< highlight markdown >}}
+{{< highlight yaml >}}
 ---
 title: "SPEC 1 — Minimum Supported Versions"
 date: 2021-01-10
@@ -159,7 +158,7 @@ For example, adding a second author the above template requires the following
 change to the SPEC header:
 
 <!-- prettier-ignore-start -->
-{{< highlight markdown >}}
+{{< highlight yaml >}}
 ---
 title: "SPEC 1 — Minimum Supported Versions"
 date: 2021-01-10

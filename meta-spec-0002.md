@@ -14,7 +14,7 @@ endorsed-by:
 The scientific Python ecosystem is a federation of projects
 that interact well with one another and that follow similar norms of
 development, documentation, testing, and so forth.
-This federation is formed around a few "core projects."
+This federation is formed around a few "core projects".
 These are projects that are depended upon by most of the other projects,
 often providing basic data structures, drawing primitives,
 or implementations of fundamental algorithms.
@@ -25,8 +25,8 @@ In fact, more specialized projects sometimes model themselves on the core packag
 
 For coordination purposes, we define the Core Projects to be the list
 of Projects found in the the `Core Projects` field in the shaded box above.
-This MetaSPEC describes the criteria for being a Core Projects and
-explains how to amend the list in the Implementation section below.
+This MetaSPEC describes the criteria for being a Core Project and
+explains how to amend the list in the [implementation section](#implementation) below.
 
 These Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
@@ -50,7 +50,7 @@ Project being on list means
 2.  project has agreed to [responsibilities](#responsibilities)
 
 SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
-"/specs/meta-spec-0001.md" >}})
+"/specs/meta-spec-0001.md" >}}))
 decides if a project is added (possible) or removed (unlikely).
 
 ## Criteria
