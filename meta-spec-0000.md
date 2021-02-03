@@ -73,8 +73,9 @@ Contributors must adhere to our [Code of Conduct]({{< relref
 ## New SPECs
 
 Creating a new SPEC requires:
-  1) making a pull request with a new SPEC document (Markdown file), and
-  2) starting a related discussion.
+
+1. making a pull request with a new SPEC document (Markdown file), and
+2. starting a related discussion.
 
 To create a new SPEC document, use the `quickstart.py` script.
 Located at the top-level of the [SPEC
