@@ -148,8 +148,9 @@ information as needed.
 
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
-Before the SPEC is merged, the SSC may ask you to change the SPEC number so that
-it doesn't conflict with another PR.
+Before the SPEC is merged, the [SSC]({{< relref "/specs/meta-spec-0001.md" >}})
+may ask you to change the SPEC number so that it doesn't conflict with another
+PR.
 If so, just rename the file as appropriate and update the SPEC number in the
 `title` field of the SPEC header.
 
