@@ -35,7 +35,7 @@ Moreover, Core Projects may appear in the `endorsed-by` field of a SPEC header.
 Having a Core project endorse a SPEC signals to the community that the SPEC has
 been vetted by a mature project with a healthy developer review process in-place.
 It also allows more specialized projects to easily see
-whether the Core Projects they depend on have endorse a given SPEC.
+whether the Core Projects they depend on have endorsed a given SPEC.
 
 Since SPECs can be proposed by anyone including members of new or more
 specialized projects, having Core Projects consider these proposals
