@@ -211,7 +211,7 @@ coordination process forward.
 
 What endorsing a SPEC means exactly may depend on the situation and is
 discussed in individual the SPECs.
-When appropriate endorsing a SPEC may mean merely that the project has
+In some circumstances, endorsing a SPEC may mean merely that the project has
 adopted the SPEC itself and encourages other projects to do so as well.
 It may mean, for instance, providing infrastructure necessary for downstream
 projects that would like to adopt a SPEC.
