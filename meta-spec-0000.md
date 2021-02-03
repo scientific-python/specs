@@ -11,7 +11,7 @@ discussion: https://github.com/scientific-python/specs/discussions/9
 # Description
 
 Scientific Python Ecosystem Coordination documents or SPECs, for short, provide
-operational guidelines for projects in the Scientific Python ecosystem.
+operational guidelines for projects in the scientific Python ecosystem.
 Their goal is to coordinate the ecosystem and to provide a more unified
 experience for users.
 
