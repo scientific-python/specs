@@ -28,18 +28,18 @@ of Projects found in the the `Core Projects` field in the shaded box above.
 This MetaSPEC describes the criteria for being a Core Project and
 explains how to amend the list in the [implementation section](#implementation) below.
 
-These Core Projects play a special role in the SPEC process.
+The Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
 engage in the SPEC design and discussion process.
 Moreover, Core Projects may appear in the `endorsed-by` field of a SPEC header.
 Having a Core project endorse a SPEC signals to the community that the SPEC has
 been vetted by a mature project with a healthy developer review process in-place.
 It also allows more specialized projects to easily see
-whether the Core Projects they depend on have endorse a given SPEC.
+whether the Core Projects they depend on have endorsed a given SPEC.
 
 Since SPECs can be proposed by anyone including members of new or more
 specialized projects, having Core Projects consider these proposals
-provides a convenient mechanism for these projects and individuals
+provides a convenient mechanism for projects and individuals
 to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
@@ -77,8 +77,7 @@ The developers of the project do not all reside at a single institution.
 
 Core Projects are **well documented and well tested**.
 They document their APIs, and have inline documentation (most often in
-the form of [numpydoc](https://numpydoc.readthedocs.io/) or
-[napoleon](https://sphinxcontrib-napoleon.readthedocs.io/)).
+the form of the [numpydoc docstring standard](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard).
 They also have a high level of test coverage to ensure that a) the code
 does what it is intended to and b) new developers can modify the code without
 fear of breaking it.

@@ -11,7 +11,7 @@ discussion: https://github.com/scientific-python/specs/discussions/9
 # Description
 
 Scientific Python Ecosystem Coordination documents or SPECs, for short, provide
-operational guidelines for projects in the Scientific Python ecosystem.
+operational guidelines for projects in the scientific Python ecosystem.
 Their goal is to coordinate the ecosystem and to provide a more unified
 experience for users.
 
@@ -72,8 +72,11 @@ Contributors must adhere to our [Code of Conduct]({{< relref
 
 ## New SPECs
 
-Creating a new SPEC requires (1) making a pull request with a new SPEC document
-(Markdown file) and (2) starting a related discussion.
+Creating a new SPEC requires:
+
+1. making a pull request with a new SPEC document (Markdown file), and
+2. starting a related discussion.
+
 To create a new SPEC document, use the `quickstart.py` script.
 Located at the top-level of the [SPEC
 repository](https://github.com/scientific-python/specs),
@@ -146,8 +149,9 @@ information as needed.
 
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
-Before the SPEC is merged, the SSC may ask you to change the SPEC number so that
-it doesn't conflict with another PR.
+Before the SPEC is merged, the [SSC]({{< relref "/specs/meta-spec-0001.md" >}})
+may ask you to change the SPEC number so that it doesn't conflict with another
+PR.
 If so, just rename the file as appropriate and update the SPEC number in the
 `title` field of the SPEC header.
 
@@ -207,7 +211,7 @@ coordination process forward.
 
 What endorsing a SPEC means exactly may depend on the situation and is
 discussed in individual the SPECs.
-When appropriate endorsing a SPEC may mean merely that the project has
+In some circumstances, endorsing a SPEC may mean merely that the project has
 adopted the SPEC itself and encourages other projects to do so as well.
 It may mean, for instance, providing infrastructure necessary for downstream
 projects that would like to adopt a SPEC.
