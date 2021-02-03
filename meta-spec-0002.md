@@ -18,7 +18,7 @@ This federation is formed around a few "core projects."
 These are projects that are depended upon by most of the other projects,
 often providing basic data structures, drawing primitives,
 or implementations of fundamental algorithms.
-Due to their central position in the ecosystem,the policies, practices, and tooling
+Due to their central position in the ecosystem, the policies, practices, and tooling
 used by the core projects are widely seen by the ecosystem
 and impact many other projects.
 In fact, more specialized projects sometimes model themselves on the core packages.
@@ -32,7 +32,7 @@ These Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
 engage in the SPEC design and discussion process.
 Moreover, Core Projects may appear in the `endorsed-by` field of a SPEC header.
-Having a Core project adopt a SPEC signals to the community that the SPEC has
+Having a Core project endorse a SPEC signals to the community that the SPEC has
 been vetted by a mature project with a healthy developer review process in-place.
 It also allows more specialized projects to easily see
 whether the Core Projects they depend on have endorse a given SPEC.
@@ -43,8 +43,6 @@ provides a convenient mechanism for these projects and individuals
 to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
-
-We intend the list to be pretty stable.
 
 Project being on list means
 
@@ -92,7 +90,7 @@ The 3-clause (also called "modified" or "new") BSD license is by far the most co
 
 - keep project registration information updated
 - participate in the SPEC process
-- discuss and adopt SPECs that make sense for them
+- discuss, adopt, and endorse SPECs
 
 ## New Core Project
 
@@ -106,6 +104,6 @@ If a project would like to be a Core Project, they should proceed as follows:
    repository.
 
 To create your project registration file, change into the
-`projects` directory and use the `register.py` script.
+`core-projects` directory and use the `register.py` script.
 The script will ask you a few questions and then create a new file
-appropriately named with a basic template for you to complete.
+appropriately named with a basic template for you to check and complete.

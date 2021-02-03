@@ -30,9 +30,10 @@ expectation that all SPECs must be adopted by all projects.
 That said, SPECs only serve a meaningful purpose if they are adopted by several
 projects—and their authority largely stems from the extent to which they are.
 
-In practice, this means that SPECs will be tightly integrated with core
-projects, but have to remain flexible enough for projects to implement them according
-to their own constraints.
+In practice, this means that SPECs will be tightly integrated with the Core
+Projects (see [MetaSPEC 2 — Core Projects]({{< relref
+"/specs/meta-spec-0002.md" >}}) for details), but have to remain flexible enough
+for projects to implement them according to their own constraints.
 
 ## Format
 
@@ -47,11 +48,6 @@ Each SPEC has a corresponding
 [discussion](https://github.com/scientific-python/specs/discussions/categories/specs)
 with the same title, where anyone can comment, ask questions, or vote on
 existing comments.
-Often conversations about SPECs will occur on individual project's communication
-channels (e.g., issues, pull requests, enhancement proposals, or commit messages).
-It is the project's responsibility to link to these discussions on the official
-[SPEC discussion](https://github.com/scientific-python/specs/discussions/categories/specs)
-when appropriate.
 
 # Implementation
 
@@ -69,18 +65,16 @@ selecting the
 category—as early in the process as possible.
 The discussion will be linked to the new SPEC using the `discussion`
 field in the SPEC header.
-
 Each new discussion should focus on a single key proposal or new idea for
 coordinating projects in the scientific Python ecosystem.
 
 Contributors must adhere to our [Code of Conduct]({{< relref
 "/about/code_of_conduct.md" >}}).
 
-## Create and submit a new SPEC
+## New SPECs
 
 Creating a new SPEC requires (1) making a pull request with a new SPEC document
 (Markdown file) and (2) starting a related discussion.
-
 To create a new SPEC document, use the `quickstart.py` script.
 Located at the top-level of the [SPEC
 repository](https://github.com/scientific-python/specs),
@@ -209,7 +203,7 @@ Additional PRs may be made to update or expand the SPEC.
 Core Projects (see [MetaSPEC 2 — Core Projects]({{< relref
 "/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and provide
 feedback as early in the process as possible.
-They are also encouraged to consider supporting SPECs to help drive the ecosystem
+They are also encouraged to consider endorsing SPECs to help drive the ecosystem
 coordination process forward.
 
 What endorsing a SPEC means exactly may depend on the situation and is
@@ -224,7 +218,7 @@ issue tracker, or on a pull request.
 Certain SPECs may require Core Projects create their own enhancement
 proposals to figure out whether and how to endorse a SPEC.
 
-Regardless, once a Core Project decideds to endorse a SPEC, they then add their project
+Regardless, once a Core Project decides to endorse a SPEC, they then add their project
 name to the `endorsed-by` field in the SPEC header via a pull request against
 the [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
