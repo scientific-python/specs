@@ -1,7 +1,7 @@
 ---
 title: "MetaSPEC 2 — Core Projects"
 date: 2021-01-12
-draft: false
+draft: true
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"

@@ -1,7 +1,7 @@
 ---
 title: "MetaSPEC 1 — Governance and Decision Making"
 date: 2021-01-06
-draft: false
+draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
