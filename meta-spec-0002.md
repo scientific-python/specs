@@ -77,8 +77,7 @@ The developers of the project do not all reside at a single institution.
 
 Core Projects are **well documented and well tested**.
 They document their APIs, and have inline documentation (most often in
-the form of [numpydoc](https://numpydoc.readthedocs.io/) or
-[napoleon](https://sphinxcontrib-napoleon.readthedocs.io/)).
+the form of the [numpydoc docstring standard](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard).
 They also have a high level of test coverage to ensure that a) the code
 does what it is intended to and b) new developers can modify the code without
 fear of breaking it.
