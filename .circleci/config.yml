@@ -34,7 +34,7 @@ jobs:
             sed -i 's/\/posts/\/posts.html/g' config.toml
             sed -i 's/\/specs/\/specs.html/g' config.toml
             sed -i 's/\/summits/\/summits.html/g' config.toml
-            hugo
+            hugo --buildDrafts
 
       - store_artifacts:
           path: /tmp/scientific-python.org/public/
