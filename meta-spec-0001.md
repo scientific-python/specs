@@ -35,7 +35,7 @@ They do, however,
 
 {{< person
       name="Matthias Bussonnier"
-      github_handle="@carreau"
+      github_handle="carreau"
       avatar="https://avatars.githubusercontent.com/u/335567?s=200"
       projects="ipython"
 >}}
