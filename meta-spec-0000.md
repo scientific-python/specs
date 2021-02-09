@@ -45,7 +45,7 @@ repository](https://github.com/scientific-python/scientific-python.org/) using
 [Hugo](https://gohugo.io/) and deployed to
 [https://scientific-python.org/specs/](https://scientific-python.org/specs/).
 Each SPEC has a corresponding
-[discussion](https://github.com/scientific-python/specs/discussions/categories/specs)
+[discussion](https://discuss.scientific-python.org/c/specs/accepted/15)
 with the same title, where anyone can comment, ask questions, or vote on
 existing comments.
 
@@ -59,8 +59,8 @@ Often it is helpful also to have drafted a proof of concept implementation
 for technical SPECs.
 
 To get feedback from the larger community, we also recommend creating a new
-[discussion](https://github.com/scientific-python/specs/discussions/new)—selecting the
-[Ideas](https://github.com/scientific-python/specs/discussions/categories/ideas)
+[discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)—under
+the `Accepted` subcategory of the `SPECs`
 category—as early in the process as possible.
 The discussion will be linked to the new SPEC using the `discussion`
 field in the SPEC header.
@@ -90,23 +90,22 @@ For example,
 $ python quickstart.py
 Your Name: Jarrod Millman
 Your Email Address: millman@berkeley.edu
-SPEC number: 8
+SPEC number: 0
 SPEC title: Minimum Supported Versions
-Discussion number []: 13
 {{< /highlight >}}
 <!-- prettier-ignore-end -->
 
-creates the file `spec-0008.md` containing:
+creates the file `spec-0000.md` containing:
 
 <!-- prettier-ignore-start -->
 {{< highlight yaml >}}
 ---
-title: "SPEC 1 — Minimum Supported Versions"
+title: "SPEC 0 — Minimum Supported Versions"
 date: 2021-01-10
 draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
-discussion: https://github.com/scientific-python/specs/discussions/13
+discussion: https://discuss.scientific-python.org/t/
 endorsed-by:
 ---
 
@@ -164,13 +163,13 @@ change to the SPEC header:
 <!-- prettier-ignore-start -->
 {{< highlight yaml >}}
 ---
-title: "SPEC 1 — Minimum Supported Versions"
+title: "SPEC 0 — Minimum Supported Versions"
 date: 2021-01-10
 draft: false
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
-discussion: https://github.com/scientific-python/specs/discussions/13
+discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
 endorsed-by:
 ---
 {{< / highlight >}}
@@ -191,15 +190,17 @@ The SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
 "/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea
 fits as a SPEC and monitor subsequent discussion.
 If there is sufficient interest, the SSC will convert the discussion to the
-[SPEC](https://github.com/scientific-python/specs/discussions/categories/specs)
-category and assign it a SPEC number.
+[Accepted](https://discuss.scientific-python.org/c/specs/accepted/15)
+subcategory and assign it a SPEC number.
 When it is ready the SSC will merge the PR.
 Additional PRs may be made to update or expand the SPEC.
 
+<!--
 ## Planning SPEC
 
 - SPEC where things are being prototyped, not ready for adoption
 - a few Core Projects could test things out
+-->
 
 ## Core Project Endorsement
 

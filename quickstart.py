@@ -19,7 +19,6 @@ author = prompt("Your Name")
 email = prompt("Your Email Address")
 number = prompt("SPEC number", validate=lambda x: int(x))
 title = prompt("SPEC title")
-discussion = prompt("Discussion number", default="", validate=lambda x: int(x))
 
 filename = f"spec-{number:04d}.md"
 text = f"""---
@@ -28,7 +27,7 @@ date: {now.strftime("%Y-%m-%d")}
 draft: false
 author:
   - "{author} <{email}>"
-discussion: {f'https://github.com/scientific-python/specs/discussions/{discussion}' if discussion else ''}
+discussion: https://discuss.scientific-python.org/t/
 endorsed-by:
 ---
 
