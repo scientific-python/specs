@@ -23,10 +23,69 @@ used by the core projects are widely seen by the ecosystem
 and impact many other projects.
 In fact, more specialized projects sometimes model themselves on the core packages.
 
-For coordination purposes, we define the Core Projects to be the list
-of Projects found in the the `Core Projects` field in the shaded box above.
-This MetaSPEC describes the criteria for being a Core Project and
-explains how to amend the list in the [implementation section](#implementation) below.
+## Core Projects
+
+<!-- prettier-ignore-start -->
+{{< gallery >}}
+
+{{< project
+      name="ipython"
+      github_handle=""
+      avatar=""
+>}}
+{{< project
+      name="numpy"
+      github_handle=""
+      avatar=""
+>}}
+{{< project
+      name="scipy"
+      github_handle=""
+      avatar=""
+>}}
+
+{{< /gallery >}}
+
+{{< gallery >}}
+
+{{< project
+      name="matplotlib"
+      github_handle=""
+      avatar=""
+>}}
+{{< project
+      name="pandas"
+      github_handle=""
+      avatar=""
+>}}
+{{< project
+      name="statsmodels"
+      github_handle=""
+      avatar=""
+>}}
+
+{{< /gallery >}}
+
+{{< gallery >}}
+
+{{< project
+      name="networkx"
+      github_handle=""
+      avatar=""
+>}}
+{{< project
+      name="scikit-image"
+      github_handle=""
+      avatar=""
+>}}
+{{< project
+      name="scikit-learn"
+      github_handle=""
+      avatar=""
+>}}
+
+{{< /gallery >}}
+<!-- prettier-ignore-end -->
 
 The Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
@@ -44,16 +103,10 @@ to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
 
-Project being on list means
+The [SSC]({{< relref "/specs/meta-spec-0001.md" >}})) maintains the list of
+Core Projects.
 
-1.  project meets the [criteria](#criteria)
-2.  project has agreed to [responsibilities](#responsibilities)
-
-SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
-"/specs/meta-spec-0001.md" >}}))
-decides if a project is added (possible) or removed (unlikely).
-
-## Criteria
+## What are the characteristics of a Core Project?
 
 Core Projects are **widely used in scientific research**.
 Of course, these tools are often used for other purposes too, and the
@@ -85,24 +138,45 @@ fear of breaking it.
 Core Projects are **open source**.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
 
-## Responsibilities
+## What are the responsibilities of being a Core Project?
 
 - keep project registration information updated
 - participate in the SPEC process
 - discuss, adopt, and endorse SPECs
 
-## New Core Project
+## How does a Core Project endorse a SPEC?
 
-If a project would like to be a Core Project, they should proceed as follows:
+Core Projects may discuss whether to endorse a SPEC on their mailing list,
+issue tracker, or on a pull request.
+Certain SPECs may require Core Projects create their own enhancement
+proposals to figure out whether and how to endorse a SPEC.
 
-1. verify project meets the criteria (above)
-2. see if there is interest by creating an issue/discussion?
-3. verify the project is willing to take on responsibilities
-4. create registration file, file a pull request against the
-   [scientific-python/specs](https://github.com/scientific-python/specs)
-   repository.
+Once a Core Project decides to endorse a SPEC, they add their project
+name to the `endorsed-by` field in the SPEC header via a pull request against
+the [scientific-python/specs](https://github.com/scientific-python/specs)
+repository.
+
+## How many Core Projects should there be?
+
+This is up to the SSC.
+But it is expected that the list of Core Projects will not rapidly change.
+
+## How do you add a project?
+
+If the SSC decides to admit a new Core Project and the project agrees, then
+the project create registration file, file a pull request against the
+[scientific-python/specs](https://github.com/scientific-python/specs) repository.
 
 To create your project registration file, change into the
 `core-projects` directory and use the `register.py` script.
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to check and complete.
+
+The SSC should also update the gallery above.
+
+## How do you remove a member?
+
+If a Core Project no longer wishes to participate or if the SSC decides to remove
+a Core Project, then the project registration file should be deleted, the project
+should be removed from the gallery above, and all occurrence of that Core Project
+in the `endorsed-by` field of a SPEC header should be deleted.

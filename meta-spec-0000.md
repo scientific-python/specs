@@ -5,7 +5,6 @@ draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
-discussion: https://github.com/scientific-python/specs/discussions/9
 ---
 
 # Description
@@ -27,13 +26,21 @@ Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
 A SPEC may not be a good fit for every single project, and thus there is no
 expectation that all SPECs must be adopted by all projects.
-That said, SPECs only serve a meaningful purpose if they are adopted by several
-projects—and their authority largely stems from the extent to which they are.
+Different SPECs may even recommend differing approaches to the same problem.
+In this case, some projects may adopt one of the competing SPECS,
+while some projects adopt the other one.
+SPECs may also propose only certain projects prototype a SPEC before
+encouraging other projects to consider adopting the SPEC.
 
-In practice, this means that SPECs will be tightly integrated with the Core
-Projects (see [MetaSPEC 2 — Core Projects]({{< relref
-"/specs/meta-spec-0002.md" >}}) for details), but have to remain flexible enough
-for projects to implement them according to their own constraints.
+That said, the purpose of the SPEC process is
+
+1. to help unify the ecosystem for users;
+2. to provide guidance to projects on technical issues or processes;
+3. to document standard APIs, development tools, and community practices; and
+4. to serve as a mechanism for ecosystem contributors to discuss shared problems and solutions.
+
+SPECs serve their purpose to the extent that they are discussed and adopted by
+several projects—and their authority stems from the extent to which they are.
 
 ## Format
 
@@ -49,14 +56,42 @@ Each SPEC has a corresponding
 with the same title, where anyone can comment, ask questions, or vote on
 existing comments.
 
+## Glossary
+
+Accepted
+: The [SPEC Steering Committee (SSC)]({{< relref "/specs/meta-spec-0001.md" >}})
+is responsible for accepting a SPEC.
+Accepting a SPEC means that is is assigned a number,
+included in the [SPEC listing]({{< relref "/spec_overview.md" >}}),
+and linked to a
+[`specs` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
+
+Adopted
+: Any project in the ecosystem can adopt any SPEC.
+Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
+Every project is resposible for deciding whether they will adopt a SPEC according
+to their own governance process.
+
+Endorsed
+: The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) can endorse any SPEC.
+Endorsements signal to the ecosystem that the core projects not only adopt
+the SPEC (when applicable), but that after carefully reviewing the SPEC
+that they want to use their reputation in the ecosystem to publicly encourage
+other projects to adopt a SPEC.
+When applicable, an endorsement also mean that the Core Project provides the
+necessary infrastructure required by other projects wishing to adopt the SPEC.
+
 # Implementation
 
 Any community member can propose a new SPEC by making making a pull request to
 the [SPEC repository](https://github.com/scientific-python/specs).
-However, we highly recommended that the new proposal be discussed
-in at least one important project in the ecosystem first.
-Often it is helpful also to have drafted a proof of concept implementation
-for technical SPECs.
+However, we highly recommended that you first do one or more of the following:
+
+1. discuss the idea in at least one project in the ecosystem,
+2. discuss the idea with at least one other member of the ecosystem,
+3. discuss the idea on the
+   [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/ideas/9),
+4. create a minimal, proof of concept prototype.
 
 To get feedback from the larger community, we also recommend creating a new
 [discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)—under
@@ -148,9 +183,8 @@ information as needed.
 
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
-Before the SPEC is merged, the [SSC]({{< relref "/specs/meta-spec-0001.md" >}})
-may ask you to change the SPEC number so that it doesn't conflict with another
-PR.
+Before the SPEC is merged, the SSC may ask you to change the SPEC number so
+that it doesn't conflict with another PR.
 If so, just rename the file as appropriate and update the SPEC number in the
 `title` field of the SPEC header.
 
@@ -186,50 +220,10 @@ repository.
 
 ## Review and Resolution
 
-The SSC (see [MetaSPEC 1 — Governance and Decision Making]({{< relref
-"/specs/meta-spec-0001.md" >}}) for details) will consider whether the new idea
-fits as a SPEC and monitor subsequent discussion.
+The SSC will consider whether the new idea fits as a SPEC and monitor
+subsequent discussion.
 If there is sufficient interest, the SSC will convert the discussion to the
 [Accepted](https://discuss.scientific-python.org/c/specs/accepted/15)
 subcategory and assign it a SPEC number.
 When it is ready the SSC will merge the PR.
 Additional PRs may be made to update or expand the SPEC.
-
-<!--
-## Planning SPEC
-
-- SPEC where things are being prototyped, not ready for adoption
-- a few Core Projects could test things out
--->
-
-## Core Project Endorsement
-
-Core Projects (see [MetaSPEC 2 — Core Projects]({{< relref
-"/specs/meta-spec-0002.md" >}}) for details) monitor SPEC proposals and provide
-feedback as early in the process as possible.
-They are also encouraged to consider endorsing SPECs to help drive the ecosystem
-coordination process forward.
-
-What endorsing a SPEC means exactly may depend on the situation and is
-discussed in individual the SPECs.
-In some circumstances, endorsing a SPEC may mean merely that the project has
-adopted the SPEC itself and encourages other projects to do so as well.
-It may mean, for instance, providing infrastructure necessary for downstream
-projects that would like to adopt a SPEC.
-
-Core Projects may discuss whether to endorse a SPEC on their mailing list,
-issue tracker, or on a pull request.
-Certain SPECs may require Core Projects create their own enhancement
-proposals to figure out whether and how to endorse a SPEC.
-
-Regardless, once a Core Project decides to endorse a SPEC, they then add their project
-name to the `endorsed-by` field in the SPEC header via a pull request against
-the [scientific-python/specs](https://github.com/scientific-python/specs)
-repository.
-
-## Ecosystem Adoption
-
-All projects in the ecosystem of scientific Python projects are encouraged to
-discuss and adopt SPECs.
-
-The SPEC adoption process may vary be SPEC and is specified in the SPEC.

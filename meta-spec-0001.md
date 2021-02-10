@@ -1,11 +1,10 @@
 ---
-title: "MetaSPEC 1 — Governance and Decision Making"
+title: "MetaSPEC 1 — SPEC Steering Committee (SSC)"
 date: 2021-01-06
 draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
-discussion: https://github.com/scientific-python/specs/discussions/12
 ---
 
 # Description
@@ -18,13 +17,11 @@ Similarly, the SSC does not decide which SPECs are endorsed—that choice reside
 with individual core projects.
 They do, however,
 
-- monitor and discuss new ideas for SPEC documents in the
-  [Discussions](https://github.com/scientific-python/specs/discussions/categories/ideas)
-  forum,
+- monitor and moderate the
+  [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/6),
 - determine which new ideas are assigned a SPEC number as described in
   [MetaSPEC 0 — Purpose and Process]({{< relref "/specs/meta-spec-0000.md" >}}),
-- decide whether new MetaSPECs (i.e., SPECs about SPECs)
-  are accepted and approve any changes to them, and
+- approve changes to the MetaSPECs (i.e., SPECs about SPECs), and
 - serve as a communication channel to and from their projects as well
   as the larger ecosystem.
 
@@ -37,25 +34,21 @@ They do, however,
       name="Matthias Bussonnier"
       github_handle="carreau"
       avatar="https://avatars.githubusercontent.com/u/335567?s=200"
-      projects="ipython"
 >}}
 {{< person
-      name="?"
+      name="numpy"
       github_handle=""
       avatar=""
-      projects="numpy"
 >}}
 {{< person
-      name="?"
+      name="pandas"
       github_handle=""
       avatar=""
-      projects="pandas"
 >}}
 {{< person
-      name="?"
+      name="scikit-learn"
       github_handle=""
       avatar=""
-      projects="scikit-learn"
 >}}
 
 {{< /gallery >}}
@@ -63,28 +56,24 @@ They do, however,
 {{< gallery >}}
 
 {{< person
-      name="?"
+      name="jupyter"
       github_handle=""
       avatar=""
-      projects="jupyter"
 >}}
 {{< person
-      name="?"
+      name="scipy"
       github_handle=""
       avatar=""
-      projects="scipy"
 >}}
 {{< person
-      name="?"
+      name="statsmodels"
       github_handle=""
       avatar=""
-      projects="statsmodels"
 >}}
 {{< person
-      name="?"
+      name="NetworkX"
       github_handle=""
       avatar=""
-      projects="NetworkX"
 >}}
 
 {{< /gallery >}}
@@ -92,28 +81,24 @@ They do, however,
 {{< gallery >}}
 
 {{< person
-      name="?"
+      name="spyder"
       github_handle=""
       avatar=""
-      projects="spyder"
 >}}
 {{< person
-      name="?"
+      name="matplotlib"
       github_handle=""
       avatar=""
-      projects="matplotlib"
 >}}
 {{< person
-      name="?"
+      name="scikit-image"
       github_handle=""
       avatar=""
-      projects="scikit-image"
 >}}
 {{< person
-      name="?"
+      name="community"
       github_handle=""
       avatar=""
-      projects="community"
 >}}
 
 {{< /gallery >}}
@@ -132,8 +117,10 @@ where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 
 Public communication takes place in the
-[`specs` GitHub repository](https://github.com/scientific-python/specs/).
-Private communication within the SSC takes place on [SSC private mailing list](https://groups.io/g/spec-steering-committee/).
+[`specs` GitHub repository](https://github.com/scientific-python/specs/)
+and the [`specs` discussion](https://discuss.scientific-python.org/c/specs/6).
+Private communication within the SSC takes place on
+[SSC private mailing list](https://groups.io/g/spec-steering-committee/).
 SSC members are expected to be aware of conversations on this list to lend validity
 to consensus-seeking and voting.
 
@@ -142,10 +129,7 @@ to consensus-seeking and voting.
 Members of the SSC should be active in the scientific Python ecosystem and
 should have a demonstrated interest in the SPECs.
 Examples of demonstrated interest include submitting SPECs, engaging in SPEC
-discussions, reviewing SPEC PRs, or advocating SPEC adoption in ecosystem
-projects.
-Individuals can request to join the SSC and the SSC can ask individuals
-if they are willing to serve on the SSC.
+discussions, reviewing SPEC PRs, or advocating for wider SPEC participation.
 
 ## How many members should there be?
 
@@ -156,21 +140,18 @@ recruit new members.
 
 ## How do you add a member?
 
-Anyone on the SSC can propose inviting a new member to join the SSC.
-And, as previously mentioned, anyone can ask to join the SSC.
-
-If the SSC decides to admit a new member and that person agrees, then they
-should
+If the SSC decides to admit a new member and that person agrees,
+then they should
 (1) be added to the SSC member listing above,
-(2) be added to the [SSC
-Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
+(2) be added to the
+[SSC Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
 (3) be added to the [SSC private mailing list](https://groups.io/g/spec-steering-committee/members).
 
 ## How do you remove a member?
 
-If a member wishes to resign or if the SSC decides to remove a member, then
-they should
+If a member wishes to resign or if the SSC decides to remove a member,
+then they should
 (1) be moved to the list of Emeritus SSC members (below the list of active members),
-(2) be removed from the [SSC
-Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
+(2) be removed from the
+[SSC Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
 (3) be removed from the [SSC private mailing list](https://groups.io/g/spec-steering-committee/members).
