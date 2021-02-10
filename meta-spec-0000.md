@@ -26,9 +26,8 @@ Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
 A SPEC may not be a good fit for every single project, and thus there is no
 expectation that all SPECs must be adopted by all projects.
-Different SPECs may even recommend differing approaches to the same problem.
-In this case, some projects may adopt one of the competing SPECS,
-while some projects adopt the other one.
+Different SPECs may even recommend differing approaches to the same problem for
+the sake of discussion and consensus-building among the projects.
 SPECs may also propose only certain projects prototype a SPEC before
 encouraging other projects to consider adopting the SPEC.
 
@@ -95,7 +94,7 @@ However, we highly recommended that you first do one or more of the following:
 
 To get feedback from the larger community, we also recommend creating a new
 [discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)—under
-the `Accepted` subcategory of the `SPECs`
+the `Proposed` subcategory of the `SPECs`
 category—as early in the process as possible.
 The discussion will be linked to the new SPEC using the `discussion`
 field in the SPEC header.

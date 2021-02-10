@@ -22,8 +22,8 @@ They do, however,
 - determine which new ideas are assigned a SPEC number as described in
   [MetaSPEC 0 — Purpose and Process]({{< relref "/specs/meta-spec-0000.md" >}}),
 - approve changes to the MetaSPECs (i.e., SPECs about SPECs), and
-- serve as a communication channel to and from their projects as well
-  as the larger ecosystem.
+- serve as a communication channel to and from projects they contribute to as
+  well as the larger ecosystem.
 
 ## Steering Committee
 
@@ -106,7 +106,7 @@ They do, however,
 
 # Implementation
 
-To accept a SPEC proposal (i.e., to assign it a SPEC number and merge the PR)
+To accept a SPEC (i.e., to assign it a SPEC number and merge the PR)
 requires two members of the SSC to approve and no members objecting.
 Since the role of the SSC is to mainly ensure that SPEC proposals are
 appropriate, objections should be rare.
