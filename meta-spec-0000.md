@@ -82,9 +82,10 @@ necessary infrastructure required by other projects wishing to adopt the SPEC.
 
 # Implementation
 
-Any community member can propose a new SPEC by making making a pull request to
-the [SPEC repository](https://github.com/scientific-python/specs).
-However, we highly recommended that you first do one or more of the following:
+Each SPEC focuses on a single key proposal, recommendation, or idea for
+coordinating projects in the scientific Python ecosystem.
+Any community member can submit a new SPEC.
+However, we highly recommended that you **first** do one or more of the following:
 
 1. discuss the idea in at least one project in the ecosystem,
 2. discuss the idea with at least one other member of the ecosystem,
@@ -92,28 +93,18 @@ However, we highly recommended that you first do one or more of the following:
    [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/ideas/9),
 4. create a minimal, proof of concept prototype.
 
-To get feedback from the larger community, we also recommend creating a new
-[discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)—under
-the `Proposed` subcategory of the `SPECs`
-category—as early in the process as possible.
-The discussion will be linked to the new SPEC using the `discussion`
-field in the SPEC header.
-Each new discussion should focus on a single key proposal or new idea for
-coordinating projects in the scientific Python ecosystem.
+Contributors must adhere to our
+[Code of Conduct]({{< relref "/about/code_of_conduct.md" >}}).
 
-Contributors must adhere to our [Code of Conduct]({{< relref
-"/about/code_of_conduct.md" >}}).
+## New SPEC
 
-## New SPECs
-
-Creating a new SPEC requires:
-
-1. making a pull request with a new SPEC document (Markdown file), and
-2. starting a related discussion.
+Submitting a new SPEC requires making a pull request to the 
+[SPEC repository](https://github.com/scientific-python/specs).
+with a new SPEC document.
 
 To create a new SPEC document, use the `quickstart.py` script.
-Located at the top-level of the [SPEC
-repository](https://github.com/scientific-python/specs),
+Located at the top-level of the
+[SPEC repository](https://github.com/scientific-python/specs),
 the script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to complete.
 
@@ -208,10 +199,9 @@ endorsed-by:
 {{< / highlight >}}
 <!-- prettier-ignore-end -->
 
-While it is recommended that you create a new discussion before creating the PR,
-you can also leave the discussion number blank.
-Before the PR is merged, you will be asked to verify that you've created a
-new discussion and that the `discussion` field is correct.
+Before the PR is merged, you will be asked to create a new discussion (if you haven't already)
+and to verify that the `discussion` field is correct.
+Leave the `draft` field as is and the `endorsed-by` field empty.
 
 Once the SPEC is in reasonable shape, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs)
