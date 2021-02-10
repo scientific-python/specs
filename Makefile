@@ -1,4 +1,5 @@
 PREVIEW_SRC_DEST=/tmp/site_preview
+HUGO_OPTS=--disableFastRender --buildDrafts
 
 preview:
 	mkdir -p $(PREVIEW_SRC_DEST)
@@ -7,7 +8,7 @@ preview:
 	git -C $(PREVIEW_SRC_DEST) submodule update --init
 	rm -rf $(PREVIEW_SRC_DEST)/content/specs/*
 	cp -r * $(PREVIEW_SRC_DEST)/content/specs
-	cd $(PREVIEW_SRC_DEST) && hugo server --disableFastRender
+	cd $(PREVIEW_SRC_DEST) && hugo server $(HUGO_OPTS)
 
 clean:
 	rm -rf $(PREVIEW_SRC_DEST)
