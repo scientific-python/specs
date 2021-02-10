@@ -98,8 +98,8 @@ Contributors must adhere to our
 
 ## New SPEC
 
-Submitting a new SPEC requires making a pull request to the 
-[SPEC repository](https://github.com/scientific-python/specs).
+Submitting a new SPEC requires making a pull request to the
+[SPEC repository](https://github.com/scientific-python/specs)
 with a new SPEC document.
 
 To create a new SPEC document, use the `quickstart.py` script.
