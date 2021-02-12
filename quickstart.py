@@ -24,7 +24,7 @@ filename = f"spec-{number:04d}.md"
 text = f"""---
 title: "SPEC {number} — {title}"
 date: {now.strftime("%Y-%m-%d")}
-draft: false
+draft: true
 author:
   - "{author} <{email}>"
 discussion: https://discuss.scientific-python.org/t/
