@@ -57,6 +57,29 @@ existing comments.
 
 ## Glossary
 
+Scientific Python Ecosystem
+: The scientific Python ecosystem is a federation of projects that interact
+well with one another and that follow similar norms of development,
+documentation, testing, and so forth.
+
+SPEC
+: A Scientific Python Ecosystem Coordination (SPEC) document provides operational
+guidelines for projects in the scientific Python ecosystem.
+
+SSC
+: The [SPEC Steering Committee (SSC)]({{< relref "/specs/meta-spec-0001.md" >}})
+manages the SPEC documents.
+
+MetaSPEC
+: MetaSPECs are special SPECs that are describe the SPEC process.
+
+Core Projects
+: The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) are
+a small set of mature, community developed project widely used in
+scientific research and by other packages in the ecosystem.
+
+A **SPEC** can be
+
 Accepted
 : The [SPEC Steering Committee (SSC)]({{< relref "/specs/meta-spec-0001.md" >}})
 is responsible for accepting a SPEC.
@@ -64,11 +87,15 @@ Accepting a SPEC means that is is assigned a number,
 included in the [SPEC listing]({{< relref "/spec_overview.md" >}}),
 and linked to a
 [`specs` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
+It typically is accepted once there is some agreement that the SPEC
+describes a useful proposal, recommendation, or idea for coordinating projects.
+Often, implementation details will need to be developed and negotiated with
+projects and will necessarily develop and evolve after the SPEC is accepted.
 
 Adopted
 : Any project in the ecosystem can adopt any SPEC.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
-Every project is resposible for deciding whether they will adopt a SPEC according
+Every project is responsible for deciding whether they will adopt a SPEC according
 to their own governance process.
 
 Endorsed
@@ -84,6 +111,16 @@ necessary infrastructure required by other projects wishing to adopt the SPEC.
 
 Each SPEC focuses on a single key proposal, recommendation, or idea for
 coordinating projects in the scientific Python ecosystem.
+A SPEC has a `Description` and an `Implementation` section.
+The `Description` section captures the general problem being addressed
+and, for this reason, a SPEC is accepted based largely on this section.
+The reason the `Description` section carries so much weight is that
+the `Implementation` section often requires an extend period of
+discussions with the Core Projects as well as the larger community.
+Often multiple authors will join a SPEC after it is accepted in
+a collaborative effort to develop a community-supported `Implementation`
+section.
+
 Any community member can submit a new SPEC.
 However, we highly recommended that you **first** do one or more of the following:
 
@@ -199,20 +236,50 @@ endorsed-by:
 {{< / highlight >}}
 <!-- prettier-ignore-end -->
 
-Before the PR is merged, you will be asked to create a new discussion (if you haven't already)
-and to verify that the `discussion` field is correct.
 Leave the `draft` field as is and the `endorsed-by` field empty.
+
+The focus should be on making a clear and compelling description of the
+problem that the SPEC addresses.
+If the SPEC is largely documenting already established best practices
+that are widely used by the Core Projects, then the `Implementation`
+should be relatively straightforward to write.
+However, if the SPEC is proposing something new or something not
+widely used by the Core Projects already, then the `Implementation`
+may be difficult to complete.
+In this case, it may not be possible to complete the `Core Project Endorsement`
+and `Ecosystem Adoption` subsections.
 
 Once the SPEC is in reasonable shape, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
+The SSC as well as community members will provide feedback.
+They will pay particular attention to ensure the `Description`
+section is clear and reasonably complete.
+They will also provide advice of how much detail is needed in
+the `Implementation` section.
 
-## Review and Resolution
+Before the PR is merged, you will be asked to create a new
+[discussion](https://discuss.scientific-python.org/c/specs/ideas/9)
+(if you haven't already).
+
+## Review and Acceptance
 
 The SSC will consider whether the new idea fits as a SPEC and monitor
 subsequent discussion.
 If there is sufficient interest, the SSC will convert the discussion to the
 [Accepted](https://discuss.scientific-python.org/c/specs/accepted/15)
 subcategory and assign it a SPEC number.
-When it is ready the SSC will merge the PR.
-Additional PRs may be made to update or expand the SPEC.
+At this point, the PR should be updated to ensure the title, file name,
+and `discussion` field are correct.
+When it is ready, the SSC will merge the PR.
+Additional PRs will be made to update or expand the SPEC after it is
+accepted.
+
+## Endorsement and Adoption
+
+Once the SPEC is accepted, the hard work begins.
+You will need to continue engaging the Core Projects and the larger ecosystem in the
+[discussion forum](https://discuss.scientific-python.org/c/specs/accepted/15)
+as well as engaging with projects directly.
+It will be helpful to recruit additional authors from different projects to
+help develop the SPEC and respond to feedback from the ecosystem.

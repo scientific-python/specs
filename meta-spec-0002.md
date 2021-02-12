@@ -11,10 +11,7 @@ endorsed-by:
 
 # Description
 
-The scientific Python ecosystem is a federation of projects
-that interact well with one another and that follow similar norms of
-development, documentation, testing, and so forth.
-This federation is formed around a few "core projects".
+The scientific Python ecosystem is formed around a few "core projects".
 These are projects that are depended upon by most of the other projects,
 often providing basic data structures, drawing primitives,
 or implementations of fundamental algorithms.
