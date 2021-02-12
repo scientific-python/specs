@@ -48,7 +48,7 @@ documentation, testing, and so forth.
 
 Core Projects
 : The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) are
-a small set of mature, community developed project widely used in
+a small set of mature, community developed projects widely used in
 scientific research and by other packages in the ecosystem.
 
 SSC
