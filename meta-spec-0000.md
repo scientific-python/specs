@@ -70,7 +70,7 @@ Accepting a SPEC means that is is assigned a number,
 included in the [SPEC listing]({{< relref "/spec_overview.md" >}}),
 and linked to a
 [`specs` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
-It typically is accepted once there is some agreement that the SPEC
+The main criterion for acceptance is some agreement among the SSC that the SPEC
 describes a useful proposal, recommendation, or idea for coordinating projects.
 Often, implementation details will need to be developed and negotiated with
 projects and will necessarily develop and evolve after the SPEC is accepted.
