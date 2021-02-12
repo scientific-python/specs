@@ -28,8 +28,6 @@ A SPEC may not be a good fit for every single project, and thus there is no
 expectation that all SPECs must be adopted by all projects.
 Different SPECs may even recommend differing approaches to the same problem for
 the sake of discussion and consensus-building among the projects.
-SPECs may also propose only certain projects prototype a SPEC before
-encouraging other projects to consider adopting the SPEC.
 
 That said, the purpose of the SPEC process is
 
@@ -40,6 +38,59 @@ That said, the purpose of the SPEC process is
 
 SPECs serve their purpose to the extent that they are discussed and adopted by
 several projects—and their authority stems from the extent to which they are.
+
+## Glossary
+
+Scientific Python Ecosystem
+: The scientific Python ecosystem is a federation of projects that interact
+well with one another and that follow similar norms of development,
+documentation, testing, and so forth.
+
+Core Projects
+: The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) are
+a small set of mature, community developed project widely used in
+scientific research and by other packages in the ecosystem.
+
+SSC
+: The [SPEC Steering Committee (SSC)]({{< relref "/specs/meta-spec-0001.md" >}})
+manages the SPEC documents.
+
+SPEC
+: A Scientific Python Ecosystem Coordination (SPEC) document provides operational
+guidelines for projects in the ecosystem.
+
+MetaSPEC
+: MetaSPECs are special SPECs that describe the SPEC process.
+
+A **SPEC** can be
+
+Accepted
+: The SSC determines whether a SPEC is accepted.
+Accepting a SPEC means that is is assigned a number,
+included in the [SPEC listing]({{< relref "/spec_overview.md" >}}),
+and linked to a
+[`specs` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
+It typically is accepted once there is some agreement that the SPEC
+describes a useful proposal, recommendation, or idea for coordinating projects.
+Often, implementation details will need to be developed and negotiated with
+projects and will necessarily develop and evolve after the SPEC is accepted.
+Accept SPECs are marked as a `draft document` until there is a consensus
+that it ready for widespread project adoption.
+
+Adopted
+: Any project in the ecosystem can adopt any SPEC.
+Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
+Every project is responsible for deciding whether they will adopt a SPEC according
+to their own governance process.
+
+Endorsed
+: Each Core Project independently decides whether to endorse a SPEC.
+Endorsements signal to the ecosystem that the core projects not only adopt
+the SPEC (when applicable), but that after carefully reviewing the SPEC
+that they want to use their reputation in the ecosystem to publicly encourage
+other projects to adopt a SPEC.
+When applicable, an endorsement also mean that the Core Project provides the
+necessary infrastructure required by other projects wishing to adopt the SPEC.
 
 ## Format
 
@@ -54,58 +105,6 @@ Each SPEC has a corresponding
 [discussion](https://discuss.scientific-python.org/c/specs/accepted/15)
 with the same title, where anyone can comment, ask questions, or vote on
 existing comments.
-
-## Glossary
-
-Scientific Python Ecosystem
-: The scientific Python ecosystem is a federation of projects that interact
-well with one another and that follow similar norms of development,
-documentation, testing, and so forth.
-
-SPEC
-: A Scientific Python Ecosystem Coordination (SPEC) document provides operational
-guidelines for projects in the scientific Python ecosystem.
-
-SSC
-: The [SPEC Steering Committee (SSC)]({{< relref "/specs/meta-spec-0001.md" >}})
-manages the SPEC documents.
-
-MetaSPEC
-: MetaSPECs are special SPECs that are describe the SPEC process.
-
-Core Projects
-: The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) are
-a small set of mature, community developed project widely used in
-scientific research and by other packages in the ecosystem.
-
-A **SPEC** can be
-
-Accepted
-: The [SPEC Steering Committee (SSC)]({{< relref "/specs/meta-spec-0001.md" >}})
-is responsible for accepting a SPEC.
-Accepting a SPEC means that is is assigned a number,
-included in the [SPEC listing]({{< relref "/spec_overview.md" >}}),
-and linked to a
-[`specs` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
-It typically is accepted once there is some agreement that the SPEC
-describes a useful proposal, recommendation, or idea for coordinating projects.
-Often, implementation details will need to be developed and negotiated with
-projects and will necessarily develop and evolve after the SPEC is accepted.
-
-Adopted
-: Any project in the ecosystem can adopt any SPEC.
-Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
-Every project is responsible for deciding whether they will adopt a SPEC according
-to their own governance process.
-
-Endorsed
-: The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) can endorse any SPEC.
-Endorsements signal to the ecosystem that the core projects not only adopt
-the SPEC (when applicable), but that after carefully reviewing the SPEC
-that they want to use their reputation in the ecosystem to publicly encourage
-other projects to adopt a SPEC.
-When applicable, an endorsement also mean that the Core Project provides the
-necessary infrastructure required by other projects wishing to adopt the SPEC.
 
 # Implementation
 
@@ -164,7 +163,7 @@ creates the file `spec-0000.md` containing:
 ---
 title: "SPEC 0 — Minimum Supported Versions"
 date: 2021-01-10
-draft: false
+draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/
@@ -226,7 +225,7 @@ change to the SPEC header:
 ---
 title: "SPEC 0 — Minimum Supported Versions"
 date: 2021-01-10
-draft: false
+draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
@@ -236,7 +235,7 @@ endorsed-by:
 {{< / highlight >}}
 <!-- prettier-ignore-end -->
 
-Leave the `draft` field as is and the `endorsed-by` field empty.
+Leave the `draft` field set to `true` and the `endorsed-by` field empty.
 
 The focus should be on making a clear and compelling description of the
 problem that the SPEC addresses.
