@@ -74,7 +74,7 @@ The main criterion for acceptance is some agreement among the SSC that the SPEC
 describes a useful proposal, recommendation, or idea for coordinating projects.
 Often, implementation details will need to be developed and negotiated with
 projects and will necessarily develop and evolve after the SPEC is accepted.
-Accept SPECs are marked as a `draft document` until there is a consensus
+Accepted SPECs are marked as a `draft document` until there is a consensus
 that it ready for widespread project adoption.
 
 Adopted
