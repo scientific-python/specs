@@ -48,7 +48,7 @@ documentation, testing, and so forth.
 
 Core Projects
 : The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}}) are
-a small set of mature, community developed project widely used in
+a small set of mature, community developed projects widely used in
 scientific research and by other packages in the ecosystem.
 
 SSC
@@ -70,11 +70,11 @@ Accepting a SPEC means that is is assigned a number,
 included in the [SPEC listing]({{< relref "/spec_overview.md" >}}),
 and linked to a
 [`specs` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
-It typically is accepted once there is some agreement that the SPEC
+The main criterion for acceptance is some agreement among the SSC that the SPEC
 describes a useful proposal, recommendation, or idea for coordinating projects.
 Often, implementation details will need to be developed and negotiated with
 projects and will necessarily develop and evolve after the SPEC is accepted.
-Accept SPECs are marked as a `draft document` until there is a consensus
+Accepted SPECs are marked as a `draft document` until there is a consensus
 that it ready for widespread project adoption.
 
 Adopted
