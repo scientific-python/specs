@@ -1,5 +1,5 @@
 ---
-title: "MetaSPEC 1 — SPEC Steering Committee (SSC)"
+title: "SPEC Steering Committee (SSC)"
 date: 2021-01-06
 draft: true
 author:
@@ -19,9 +19,12 @@ They do, however,
 
 - monitor and moderate the
   [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/6),
-- determine which new ideas are assigned a SPEC number as described in
-  [MetaSPEC 0 — Purpose and Process]({{< relref "/specs/meta-spec-0000.md" >}}),
-- approve changes to the MetaSPECs (i.e., SPECs about SPECs), and
+- determine which proposed SPECS are accepted as described in the SPEC
+  [Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
+- approve changes to the SPEC process including any changes to the
+  [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
+  [SPEC Steering Committee]({{< relref "/specs/purpose-and-process/index.md" >}}), and
+  [SPEC Core Projects]({{< relref "/specs/purpose-and-process/index.md" >}}), as well as
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
@@ -111,8 +114,11 @@ requires two members of the SSC to approve and no members objecting.
 Since the role of the SSC is to mainly ensure that SPEC proposals are
 appropriate, objections should be rare.
 
-To add members, remove members, or modify the MetaSPECs, the SSC
-makes decisions through group consensus and, in the very rare instance
+To make changes to the SPEC process including to the
+[SPEC Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
+[SPEC Steering Committee]({{< relref "/specs/purpose-and-process/index.md" >}}), or
+[SPEC Core Projects]({{< relref "/specs/purpose-and-process/index.md" >}}),
+the SSC makes decisions through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 

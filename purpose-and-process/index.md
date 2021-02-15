@@ -1,5 +1,5 @@
 ---
-title: "MetaSPEC 0 — Purpose and Process"
+title: "SPEC Purpose and Process"
 date: 2020-12-17
 draft: true
 author:
@@ -49,21 +49,24 @@ widely used in scientific research that interact well with one another and that
 follow similar norms of development, documentation, testing, and so forth.
 
 Core Projects
-: The [Core Projects]({{< relref "/specs/meta-spec-0002.md" >}})
+: The [Core Projects]({{< relref "/specs/core-projects/_index.md" >}})
 are a small subset of the ecosystem consisting of mature, community developed projects
 that are (a) depended upon by most of the other projects and (b) responsible for
 reviewing, discussing, implementing, and endorsing SPEC documents.
 
 SPEC Steering Committee (SSC)
-: The [SSC]({{< relref "/specs/meta-spec-0001.md" >}}) leads the SPEC project and
+: The [SSC]({{< relref "/specs/steering-committee/index.md" >}}) leads the SPEC project and
 manages the SPEC process including moderating
 [`specs` discussions](https://discuss.scientific-python.org/c/specs/6)
 and accepting SPEC documents.
+It is also responsible for any changes to the
+[SPEC Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
+[SPEC Steering Committee]({{< relref "/specs/purpose-and-process/index.md" >}}), or
+[SPEC Core Projects]({{< relref "/specs/purpose-and-process/index.md" >}}).
 
 <!-- prettier-ignore-start -->
 Scientific Python Ecosystem Coordination (SPEC)
 : A **SPEC document** provides operational guidelines for projects in the ecosystem.
-  MetaSPECs are special SPEC documents that describe the **SPEC process**.
   During the SPEC process, a SPEC can be
 
   Proposed
