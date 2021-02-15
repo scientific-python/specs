@@ -100,7 +100,7 @@ to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
 
-The [SSC]({{< relref "/specs/steering-committee/_index.md" >}}) maintains the list of
+The [SSC]({{< relref "/specs/steering-committee" >}}) maintains the list of
 Core Projects.
 
 ## What are the characteristics of a Core Project?
