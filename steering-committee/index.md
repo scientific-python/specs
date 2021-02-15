@@ -20,11 +20,11 @@ They do, however,
 - monitor and moderate the
   [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/6),
 - determine which proposed SPECS are accepted as described in the SPEC
-  [Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
+  [Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
 - approve changes to the SPEC process including any changes to the
-  [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
-  [SPEC Steering Committee]({{< relref "/specs/purpose-and-process/index.md" >}}), and
-  [SPEC Core Projects]({{< relref "/specs/purpose-and-process/index.md" >}}), as well as
+  [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
+  [SPEC Steering Committee]({{< relref "/specs/purpose-and-process" >}}), and
+  [SPEC Core Projects]({{< relref "/specs/purpose-and-process" >}}), as well as
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
@@ -115,9 +115,9 @@ Since the role of the SSC is to mainly ensure that SPEC proposals are
 appropriate, objections should be rare.
 
 To make changes to the SPEC process including to the
-[SPEC Purpose and Process]({{< relref "/specs/purpose-and-process/index.md" >}}),
-[SPEC Steering Committee]({{< relref "/specs/purpose-and-process/index.md" >}}), or
-[SPEC Core Projects]({{< relref "/specs/purpose-and-process/index.md" >}}),
+[SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
+[SPEC Steering Committee]({{< relref "/specs/purpose-and-process" >}}), or
+[SPEC Core Projects]({{< relref "/specs/purpose-and-process" >}}),
 the SSC makes decisions through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
