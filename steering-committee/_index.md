@@ -30,7 +30,7 @@ choice resides with individual core projects.
 
 ## Steering Committee
 
-{{< page_gallery "." >}}
+{{< page_gallery pages=. >}}
 
 # Implementation
 

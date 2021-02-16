@@ -83,7 +83,7 @@ SPEC Process
   describes a useful proposal, recommendation, or idea for coordinating projects.
   Often, implementation details will need to be developed and negotiated with
   projects and will necessarily develop and evolve after the SPEC is accepted.
-  An accepted SPEC appears in the [SPEC list]({{< relref "/spec_overview.md" >}})
+  An accepted SPEC appears in the [SPEC list]({{< relref "/specs" >}})
   and has a corresponding
   [`specs/accepted` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
   Accepted SPECs are marked as a `draft document` until there is a consensus
