@@ -14,6 +14,7 @@ from tools import prompt
 
 project = prompt("Project Name")
 project_lower = project.lower()
+logo = prompt("Project Logo (from your GitHub organization profile pic)")
 default_home = f"https://{project_lower}.org"
 homepage = prompt("Project Homepage", default=default_home)
 repository = prompt(
@@ -28,6 +29,7 @@ filename = f"{project.lower()}.md"
 text = f"""---
 title: "{project}"
 draft: false
+avatar: {logo}
 homepage: {homepage}
 repository: {repository}
 pypi: {pypi}

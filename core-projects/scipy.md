@@ -1,6 +1,7 @@
 ---
 title: "SciPy"
 draft: true
+avatar: https://avatars.githubusercontent.com/u/288277
 homepage: https://scipy.org
 repository: https://github.com/scipy/scipy
 pypi: https://pypi.org/project/scipy
