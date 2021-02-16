@@ -1,6 +1,6 @@
 ---
 title: "SPEC Core Projects"
-date: 2021-01-12
+hide_meta: true
 draft: true
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
