@@ -1,6 +1,6 @@
 ---
 title: "statsmodels"
-draft: false
+draft: true
 homepage: https://www.statsmodels.org
 repository: https://github.com/statsmodels/statsmodels
 pypi: https://pypi.org/project/statsmodels

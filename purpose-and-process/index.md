@@ -9,8 +9,8 @@ author:
 
 # Description
 
-Scientific Python Ecosystem Coordination documents or SPECs, for short, provide
-operational guidelines for projects in the scientific Python ecosystem.
+SPEC documents or SPECs, for short, provide operational guidelines
+for projects in the scientific Python ecosystem.
 Their goal is to coordinate the ecosystem and to provide a more unified
 experience for users.
 
@@ -41,32 +41,34 @@ That said, the purpose of the SPEC process is
 SPECs serve their purpose to the extent that they are discussed and adopted by
 several projects—and their authority stems from the extent to which they are.
 
-## Glossary
+## Key Concepts
 
 Scientific Python Ecosystem
-: The **Ecosystem** is a loose federation of community developed Python projects
+: The **ecosystem** is a loose federation of community developed Python projects
 widely used in scientific research that interact well with one another and that
 follow similar norms of development, documentation, testing, and so forth.
 
-Core Projects
+SPEC Core Projects
 : The [Core Projects]({{< relref "/specs/core-projects" >}})
 are a small subset of the ecosystem consisting of mature, community developed projects
 that are (a) depended upon by most of the other projects and (b) responsible for
 reviewing, discussing, implementing, and endorsing SPEC documents.
 
-SPEC Steering Committee (SSC)
-: The [SSC]({{< relref "/specs/steering-committee" >}}) leads the SPEC project and
+SPEC Steering Committee
+: The [Steering Committee]({{< relref "/specs/steering-committee" >}}) leads the SPEC project and
 manages the SPEC process including moderating
-[`specs` discussions](https://discuss.scientific-python.org/c/specs/6)
-and accepting SPEC documents.
-It is also responsible for any changes to the
-SPEC Purpose and Process (this document),
-[SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), or
-[SPEC Core Projects]({{< relref "/specs/core-projects" >}}).
+[`specs` discussions](https://discuss.scientific-python.org/c/specs/6),
+accepting SPEC documents, and maintaining the SPEC process documents.
+
+SPEC Document
+: A **SPEC document** provides operational guidelines for projects in the ecosystem.
 
 <!-- prettier-ignore-start -->
-Scientific Python Ecosystem Coordination (SPEC)
-: A **SPEC document** provides operational guidelines for projects in the ecosystem.
+SPEC Process
+: The **SPEC process** is described in the
+  [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
+  [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), or
+  [SPEC Core Projects]({{< relref "/specs/core-projects" >}}) documents.
   During the SPEC process, a SPEC can be
 
   Proposed
@@ -76,8 +78,8 @@ Scientific Python Ecosystem Coordination (SPEC)
   [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9).
 
   Accepted
-  : The SSC determines whether a SPEC is accepted.
-  The main criterion for acceptance is some agreement among the SSC that the SPEC
+  : The Steering Committee determines whether a SPEC is accepted.
+  The main criterion for acceptance is some agreement among the Steering Committee that the SPEC
   describes a useful proposal, recommendation, or idea for coordinating projects.
   Often, implementation details will need to be developed and negotiated with
   projects and will necessarily develop and evolve after the SPEC is accepted.
@@ -137,8 +139,8 @@ However, we highly recommended that you first **vet the idea** by doing one or m
 Each SPEC document should focus on a single key proposal, recommendation, or idea for
 coordinating projects in the scientific Python ecosystem.
 
-The first hurdle in the SPEC process is getting a new SPEC document accepted by the SSC.
-The SSC will accept the new SPEC document based on the quality of the proposal
+The first hurdle in the SPEC process is getting a new SPEC document accepted by the Steering Committee.
+The Steering Committee will accept the new SPEC document based on the quality of the proposal
 and on interest for the proposed SPEC on its
 [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9).
 
@@ -264,7 +266,7 @@ information as needed.
 
 When asked to enter the SPEC number, choose the next available number that
 has not yet been used.
-Before the SPEC is merged, the SSC may ask you to change the SPEC number so
+Before the SPEC is merged, the Steering Committee may ask you to change the SPEC number so
 that it doesn't conflict with another PR.
 If so, just rename the file as appropriate and update the SPEC number in the
 `title` field of the SPEC header.
@@ -294,7 +296,7 @@ Leave the `draft` field set to `true` and the `endorsed-by` field empty.
 Once the SPEC is in reasonable shape, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
-The SSC as well as community members will provide feedback.
+The Steering Committee as well as community members will provide feedback.
 They will pay particular attention to ensure the `Description`
 section is clear and reasonably complete.
 They will also provide advice of how much detail is needed in
@@ -306,14 +308,14 @@ Before the PR is merged, you will be asked to create a new
 
 ## Review and Acceptance
 
-The SSC will consider whether the new idea fits as a SPEC and monitor
+The Steering Committee will consider whether the new idea fits as a SPEC and monitor
 subsequent discussion.
-If there is sufficient interest, the SSC will convert the discussion to the
+If there is sufficient interest, the Steering Committee will convert the discussion to the
 [Accepted](https://discuss.scientific-python.org/c/specs/accepted/15)
 subcategory and assign it a SPEC number.
 At this point, the PR should be updated to ensure the title, file name,
 and `discussion` field are correct.
-When it is ready, the SSC will merge the PR.
+When it is ready, the Steering Committee will merge the PR.
 Additional PRs will be made to update or expand the SPEC after it is
 accepted.
 

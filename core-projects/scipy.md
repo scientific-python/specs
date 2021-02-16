@@ -1,6 +1,6 @@
 ---
 title: "SciPy"
-draft: false
+draft: true
 homepage: https://scipy.org
 repository: https://github.com/scipy/scipy
 pypi: https://pypi.org/project/scipy

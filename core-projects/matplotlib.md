@@ -1,6 +1,6 @@
 ---
 title: "Matplotlib"
-draft: false
+draft: true
 homepage: https://matplotlib.org
 repository: https://github.com/matplotlib/matplotlib
 pypi: https://pypi.org/project/matplotlib

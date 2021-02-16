@@ -1,6 +1,7 @@
 ---
 title: "NetworkX"
-draft: false
+draft: true
+avatar: https://avatars.githubusercontent.com/u/388785
 homepage: https://networkx.org/
 repository: https://github.com/networkx/networkx
 pypi: https://pypi.org/project/networkx
