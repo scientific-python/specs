@@ -1,6 +1,6 @@
 ---
 title: "pandas"
-draft: false
+draft: true
 homepage: https://pandas.pydata.org/
 repository: https://github.com/pandas-dev/pandas
 pypi: https://pypi.org/project/pandas

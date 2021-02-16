@@ -1,6 +1,6 @@
 ---
 title: "scikit-image"
-draft: false
+draft: true
 homepage: https://scikit-image.org
 repository: https://github.com/scikit-image/scikit-image
 pypi: https://pypi.org/project/scikit-image

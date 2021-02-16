@@ -9,12 +9,8 @@ author:
 
 # Description
 
-The **SPEC process** is managed by the Steering Committee.
-The Steering Committee does not decide which SPECs are adopted—that
-choice resides with individual projects.
-Similarly, the Steering Committee does not decide which SPECs are endorsed—that
-choice resides with individual core projects.
-They do, however,
+The SPEC process is managed by the Steering Committee.
+In particuler, the Steering Committee members
 
 - monitor and moderate the
   [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/6),
@@ -27,76 +23,14 @@ They do, however,
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
+The Steering Committee does not decide which SPECs are adopted—that
+choice resides with individual projects.
+Similarly, the Steering Committee does not decide which SPECs are endorsed—that
+choice resides with individual core projects.
+
 ## Steering Committee
 
-<!-- prettier-ignore-start -->
-{{< gallery >}}
-
-{{< person
-      name="Matthias Bussonnier"
-      github_handle="carreau"
-      avatar="https://avatars.githubusercontent.com/u/335567?s=200"
->}}
-{{< person
-      name="numpy"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="pandas"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="scikit-learn"
-      github_handle=""
-      avatar=""
->}}
-
-{{< person
-      name="jupyter"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="scipy"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="statsmodels"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="NetworkX"
-      github_handle=""
-      avatar=""
->}}
-
-{{< person
-      name="spyder"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="matplotlib"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="scikit-image"
-      github_handle=""
-      avatar=""
->}}
-{{< person
-      name="community"
-      github_handle=""
-      avatar=""
->}}
-
-{{< /gallery >}}
-<!-- prettier-ignore-end -->
+{{< page_gallery "." >}}
 
 # Implementation
 

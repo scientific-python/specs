@@ -9,8 +9,8 @@ author:
 
 # Description
 
-Scientific Python Ecosystem Coordination documents or SPECs, for short, provide
-operational guidelines for projects in the scientific Python ecosystem.
+SPEC documents or SPECs, for short, provide operational guidelines
+for projects in the scientific Python ecosystem.
 Their goal is to coordinate the ecosystem and to provide a more unified
 experience for users.
 
@@ -57,16 +57,18 @@ reviewing, discussing, implementing, and endorsing SPEC documents.
 SPEC Steering Committee
 : The [Steering Committee]({{< relref "/specs/steering-committee" >}}) leads the SPEC project and
 manages the SPEC process including moderating
-[`specs` discussions](https://discuss.scientific-python.org/c/specs/6)
-and accepting SPEC documents.
-It is also responsible for any changes to the
-[SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
-[SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), or
-[SPEC Core Projects]({{< relref "/specs/core-projects" >}}) documents.
+[`specs` discussions](https://discuss.scientific-python.org/c/specs/6),
+accepting SPEC documents, and maintaining the SPEC process documents.
+
+SPEC Document
+: A **SPEC document** provides operational guidelines for projects in the ecosystem.
 
 <!-- prettier-ignore-start -->
-Scientific Python Ecosystem Coordination (SPEC)
-: A **SPEC document** provides operational guidelines for projects in the ecosystem.
+SPEC Process
+: The **SPEC process** is described in the
+  [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
+  [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), or
+  [SPEC Core Projects]({{< relref "/specs/core-projects" >}}) documents.
   During the SPEC process, a SPEC can be
 
   Proposed

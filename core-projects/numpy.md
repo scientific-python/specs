@@ -1,6 +1,6 @@
 ---
 title: "NumPy"
-draft: false
+draft: true
 homepage: https://numpy.org
 repository: https://github.com/numpy/numpy
 pypi: https://pypi.org/project/numpy
