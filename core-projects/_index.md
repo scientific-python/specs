@@ -22,7 +22,7 @@ In fact, more specialized projects sometimes model themselves on the core packag
 
 ## Core Projects
 
-{{< page_gallery pages=. link=internal >}}
+{{< page_gallery pages="." link=internal >}}
 
 The Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
