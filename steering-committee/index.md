@@ -38,31 +38,31 @@ They do, however,
       github_handle="carreau"
       avatar="https://avatars.githubusercontent.com/u/335567?s=200"
 >}}
+
 {{< person
       name="numpy"
       github_handle=""
       avatar=""
 >}}
+
 {{< person
       name="pandas"
       github_handle=""
       avatar=""
 >}}
+
 {{< person
       name="scikit-learn"
       github_handle=""
       avatar=""
 >}}
 
-{{< /gallery >}}
-
-{{< gallery >}}
-
 {{< person
       name="jupyter"
       github_handle=""
       avatar=""
 >}}
+
 {{< person
       name="scipy"
       github_handle=""
@@ -79,25 +79,24 @@ They do, however,
       avatar=""
 >}}
 
-{{< /gallery >}}
-
-{{< gallery >}}
-
 {{< person
       name="spyder"
       github_handle=""
       avatar=""
 >}}
+
 {{< person
       name="matplotlib"
       github_handle=""
       avatar=""
 >}}
+
 {{< person
       name="scikit-image"
       github_handle=""
       avatar=""
 >}}
+
 {{< person
       name="community"
       github_handle=""
