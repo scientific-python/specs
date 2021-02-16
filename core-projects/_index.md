@@ -22,67 +22,7 @@ In fact, more specialized projects sometimes model themselves on the core packag
 
 ## Core Projects
 
-<!-- prettier-ignore-start -->
-{{< gallery >}}
-
-{{< project
-      name="ipython"
-      github_handle=""
-      avatar=""
->}}
-{{< project
-      name="numpy"
-      github_handle=""
-      avatar=""
->}}
-{{< project
-      name="scipy"
-      github_handle=""
-      avatar=""
->}}
-
-{{< /gallery >}}
-
-{{< gallery >}}
-
-{{< project
-      name="matplotlib"
-      github_handle=""
-      avatar=""
->}}
-{{< project
-      name="pandas"
-      github_handle=""
-      avatar=""
->}}
-{{< project
-      name="statsmodels"
-      github_handle=""
-      avatar=""
->}}
-
-{{< /gallery >}}
-
-{{< gallery >}}
-
-{{< project
-      name="networkx"
-      github_handle=""
-      avatar=""
->}}
-{{< project
-      name="scikit-image"
-      github_handle=""
-      avatar=""
->}}
-{{< project
-      name="scikit-learn"
-      github_handle=""
-      avatar=""
->}}
-
-{{< /gallery >}}
-<!-- prettier-ignore-end -->
+{{< page_gallery "." >}}
 
 The Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
@@ -100,7 +40,7 @@ to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
 
-The [SSC]({{< relref "/specs/steering-committee" >}}) maintains the list of
+The [Steering Committee]({{< relref "/specs/steering-committee" >}}) maintains the list of
 Core Projects.
 
 ## What are the characteristics of a Core Project?
@@ -155,12 +95,12 @@ repository.
 
 ## How many Core Projects should there be?
 
-This is up to the SSC.
+This is up to the Steering Committee.
 But it is expected that the list of Core Projects will not rapidly change.
 
 ## How do you add a project?
 
-If the SSC decides to admit a new Core Project and the project agrees, then
+If the Steering Committee decides to admit a new Core Project and the project agrees, then
 the project create registration file, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs) repository.
 
@@ -169,11 +109,11 @@ To create your project registration file, change into the
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to check and complete.
 
-The SSC should also update the gallery above.
+The Steering Committee should also update the gallery above.
 
 ## How do you remove a member?
 
-If a Core Project no longer wishes to participate or if the SSC decides to remove
+If a Core Project no longer wishes to participate or if the Steering Committee decides to remove
 a Core Project, then the project registration file should be deleted, the project
 should be removed from the gallery above, and all occurrence of that Core Project
 in the `endorsed-by` field of a SPEC header should be deleted.
