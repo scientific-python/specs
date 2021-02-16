@@ -60,43 +60,51 @@ manages the SPEC process including moderating
 [`specs` discussions](https://discuss.scientific-python.org/c/specs/6),
 accepting SPEC documents, and maintaining the SPEC process documents.
 
-SPEC Document
-: A **SPEC document** provides operational guidelines for projects in the ecosystem.
+SPEC Process
+: The SPEC process is outlined in this document and the associated
+[SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}) and
+[SPEC Core Projects]({{< relref "/specs/core-projects" >}}) documents.
+This process is managed and overseen by the Steering Committee in collaboration
+with the Core Projects as well as community members and projects across
+the entire ecosystem.
 
 <!-- prettier-ignore-start -->
-SPEC Process
-: The **SPEC process** is described in the
-  [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
-  [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), or
-  [SPEC Core Projects]({{< relref "/specs/core-projects" >}}) documents.
-  During the SPEC process, a SPEC can be
+SPEC Document
+: A **SPEC document** provides operational guidelines for projects in the ecosystem and
+  help coordinate the ecosystem and to provide a more unified experience for users.
+  These documents are developed collaboratively with the Core Projects and other interested
+  ecosystem projects and community members.
+  During the SPEC process, a SPEC will go through the following stages:
 
-  Proposed
+  Propose
   : Anyone can propose a SPEC.  Often, proposals are driven by contributors and
   maintainers of Core Projects or other ecosystem projects. 
   Before a proposed SPEC can be accepted, it must be discussed as a 
   [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9).
 
-  Accepted
+  Accept
   : The Steering Committee determines whether a SPEC is accepted.
-  The main criterion for acceptance is some agreement among the Steering Committee that the SPEC
-  describes a useful proposal, recommendation, or idea for coordinating projects.
+  The main criterion for acceptance is community interest as gauged on the
+  [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)
+  and agreement among the Steering Committee that the SPEC describes a useful proposal,
+  recommendation, or idea for coordinating projects at a high-level.
   Often, implementation details will need to be developed and negotiated with
   projects and will necessarily develop and evolve after the SPEC is accepted.
   An accepted SPEC appears in the [SPEC list]({{< relref "/specs" >}})
   and has a corresponding
   [`specs/accepted` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
-  Accepted SPECs are marked as a `draft document` until there is a consensus
+
+  Draft
+  : Accepted SPECs are marked as a `draft document` until there is a consensus
   that it ready for widespread project adoption through endorsement from two
-  or more Core Projects.
-  
-  Adopted
-  : Any project in the ecosystem can adopt any SPEC.
-  Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
-  Every project is responsible for deciding whether they will adopt a SPEC according
-  to their own governance process.
-  
-  Endorsed
+  or more Core Projects.[^draft]
+  During the draft stage, member of the Core Projects and interested community members should
+  further develop the SPEC as coauthors.
+  Most SPECs will have several authors from numberous projects.
+  During this stage, the focus is on collaboratively developing an implementation plan that
+  will be broadly applicable and and widely adopted.
+
+  Endorse
   : Each Core Project independently decides whether to endorse a SPEC.
   Endorsements signal to the ecosystem that the core projects not only adopt
   the SPEC (when applicable), but that after carefully reviewing the SPEC
@@ -107,6 +115,20 @@ SPEC Process
   Often, as part of the collaborative effort, Core Project contributors will
   become coauthors of the SPEC document after it is accepted, but before endorsing it,
   in order to help shape it.
+ 
+  Adopt
+  : Any project in the ecosystem is welcome to adopt a SPEC at any point.
+  However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
+  This ensures that the SPEC has been vetted and deemed stable enough for wide
+  spread adoption.
+  Once a SPEC is endorsed by several Core Projects it may still evolve, but the
+  barrier for modifying the SPEC will increase substantially once it is endorsed by several
+  Core Projects.
+  Projects that adopt a SPEC early should engage in the collaborative process
+  leading to the SPEC being endorsed by the Core Projects.
+  Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
+  Every project is responsible for deciding whether they will adopt a SPEC according
+  to their own governance process.
 <!-- prettier-ignore-end -->
 
 ## Format
@@ -138,13 +160,16 @@ However, we highly recommended that you first **vet the idea** by doing one or m
 
 Each SPEC document should focus on a single key proposal, recommendation, or idea for
 coordinating projects in the scientific Python ecosystem.
+There are three important milestones over the lifetime of a SPEC:
 
-The first hurdle in the SPEC process is getting a new SPEC document accepted by the Steering Committee.
+SPEC Acceptance
+: The first important milestone in the SPEC process is getting a new SPEC document accepted by the Steering Committee.
 The Steering Committee will accept the new SPEC document based on the quality of the proposal
 and on interest for the proposed SPEC on its
 [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9).
 
-The next hurdle is getting Core Projects to endorse the accepted SPEC.
+SPEC Endorsement
+: The next important milestone is getting Core Projects to endorse the accepted SPEC.
 Accepted SPEC documents are marked as `draft documents` until some of
 the Core Projects decide to adopt (if applicable) and endorse the SPEC.
 During this phase of the process, it is helpful to recruit coauthors
@@ -155,7 +180,8 @@ All PRs to the SPEC repository will be reviewed by the SCC.
 Some SPECs will involve the creation of new projects or implementation
 work in existing projects.
 
-The final hurdle is to get projects throughout the ecosystem to adopt the SPEC.
+SPEC Adoption
+: The final milestone is to get projects throughout the ecosystem to adopt the SPEC.
 This phase of the process is ill-defined and how effective it will be will
 need to be demonstrated.
 The hope is that we will attract attention for projects throughout the
@@ -327,3 +353,9 @@ You will need to continue engaging the Core Projects and the larger ecosystem in
 as well as engaging with projects directly.
 It will be helpful to recruit additional authors from different projects to
 help develop the SPEC and respond to feedback from the ecosystem.
+
+# Notes
+
+[^draft]:
+    Normally, Hugo does not render documents with `draft: true` in its header.
+    However, we use the this field to render SPECs with a warning that they are draft documents.

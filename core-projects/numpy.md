@@ -1,6 +1,7 @@
 ---
 title: "NumPy"
 draft: true
+avatar: https://avatars.githubusercontent.com/u/288276
 homepage: https://numpy.org
 repository: https://github.com/numpy/numpy
 pypi: https://pypi.org/project/numpy

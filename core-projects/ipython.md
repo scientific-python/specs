@@ -1,6 +1,7 @@
 ---
 title: "IPython"
 draft: true
+avatar: https://avatars.githubusercontent.com/u/230453
 homepage: https://ipython.org
 repository: https://github.com/ipython/ipython
 pypi: https://pypi.org/project/ipython

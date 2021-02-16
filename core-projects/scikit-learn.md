@@ -1,6 +1,7 @@
 ---
 title: "scikit-learn"
 draft: true
+avatar: https://avatars.githubusercontent.com/u/365630
 homepage: https://scikit-learn.org
 repository: https://github.com/scikit-learn/scikit-learn
 pypi: https://pypi.org/project/scikit-learn
