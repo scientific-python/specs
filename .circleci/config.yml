@@ -30,10 +30,10 @@ jobs:
             sed -i '/theme/a uglyurls = true' config.toml
             sed -i '/uglyurls/a relativeURLs=true' config.toml
             sed -i 's/\"\/\"/\"\/index.html\"/g' config.toml
-            sed -i 's/\/about/\/about.html/g' config.toml
-            sed -i 's/\/posts/\/posts.html/g' config.toml
-            sed -i 's/\/specs/\/specs.html/g' config.toml
-            sed -i 's/\/summits/\/summits.html/g' config.toml
+            sed -i 's/\/about\//\/about.html/g' config.toml
+            sed -i 's/\/posts\//\/posts.html/g' config.toml
+            sed -i 's/\/specs\//\/specs.html/g' config.toml
+            sed -i 's/\/summits\//\/summits.html/g' config.toml
             hugo --buildDrafts
 
       - store_artifacts:

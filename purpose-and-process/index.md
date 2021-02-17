@@ -50,7 +50,7 @@ reviewing, discussing, implementing, and endorsing SPEC documents.
 SPEC Steering Committee
 : The [Steering Committee]({{< relref "/specs/steering-committee" >}}) leads the SPEC project and
 manages the SPEC process including moderating
-[`specs` discussions](https://discuss.scientific-python.org/c/specs/6),
+[`SPECs` Discourse forum](https://discuss.scientific-python.org/c/specs/6),
 accepting SPEC documents, and maintaining the SPEC process documents.
 
 SPEC Process
@@ -63,7 +63,7 @@ the entire ecosystem.
 
 SPEC Document
 : A **SPEC document** provides operational guidelines for projects in the ecosystem and
-help coordinate the ecosystem and to provide a more unified experience for users.
+helps coordinate the ecosystem and to provide a more unified experience for users.
 These documents are developed collaboratively with the Core Projects and other interested
 ecosystem projects and community members.
 
@@ -84,7 +84,7 @@ existing comments.
 # Implementation
 
 Before a proposed SPEC can be accepted, it must be discussed as a
-[`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)
+[`SPECs/Ideas` Discourse topic](https://discuss.scientific-python.org/c/specs/ideas/9)
 and a new SPEC document must be submitted
 as a pull request (PR) to the [SPEC repository](https://github.com/scientific-python/specs).
 Any community member can submit a new SPEC document, but only the Steering Committee
@@ -98,7 +98,6 @@ Contributors must adhere to our
 
 ## Propose
 
-Anyone can propose a SPEC by posting a new discussion topic
 Before a proposed SPEC can be accepted, it must be discussed as a
 [`SPECs/Ideas` Discourse topic](https://discuss.scientific-python.org/c/specs/ideas/9).
 Often, proposals are driven by contributors and maintainers of Core Projects or
@@ -121,7 +120,7 @@ Located at the top-level of the
 the script will ask you a few questions[^newspec] and then create a new file
 appropriately named with a basic template for you to complete.
 Once the SPEC is in reasonable shape, file a pull request against the
-[scientific-python/specs](https://github.com/scientific-python/specs)
+[SPEC repository](https://github.com/scientific-python/specs)
 repository.
 
 The Steering Committee will accept the new SPEC document based on the quality of the proposal
@@ -131,7 +130,7 @@ Often, implementation details will need to be developed and negotiated with
 projects and will necessarily evolve after the SPEC is accepted.
 An accepted SPEC appears in the [SPEC list]({{< relref "/specs" >}})
 and has a corresponding
-[`specs/accepted` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
+[`SPECs/Accepted` Discourse topic](https://discuss.scientific-python.org/c/specs/accepted/15).
 
 ## Endorse
 
@@ -153,8 +152,7 @@ work in existing projects.
 
 Any project in the ecosystem is welcome to adopt a SPEC at any point.
 However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
-This ensures that the SPEC has been vetted and deemed stable enough for wide
-spread adoption.
+This ensures that the SPEC has been vetted and deemed stable enough for widespread adoption.
 Once a SPEC is endorsed by several Core Projects it may still evolve, but the
 barrier for modifying the SPEC will increase substantially once it is endorsed by several
 Core Projects.
