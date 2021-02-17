@@ -9,15 +9,20 @@ author:
 
 # Description
 
-SPEC documents or SPECs, for short, provide operational guidelines
-for projects in the scientific Python ecosystem.
-Their goal is to coordinate the ecosystem and to provide a more unified
-experience for users.
+The purpose of the SPEC process is
+
+1. to help unify the ecosystem for users and developers;
+2. to provide guidance to projects on technical issues or processes;
+3. to document standard APIs, development tools, and community practices; and
+4. to foster ecosystem-wide discussions of common problems and to develop shared solutions.
+
+The SPEC process is designed to identify shared concerns and areas of unification
+and to produce collaboratively written and community adopted SPEC documents or SPECs, for short,
+which provide operational guidelines for projects in the scientific Python ecosystem.
 
 Projects in the ecosystem have an existing, diverse set of proposal processes
 and development constraints.
-SPECs, therefore, are not meant to be prescriptive: rather, they are a
-mechanism to encourage shared practices and improve uniformity of experience.
+SPECs are a mechanism to encourage shared practices and improve uniformity of experience.
 SPECs may, for example, capture established practices so that new projects can
 learn from them; or they may propose a new practice that the authors believe
 will benefit the ecosystem as a whole.
@@ -26,22 +31,10 @@ Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
 A SPEC may not be a good fit for every single project, and thus there is no
 expectation that all SPECs must be adopted by all projects.
-Different SPECs may even recommend differing approaches to the same problem for
-the sake of discussion and consensus-building among the projects.
-However, it is often better to capture the various approaches to one problem
-in one SPEC.
-
-That said, the purpose of the SPEC process is
-
-1. to help unify the ecosystem for users;
-2. to provide guidance to projects on technical issues or processes;
-3. to document standard APIs, development tools, and community practices; and
-4. to serve as a mechanism for ecosystem contributors to discuss common problems and develop shared solutions.
-
-SPECs serve their purpose to the extent that they are discussed and adopted by
+That said, SPECs serve their purpose to the extent that they are discussed and adopted by
 several projects—and their authority stems from the extent to which they are.
 
-## Key Concepts
+## Key Terms
 
 Scientific Python Ecosystem
 : The **ecosystem** is a loose federation of community developed Python projects
@@ -68,68 +61,11 @@ This process is managed and overseen by the Steering Committee in collaboration
 with the Core Projects as well as community members and projects across
 the entire ecosystem.
 
-<!-- prettier-ignore-start -->
 SPEC Document
 : A **SPEC document** provides operational guidelines for projects in the ecosystem and
-  help coordinate the ecosystem and to provide a more unified experience for users.
-  These documents are developed collaboratively with the Core Projects and other interested
-  ecosystem projects and community members.
-  During the SPEC process, a SPEC will go through the following stages:
-
-  Propose
-  : Anyone can propose a SPEC.  Often, proposals are driven by contributors and
-  maintainers of Core Projects or other ecosystem projects. 
-  Before a proposed SPEC can be accepted, it must be discussed as a 
-  [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-
-  Accept
-  : The Steering Committee determines whether a SPEC is accepted.
-  The main criterion for acceptance is community interest as gauged on the
-  [`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)
-  and agreement among the Steering Committee that the SPEC describes a useful proposal,
-  recommendation, or idea for coordinating projects at a high-level.
-  Often, implementation details will need to be developed and negotiated with
-  projects and will necessarily develop and evolve after the SPEC is accepted.
-  An accepted SPEC appears in the [SPEC list]({{< relref "/specs" >}})
-  and has a corresponding
-  [`specs/accepted` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
-
-  Draft
-  : Accepted SPECs are marked as a `draft document` until there is a consensus
-  that it ready for widespread project adoption through endorsement from two
-  or more Core Projects.[^draft]
-  During the draft stage, member of the Core Projects and interested community members should
-  further develop the SPEC as coauthors.
-  Most SPECs will have several authors from numberous projects.
-  During this stage, the focus is on collaboratively developing an implementation plan that
-  will be broadly applicable and and widely adopted.
-
-  Endorse
-  : Each Core Project independently decides whether to endorse a SPEC.
-  Endorsements signal to the ecosystem that the core projects not only adopt
-  the SPEC (when applicable), but that after carefully reviewing the SPEC
-  that they want to use their reputation in the ecosystem to publicly encourage
-  other projects to adopt a SPEC.
-  When applicable, an endorsement also mean that the Core Project provides the
-  necessary infrastructure required by other projects wishing to adopt the SPEC.
-  Often, as part of the collaborative effort, Core Project contributors will
-  become coauthors of the SPEC document after it is accepted, but before endorsing it,
-  in order to help shape it.
- 
-  Adopt
-  : Any project in the ecosystem is welcome to adopt a SPEC at any point.
-  However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
-  This ensures that the SPEC has been vetted and deemed stable enough for wide
-  spread adoption.
-  Once a SPEC is endorsed by several Core Projects it may still evolve, but the
-  barrier for modifying the SPEC will increase substantially once it is endorsed by several
-  Core Projects.
-  Projects that adopt a SPEC early should engage in the collaborative process
-  leading to the SPEC being endorsed by the Core Projects.
-  Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
-  Every project is responsible for deciding whether they will adopt a SPEC according
-  to their own governance process.
-<!-- prettier-ignore-end -->
+help coordinate the ecosystem and to provide a more unified experience for users.
+These documents are developed collaboratively with the Core Projects and other interested
+ecosystem projects and community members.
 
 ## Format
 
@@ -147,215 +83,106 @@ existing comments.
 
 # Implementation
 
-Before a proposed SPEC can be accepted, a new SPEC document must be submitted
+Before a proposed SPEC can be accepted, it must be discussed as a
+[`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9)
+and a new SPEC document must be submitted
 as a pull request (PR) to the [SPEC repository](https://github.com/scientific-python/specs).
-Any community member can submit a new SPEC document.
-However, we highly recommended that you first **vet the idea** by doing one or more of the following:
-
-1. discuss the idea in at least one project in the ecosystem,
-2. discuss the idea with at least one other member of the ecosystem,
-3. discuss the idea on the
-   [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/ideas/9),
-4. create a minimal, proof of concept prototype.
-
-Each SPEC document should focus on a single key proposal, recommendation, or idea for
-coordinating projects in the scientific Python ecosystem.
-There are three important milestones over the lifetime of a SPEC:
-
-SPEC Acceptance
-: The first important milestone in the SPEC process is getting a new SPEC document accepted by the Steering Committee.
-The Steering Committee will accept the new SPEC document based on the quality of the proposal
-and on interest for the proposed SPEC on its
-[`specs/ideas` discussion topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-
-SPEC Endorsement
-: The next important milestone is getting Core Projects to endorse the accepted SPEC.
-Accepted SPEC documents are marked as `draft documents` until some of
-the Core Projects decide to adopt (if applicable) and endorse the SPEC.
-During this phase of the process, it is helpful to recruit coauthors
-from the Core Projects to help collaboratively develop the SPEC.
-Often, this phase of the process will take longer and be more involved
-than the the acceptance phase.
-All PRs to the SPEC repository will be reviewed by the SCC.
-Some SPECs will involve the creation of new projects or implementation
-work in existing projects.
-
-SPEC Adoption
-: The final milestone is to get projects throughout the ecosystem to adopt the SPEC.
-This phase of the process is ill-defined and how effective it will be will
-need to be demonstrated.
-The hope is that we will attract attention for projects throughout the
-ecosystem and they will help us figure out the best way to improve the
-process.
+Any community member can submit a new SPEC document, but only the Steering Committee
+can accept it.
+Accepted SPECs are marked as a `draft document` until there is a consensus
+that it ready for widespread project adoption through endorsement from two
+or more Core Projects.[^draft]
 
 Contributors must adhere to our
-[Code of Conduct]({{< relref "/about/code_of_conduct.md" >}}).
+[Code of Conduct]({{< relref "/code_of_conduct.md" >}}).
 
-## New SPEC Document
+## Propose
+
+Anyone can propose a SPEC by posting a new discussion topic
+Before a proposed SPEC can be accepted, it must be discussed as a
+[`SPECs/Ideas` Discourse topic](https://discuss.scientific-python.org/c/specs/ideas/9).
+Often, proposals are driven by contributors and maintainers of Core Projects or
+other ecosystem projects.
+
+A good SPEC proposal focuses on a single key proposal, recommendation, or idea for
+coordinating projects in the scientific Python ecosystem.
+Before proposing a SPEC, we highly recommended that you first **vet the idea**
+by doing one or more of the following:
+
+1. discuss the idea with at least one project in the ecosystem,
+2. discuss the idea with at least one other member of the ecosystem, or
+3. create a minimal, proof of concept prototype.
+
+## Accept
 
 Use the `quickstart.py` script to create a new SPEC document.
 Located at the top-level of the
 [SPEC repository](https://github.com/scientific-python/specs),
-the script will ask you a few questions and then create a new file
-appropriately named with a basic template for you to complete:
-
-Header
-: The `Header` section is mostly autofilled by the `quickstart.py` script.
-However, you may need to expand or update it.
-
-Description
-: The `Description` section captures the general proposal.
-A SPEC is accepted based largely on this section and the community interest.
-So the focus of a proposed SPEC should be on making a clear and compelling
-description of the problem that the SPEC addresses.
-
-Implementation
-: If the SPEC is largely documenting already established best practices
-that are widely used by the Core Projects, then the `Implementation`
-should be relatively straightforward to write.
-However, if the SPEC is proposing something new or something not
-widely used by the Core Projects already, then the `Implementation`
-section often requires an extend period of discussions with the Core
-Projects as well as the larger community.
-This process takes place after a SPEC is accepted, but before it
-is endorsed by any Core Projects.
-
-Notes
-: The `Notes` section is optional.
-
-Additional files associated with a SPEC document may be kept in a directory
-with the same filename (minus as the `.md` extension) as the SPEC.
-For example, files associated with `spec-0000.md` are in `spec-0000`.
-
-For example,
-
-<!-- prettier-ignore-start -->
-{{< highlight bash >}}
-$ python quickstart.py
-Your Name: Jarrod Millman
-Your Email Address: millman@berkeley.edu
-SPEC number: 0
-SPEC title: Minimum Supported Versions
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
-
-creates the file `spec-0000.md` containing:
-
-<!-- prettier-ignore-start -->
-{{< highlight yaml >}}
----
-title: "SPEC 0 — Minimum Supported Versions"
-date: 2021-01-10
-draft: true
-author:
-  - "Jarrod Millman <millman@berkeley.edu>"
-discussion: https://discuss.scientific-python.org/t/
-endorsed-by:
----
-
-# Description
-
-<!--
-Briefly and clearly describe the proposal.
-Explain the general need and the advantages of this specific proposal.
-If relevant, include examples of how the new functionality would be
-used, intended use-cases, and pseudo-code illustrating its use.
--->
-
-# Implementation
-
-<!--
-Discuss how this would be implemented.
--->
-
-## Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-## Ecosystem Adoption
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
-
-# Notes
-
-<!--
-Include a bulleted list of annotated links, comments, and other ancillary
-information as needed.
--->
-
-{{< /highlight >}}
-<!-- prettier-ignore-end -->
-
-When asked to enter the SPEC number, choose the next available number that
-has not yet been used.
-Before the SPEC is merged, the Steering Committee may ask you to change the SPEC number so
-that it doesn't conflict with another PR.
-If so, just rename the file as appropriate and update the SPEC number in the
-`title` field of the SPEC header.
-
-The script currently only supports adding one author.
-If you need to add additional authors, just edit the text file.
-
-For example, adding a second author the above template requires the following
-change to the SPEC header:
-
-<!-- prettier-ignore-start -->
-{{< highlight yaml >}}
----
-title: "SPEC 0 — Minimum Supported Versions"
-date: 2021-01-10
-draft: true
-author:
-  - "Jarrod Millman <millman@berkeley.edu>"
-  - "Ross Barnowski <rossbar@berkeley.edu>"
-discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
-endorsed-by:
----
-{{< / highlight >}}
-<!-- prettier-ignore-end -->
-
-Leave the `draft` field set to `true` and the `endorsed-by` field empty.
+the script will ask you a few questions[^newspec] and then create a new file
+appropriately named with a basic template for you to complete.
 Once the SPEC is in reasonable shape, file a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
-The Steering Committee as well as community members will provide feedback.
-They will pay particular attention to ensure the `Description`
-section is clear and reasonably complete.
-They will also provide advice of how much detail is needed in
-the `Implementation` section.
 
-Before the PR is merged, you will be asked to create a new
-[discussion](https://discuss.scientific-python.org/c/specs/ideas/9)
-(if you haven't already).
+The Steering Committee will accept the new SPEC document based on the quality of the proposal
+and on interest on the [`SPECs/Ideas` Discourse forum](https://discuss.scientific-python.org/c/specs/ideas/9).
+Accepting a SPEC does not mean it is ready for Core Project endorsement or project adoption.
+Often, implementation details will need to be developed and negotiated with
+projects and will necessarily evolve after the SPEC is accepted.
+An accepted SPEC appears in the [SPEC list]({{< relref "/specs" >}})
+and has a corresponding
+[`specs/accepted` discussion topic](https://discuss.scientific-python.org/c/specs/accepted/15).
 
-## Review and Acceptance
+## Endorse
 
-The Steering Committee will consider whether the new idea fits as a SPEC and monitor
-subsequent discussion.
-If there is sufficient interest, the Steering Committee will convert the discussion to the
-[Accepted](https://discuss.scientific-python.org/c/specs/accepted/15)
-subcategory and assign it a SPEC number.
-At this point, the PR should be updated to ensure the title, file name,
-and `discussion` field are correct.
-When it is ready, the Steering Committee will merge the PR.
-Additional PRs will be made to update or expand the SPEC after it is
-accepted.
+Accepted SPEC documents are marked as `draft documents` until two or more
+of the Core Projects decide to adopt (if applicable) and endorse the SPEC.
+During this phase of the process, it is helpful to recruit coauthors
+from the Core Projects to help collaboratively develop the SPEC.
+Most SPECs will have several authors from numerous projects.
+During this stage, the focus is on collaboratively developing an implementation plan that
+will be broadly applicable and and widely adopted.
 
-## Endorsement and Adoption
+Often, this phase of the process will take longer and be more involved
+than the acceptance phase.
+All PRs to the SPEC repository will be reviewed by the Steering Committee.
+SPECs may involve the creation of new projects or implementation
+work in existing projects.
 
-Once the SPEC is accepted, the hard work begins.
-You will need to continue engaging the Core Projects and the larger ecosystem in the
-[discussion forum](https://discuss.scientific-python.org/c/specs/accepted/15)
-as well as engaging with projects directly.
-It will be helpful to recruit additional authors from different projects to
-help develop the SPEC and respond to feedback from the ecosystem.
+## Adopt
+
+Any project in the ecosystem is welcome to adopt a SPEC at any point.
+However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
+This ensures that the SPEC has been vetted and deemed stable enough for wide
+spread adoption.
+Once a SPEC is endorsed by several Core Projects it may still evolve, but the
+barrier for modifying the SPEC will increase substantially once it is endorsed by several
+Core Projects.
+Projects that adopt a SPEC early should engage in the collaborative process
+leading to the SPEC being endorsed by the Core Projects.
+Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
+Every project is responsible for deciding whether they will adopt a SPEC according
+to their own governance process.
 
 # Notes
 
 [^draft]:
     Normally, Hugo does not render documents with `draft: true` in its header.
     However, we use the this field to render SPECs with a warning that they are draft documents.
+
+[^newspec]:
+    When asked to enter the SPEC number, choose the next available number that
+    has not yet been used.
+    Before the SPEC is merged, the Steering Committee may ask you to change the SPEC number so
+    that it doesn't conflict with another PR.
+    If so, just rename the file as appropriate and update the SPEC number in the
+    `title` field of the SPEC header.
+
+    The script currently only supports adding one author.
+    If you need to add additional authors, just edit the text file.
+
+    Additional files associated with a SPEC document may be kept in a directory
+    with the same filename (minus as the `.md` extension) as the SPEC.
+    For example, files associated with `spec-0000.md` are in `spec-0000`.
+
+    Leave the `draft` field set to `true` and the `endorsed-by` field empty.
