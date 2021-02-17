@@ -20,10 +20,6 @@ used by the core projects are widely seen by the ecosystem
 and impact many other projects.
 In fact, more specialized projects sometimes model themselves on the core packages.
 
-## Role in SPEC process
-
-{{< page_gallery pages="." link=internal >}}
-
 The Core Projects play a special role in the SPEC process.
 Each Core Project monitors proposed SPECs and often members of their community
 engage in the SPEC design and discussion process.
@@ -37,6 +33,10 @@ Since SPECs can be proposed by anyone, including members of new or more
 specialized projects, having Core Projects consider these proposals
 provides a convenient mechanism for projects and individuals
 to have greater influence on the Core Projects and larger ecosystem.
+
+## Core Projects
+
+{{< page_gallery pages="." link=internal >}}
 
 # Implementation
 
