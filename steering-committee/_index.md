@@ -10,7 +10,7 @@ author:
 # Description
 
 The SPEC process is managed by the Steering Committee.
-In particuler, the Steering Committee members
+In particular, the Steering Committee members
 
 - monitor and moderate the
   [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),

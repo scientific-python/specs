@@ -11,28 +11,14 @@ endorsed-by:
 
 # Description
 
-The scientific Python ecosystem is formed around a few "core projects".
+The [Steering Committee]({{< relref "/specs/steering-committee" >}}) maintains the list of
+Core Projects.
 These projects are depended upon by most of the other projects,
 and often provide basic data structures, drawing primitives,
 or implementations of fundamental algorithms.
 Due to their central position in the ecosystem, the policies, practices, and tooling
 used by the core projects are widely seen by the ecosystem
 and impact many other projects.
-In fact, more specialized projects sometimes model themselves on the core packages.
-
-The Core Projects play a special role in the SPEC process.
-Each Core Project monitors proposed SPECs and often members of their community
-engage in the SPEC design and discussion process.
-Moreover, Core Projects may appear in the `endorsed-by` field of a SPEC header.
-Having a Core project endorse a SPEC signals to the community that the SPEC has
-been vetted by a mature project with a healthy developer review process in-place.
-It also allows more specialized projects to easily see
-whether the Core Projects they depend on have endorsed a given SPEC.
-
-Since SPECs can be proposed by anyone, including members of new or more
-specialized projects, having Core Projects consider these proposals
-provides a convenient mechanism for projects and individuals
-to have greater influence on the Core Projects and larger ecosystem.
 
 ## Core Projects
 
@@ -40,8 +26,8 @@ to have greater influence on the Core Projects and larger ecosystem.
 
 # Implementation
 
-The [Steering Committee]({{< relref "/specs/steering-committee" >}}) maintains the list of
-Core Projects.
+Core Projects are involved at all stages of the SPEC process.
+They work collaboratively to develop draft SPECs so that they can be endorsed.
 
 ## What are the characteristics of a Core Project?
 
@@ -74,12 +60,6 @@ fear of breaking it.
 
 Core Projects are **open source**.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
-
-## What are the responsibilities of being a Core Project?
-
-- keep project registration information updated
-- participate in the SPEC process
-- discuss, adopt, and endorse SPECs
 
 ## How does a Core Project endorse a SPEC?
 
