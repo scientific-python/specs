@@ -12,15 +12,15 @@ endorsed-by:
 # Description
 
 The scientific Python ecosystem is formed around a few "core projects".
-These are projects that are depended upon by most of the other projects,
-often providing basic data structures, drawing primitives,
+These projects are depended upon by most of the other projects,
+and often provide basic data structures, drawing primitives,
 or implementations of fundamental algorithms.
 Due to their central position in the ecosystem, the policies, practices, and tooling
 used by the core projects are widely seen by the ecosystem
 and impact many other projects.
 In fact, more specialized projects sometimes model themselves on the core packages.
 
-## Core Projects
+## Role in SPEC process
 
 {{< page_gallery pages="." link=internal >}}
 
@@ -33,7 +33,7 @@ been vetted by a mature project with a healthy developer review process in-place
 It also allows more specialized projects to easily see
 whether the Core Projects they depend on have endorsed a given SPEC.
 
-Since SPECs can be proposed by anyone including members of new or more
+Since SPECs can be proposed by anyone, including members of new or more
 specialized projects, having Core Projects consider these proposals
 provides a convenient mechanism for projects and individuals
 to have greater influence on the Core Projects and larger ecosystem.
@@ -83,10 +83,9 @@ The 3-clause (also called "modified" or "new") BSD license is by far the most co
 
 ## How does a Core Project endorse a SPEC?
 
-Core Projects may discuss whether to endorse a SPEC on their mailing list,
-issue tracker, or on a pull request.
-Certain SPECs may require Core Projects create their own enhancement
-proposals to figure out whether and how to endorse a SPEC.
+Core Projects use their project-specific discussion and decision making mechanisms to decide whether to support a SPEC.
+Certain SPECs may, for example, require Core Projects to create their _own_ enhancement
+proposals to expand on implementation details.
 
 Once a Core Project decides to endorse a SPEC, they add their project
 name to the `endorsed-by` field in the SPEC header via a pull request against
@@ -101,15 +100,13 @@ But it is expected that the list of Core Projects will not rapidly change.
 ## How do you add a project?
 
 If the Steering Committee decides to admit a new Core Project and the project agrees, then
-the project create registration file, file a pull request against the
+the project creates a registration file and files a pull request against the
 [scientific-python/specs](https://github.com/scientific-python/specs) repository.
 
 To create your project registration file, change into the
 `core-projects` directory and use the `register.py` script.
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to check and complete.
-
-The Steering Committee should also update the gallery above.
 
 ## How do you remove a member?
 
