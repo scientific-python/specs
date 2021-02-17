@@ -13,10 +13,10 @@ The SPEC process is managed by the Steering Committee.
 In particuler, the Steering Committee members
 
 - monitor and moderate the
-  [`specs` discussion forum](https://discuss.scientific-python.org/c/specs/6),
-- determine which proposed SPECS are accepted as described in the SPEC
+  [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),
+- determine which proposed SPECs are accepted as described in the SPEC
   [Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
-- approve changes to the SPEC process including any changes to the
+- suggest and approve changes to the SPEC process including any changes to the
   [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
   [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), and
   [SPEC Core Projects]({{< relref "/specs/core-projects" >}}), as well as
@@ -36,20 +36,16 @@ choice resides with individual core projects.
 
 To accept a SPEC (i.e., to assign it a SPEC number and merge the PR)
 requires two members of the Steering Committee to approve and no members objecting.
-Since the role of the Steering Committee is to mainly ensure that SPEC proposals are
+Since the role of the Steering Committee is mainly to ensure that SPEC proposals are
 appropriate, objections should be rare.
 
-To make changes to the SPEC process including to the
-[SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
-[SPEC Steering Committee]({{< relref "/specs/purpose-and-process" >}}), or
-[SPEC Core Projects]({{< relref "/specs/purpose-and-process" >}}),
-the Steering Committee makes decisions through group consensus and, in the very rare instance
+The Steering Committee makes decisions through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
 
 Public communication takes place in the
 [`specs` GitHub repository](https://github.com/scientific-python/specs/)
-and the [`specs` discussion](https://discuss.scientific-python.org/c/specs/6).
+and the [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6).
 Private communication within the Steering Committee takes place on
 [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/).
 Steering Committee members are expected to be aware of conversations on this list to lend validity
