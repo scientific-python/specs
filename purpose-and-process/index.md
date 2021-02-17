@@ -87,10 +87,8 @@ existing comments.
 
 # Implementation
 
-## Propose
-
 SPEC Proposals often will be driven by contributors and maintainers of Core or other ecosystem projects.
-Only the Steering Committee can accept them.
+Only the Steering Committee can accept them (details below).
 
 Before a proposed SPEC can be accepted, the idea must be discussed on the
 discussion forum under the [`SPECS/Ideas` topic](https://discuss.scientific-python.org/c/specs/ideas/9).
