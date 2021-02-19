@@ -66,8 +66,8 @@ with the Core Projects, as well as community members and projects across
 the entire ecosystem.
 
 SPEC Document
-: A **SPEC document** provides operational guidelines for projects in the ecosystem and
-helps coordinate the ecosystem and to provide a more unified experience for users.
+: A **SPEC document** provides operational guidelines for projects in the ecosystem and helps
+coordinate the ecosystem to provide a more unified experience for users and developers.
 These documents are developed collaboratively with the Core Projects and other interested
 ecosystem projects and community members.
 
@@ -103,7 +103,7 @@ appropriately named with a basic template for you to complete.
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
 
-A good SPEC proposal focuses on a single key proposal, recommendation, or idea for
+A good SPEC proposal focuses on a single key recommendation or idea for
 coordinating projects in the scientific Python ecosystem.
 Before proposing a SPEC, we highly recommended that you first **vet the idea**
 by doing one or more of the following:
@@ -111,6 +111,10 @@ by doing one or more of the following:
 1. discuss the idea with at least one project in the ecosystem,
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
+
+There are several stages that a SPEC undergoes over the course of its development and implementation:
+**Acceptance**, **Endorsement**, and **Adoption**.
+These stages are described below.
 
 ## Accept
 
@@ -145,9 +149,9 @@ work in existing projects.
 Any project in the ecosystem is welcome to adopt a SPEC at any point.
 However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
 This ensures that the SPEC has been vetted and deemed stable enough for widespread adoption.
-Once a SPEC is endorsed by several Core Projects it may still evolve, but the
-barrier for modifying the SPEC will increase substantially once it is endorsed by several
-Core Projects (since all endorsing projects would need to agree to changes).
+Once a SPEC is endorsed by several Core Projects it may still evolve,
+but the barrier for modifying the SPEC will increase substantially
+(since all endorsing projects would need to agree to changes).
 Projects that adopt a SPEC early should engage in the collaborative process
 leading to the SPEC being endorsed by the Core Projects.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
