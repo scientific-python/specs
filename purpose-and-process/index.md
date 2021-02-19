@@ -103,7 +103,7 @@ appropriately named with a basic template for you to complete.
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
 
-A good SPEC proposal focuses on a single key proposal, recommendation, or idea for
+A good SPEC proposal focuses on a single key recommendation or idea for
 coordinating projects in the scientific Python ecosystem.
 Before proposing a SPEC, we highly recommended that you first **vet the idea**
 by doing one or more of the following:
