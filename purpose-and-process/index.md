@@ -67,7 +67,7 @@ the entire ecosystem.
 
 SPEC Document
 : A **SPEC document** provides operational guidelines for projects in the ecosystem and
-helps coordinate the ecosystem and to provide a more unified experience for users.
+helps coordinate the ecosystem to provide a more unified experience for users.
 These documents are developed collaboratively with the Core Projects and other interested
 ecosystem projects and community members.
 
