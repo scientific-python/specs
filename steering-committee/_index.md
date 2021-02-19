@@ -12,11 +12,11 @@ author:
 The SPEC process is managed by the Steering Committee.
 In particular, the Steering Committee members
 
-- monitor and moderate the
+- monitor the
   [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),
 - determine which proposed SPECs are accepted as described in the SPEC
   [Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
-- suggest and approve changes to the SPEC process including any changes to the
+- approve changes to the SPEC process including to the
   [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
   [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), and
   [SPEC Core Projects]({{< relref "/specs/core-projects" >}}), as well as
@@ -34,7 +34,7 @@ choice resides with individual core projects.
 
 # Implementation
 
-To accept a SPEC (i.e., to assign it a SPEC number and merge the PR)
+To accept a SPEC (i.e., assigning it a SPEC number, marking its discussion `Accepted`, and merging the PR)
 requires two members of the Steering Committee to approve and no members objecting.
 Since the role of the Steering Committee is mainly to ensure that SPEC proposals are
 appropriate, objections should be rare.
@@ -68,11 +68,11 @@ recruit new members.
 ## How do you add a member?
 
 If the Steering Committee decides to admit a new member and that person agrees,
-then they should
-(1) be added to the Steering Committee member listing above,
-(2) be added to the
-[Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
-(3) be added to the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
+then they should be added to the
+(1) the Steering Committee member listing above,
+(2) the [Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
+(3) the [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/SSC), and
+(4) the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
 
 ## How do you remove a member?
 
@@ -81,4 +81,6 @@ then they should
 (1) be moved to the list of Emeritus Steering Committee members (below the list of active members),
 (2) be removed from the
 [Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
-(3) be removed from the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
+(3) be removed from the
+[Steering Committee Discourse Group](https://discuss.scientific-python.org/g/SSC), and
+(4) be removed from the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).

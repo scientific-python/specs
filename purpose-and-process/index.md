@@ -23,7 +23,8 @@ Specifically, the purpose of the SPEC process is
 
 Projects in the ecosystem have an existing, diverse set of proposal processes
 and development constraints.
-SPECs complement these: they are a mechanism to encourage shared practices and improve uniformity of experience across projects.
+SPECs complement these: they are a mechanism to encourage shared practices and
+improve uniformity of experience across projects.
 SPECs may, for example, capture established practices so that new projects can
 learn from them; or they may propose a new practice that the authors believe
 will benefit the ecosystem as a whole.
@@ -35,8 +36,8 @@ expectation that all SPECs must be adopted by all projects.
 That said, SPECs serve their purpose to the extent that they are adopted by
 several projects—and their authority stems from the extent to which they are.
 
-Participants in the SPEC process must adhere to our [Code of
-Conduct]({{< relref "/code_of_conduct.md" >}}).
+Participants in the SPEC process must adhere to our
+[Code of Conduct]({{< relref "/code_of_conduct.md" >}}).
 
 ## Key Terms
 
@@ -74,10 +75,10 @@ ecosystem projects and community members.
 ## Format
 
 SPECs are UTF-8 encoded text files using
-[Markdown](https://www.markdownguide.org/) format and stored in the [SPEC
-repository](https://github.com/scientific-python/specs).
-The SPEC documents are converted to HTML by code in the [scientific-python.org
-repository](https://github.com/scientific-python/scientific-python.org/) using
+[Markdown](https://www.markdownguide.org/) format and stored in the
+[SPEC repository](https://github.com/scientific-python/specs).
+The SPEC documents are converted to HTML by code in the
+[scientific-python.org repository](https://github.com/scientific-python/scientific-python.org/) using
 [Hugo](https://gohugo.io/) and deployed to
 [https://scientific-python.org/specs/](https://scientific-python.org/specs/).
 Each SPEC has a corresponding
