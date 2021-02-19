@@ -146,8 +146,7 @@ Any project in the ecosystem is welcome to adopt a SPEC at any point.
 However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
 This ensures that the SPEC has been vetted and deemed stable enough for widespread adoption.
 Once a SPEC is endorsed by several Core Projects it may still evolve, but the
-barrier for modifying the SPEC will increase substantially once it is endorsed by several
-Core Projects (since all endorsing projects would need to agree to changes).
+barrier for modifying the SPEC will increase substantially (since all endorsing projects would need to agree to changes).
 Projects that adopt a SPEC early should engage in the collaborative process
 leading to the SPEC being endorsed by the Core Projects.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
