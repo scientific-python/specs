@@ -23,7 +23,7 @@ Core Projects.
 Core Projects endorse SPEC documents.
 During the endorsement stage of the SPEC process, Core Project contributors
 propose, discuss, and review SPEC documents with the goal of developing
-an implementation plan that all the Core Projects will adopt and endorse.
+a coherent implementation plan suitable for all the Core Projects.
 Often SPECs are coauthored by contributors from several Core Projects as well
 as other community members (e.g., contributors to other ecosystem projects).
 
