@@ -94,7 +94,7 @@ Only the Steering Committee can accept them (details below).
 Before a proposed SPEC can be accepted, the idea must be discussed on the
 discussion forum under the [`SPECS/Ideas` topic](https://discuss.scientific-python.org/c/specs/ideas/9).
 Thereafter a new SPEC document must be submitted
-as a pull request (PR) to the [SPEC repository](https://github.com/scientific-python/specs).
+as a pull request to the [SPEC repository](https://github.com/scientific-python/specs).
 
 Use the `quickstart.py` script to create a new SPEC document.
 Located at the top-level of the
@@ -141,7 +141,7 @@ will be broadly applicable and and widely adopted.
 
 Often, this phase of the process will take longer and be more involved
 than the acceptance phase.
-All PRs to the SPEC repository will be reviewed by the Steering Committee.
+All pull requests to the SPEC repository will be reviewed by the Steering Committee.
 SPECs may involve the creation of new projects or implementation
 work in existing projects.
 
@@ -165,7 +165,7 @@ to their own governance process.
     When asked to enter the SPEC number, choose the next available number that
     has not yet been used.
     Before the SPEC is merged, the Steering Committee may ask you to change the SPEC number so
-    that it doesn't conflict with another PR.
+    that it doesn't conflict with another pull request.
     If so, just rename the file as appropriate and update the SPEC number in the
     `title` field of the SPEC header.
 

@@ -11,14 +11,21 @@ endorsed-by:
 
 # Description
 
-The [Steering Committee]({{< relref "/specs/steering-committee" >}}) maintains the list of
-Core Projects.
-These projects are depended upon by most of the other projects,
+Core Projects are depended upon by most of the other projects,
 and often provide basic data structures, drawing primitives,
 or implementations of fundamental algorithms.
 Due to their central position in the ecosystem, the policies, practices, and tooling
-used by the core projects are widely seen by the ecosystem
+used by the Core Projects are widely seen by the ecosystem
 and impact many other projects.
+The [Steering Committee]({{< relref "/specs/steering-committee" >}}) maintains the list of
+Core Projects.
+
+Core Projects endorse SPEC documents.
+During the endorsement stage of the SPEC process, Core Project contributors
+propose, discuss, and review SPEC documents with the goal of developing
+an implementation plan that all the Core Projects will adopt and endorse.
+Often SPECs are coauthored by contributors from several Core Projects as well
+as other community members (e.g., contributors to other ecosystem projects).
 
 ## Core Projects
 
@@ -75,7 +82,11 @@ repository.
 ## How many Core Projects should there be?
 
 This is up to the Steering Committee.
-But it is expected that the list of Core Projects will not rapidly change.
+But it is expected that the list of Core Projects will remain small and will not rapidly change.
+During the endorsement stage of the SPEC process, contributors to the Core Projects are supposed
+to achieve a shared agreement on how to implement the SPEC.
+When adding new Core Projects, the Steering Committee should ensure that doing so will
+only make it easier for the the Core Projects to achieve consensus.
 
 ## How do you add a project?
 

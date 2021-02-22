@@ -10,6 +10,10 @@ author:
 # Description
 
 The SPEC process is managed by the Steering Committee.
+The Steering Committee represents the interests of the ecosystem and the community.
+The Steering Committee also represent the interests of the
+[Core Projects]({{< relref "/specs/core-projects" >}})
+and is partially composed of individuals who are active Core Project contributors.
 In particular, the Steering Committee members
 
 - monitor the
@@ -34,8 +38,9 @@ choice resides with individual core projects.
 
 # Implementation
 
-To accept a SPEC (i.e., assigning it a SPEC number, marking its discussion `Accepted`, and merging the PR)
-requires two members of the Steering Committee to approve and no members objecting.
+To accept a SPEC (i.e., assigning it a SPEC number, marking its discussion
+`Accepted`, and merging the pull request) requires two members of the Steering
+Committee to approve and no members objecting.
 Since the role of the Steering Committee is mainly to ensure that SPEC proposals are
 appropriate, objections should be rare.
 
@@ -54,9 +59,9 @@ to consensus-seeking and voting.
 ## Who should be a member?
 
 Members of the Steering Committee should be active in the scientific Python ecosystem and
-should have a demonstrated interest in the SPECs.
+should have a demonstrated interest in the Core Projects and the SPEC process.
 Examples of demonstrated interest include submitting SPECs, engaging in SPEC
-discussions, reviewing SPEC PRs, or advocating for wider SPEC participation.
+discussions, reviewing SPEC pull requests, or advocating for wider SPEC participation.
 
 ## How many members should there be?
 
