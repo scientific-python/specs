@@ -9,10 +9,10 @@ author:
 
 # Description
 
-The SPEC process is designed to identify shared concerns and areas of unification
-and to produce collaboratively written, community adopted guidelines for projects in the
-scientific Python ecosystem.
-These documents are known as SPECs: Scientific Python Ecosystem Coordination documents.
+The SPEC process is designed to identify areas of shared concern between projects
+in the scientific Python ecosystem and to produce collaboratively written,
+community adopted guidelines for addressing these.
+Such guidelines are known as SPECs: Scientific Python Ecosystem Coordination documents.
 
 Specifically, the purpose of the SPEC process is
 
@@ -33,7 +33,7 @@ Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
 A SPEC may not be a good fit for every single project, and thus there is no
 expectation that all SPECs must be adopted by all projects.
-That said, SPECs serve their purpose to the extent that they are adopted by
+That said, SPECs serve their purpose through being adopted by
 several projects—and their authority stems from the extent to which they are.
 
 Participants in the SPEC process must adhere to our
@@ -62,12 +62,11 @@ SPEC Process
 : The SPEC process is outlined in this document and the associated
 [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}) and
 [SPEC Core Projects]({{< relref "/specs/core-projects" >}}) documents.
-This process is managed and overseen by the Steering Committee in collaboration
-with the Core Projects, as well as community members and projects across
-the entire ecosystem.
+This process is managed and overseen by the Steering Committee, and functions in collaboration
+with the Core Projects, community members, and projects across the ecosystem.
 
 SPEC Document
-: A **SPEC document** provides operational guidelines for projects in the ecosystem and helps
+: A **SPEC document** provides operational guidelines for projects and helps
 coordinate the ecosystem to provide a more unified experience for users and developers.
 These documents are developed collaboratively with the Core Projects and other interested
 ecosystem projects and community members.
@@ -113,14 +112,15 @@ by doing one or more of the following:
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
 
-There are several stages that a SPEC undergoes over the course of its development and implementation:
+After being proposed, there are four stages that a SPEC undergoes over the course of
+its development and implementation:
 **Acceptance**, **Endorsement**, and **Adoption**.
 These stages are described below.
 
 ## Accept
 
 The Steering Committee will accept the new SPEC document based on the quality of the proposal
-and on interest on the [discussion forum](https://discuss.scientific-python.org/c/specs/ideas/9).
+and interest expressed on the [discussion forum](https://discuss.scientific-python.org/c/specs/ideas/9).
 Accepting a SPEC does not mean it is ready for Core Project endorsement or project adoption.
 Often, implementation details will need to be developed and negotiated with
 projects and will necessarily evolve after the SPEC is accepted.
@@ -132,18 +132,17 @@ and has a corresponding
 ## Endorse
 
 Accepted SPEC documents are marked as draft documents until two or more
-of the Core Projects decide to endorse and, if applicable, adopt the SPEC.
+of the Core Projects decide to endorse it.
 
 Pre-endorsement, it is helpful to recruit coauthors from the Core Projects to develop the SPEC.
 Most SPECs will have several authors from numerous projects.
 During this stage, the focus is on collaboratively developing an implementation plan that
 will be broadly applicable and and widely adopted.
 
-Often, this phase of the process will take longer and be more involved
-than the acceptance phase.
+Often, getting a SPEC endorsed will take longer and be more involved
+than having it accepted.
 All pull requests to the SPEC repository will be reviewed by the Steering Committee.
-SPECs may involve the creation of new projects or implementation
-work in existing projects.
+SPECs may propose entirely new projects or describe work on existing projects.
 
 ## Adopt
 
