@@ -82,7 +82,7 @@ repository.
 ## How many Core Projects should there be?
 
 This is up to the Steering Committee.
-But it is expected that the list of Core Projects will remain small and will not rapidly change.
+But it is expected that the list of Core Projects will remain small and will not change rapidly.
 During the endorsement stage of the SPEC process, contributors to the Core Projects are supposed
 to achieve a shared agreement on how to implement the SPEC.
 When adding new Core Projects, the Steering Committee should ensure that doing so will
