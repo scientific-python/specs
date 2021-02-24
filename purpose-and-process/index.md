@@ -112,7 +112,7 @@ by doing one or more of the following:
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
 
-After being proposed, there are four stages that a SPEC undergoes over the course of
+After being proposed, there are three stages that a SPEC undergoes over the course of
 its development and implementation:
 **Acceptance**, **Endorsement**, and **Adoption**.
 These stages are described below.
