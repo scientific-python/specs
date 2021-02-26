@@ -112,9 +112,27 @@ by doing one or more of the following:
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
 
-After being proposed, a SPEC undergoes three stages over the course of
+A SPEC passes through three stages over the course of
 its development and implementation:
-**Acceptance**, **Endorsement**, and **Adoption**.
+**Accept**, **Endorse**, and **Adopt**.
+
+<!-- prettier-ignore-start -->
+{{<mermaid>}}
+graph LR
+
+START[ ]--> |Propose<br/>SPEC| A[Accept]
+A--> |Draft<br/>SPEC| B[Endorse]
+B--> |SPEC| C[Adopt]
+
+click A callback "Steering Committee Action"
+click B callback "Core Project Action"
+click C callback "Ecosystem Action"
+
+style START fill:#FFFFFF, stroke:#FFFFFF;
+
+{{</mermaid>}}
+<!-- prettier-ignore-end -->
+
 These stages are described below.
 
 ## Accept
