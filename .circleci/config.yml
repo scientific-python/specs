@@ -34,6 +34,7 @@ jobs:
             sed -i 's/\/posts\//\/posts.html/g' config.toml
             sed -i 's/\/specs\//\/specs.html/g' config.toml
             sed -i 's/\/summits\//\/summits.html/g' config.toml
+            sed -i 's/flowchart.svg/purpose-and-process\/flowchart.svg/g' content/specs/purpose-and-process/index.md
             hugo --buildDrafts
 
       - store_artifacts:
