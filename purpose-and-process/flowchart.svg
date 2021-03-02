@@ -9,9 +9,9 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="mermaid-svg"
-   width="1028.9958"
-   height="316.10919"
-   viewBox="-1.5258789e-05 0 1028.9958 316.10919"
+   width="1029.7036"
+   height="288.28137"
+   viewBox="-1.5258789e-05 0 1029.7036 288.28137"
    version="1.1"
    sodipodi:docname="flowchart.svg"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -227,6 +227,49 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          id="path1741-1" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="marker991-36"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path989-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker991-3-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path989-6-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker991-5-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path989-3-1" />
+    </marker>
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -242,8 +285,8 @@
      id="namedview149"
      showgrid="false"
      inkscape:zoom="0.87907584"
-     inkscape:cx="484.65651"
-     inkscape:cy="274.20937"
+     inkscape:cx="443.15341"
+     inkscape:cy="149.36235"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -257,7 +300,7 @@
      id="style2">#mermaid-svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:2px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;}#mermaid-svg .label{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;color:#333;}#mermaid-svg .cluster-label text{fill:#333;}#mermaid-svg .cluster-label span{color:#333;}#mermaid-svg .label text,#mermaid-svg span{fill:#333;color:#333;}#mermaid-svg .node rect,#mermaid-svg .node circle,#mermaid-svg .node ellipse,#mermaid-svg .node polygon,#mermaid-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-svg .node .label{text-align:center;}#mermaid-svg .node.clickable{cursor:pointer;}#mermaid-svg .arrowheadPath{fill:#333333;}#mermaid-svg .edgePath .path{stroke:#333333;stroke-width:1.5px;}#mermaid-svg .flowchart-link{stroke:#333333;fill:none;}#mermaid-svg .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-svg .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-svg .cluster text{fill:#333;}#mermaid-svg .cluster span{color:#333;}#mermaid-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:12px;background:hsl(80,100%,96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg:root{--mermaid-font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;}#mermaid-svg flowchart{fill:apa;}</style>
   <use
      xlink:href="#AuxillaryOp"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ffffde;fill-opacity:1;stroke:#000000"
      id="use842"
      transform="matrix(3.9328225,0,0,2.488497,-133.71598,-83.110119)"
      x="0"
@@ -266,7 +309,7 @@
      height="100%" />
   <use
      xlink:href="#AuxillaryOp"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ffffde;fill-opacity:1;stroke:#000000"
      id="use842-3"
      transform="matrix(3.9099978,0,0,2.4900339,222.43176,-82.594758)"
      x="0"
@@ -275,7 +318,7 @@
      height="100%" />
   <use
      xlink:href="#AuxillaryOp"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ffffde;fill-opacity:1;stroke:#000000"
      id="use842-6"
      transform="matrix(3.9039942,0,0,2.4934691,575.42262,-84.777949)"
      x="0"
@@ -284,9 +327,9 @@
      height="100%" />
   <use
      xlink:href="#Document"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ececff;fill-opacity:1;stroke:#000000"
      id="use919"
-     transform="translate(4.9923427,46.485694)"
+     transform="translate(4.9923424,46.485694)"
      x="0"
      y="0"
      width="100%"
@@ -347,9 +390,9 @@
        style="font-size:21.3333px">Adopt</tspan></text>
   <use
      xlink:href="#Decision"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ececff;fill-opacity:1;stroke:#000000"
      id="use999"
-     transform="matrix(1.1507168,0,0,1.4497479,148.40287,4.2493246)"
+     transform="matrix(1.1507168,0,0,1.4497479,148.40287,4.2493242)"
      x="0"
      y="0"
      width="100%"
@@ -358,16 +401,16 @@
      xml:space="preserve"
      style="font-weight:bold;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;text-anchor:middle"
      x="232.75"
-     y="105.1351"
+     y="107.1351"
      id="text1017"><tspan
        sodipodi:role="line"
        id="tspan1015"
        x="232.75"
-       y="105.1351"
+       y="107.1351"
        style="font-size:16px">Steering</tspan><tspan
        sodipodi:role="line"
        x="232.75"
-       y="125.1351"
+       y="127.1351"
        id="tspan1019"
        style="font-size:16px">Committee</tspan></text>
   <text
@@ -382,9 +425,9 @@
      transform="translate(-13.316072,-11.883064)" />
   <use
      xlink:href="#AuxillaryOp"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ffffde;fill-opacity:1;stroke:#000000"
      id="use2419"
-     transform="matrix(12.535869,0,0,0.93885884,-425.16498,207.20157)"
+     transform="matrix(12.553133,0,0,0.59264136,-426.4598,219.53496)"
      x="0"
      y="0"
      width="100%"
@@ -393,12 +436,12 @@
      xml:space="preserve"
      style="font-weight:bold;font-size:18.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px"
      x="326.40216"
-     y="282.74451"
+     y="272.74451"
      id="text2433"><tspan
        sodipodi:role="line"
        id="tspan2431"
        x="326.40216"
-       y="282.74451"
+       y="272.74451"
        style="font-size:18.6667px">SPEC and Community Discusssions</tspan></text>
   <path
      style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.947757;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
@@ -408,25 +451,25 @@
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker991)"
-     d="m 149.65419,236.48057 -0.19562,-28.81901"
+     d="M 79.65419,236.48057 79.45857,207.66156"
      id="path981"
      inkscape:connector-type="polyline"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker991-3)"
-     d="m 510.17445,237.83525 -0.19562,-28.81901"
+     d="m 432.17445,237.83525 -0.19562,-28.81901"
      id="path981-7"
      inkscape:connector-type="polyline"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker991-5)"
-     d="M 894.45733,237.16951 894.26171,208.3505"
+     d="M 948.45733,237.16951 948.26171,208.3505"
      id="path981-5"
      inkscape:connector-type="polyline"
      inkscape:connector-curvature="0" />
   <use
      xlink:href="#Document"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ececff;fill-opacity:1;stroke:#000000"
      id="use919-2"
      transform="translate(360.60037,46.746245)"
      x="0"
@@ -451,9 +494,9 @@
        style="font-size:16px">SPEC</tspan></text>
   <use
      xlink:href="#Decision"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ececff;fill-opacity:1;stroke:#000000"
      id="use999-7"
-     transform="matrix(1.1507168,0,0,1.4497479,504.0109,4.5098776)"
+     transform="matrix(1.1507168,0,0,1.4497479,504.0109,4.5098772)"
      x="0"
      y="0"
      width="100%"
@@ -461,17 +504,17 @@
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;text-anchor:middle"
-     x="588.35803"
-     y="105.39565"
+     x="590.35803"
+     y="107.39565"
      id="text1017-9"><tspan
        sodipodi:role="line"
        id="tspan1015-2"
-       x="588.35803"
-       y="105.39565"
+       x="590.35803"
+       y="107.39565"
        style="font-size:16px">Core</tspan><tspan
        sodipodi:role="line"
-       x="588.35803"
-       y="125.39565"
+       x="590.35803"
+       y="127.39565"
        id="tspan1019-02"
        style="font-size:16px">Projects</tspan></text>
   <path
@@ -482,7 +525,7 @@
      inkscape:connector-curvature="0" />
   <use
      xlink:href="#Document"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ececff;fill-opacity:1;stroke:#000000"
      id="use919-9"
      transform="translate(715.99556,45.550446)"
      x="0"
@@ -507,9 +550,9 @@
        style="font-size:16px">SPEC</tspan></text>
   <use
      xlink:href="#Decision"
-     style="fill:#aaccee;stroke:#000000"
+     style="fill:#ececff;fill-opacity:1;stroke:#000000"
      id="use999-73"
-     transform="matrix(1.1507168,0,0,1.4497479,859.40609,3.3140754)"
+     transform="matrix(1.1507168,0,0,1.4497479,859.40609,3.314075)"
      x="0"
      y="0"
      width="100%"
@@ -517,17 +560,17 @@
   <text
      xml:space="preserve"
      style="font-weight:bold;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;letter-spacing:0px;text-anchor:middle"
-     x="943.75323"
-     y="104.19986"
+     x="945.75323"
+     y="108.19986"
      id="text1017-6"><tspan
        sodipodi:role="line"
        id="tspan1015-1"
-       x="943.75323"
-       y="104.19986"
+       x="945.75323"
+       y="108.19986"
        style="font-size:16px">Ecosystem</tspan><tspan
        sodipodi:role="line"
-       x="943.75323"
-       y="124.19986"
+       x="945.75323"
+       y="128.19986"
        id="tspan1019-2"
        style="font-size:16px">Projects</tspan></text>
   <path
@@ -546,6 +589,24 @@
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1743-3)"
      d="m 659.35767,113.24097 68.33215,-0.86899"
      id="path1733-9"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker991-36)"
+     d="m 237.0816,237.64512 -0.19562,-28.81901"
+     id="path981-53"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker991-3-5)"
+     d="m 591.76677,239.34257 -0.19562,-28.81901"
+     id="path981-7-2"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker991-5-9)"
+     d="m 794.26146,237.06745 -0.19562,-28.81901"
+     id="path981-5-2"
      inkscape:connector-type="polyline"
      inkscape:connector-curvature="0" />
 </svg>

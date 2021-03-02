@@ -116,6 +116,8 @@ A SPEC passes through three stages over the course of
 its development and implementation:
 **Accept**, **Endorse**, and **Adopt**.
 
+### Option 1
+
 <!-- prettier-ignore-start -->
 {{<mermaid>}}
 graph LR
@@ -132,6 +134,8 @@ style START fill:#FFFFFF, stroke:#FFFFFF;
 
 {{</mermaid>}}
 <!-- prettier-ignore-end -->
+
+### Option 2
 
 <!-- prettier-ignore-start -->
 {{<mermaid>}}
@@ -155,6 +159,8 @@ end
 
 {{</mermaid>}}
 <!-- prettier-ignore-end -->
+
+### Option 3
 
 ![SPEC flowchart](flowchart.svg)
 
