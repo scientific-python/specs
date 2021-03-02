@@ -116,6 +116,8 @@ A SPEC passes through three stages over the course of
 its development and implementation:
 **Accept**, **Endorse**, and **Adopt**.
 
+### Option 1
+
 <!-- prettier-ignore-start -->
 {{<mermaid>}}
 graph LR
@@ -132,6 +134,35 @@ style START fill:#FFFFFF, stroke:#FFFFFF;
 
 {{</mermaid>}}
 <!-- prettier-ignore-end -->
+
+### Option 2
+
+<!-- prettier-ignore-start -->
+{{<mermaid>}}
+graph LR
+
+subgraph Accept
+A[Proposed<br/>SPEC]-->  B{Steering<br/>Committee}
+end
+
+B--> C[Draft<br/>SPEC]
+
+subgraph Endorse
+C--> D{Core<br/>Projects}
+end
+
+D-->E
+
+subgraph Adopt
+E[Stable<br/>SPEC]-->F{Ecosystem<br/>Projects}
+end
+
+{{</mermaid>}}
+<!-- prettier-ignore-end -->
+
+### Option 3
+
+![SPEC flowchart](flowchart.svg)
 
 These stages are described below.
 
