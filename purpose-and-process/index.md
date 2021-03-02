@@ -112,7 +112,7 @@ by doing one or more of the following:
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
 
-A SPEC passes through three stages over the course of
+A SPEC passes through three decision points over the course of
 its development and implementation:
 **Accept**, **Endorse**, and **Adopt**.
 
@@ -120,9 +120,9 @@ its development and implementation:
 {{<mermaid>}}
 graph LR
 
-START[ ]--> |Propose<br/>SPEC| A[Accept]
-A--> |Draft<br/>SPEC| B[Endorse]
-B--> |SPEC| C[Adopt]
+START[ ]--> |Propose| A[Accept]
+A--> |Draft| B[Endorse]
+B--> |Recommend| C[Adopt]
 
 click A callback "Steering Committee Action"
 click B callback "Core Project Action"
@@ -133,37 +133,31 @@ style START fill:#FFFFFF, stroke:#FFFFFF;
 {{</mermaid>}}
 <!-- prettier-ignore-end -->
 
-These stages are described below.
+The **accept decision** is made by the Steering Committee and means the proposed SPEC is
+accepted as a draft and added to the main branch of the
+[SPEC repository](https://github.com/scientific-python/specs).
+Proposed SPECs are accepted once (a) the draft is written to clearly explain the area of
+common concern and a general approach to a shared solution and (b) there
+are contributors (from at least two Core Projects) interested in working on the new SPEC
+and in championing it to their projects as well as the larger community.
+Additional details may be found in
+[Steering Committee documentation]({{< relref "/specs/steering-committee" >}}).
 
-## Accept
-
-The Steering Committee will accept the new SPEC document based on the quality of the proposal
-and interest expressed on the [discussion forum](https://discuss.scientific-python.org/c/specs/ideas/9).
-Accepting a SPEC does not mean it is ready for Core Project endorsement or project adoption.
-Often, implementation details will need to be developed and negotiated with
-projects and will necessarily evolve after the SPEC is accepted.
-
-An accepted SPEC appears in the [SPEC list]({{< relref "/specs" >}})
-and has a corresponding
-[`SPECs/Accepted` topic](https://discuss.scientific-python.org/c/specs/accepted/15) on the discussion forum.
-
-## Endorse
-
-Accepted SPEC documents are marked as draft documents until two or more
-of the Core Projects decide to endorse it.
-
-Pre-endorsement, it is helpful to recruit coauthors from the Core Projects to develop the SPEC.
-Most SPECs will have several authors from numerous projects.
-During this stage, the focus is on collaboratively developing an implementation plan that
-will be broadly applicable and and widely adopted.
-
+The **endorse decision** is made by the Core Projects.
+The Core Projects and interested community members revise the accepted SPEC in a
+collabortive and iterative process focused on ensuring the SPEC implementation plan that
+is broadly applicable and likely to be widely adopted.
 Often, getting a SPEC endorsed will take longer and be more involved
 than having it accepted.
-All pull requests to the SPEC repository will be reviewed by the Steering Committee.
-SPECs may propose entirely new projects or describe work on existing projects.
+Most SPECs will have several authors from numerous projects including several Core Projects.
+A SPEC is recommended for wide-spread adoption once it is endorsed by two (or more) Core Projects.
+Once a SPEC is recommended, further changes require the approval of all endorsing
+Core Projects.
+Additional details may be found in
+[Core Project documentation]({{< relref "/specs/core-projects" >}}).
 
-## Adopt
-
+The **adopt decision** is made by individual projects according to their own decision-making
+processes.
 Any project in the ecosystem is welcome to adopt a SPEC at any point.
 However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
 This ensures that the SPEC has been vetted and deemed stable enough for widespread adoption.
@@ -173,8 +167,6 @@ but the barrier for modifying the SPEC will increase substantially
 Projects that adopt a SPEC early should engage in the collaborative process
 leading to the SPEC being endorsed by the Core Projects.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
-Every project is responsible for deciding whether they will adopt a SPEC according
-to their own governance process.
 
 # Notes
 
