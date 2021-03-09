@@ -99,7 +99,7 @@ To create your project registration file, change into the
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to check and complete.
 
-## How do you remove a member?
+## How do you remove a project?
 
 If a Core Project no longer wishes to participate or if the Steering Committee decides to remove
 a Core Project, then the project registration file should be deleted, the project

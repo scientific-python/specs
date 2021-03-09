@@ -27,12 +27,6 @@ In particular, the Steering Committee members
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
-The Steering Committee decides which SPECs are _accepted_, but not
-which SPECs are _adopted_—that choice resides with individual
-projects.
-Similarly, the Steering Committee does not decide which SPECs are _endorsed_—that
-choice resides with individual core projects.
-
 ## Steering Committee
 
 {{< page_gallery pages="." >}}
@@ -64,6 +58,14 @@ The Steering Committee makes decisions about changing the SPEC process documents
 through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
+
+<!--
+The vote "within ten days" is not clear. "ten days" after what?
+Maybe:
+
+Voting starts with an email to the
+[Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/).
+-->
 
 ## Who should be a member?
 
