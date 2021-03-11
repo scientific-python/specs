@@ -87,30 +87,12 @@ existing comments.
 
 # Implementation
 
-SPEC Proposals often will be driven by contributors and maintainers of Core or other ecosystem projects.
-Only the Steering Committee can accept them (details below).
+The Steering Committee manages the SPEC process and will provide guidance to contributors
+throughout the process.
+In this section, we provide an overview of the main decision points in the SPEC process
+and provide guidance for how to get started with a new SPEC proposal.
 
-Before a proposed SPEC can be accepted, the idea must be discussed on the
-discussion forum under the [`SPECS/Ideas` topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-Thereafter a new SPEC document must be submitted
-as a pull request to the [SPEC repository](https://github.com/scientific-python/specs).
-
-Use the `quickstart.py` script to create a new SPEC document.
-Located at the top-level of the
-[SPEC repository](https://github.com/scientific-python/specs),
-the script will ask you a few questions[^newspec] and then create a new file
-appropriately named with a basic template for you to complete.
-Once the SPEC is in reasonable shape, file a pull request against the
-[SPEC repository](https://github.com/scientific-python/specs).
-
-A good SPEC proposal focuses on a single key recommendation or idea for
-coordinating projects in the scientific Python ecosystem.
-Before proposing a SPEC, we highly recommended that you first **vet the idea**
-by doing one or more of the following:
-
-1. discuss the idea with at least one project in the ecosystem,
-2. discuss the idea with at least one other member of the ecosystem, or
-3. create a minimal, proof of concept prototype.
+## Decision Points
 
 A SPEC passes through three decision points over the course of
 its development and implementation:
@@ -147,9 +129,8 @@ The **endorse decision** is made by the Core Projects.
 The Core Projects and interested community members revise the accepted SPEC in a
 collabortive and iterative process focused on ensuring the SPEC implementation plan that
 is broadly applicable and likely to be widely adopted.
-Often, getting a SPEC endorsed will take longer and be more involved
-than having it accepted.
-Most SPECs will have several authors from numerous projects including several Core Projects.
+The intent is that most SPECs will have several authors from numerous projects
+including several Core Projects.
 A SPEC is recommended for wide-spread adoption once it is endorsed by two (or more) Core Projects.
 Once a SPEC is recommended, further changes require the approval of all endorsing
 Core Projects.
@@ -167,6 +148,32 @@ but the barrier for modifying the SPEC will increase substantially
 Projects that adopt a SPEC early should engage in the collaborative process
 leading to the SPEC being endorsed by the Core Projects.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
+
+## New SPEC Proposals
+
+A good SPEC proposal focuses on a single key recommendation or idea for
+coordinating projects in the scientific Python ecosystem.
+Before proposing a SPEC, we highly recommended that you first **vet the idea**
+by doing one or more of the following:
+
+1. discuss the idea with at least one project in the ecosystem,
+2. discuss the idea with at least one other member of the ecosystem, or
+3. create a minimal, proof of concept prototype.
+
+Before a proposed SPEC can be accepted, the idea must be discussed on the
+discussion forum under the [`SPECS/Ideas` topic](https://discuss.scientific-python.org/c/specs/ideas/9).
+Thereafter a new SPEC document must be submitted
+as a pull request to the [SPEC repository](https://github.com/scientific-python/specs).
+
+Use the `quickstart.py` script to create the new SPEC document.
+Located at the top-level of the
+[SPEC repository](https://github.com/scientific-python/specs),
+the script will ask you a few questions[^newspec] and then create a new file
+appropriately named with a basic template for you to complete.
+Once the SPEC is in reasonable shape, file a pull request against the
+[SPEC repository](https://github.com/scientific-python/specs).
+The Steering Committee then considers the SPEC as presented
+in the pull request and will provide additional guidance.
 
 # Notes
 
