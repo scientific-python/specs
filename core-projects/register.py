@@ -21,9 +21,9 @@ repository = prompt(
     "Repository", default=f"https://github.com/{project_lower}/{project_lower}"
 )
 pypi = prompt("PyPI page", default=f"https://pypi.org/project/{project_lower}")
-license = prompt("License URL", default=f"{repository}/blob/master/LICENSE.txt")
+license = prompt("License URL", default=f"{repository}/blob/main/LICENSE.txt")
 license_type = prompt("License", default="3-clause BSD")
-adopters = prompt("List the GitHub handles of developers who can adopt SPECs")
+contact = prompt("List the GitHub handles of developers to contact about SPECs")
 
 filename = f"{project.lower()}.md"
 text = f"""---
@@ -36,7 +36,7 @@ pypi: {pypi}
 libraries-io: https://libraries.io/pypi/{pypi.split("/")[-1]}
 license: {license}
 license-type: {license_type}
-adopters: {adopters}
+contact: {contact}
 ---
 """
 

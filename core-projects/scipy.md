@@ -8,5 +8,5 @@ pypi: https://pypi.org/project/scipy
 libraries-io: https://libraries.io/pypi/scipy
 license: https://github.com/scipy/scipy/blob/master/LICENSE.txt
 license-type: 3-clause BSD
-adopters:
+contact: rgommers
 ---
