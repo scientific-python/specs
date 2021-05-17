@@ -189,7 +189,7 @@ in the pull request and will provide additional guidance.
     If you need to add additional authors, just edit the text file.
 
     Additional files associated with a SPEC document may be kept in a directory
-    with the same filename (minus as the `.md` extension) as the SPEC.
+    with the same filename (without the `.md` extension) as the SPEC.
     For example, files associated with `spec-0000.md` are in `spec-0000`.
 
     Leave the `draft` field set to `true` and the `endorsed-by` field empty.
