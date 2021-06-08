@@ -1,6 +1,6 @@
 ---
 title: "scikit-image"
-draft: true
+draft: false
 avatar: https://avatars.githubusercontent.com/u/897180
 homepage: https://scikit-image.org
 repository: https://github.com/scikit-image/scikit-image
