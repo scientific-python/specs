@@ -1,6 +1,6 @@
 ---
 title: "pandas"
-draft: true
+draft: false
 avatar: https://avatars.githubusercontent.com/u/21206976
 homepage: https://pandas.pydata.org/
 repository: https://github.com/pandas-dev/pandas
