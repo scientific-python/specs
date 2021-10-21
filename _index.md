@@ -1,5 +1,5 @@
 ---
-title: Scientific Python Ecosystem Coordination (SPEC)
+title: Scientific Python Ecosystem Coordination
 hide_meta: true
 ---
 
