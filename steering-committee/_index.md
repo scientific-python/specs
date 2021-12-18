@@ -7,7 +7,7 @@ author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
 ---
 
-# Description
+## Description
 
 The SPEC process is managed by the Steering Committee.
 The Steering Committee represents the interests of the ecosystem and the community.
@@ -27,11 +27,11 @@ In particular, the Steering Committee members
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
-## Steering Committee
+### Steering Committee
 
 {{< page_gallery pages="." >}}
 
-# Implementation
+## Implementation
 
 Public communication takes place in the
 [`specs` GitHub repository](https://github.com/scientific-python/specs/)
@@ -41,7 +41,7 @@ Private communication within the Steering Committee takes place on
 Steering Committee members are expected to be aware of conversations on this list to lend validity
 to consensus-seeking and voting.
 
-## How are SPECs accepted?
+### How are SPECs accepted?
 
 To accept a SPEC (i.e., assigning it a SPEC number, marking its discussion
 `Accepted`, and merging the pull request) requires two members of the Steering
@@ -49,7 +49,7 @@ Committee to approve and no members objecting.
 Since the role of the Steering Committee is mainly to ensure that SPEC proposals are
 appropriate,[^accept] objections should be rare.
 
-## How is the SPEC process changed?
+### How is the SPEC process changed?
 
 The Steering Committee makes decisions about changing the SPEC process documents
 ([SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
@@ -67,7 +67,7 @@ Voting starts with an email to the
 [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/).
 -->
 
-## Who should be a member?
+### Who should be a member?
 
 Members of the Steering Committee should be active in the scientific Python ecosystem and
 should have a demonstrated interest in the Core Projects and the SPEC process.
@@ -75,14 +75,14 @@ Examples of demonstrated interest include submitting SPECs, engaging in SPEC
 discussions, reviewing SPEC pull requests, or advocating for wider SPEC participation.
 Members of the steering committee do not have to belong to a core project.
 
-## How many members should there be?
+### How many members should there be?
 
 This is up to the Steering Committee.
 However, if the Steering Committee is unable to quickly handle new SPEC proposals and new ideas arising
 in the discussions aren't addressed in a timely manner, the Steering Committee should try to
 recruit new members.
 
-## How do you add a member?
+### How do you add a member?
 
 If the Steering Committee decides to admit a new member and that person agrees,
 then they should be added to the
@@ -91,7 +91,7 @@ then they should be added to the
 (3) the [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/SSC), and
 (4) the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
 
-## How do you remove a member?
+### How do you remove a member?
 
 If a member wishes to resign or if the Steering Committee decides to remove a member,
 then they should
@@ -102,7 +102,7 @@ then they should
 [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/SSC), and
 (4) be removed from the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
 
-# Notes
+## Notes
 
 [^accept]:
     Proposed SPECs are accepted once (a) the draft is written to clearly explain the area of

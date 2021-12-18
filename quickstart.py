@@ -31,7 +31,7 @@ discussion: https://discuss.scientific-python.org/t/
 endorsed-by:
 ---
 
-# Description
+## Description
 
 <!--
 Briefly and clearly describe the proposal.
@@ -40,25 +40,25 @@ If relevant, include examples of how the new functionality would be used,
 intended use-cases, and pseudo-code illustrating its use.
 -->
 
-# Implementation
+## Implementation
 
 <!--
 Discuss how this would be implemented.
 -->
 
-## Core Project Endorsement
+### Core Project Endorsement
 
 <!--
 Discuss what it means for a core project to endorse this SPEC.
 -->
 
-## Ecosystem Adoption
+### Ecosystem Adoption
 
 <!--
 Discuss what it means for a project to adopt this SPEC.
 -->
 
-# Notes
+## Notes
 
 <!--
 Include a bulleted list of annotated links, comments,
