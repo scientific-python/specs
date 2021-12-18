@@ -7,7 +7,7 @@ author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
 ---
 
-# Description
+## Description
 
 The SPEC process is designed to identify areas of shared concern between projects
 in the scientific Python ecosystem and to produce collaboratively written,
@@ -39,7 +39,7 @@ several projects—and their authority stems from the extent to which they are.
 Participants in the SPEC process must adhere to our
 [Code of Conduct]({{< relref "/code_of_conduct.md" >}}).
 
-## Key Terms
+### Key Terms
 
 Scientific Python Ecosystem
 : The **ecosystem** is a loose federation of community developed Python projects
@@ -71,7 +71,7 @@ coordinate the ecosystem to provide a more unified experience for users and deve
 These documents are developed collaboratively with the Core Projects and other interested
 ecosystem projects and community members.
 
-## Format
+### Format
 
 SPECs are UTF-8 encoded text files using
 [Markdown](https://www.markdownguide.org/) format and stored in the
@@ -85,14 +85,14 @@ Each SPEC has a corresponding
 with the same title, where anyone can comment, ask questions, or vote on
 existing comments.
 
-# Implementation
+## Implementation
 
 The Steering Committee manages the SPEC process and will provide guidance to contributors
 throughout the process.
 In this section, we provide an overview of the main decision points in the SPEC process
 and provide guidance for how to get started with a new SPEC proposal.
 
-## Decision Points
+### Decision Points
 
 A SPEC passes through three decision points over the course of
 its development and implementation:
@@ -149,7 +149,7 @@ Projects that adopt a SPEC early should engage in the collaborative process
 leading to the SPEC being endorsed by the Core Projects.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
 
-## New SPEC Proposals
+### New SPEC Proposals
 
 A good SPEC proposal focuses on a single key recommendation or idea for
 coordinating projects in the scientific Python ecosystem.
@@ -175,7 +175,7 @@ Once the SPEC is in reasonable shape, file a pull request against the
 The Steering Committee then considers the SPEC as presented
 in the pull request and will provide additional guidance.
 
-# Notes
+## Notes
 
 [^newspec]:
     When asked to enter the SPEC number, choose the next available number that

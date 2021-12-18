@@ -14,7 +14,7 @@ endorsed-by:
 This is a draft document.
 {{< /notice >}}
 
-# Description
+## Description
 
 This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping support of older Python and core package versions.
 
@@ -58,7 +58,7 @@ section Matplotlib
 {{</mermaid>}}
 <!-- prettier-ignore-end -->
 
-## Motivation
+### Motivation
 
 Limiting the scope of supported dependencies is an effective way for packages to limit maintenance burden.
 Combinations of packages need to be tested, which impacts also on continuous integration times and infrastructure upkeep.
@@ -68,13 +68,13 @@ Adoption of this SPEC will ensure a consistent support policy across packages, a
 
 Ultimately, reduced maintenance burden frees up developer time, which translates into more features, bugfixes, and optimizations for users.
 
-## Background
+### Background
 
 In the past, longer support cycles were common.
 There were several reasons for this, including the Python 2 / 3 transition, difficulties installing packages, and users needing to use old, operating-system provided versions of Python.
 The situation has since improved due to improved installations via binary wheels, virtual environments becoming commonplace, and support for Python 2 being dropped.
 
-## Drop Schedule
+### Drop Schedule
 
     On May 16, 2021 drop support for SciPy 1.3 (initially released on May 17, 2019)
     On May 17, 2021 drop support for Matplotlib 3.1 (initially released on May 18, 2019)
@@ -90,25 +90,25 @@ The situation has since improved due to improved installations via binary wheels
     On Dec 31, 2022 drop support for SciPy 1.6 (initially released on Dec 31, 2020)
     On Oct 05, 2023 drop support for Python 3.9 (initially released on Oct 05, 2020)
 
-# Implementation
+## Implementation
 
 <!--
 Discuss how this would be implemented.
 -->
 
-## Core Project Endorsement
+### Core Project Endorsement
 
 <!--
 Discuss what it means for a core project to endorse this SPEC.
 -->
 
-## Ecosystem Adoption
+### Ecosystem Adoption
 
 <!--
 Discuss what it means for a project to adopt this SPEC.
 -->
 
-# Notes
+## Notes
 
 - This document builds on [NEP 29](https://numpy.org/neps/nep-0029-deprecation_policy.html), which describes several alternatives including ad hoc version support, all CPython supported versions, default version on Linux distribution, N minor versions of Python, and time window from the X.Y.1 Python release.
 

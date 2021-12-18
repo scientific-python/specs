@@ -9,7 +9,7 @@ discussion:
 endorsed-by:
 ---
 
-# Description
+## Description
 
 Core Projects are depended upon by most of the other projects,
 and often provide basic data structures, drawing primitives,
@@ -27,16 +27,16 @@ a coherent implementation plan suitable for all the Core Projects.
 Often SPECs are coauthored by contributors from several Core Projects as well
 as other community members (e.g., contributors to other ecosystem projects).
 
-## Core Projects
+### Core Projects
 
 {{< page_gallery pages="." link=internal >}}
 
-# Implementation
+## Implementation
 
 Core Projects are involved at all stages of the SPEC process.
 They work collaboratively to develop draft SPECs so that they can be endorsed.
 
-## What are the characteristics of a Core Project?
+### What are the characteristics of a Core Project?
 
 Core Projects are **widely used in scientific research**.
 Of course, these tools are often used for other purposes too, and the
@@ -68,7 +68,7 @@ fear of breaking it.
 Core Projects are **open source**.
 The 3-clause (also called "modified" or "new") BSD license is by far the most common.
 
-## How does a Core Project endorse a SPEC?
+### How does a Core Project endorse a SPEC?
 
 Core Projects use their project-specific discussion and decision making mechanisms to decide whether to support a SPEC.
 Certain SPECs may, for example, require Core Projects to create their _own_ enhancement
@@ -79,7 +79,7 @@ name to the `endorsed-by` field in the SPEC header via a pull request against
 the [scientific-python/specs](https://github.com/scientific-python/specs)
 repository.
 
-## How many Core Projects should there be?
+### How many Core Projects should there be?
 
 This is up to the Steering Committee.
 But it is expected that the list of Core Projects will remain small and will not change rapidly.
@@ -88,7 +88,7 @@ to achieve a shared agreement on how to implement the SPEC.
 When adding new Core Projects, the Steering Committee should ensure that doing so will
 only make it easier for the the Core Projects to achieve consensus.
 
-## How do you add a project?
+### How do you add a project?
 
 If the Steering Committee decides to admit a new Core Project and the project agrees, then
 the project creates a registration file and files a pull request against the
@@ -99,7 +99,7 @@ To create your project registration file, change into the
 The script will ask you a few questions and then create a new file
 appropriately named with a basic template for you to check and complete.
 
-## How do you remove a project?
+### How do you remove a project?
 
 If a Core Project no longer wishes to participate or if the Steering Committee decides to remove
 a Core Project, then the project registration file should be deleted, the project
