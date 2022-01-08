@@ -1,2 +1,3 @@
 [build.environment]
-  HUGO_VERSION = "0.88.1"
+  PYTHON_VERSION = "3.8"
+  HUGO_VERSION = "0.91.2"
