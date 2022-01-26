@@ -10,10 +10,6 @@ discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-ver
 endorsed-by:
 ---
 
-{{< notice warning >}}
-This is a draft document.
-{{< /notice >}}
-
 ## Description
 
 This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping support of older Python and core package versions.
