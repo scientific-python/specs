@@ -1,6 +1,5 @@
 ---
 title: "SciPy"
-draft: false
 avatar: https://avatars.githubusercontent.com/u/288277
 homepage: https://scipy.org
 repository: https://github.com/scipy/scipy

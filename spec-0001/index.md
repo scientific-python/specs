@@ -1,7 +1,6 @@
 ---
 title: "SPEC 1 — Lazy Loading for Submodules"
 date: 2020-12-17
-draft: true
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jon Crall <jon.crall@kitware.com>"

@@ -1,7 +1,6 @@
 ---
 title: "SPEC Core Projects"
 hide_meta: true
-draft: true
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"

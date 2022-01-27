@@ -1,7 +1,6 @@
 ---
 title: "SPEC Steering Committee"
 date: 2021-01-06
-draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"

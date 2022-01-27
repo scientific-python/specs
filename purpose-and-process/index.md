@@ -1,7 +1,6 @@
 ---
 title: "SPEC Purpose and Process"
 date: 2020-12-17
-draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
