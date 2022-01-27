@@ -1,7 +1,6 @@
 ---
 title: "SPEC 0 — Minimum Supported Versions"
 date: 2020-12-17
-draft: true
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Ross Barnowski <rossbar@berkeley.edu>"

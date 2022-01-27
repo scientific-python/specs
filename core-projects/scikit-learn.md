@@ -1,6 +1,5 @@
 ---
 title: "scikit-learn"
-draft: false
 avatar: https://avatars.githubusercontent.com/u/365630
 homepage: https://scikit-learn.org
 repository: https://github.com/scikit-learn/scikit-learn

@@ -28,7 +28,6 @@ contact = prompt("List the GitHub handles of developers to contact about SPECs")
 filename = f"{project.lower()}.md"
 text = f"""---
 title: "{project}"
-draft: false
 avatar: {logo}
 homepage: {homepage}
 repository: {repository}

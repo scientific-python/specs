@@ -1,7 +1,6 @@
 ---
 title: "SPEC 2 — API Dispatch"
 date: 2021-12-16
-draft: true
 author:
   - "Ivan Yashchuk <ivan.yashchuk@quansight.com>"
   - "Ralf Gommers <rgommers@quansight.com>"
