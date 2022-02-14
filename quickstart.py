@@ -20,7 +20,7 @@ email = prompt("Your Email Address")
 number = prompt("SPEC number", validate=lambda x: int(x))
 title = prompt("SPEC title")
 
-filename = f"spec-{number:04d}.md"
+filename = f"spec-{number:04d}/index.md"
 text = f"""---
 title: "SPEC {number} — {title}"
 date: {now.strftime("%Y-%m-%d")}
@@ -65,5 +65,6 @@ and other ancillary information as needed.
 -->
 """
 
+os.makedirs(os.path.dirname(filename), exist_ok=True)
 with open(filename, "w") as file:
     file.write(text)
