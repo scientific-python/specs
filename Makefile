@@ -19,7 +19,7 @@ preview-serve: prepare-preview
 
 # Build website to $(PREVIEW_DEST)/public
 preview-build: prepare-preview
-	cd $(PREVIEW_DEST) && pip install -r calendars/yaml2ics/requirements.txt && make html
+	cd $(PREVIEW_DEST) && pip install -r tools/yaml2ics/requirements.txt && make html
 
 clean:
 	rm -rf $(PREVIEW_DEST)
