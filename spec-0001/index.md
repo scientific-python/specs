@@ -84,26 +84,27 @@ This has several advantages:
 Python 3.7, with [PEP 562](https://www.python.org/dev/peps/pep-0562/), introduces the ability to override module `__getattr__` and `__dir__`.
 In combination, these features make it possible to again provide access to submodules, but without incurring performance penalties.
 
-We propose a utility library for easily setting up so-called "lazy imports" so that submodules are only loaded upon accessing them.
+We propose a [utility library](https://pypi.org/project/lazy_loader/) for easily setting up so-called "lazy imports" so that submodules are only loaded upon accessing them.
 
 As an example, we will show how to set up lazy importing for `skimage.filters`.
 In the library's main `__init__.py`, specify which submodules are lazily loaded:
 
 ```python
+import lazy_loader as lazy
+
 submodules = [
     ...
     'filters',
     ...
 ]
 
-from .util import lazy
 __getattr__, __dir__, _ = lazy.attach(__name__, submodules)
 ```
 
 Then, in each submodule's `__init__.py` (in this case, `filters/__init__.py`), specify which functions are to be loaded from where:
 
 ```python
-from ..util import lazy
+import lazy_loader as lazy
 
 __getattr__, __dir__, __all__ = lazy.attach(
     __name__,
@@ -157,20 +158,29 @@ During development and testing, the `EAGER_IMPORT` environment variable can be s
 
 #### External libraries
 
-The `lazy.attach` function is an alternative to setting up package internal imports.
-We also provide `lazy.load` so that projects can lazily import external libraries:
+The `lazy_loader.attach` function is an alternative to setting up package internal imports.
+We also provide `lazy_loader.load` so that projects can lazily import external libraries:
 
 ```python
 linalg = lazy.load('scipy.linalg')  # `linalg` will only be loaded when accessed
 ```
 
+By default, import errors are postponed until usage. Import errors can
+be immediately raised with:
+
+```python
+linalg = lazy.load('scipy.linalg', error_on_import=True)
+```
+
 ## Implementation
 
-Currently, a work-in-progress implementation lives in [this pull request to scikit-image](https://github.com/scikit-image/scikit-image/pull/5101)—specifically, inside of `lazy.py`.
+Lazy loading is implemented at
+https://github.com/scientific-python/lazy_loader and is
+pip-installable as
+[lazy_loader](https://pypi.org/project/lazy_loader/).
 
-At this point, there exists a prototype of lazy loading, and we're showing it to the community to uncover design flaws, discover improvements, and solicit suggestions on APIs. The prototype implementation has been adapted for use in [napari](https://github.com/napari/napari/pull/2816) and [NetworkX](https://github.com/networkx/networkx/pull/4909).
-
-Once a lazy import interface is implemented, other interesting options become available.
+Once a lazy import interface is implemented, other interesting options
+become available (but is not implemented in `lazy_loader`).
 For example, instead of specifying sub-submodules and functions the way we do above, one could do this in YAML files:
 
 ```
@@ -204,6 +214,15 @@ Discuss what it means for a core project to endorse this SPEC.
 -->
 
 ### Ecosystem Adoption
+
+Lazy loading has been adopted by
+[scikit-image](https://github.com/scikit-image/scikit-image/pull/5101)
+and [NetworkX](https://github.com/networkx/networkx/pull/4909).
+SciPy implements a [subset of lazy
+loading](https://github.com/scipy/scipy/pull/15230) which exposes only
+subpackages lazily.
+A prototype implementation of `lazy_loader` was adapted for
+[napari](https://github.com/napari/napari/pull/2816).
 
 <!--
 Discuss what it means for a project to adopt this SPEC.
