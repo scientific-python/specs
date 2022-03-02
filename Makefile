@@ -11,7 +11,7 @@ prepare-preview: clean
 	git clone https://github.com/scientific-python/scientific-python.org $(PREVIEW_DEST)
 	git -C $(PREVIEW_DEST) submodule set-url themes/scientific-python-hugo-theme https://github.com/scientific-python/scientific-python-hugo-theme.git
 	git -C $(PREVIEW_DEST) submodule update --init
-	cp -r * $(PREVIEW_DEST)/content/en/specs/
+	cp -r * $(PREVIEW_DEST)/content/specs/
 
 # Serve SPECs to http://localhost:1313
 preview-serve: prepare-preview
