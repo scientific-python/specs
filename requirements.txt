@@ -1,1 +1,1 @@
-pre-commit>=2.15
+pre-commit>=2.17
