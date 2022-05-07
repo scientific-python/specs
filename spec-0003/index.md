@@ -28,7 +28,9 @@ Scientific Python communities and their projects need to be accessible and inclu
 
 ## Community
 
-At the time of writing, accessibility is not a regular consideration in many Scientific Python projects. Many projects may have a handful of people who have accessibility knowledge or are interested in accquiring more, but may not be able to reach critical mass on a per-project basis. Connecting Scientific Python community members focused on accessibility will provide a boon for individuals, projects, and the ecosystem at large. 
+At the time of writing, accessibility is not a regular consideration in many Scientific Python projects. Many projects may have a handful of people who have accessibility knowledge or are interested in acquiring more, but may not be able to reach critical mass on a per-project basis. Connecting Scientific Python community members focused on accessibility will provide a boon for individuals, projects, and the ecosystem at large. 
+
+If you are interested in this effort, [join us now](accessibility.scientific-python.org/community.html)!
 
 ## Implementation
 
@@ -48,6 +50,7 @@ Please note that in many cases guidelines serve as a foundation for accessibilit
 
 For cases where ecosystem-specific recommendations are needed or examples of accessibility within the ecosystem are helpful, we also provide a list of resources designed to support the needs of our community.
 
+If you would like to add, edit or suggest new recommendations, join the community at [accessibility.scientific-python.org](accessibility.scientific-python.org/community.html)
 #### Existing recommendations
 
 - [Image descriptions (including alt text)](https://accessibility.scientific-python.org/reference.html)
