@@ -10,13 +10,6 @@ endorsed-by:
 
 ## Description
 
-<!--
-Briefly and clearly describe the proposal.
-Explain the general need and the advantages of this specific proposal.
-If relevant, include examples of how the new functionality would be used,
-intended use-cases, and pseudo-code illustrating its use.
--->
-
 [Accessibility](https://en.wikipedia.org/wiki/Accessibility) is building things that are fully usable for people with disabilities. [There are many reasons to prioritize accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/#important)), including ethical, user experience, and legal motivations. Accessibility is also a long-recommended web standard (via [WCAG](https://www.w3.org/TR/WCAG/)).
 
 Scientific Python communities and their projects need to be accessible and inclusive of disabled people. This SPEC is an agreement between projects to 
@@ -33,10 +26,6 @@ At the time of writing, accessibility is not a regular consideration in many Sci
 If you are interested in this effort, [join us now](accessibility.scientific-python.org/community.html)!
 
 ## Implementation
-
-<!--
-Discuss how this would be implemented.
--->
 
 ### Global accessibility guidelines
 
@@ -63,19 +52,6 @@ This may include recommendations that are in progress or have been requested by 
 
 ### Core Project Endorsement
 
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
 ### Ecosystem Adoption
 
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
-
 ## Notes
-
-<!--
-Include a bulleted list of annotated links, comments,
-and other ancillary information as needed.
--->
