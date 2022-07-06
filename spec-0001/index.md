@@ -216,7 +216,7 @@ Static type checkers (such as [mypy](http://mypy-lang.org) and
 types and locations dynamically-loaded modules and functions. This means that some
 integrated development environments (e.g.
 [VS Code](https://code.visualstudio.com)) will not be able to provide code
-completion, parameter hints, documentation, or other features for any objects in your module.
+completion, parameter hints, documentation, or other features for any objects in your module.  Nor will `mypy` be able to detect potential errors in your user's code.
 
 You can direct static type checkers to the actual location of dynamically loaded objects in one of two ways:
 
