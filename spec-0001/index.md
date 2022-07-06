@@ -207,6 +207,65 @@ In the mean time, we now have the necessary mechanisms to implement it ourselves
 
 [^cannon]: Cannon B., personal communication, 7 January 2021.
 
+### Caveats
+
+While this pattern has benefits at runtime, it does have one specific drawback:
+
+Static type checkers (such as [mypy](http://mypy-lang.org) and
+[pyright](https://github.com/microsoft/pyright)) will not be able to infer the
+types and locations dynamically-loaded modules and functions. This means that some
+integrated development environments (e.g.
+[VS Code](https://code.visualstudio.com)) will not be able to provide code
+completion, parameter hints, documentation, or other features for any objects in your module.
+
+You can direct static type checkers to the actual location of dynamically loaded objects in one of two ways:
+
+1. Use an [`if
+   typing.TYPE_CHECKING`](https://docs.python.org/3/library/typing.html#typing.TYPE_CHECKING)
+   clause .
+
+   ```python
+    from typing import TYPE_CHECKING
+
+    import lazy_loader as lazy
+
+    if TYPE_CHECKING:
+        from .edges import sobel, sobel_h, sobel_v
+
+    __getattr__, __dir__, __all__ = lazy.attach(
+        __name__,
+        submod_attrs={
+            'edges': ['sobel', 'sobel_h', 'sobel_v']
+        }
+    )
+    ```
+
+    `typing.TYPE_CHECKING` is a special variable that is set to `False` at runtime, and has negative runtime impact. 
+
+2. Use a [type stub (`.pyi`) file](https://mypy.readthedocs.io/en/stable/stubs.html). Type stubs are ignored at runtime, but used
+by static type checkers. This method entails adding a new file with a `.pyi` extension in the same directory as your actual `.py`. For example:
+
+    ```python
+    # mypackage/__init__.py
+    import lazy_loader as lazy
+
+    __getattr__, __dir__, __all__ = lazy.attach(
+        __name__,
+        submod_attrs={
+            'edges': ['sobel', 'sobel_h', 'sobel_v']
+        }
+    )
+    ```
+
+    ```python
+    # mypackage/__init__.pyi
+    from .edges import sobel, sobel_h, sobel_v
+    ```
+
+    Note that if you use a type stub, you will need to take additional action to add the `.pyi` file to your sdist and wheel distributions.  See [PEP 561](https://peps.python.org/pep-0561/) and the [mypy documentation](https://mypy.readthedocs.io/en/stable/installed_packages.html#creating-pep-561-compatible-packages) for more information.
+
+    It is also sometimes harder to keep `.pyi` in sync with `.py` files, as they more often go unnoticed by contributors.
+
 ### Core Project Endorsement
 
 <!--
