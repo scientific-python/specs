@@ -239,7 +239,7 @@ You can direct static type checkers to the actual location of dynamically loaded
      )
     ```
 
-    `typing.TYPE_CHECKING` is a special variable that is set to `False` at runtime, and has negative runtime impact.
+    `typing.TYPE_CHECKING` is a special variable that is set to `False` at runtime, and has negligible runtime impact.
 
 2.  Use a [type stub (`.pyi`) file](https://mypy.readthedocs.io/en/stable/stubs.html). Type stubs are ignored at runtime, but used
     by static type checkers. This method entails adding a new file with a `.pyi` extension in the same directory as your actual `.py`. For example:
