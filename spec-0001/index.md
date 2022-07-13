@@ -1,5 +1,5 @@
 ---
-title: "SPEC 1 — Lazy Loading for Submodules"
+title: "SPEC 1 — Lazy Loading of Submodules and Functions"
 date: 2020-12-17
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
