@@ -216,7 +216,7 @@ Static type checkers (such as [mypy](http://mypy-lang.org) and
 types and locations dynamically-loaded modules and functions. This means that some
 integrated development environments (e.g.
 [VS Code](https://code.visualstudio.com)) will not be able to provide code
-completion, parameter hints, documentation, or other features for any objects in your module. Nor will `mypy` be able to detect potential errors in your user's code.
+completion, parameter hints, documentation, or other features for any objects in your module. Nor will `mypy` be able to detect potential errors in your users' code.
 
 You can direct static type checkers to the actual location of dynamically loaded objects in one of two ways:
 
@@ -261,9 +261,16 @@ You can direct static type checkers to the actual location of dynamically loaded
         from .edges import sobel, sobel_h, sobel_v
         ```
 
-        Note that if you use a type stub, you will need to take additional action to add the `.pyi` file to your sdist and wheel distributions.  See [PEP 561](https://peps.python.org/pep-0561/) and the [mypy documentation](https://mypy.readthedocs.io/en/stable/installed_packages.html#creating-pep-561-compatible-packages) for more information.
+    _Note that if you use a type stub, you will need to take additional action to add the `.pyi` file to your sdist and wheel distributions. See [PEP 561](https://peps.python.org/pep-0561/) and the [mypy documentation](https://mypy.readthedocs.io/en/stable/installed_packages.html#creating-pep-561-compatible-packages) for more information._
 
-        It is also sometimes harder to keep `.pyi` in sync with `.py` files, as they more often go unnoticed by contributors.
+3.  If you would like to avoid the unfortunate duplication of declaring exports in _both_ a type stub and in the arguments to `lazy.attach`, the aforementioned [lazy_loader](https://github.com/scientific-python/lazy_loader) package offers a [`lazy_loader.attach_stub` function](https://github.com/scientific-python/lazy_loader#lazily-load-subpackages-and-functions-from-type-stubs) that can be used to infer your module exports directly from your stub file – which now becomes the single source of truth for your module's exports. It is used as follows:
+
+    ```python
+    from lazy_loader import attach_stub
+
+    # this assumes there is a `.pyi` file adjacent to this module
+    __getattr__, __dir__, __all__ = attach_stub(__name__, __file__)
+    ```
 
 ### Core Project Endorsement
 
