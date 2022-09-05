@@ -168,7 +168,7 @@ Use the `quickstart.py` script to create the new SPEC document.
 Located at the top-level of the
 [SPEC repository](https://github.com/scientific-python/specs),
 the script will ask you a few questions[^newspec] and then create a new file
-appropriately named with a basic template for you to complete.
+appropriately named with a basic template for you to complete (e.g., `spec-0000/index.md`).
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
 The Steering Committee then considers the SPEC as presented
@@ -187,8 +187,8 @@ in the pull request and will provide additional guidance.
     The script currently only supports adding one author.
     If you need to add additional authors, just edit the text file.
 
-    Additional files associated with a SPEC document may be kept in a directory
-    with the same filename (without the `.md` extension) as the SPEC.
-    For example, files associated with `spec-0000.md` are in `spec-0000`.
+    Additional files associated with a SPEC document may be kept in the directory
+    containing the SPEC.
+    For example, files associated with `spec-0000/index.md` are in `spec-0000/`.
 
     Leave the `draft` field set to `true` and the `endorsed-by` field empty.
