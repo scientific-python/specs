@@ -36,7 +36,7 @@ Public communication takes place in the
 [`specs` GitHub repository](https://github.com/scientific-python/specs/)
 and the [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6).
 Private communication within the Steering Committee takes place on
-[Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/).
+[Steering Committee private mailing list](mailto:spec-steering-committee@discuss.scientific-python.org).
 Steering Committee members are expected to be aware of conversations on this list to lend validity
 to consensus-seeking and voting.
 
@@ -63,7 +63,7 @@ The vote "within ten days" is not clear. "ten days" after what?
 Maybe:
 
 Voting starts with an email to the
-[Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/).
+[Steering Committee private mailing list](mailto:spec-steering-committee@discuss.scientific-python.org).
 -->
 
 ### Who should be a member?
@@ -86,9 +86,8 @@ recruit new members.
 If the Steering Committee decides to admit a new member and that person agrees,
 then they should be added to the
 (1) the Steering Committee member listing above,
-(2) the [Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
-(3) the [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/SSC), and
-(4) the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
+(2) the [Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members), and
+(3) the [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/spec-steering-committee).
 
 ### How do you remove a member?
 
@@ -96,10 +95,9 @@ If a member wishes to resign or if the Steering Committee decides to remove a me
 then they should
 (1) be moved to the list of Emeritus Steering Committee members (below the list of active members),
 (2) be removed from the
-[Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members),
+[Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members), and
 (3) be removed from the
-[Steering Committee Discourse Group](https://discuss.scientific-python.org/g/SSC), and
-(4) be removed from the [Steering Committee private mailing list](https://groups.io/g/spec-steering-committee/members).
+[Steering Committee Discourse Group](https://discuss.scientific-python.org/g/spec-steering-committee).
 
 ## Notes
 
