@@ -7,6 +7,7 @@ author:
   - "Dan Schult <dschult@colgate.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-1-lazy-loading-for-submodules/25
 endorsed-by:
+shortcutDepth: 3
 ---
 
 ## Description
@@ -171,6 +172,57 @@ be immediately raised with:
 ```python
 linalg = lazy.load('scipy.linalg', error_on_import=True)
 ```
+
+#### Type checkers
+
+The lazy loading shown above has one drawback: static type checkers
+(such as [mypy](http://mypy-lang.org) and
+[pyright](https://github.com/microsoft/pyright)) will not be able to
+infer the types of lazy-loaded modules and functions.
+Therefore, `mypy` won't be able to detect potential errors, and
+integrated development environments such as [VS
+Code](https://code.visualstudio.com) won't provide code completion.
+
+To work around this limitation, we provide an alternative way to define lazy
+imports.
+Instead of importing modules and functions in `__init__.py`
+file with `lazy.attach`, you instead specify those imports in a `__init__.pyi`
+file—called a "type stub".
+Your `__init__.py` file then loads imports from the stub using `lazy.attach_stub`.
+
+Here's an example of how to convert this `__init__.py`:
+
+```python
+# mypackage/__init__.py
+import lazy_loader as lazy
+
+__getattr__, __dir__, __all__ = lazy.attach(
+    __name__,
+    submod_attrs={
+        'edges': ['sobel', 'sobel_h', 'sobel_v']
+    }
+)
+```
+
+Add a [type stub (`__init__.pyi`) file](https://mypy.readthedocs.io/en/stable/stubs.html) in the same directory as the `__init__.py`.
+   Type stubs are ignored at runtime, but used by static type checkers.
+
+   ```python
+   # mypackage/__init__.pyi
+   from .edges import sobel, sobel_h, sobel_v
+   ```
+
+   Replace `lazy.attach` in `mypackage/__init__.py` with a call to `attach_stub`:
+
+   ```python
+   import lazy_loader as lazy
+
+   # this assumes there is a `.pyi` file adjacent to this module
+   __getattr__, __dir__, __all__ = lazy.attach_stub(__name__, __file__)
+   ```
+
+_Note that if you use a type stub, you will need to take additional action to add the `.pyi` file to your sdist and wheel distributions.
+See [PEP 561](https://peps.python.org/pep-0561/) and the [mypy documentation](https://mypy.readthedocs.io/en/stable/installed_packages.html#creating-pep-561-compatible-packages) for more information._
 
 ## Implementation
 
