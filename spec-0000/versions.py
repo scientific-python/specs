@@ -3,7 +3,6 @@ from glob import glob
 import json
 import requests
 from packaging.version import parse, Version
-from pathlib import Path
 
 
 py_releases = {
@@ -31,30 +30,39 @@ plus24 = timedelta(days=int(365 * 2))
 def get_release_dates(package, support_time=plus24):
     releases = {}
     response = requests.get(f"https://pypi.org/pypi/{package}/json").json()
-    for k, v in response["releases"].items():
+
+    for ver, ver_files in response["releases"].items():
         try:
-            version = Version(k)
+            version = Version(ver)
         except:
-            pass
-        if not version.is_prerelease and version.micro == 0:
-            upload_time = min(
-                (item["upload_time_iso_8601"] for item in v), default=None
-            )
-            if upload_time is not None:
-                for format in ["%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ"]:
-                    try:
-                        release_date = datetime.strptime(upload_time, format)
-                        break
-                    except:
-                        pass
-                else:
-                    break
-                drop_date = release_date + support_time
-                if drop_date >= datetime.now():
-                    releases[k] = {
-                        "release_date": release_date,
-                        "drop_date": drop_date,
-                    }
+            continue
+
+        if version.is_prerelease or version.micro != 0:
+            continue
+
+        upload_time = min(
+            (release_file["upload_time_iso_8601"] for release_file in ver_files),
+            default=None,
+        )
+        if upload_time is None:
+            continue
+
+        release_date = None
+        for format in ["%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ"]:
+            try:
+                release_date = datetime.strptime(upload_time, format)
+            except:
+                pass
+
+        if not release_date:
+            continue
+
+        drop_date = release_date + support_time
+        if drop_date >= datetime.now():
+            releases[ver] = {
+                "release_date": release_date,
+                "drop_date": drop_date,
+            }
 
     return releases
 
