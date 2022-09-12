@@ -205,21 +205,21 @@ __getattr__, __dir__, __all__ = lazy.attach(
 ```
 
 Add a [type stub (`__init__.pyi`) file](https://mypy.readthedocs.io/en/stable/stubs.html) in the same directory as the `__init__.py`.
-   Type stubs are ignored at runtime, but used by static type checkers.
+Type stubs are ignored at runtime, but used by static type checkers.
 
-   ```python
-   # mypackage/__init__.pyi
-   from .edges import sobel, sobel_h, sobel_v
-   ```
+```python
+# mypackage/__init__.pyi
+from .edges import sobel, sobel_h, sobel_v
+```
 
-   Replace `lazy.attach` in `mypackage/__init__.py` with a call to `attach_stub`:
+Replace `lazy.attach` in `mypackage/__init__.py` with a call to `attach_stub`:
 
-   ```python
-   import lazy_loader as lazy
+```python
+import lazy_loader as lazy
 
-   # this assumes there is a `.pyi` file adjacent to this module
-   __getattr__, __dir__, __all__ = lazy.attach_stub(__name__, __file__)
-   ```
+# this assumes there is a `.pyi` file adjacent to this module
+__getattr__, __dir__, __all__ = lazy.attach_stub(__name__, __file__)
+```
 
 _Note that if you use a type stub, you will need to take additional action to add the `.pyi` file to your sdist and wheel distributions.
 See [PEP 561](https://peps.python.org/pep-0561/) and the [mypy documentation](https://mypy.readthedocs.io/en/stable/installed_packages.html#creating-pep-561-compatible-packages) for more information._
