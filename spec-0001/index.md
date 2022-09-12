@@ -204,7 +204,7 @@ __getattr__, __dir__, __all__ = lazy.attach(
 )
 ```
 
-1. Add a [type stub (`__init__.pyi`) file](https://mypy.readthedocs.io/en/stable/stubs.html) in the same directory as the `__init__.py`.
+Add a [type stub (`__init__.pyi`) file](https://mypy.readthedocs.io/en/stable/stubs.html) in the same directory as the `__init__.py`.
    Type stubs are ignored at runtime, but used by static type checkers.
 
    ```python
