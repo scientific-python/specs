@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
+from glob import glob
+import json
+import requests
+from packaging.version import parse, Version
 
-plus36 = timedelta(days=int(365 * 3))
-plus24 = timedelta(days=int(365 * 2))
-
-# Release data
 
 py_releases = {
     # "3.7": "Jun 27, 2018",
@@ -11,109 +11,120 @@ py_releases = {
     "3.9": "Oct 5, 2020",
     "3.10": "Oct 4, 2021",
 }
+core_packages = [
+    # Path(x).stem for x in glob("../core-projects/*.md") if "_index" not in x
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "scikit-image",
+    "networkx",
+    "scikit-learn",
+]
+plus36 = timedelta(days=int(365 * 3))
+plus24 = timedelta(days=int(365 * 2))
 
-np_releases = {
-    # "1.17": "Jul 26, 2019",
-    # "1.18": "Dec 22, 2019",
-    # "1.19": "Jun 20, 2020",
-    "1.20": "Jan 30, 2021",
-    "1.21": "Jun 22, 2021",
-    "1.22": "Dec 31, 2021",
-    "1.23": "Jun 22, 2022",
+# Release data
+
+
+def get_release_dates(package, support_time=plus24):
+    releases = {}
+    response = requests.get(f"https://pypi.org/pypi/{package}/json").json()
+
+    for ver, ver_files in response["releases"].items():
+        try:
+            version = Version(ver)
+        except:
+            continue
+
+        if version.is_prerelease or version.micro != 0:
+            continue
+
+        upload_time = min(
+            (release_file["upload_time_iso_8601"] for release_file in ver_files),
+            default=None,
+        )
+        if upload_time is None:
+            continue
+
+        release_date = None
+        for format in ["%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ"]:
+            try:
+                release_date = datetime.strptime(upload_time, format)
+            except:
+                pass
+
+        if not release_date:
+            continue
+
+        drop_date = release_date + support_time
+        if drop_date >= datetime.now():
+            releases[ver] = {
+                "release_date": release_date,
+                "drop_date": drop_date,
+            }
+
+    return releases
+
+
+# {
+#    "python": {
+#        "3.8": {
+#            "release_date": datetime.datetime(2019, 10, 14, 0, 0),
+#            "drop_date": datetime.datetime(2022, 10, 13, 0, 0),
+#        },
+#        ...
+#    },
+#    "numpy": {
+#        ...
+#    },
+#    ...
+# }
+package_releases = {
+    "python": {
+        version: {
+            "release_date": datetime.strptime(release_date, "%b %d, %Y"),
+            "drop_date": datetime.strptime(release_date, "%b %d, %Y") + plus36,
+        }
+        for version, release_date in py_releases.items()
+    }
 }
-
-sp_releases = {
-    # "1.3": "May 17, 2019",
-    # "1.4": "Dec 16, 2019",
-    # "1.5": "Jun 21, 2020",
-    "1.6": "Dec 31, 2020",
-    "1.7": "Jun 20, 2021",
-    "1.8": "Feb 5, 2022",
-    "1.9": "Jun 29, 2022",
-}
-
-mpl_releases = {
-    # "3.1": "May 18, 2019",
-    # "3.2": "Mar 4, 2020",
-    # "3.3": "Jul 16, 2020",
-    "3.4": "Mar 26, 2021",
-    "3.5": "Nov 15, 2021",
-}
-
-# Get support window
-
-
-def support_window(project, releases, support_time):
-    windows = []
-    for version, release_date in releases.items():
-        release = datetime.strptime(release_date, "%b %d, %Y")
-        drop = release + support_time
-        windows.append((project, version, release, drop))
-    return windows
-
-
-py_support_window = support_window("Python", py_releases, plus36)
-np_support_window = support_window("NumPy", np_releases, plus24)
-sp_support_window = support_window("SciPy", sp_releases, plus24)
-mpl_support_window = support_window("Matplotlib", mpl_releases, plus24)
+package_releases |= {package: get_release_dates(package) for package in core_packages}
 
 
 # Print Gantt chart
 
-
-def gantt_section(window, prefix):
-    section = ""
-    for project, version, release, drop in window:
-        version_name = prefix + str(version).replace(".", "")
-        release_date = release.strftime("%Y-%m-%d")
-        drop_date = drop.strftime("%Y-%m-%d")
-        section += f"{version}  :     {version_name}, {release_date},{drop_date}\n"
-    return section
-
-
-py_gantt_section = gantt_section(py_support_window, "py")
-np_gantt_section = gantt_section(np_support_window, "np")
-sp_gantt_section = gantt_section(sp_support_window, "sp")
-mpl_gantt_section = gantt_section(mpl_support_window, "mpl")
-
-gantt = f"""
-<!-- prettier-ignore-start -->
-{{{{<mermaid>}}}}
+print(
+    """<!-- prettier-ignore-start -->
+{{<mermaid>}}
 gantt
 dateFormat  YYYY-MM-DD
 axisFormat  %m / %Y
 title Support Window
-
-section Python
-{py_gantt_section}
-section NumPy
-{np_gantt_section}
-section SciPy
-{sp_gantt_section}
-section Matplotlib
-{mpl_gantt_section}
-{{{{</mermaid>}}}}
-<!-- prettier-ignore-end -->
 """
+)
 
-print(gantt)
+for name, releases in package_releases.items():
+    print(f"\nsection {name}")
+    for version, dates in releases.items():
+        print(
+            f"{version}  :     {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
+        )
+
+print("{{</mermaid>}}\n<!-- prettier-ignore-end -->")
 
 # Print drop schedule
 
+rel = {}
+for name, releases in package_releases.items():
+    rel |= {
+        " ".join([name, str(ver)]): [dates["release_date"], dates["drop_date"]]
+        for ver, dates in releases.items()
+    }
 
-def get_drop_dates(window):
-    return {" ".join([proj, str(ver)]): [rel, drop] for proj, ver, rel, drop in window}
 
-
-py_drop = get_drop_dates(py_support_window)
-np_drop = get_drop_dates(np_support_window)
-sp_drop = get_drop_dates(sp_support_window)
-mpl_drop = get_drop_dates(mpl_support_window)
-
-releases = py_drop | np_drop | sp_drop | mpl_drop
-releases = dict(sorted(releases.items(), key=lambda item: item[1][1]))
-
-for package, dates in releases.items():
+rel = dict(sorted(rel.items(), key=lambda item: item[1][1]))
+for package, dates in rel.items():
     print(
         f"On {dates[1].strftime('%b %d, %Y')} drop support for {package} "
         f"(initially released on {dates[0].strftime('%b %d, %Y')})"
