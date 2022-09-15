@@ -224,6 +224,13 @@ __getattr__, __dir__, __all__ = lazy.attach_stub(__name__, __file__)
 _Note that if you use a type stub, you will need to take additional action to add the `.pyi` file to your sdist and wheel distributions.
 See [PEP 561](https://peps.python.org/pep-0561/) and the [mypy documentation](https://mypy.readthedocs.io/en/stable/installed_packages.html#creating-pep-561-compatible-packages) for more information._
 
+#### Caveats
+
+Thus far, we are aware of one corner case in which lazy loading does not work.
+This is when you define a lazily loaded function, say `my_func`, in a file of the same name (`my_func.py`) **AND** run doctests.
+Somehow, the doctest collector modifies the parent module's `__dict__` to include `my_func` (the module, not the function), essentially short circuiting the lazy loader and its ability to provide `my_module.my_func` (the function).
+Fortunately, there is an easy way to address this that already aligns with common practice: define `my_func` inside `_my_func.py` instead (note the underscore).
+
 ## Implementation
 
 Lazy loading is implemented at
