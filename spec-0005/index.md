@@ -51,6 +51,7 @@ and other ancillary information as needed.
   - Could use for pins
   - Can use labels to trigger additional runs of "exotic" jobs
   - Can open an issue on failure rather than hiding in a UI somewhere--helps give notifications
+  - Generate a badge for the workflow, that can be collected into a dashboard
 
 - GitHub actions security concerns
   - Need to trust action creators
