@@ -3,6 +3,7 @@ title: "SPEC 5 — CI Best Practices"
 date: 2022-09-22
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
+  - "Marta Iborra <martaiborra24@gmail.com>"
   - "Ryan May <rmay@ucar.edu>"
   - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
 discussion: https://discuss.scientific-python.org/t/spec-5-ci-best-practices/507
