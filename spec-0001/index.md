@@ -209,6 +209,15 @@ Type stubs are ignored at runtime, but used by static type checkers.
 
 ```python
 # mypackage/__init__.pyi
+from .edges import sobel as sobel, sobel_h as sobel_h, sobel_v as sobel_v
+```
+
+The explicit import naming `sobel as sobel` is [necessary due to PEP 484](https://github.com/microsoft/pyright/issues/3989#issuecomment-1260194688).
+Alternatively, you can manually provide an `__all__`:
+
+```python
+# mypackage/__init__.pyi
+__all__ = ['sobel', 'sobel_h', 'sobel_v']
 from .edges import sobel, sobel_h, sobel_v
 ```
 
