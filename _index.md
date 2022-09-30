@@ -13,3 +13,5 @@ Community discussions take place on the
 [`SPECs` Discourse forum](https://discuss.scientific-python.org/c/specs/6).
 
 Contributors must adhere to our [code of conduct]({{< relref "/code_of_conduct.md" >}}).
+
+SPEC development takes place at https://github.com/scientific-python/specs.
