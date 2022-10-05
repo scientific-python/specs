@@ -17,8 +17,8 @@ In particular, the Steering Committee members
 
 - monitor the
   [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),
-- determine which proposed SPECs are accepted as described in the SPEC
-  [Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
+- determine which proposed SPECs are accepted as described in the [SPEC
+  Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
 - approve changes to the SPEC process including to the
   [SPEC Purpose and Process]({{< relref "/specs/purpose-and-process" >}}),
   [SPEC Steering Committee]({{< relref "/specs/steering-committee" >}}), and
