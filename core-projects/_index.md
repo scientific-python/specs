@@ -16,7 +16,7 @@ or implementations of fundamental algorithms.
 Due to their central position in the ecosystem, the policies, practices, and tooling
 used by the Core Projects are widely seen by the ecosystem
 and impact many other projects.
-The [Steering Committee]({{< relref "/specs/steering-committee" >}}) maintains the list of
+The [Steering Committee]({{< relref "/steering-committee" >}}) maintains the list of
 Core Projects.
 
 Core Projects endorse SPEC documents.
