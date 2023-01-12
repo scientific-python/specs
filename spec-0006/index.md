@@ -60,6 +60,8 @@ Discuss what it means for a project to adopt this SPEC.
 
 ## Notes
 
+See [gopass's security goals](https://github.com/gopasspw/gopass/blob/master/docs/security.md#security-goals).
+
 <!--
 Include a bulleted list of annotated links, comments,
 and other ancillary information as needed.
