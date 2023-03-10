@@ -36,11 +36,11 @@ A system for distributing project secrets must have the following properties:
 
 ### Example
 
-The [NumPy password vault](https://github.com/numpy/vault) is an example of an implementation that satisfies the above principles.
+The [NumPy password vault](https://github.com/scientific-python/vault-template) is an example of an implementation that satisfies the above principles.
 The secrets are stored, encrypted, in a public Git repository.
 The vault uses [gopass](https://github.com/gopasspw/gopass) to manage access via GPG keys.
 Each secret is encrypted using the public keys of all developers that should have access.
-If a developer's access is removed, the vault is re-encrypted so that that developer cannot read future copies of the repository.
+If a developer's access is removed, the vault is re-encrypted so that that developer cannot read future copies of the repository (but secrets should be considered compromised and, thus, rotated).
 
 ### Alternative implementations
 
