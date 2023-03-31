@@ -1,6 +1,6 @@
 [build.environment]
-  PYTHON_VERSION = "3.8"
-  HUGO_VERSION = "0.109.0"
+  PYTHON_VERSION = "3.10"
+  HUGO_VERSION = "0.111.3"
 
 [[plugins]]
   package = "netlify-plugin-checklinks"
