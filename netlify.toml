@@ -1,5 +1,5 @@
 [build.environment]
-  PYTHON_VERSION = "3.10"
+  PYTHON_VERSION = "3.8" # netlify currently only support 2.7 and 3.8
   HUGO_VERSION = "0.111.3"
 
 [[plugins]]
