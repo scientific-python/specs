@@ -38,29 +38,27 @@ In practice, the seed is unfortunately also often controlled using `np.random.se
 Discuss how this would be implemented.
 -->
 
-The new API takes into account legacy behavior in packages such as scikit-learn (see `sklearn.utils.check_random_state`), which works as follows:
+Legacy behavior in packages such as scikit-learn (`sklearn.utils.check_random_state`) typically handle `None` (use the global seed state), an int (convert to `RandomState`), or `RandomState` object.
 
-1. Because `np.random.seed` is so often used in practice, no seed means
-   using the global `RandomState` object, `np.random.mtrand._rand`.
-2. (Option a) When a seed is provided, a `RandomState` object is initialized with that seed.
-3. (Option b) When a seed is provided, a `Generator` object is initialized with that seed.
-4. If an instance of `RandomState` is provided, it is used as-is.
-5. If an instance of `Generator` is provided, it is used as-is.
+Two strong motivations for moving over to `Generator`s are:
 
-Option a:
+(1) it avoids naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
+(2) it avoids using global state for seeding.
 
-Since the `random_state` keyword is so widely established, we recommend continuing its usage, but with the addition of accepting `Generator` instances.
+Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen[^hinsen] principle. Specifically, behavior will change over a long period of time in the case where no seed is specified. I.e., the output of `library_func()` will change, since the underlying PRNG used will be different.
 
-Option b:
+The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#issuecomment-1515248009) is:
 
-Despite the `random_state` keyword being so widely established, we recommend changing its behavior to seed using the new `Generator` interface.
-(Very likely an unworkable option, since it will change numerical results.)
+1. Accept both `rng` and `random_state` keyword arguments.
+2. If `rng=None`, handle `random_state` as in legacy behavior (see above), except use a compatible Generator instead of RandomState.
+   A DeprecationWarning is raised to warn about a future change in behavior.
+3. After <X time>, use only `rng`, seeding with `default_rng(rng)`.
+   Raise an error if `random_state` is provided.
+4. At a time of the lirbrary's choosing, remove any machinery related to `random_state`.
 
-Option b(2):
+[^hinsen]: The Hinsen principle states, loosely, that code should, whether executed now or in the future, return the same result, or raise an error.
 
-Because the `random_state` keyword is so widely established, and presumes seeding via `RandomState`, we recommend using a new keyword argument, namely `rng`.
-If `rng=None`, the global `np.random.seed` behavior is still followed.
-Otherwise, a `Generator` is initialized from the given seed.
+TODO: Add example `check_random_state` implementation.
 
 ### Core Project Endorsement
 
