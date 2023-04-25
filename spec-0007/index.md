@@ -45,7 +45,7 @@ Two strong motivations for moving over to `Generator`s are:
 (1) it avoids naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
 (2) it avoids using global state for seeding.
 
-Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen[^hinsen] principle. Specifically, behavior will change over a long period of time in the case where no seed is specified. I.e., the output of `library_func()` will change, since the underlying PRNG used will be different.
+Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen[^hinsen] principle.
 
 The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#issuecomment-1515248009) is:
 
@@ -56,7 +56,22 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
    Raise an error if `random_state` is provided.
 4. At a time of the lirbrary's choosing, remove any machinery related to `random_state`.
 
+### Impact
+
+The following users will be affected:
+
+1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before.
+
+   Such code will, in effect, go from being seeded to being unseeded.
+   To avoid that from happening, the code will have to be modified to pass in explicitly an `rng` argument on each function call.
+
+2. Those who do not seed. These users _probably_ care more about _distributions_ of pseudo-random numbers, rather than the numbers themselves. But, because they do not provide an explicit seed, their code will, after the deprecation period, use the newly proposed default.
+
+3. Users of `random_state=...`. Support for the `random_state` argument may be dropped eventually, but meanwhile we can provide clear guidance, via deprecation warnings and documentation, on how to migrate to the new `rng` keyword.
+
 [^hinsen]: The Hinsen principle states, loosely, that code should, whether executed now or in the future, return the same result, or raise an error.
+
+### Code
 
 TODO: Add example `check_random_state` implementation.
 
