@@ -33,6 +33,7 @@ that depend on you to test against your latest changes. They can then report pro
 they find.
 
 There are a few steps to implementing this for your project:
+
 1. Get access to the area that nightly wheels are uploaded to
 2. Setup a CI step that builds wheels for your project
 3. Setup a CI step that uploads wheels to https://anaconda.org/scientific-python-nightly-wheels/
@@ -46,10 +47,11 @@ once a week.
 For step (3) there is a GitHub Action that you can use. You can find the action at
 https://github.com/scientific-python/upload-nightly-action. To use it in your "build wheels
 workflow" add the following lines as an additional step:
+
 ```
-- name: Upload wheel 
+- name: Upload wheel
   uses: scientific-python/upload-nightly-wheel
-  with: 
+  with:
     artifact-names: dist/*.whl
     anaconda-nightly-upload-token: ${secrets.UPLOAD_TOKEN}
 ```
