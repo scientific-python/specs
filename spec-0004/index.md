@@ -38,7 +38,7 @@ We recommend that projects add a cron job to test against the nightly wheels and
 when errors are encountered to automatically open an issue in their project so they
 can investigate.
 
-The nightly wheels for conda can be found [here](https://anaconda.org/scipy-wheels-nightly/).
+The nightly wheels for conda can be found [here](https://anaconda.org/scientific-python-nightly-wheels/).
 
 We have a GitHub action to upload new nightly wheels and remove old ones:
 https://github.com/scientific-python/nightly-wheels
