@@ -53,7 +53,7 @@ workflow" add the following lines as an additional step:
   uses: scientific-python/upload-nightly-action@main
   with:
     artifacts_path: dist/
-    anaconda_nightly_upload_token: ${{secrets.UPLOAD_TOKEN}}
+    anaconda_nightly_upload_token: ${{ secrets.UPLOAD_TOKEN }}
 ```
 
 ### Core Project Endorsement
