@@ -6,10 +6,11 @@ from packaging.version import parse, Version
 
 
 py_releases = {
-    # "3.7": "Jun 27, 2018",
     "3.8": "Oct 14, 2019",
     "3.9": "Oct 5, 2020",
     "3.10": "Oct 4, 2021",
+    "3.11": "Oct 24, 2022",
+    "3.12": "Oct 2, 2023",
 }
 core_packages = [
     # Path(x).stem for x in glob("../core-projects/*.md") if "_index" not in x
