@@ -7,6 +7,7 @@ author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
 endorsed-by:
+  - ipython
 ---
 
 ## Description
@@ -119,15 +120,15 @@ The situation has since improved due to improved installations via binary wheels
 Discuss how this would be implemented.
 -->
 
+<!--
 ### Core Project Endorsement
 
-<!--
 Discuss what it means for a core project to endorse this SPEC.
 -->
+<!--
 
 ### Ecosystem Adoption
 
-<!--
 Discuss what it means for a project to adopt this SPEC.
 -->
 
