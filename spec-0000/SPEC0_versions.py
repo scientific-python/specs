@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
+
+import pandas as pd
 import requests
 from packaging.version import Version
-
 
 py_releases = {
     "3.8": "Oct 14, 2019",
@@ -26,6 +27,8 @@ plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
 
 # Release data
+
+now = datetime.now()
 
 
 def get_release_dates(package, support_time=plus24):
@@ -79,6 +82,17 @@ package_releases = {
 }
 package_releases |= {package: get_release_dates(package) for package in core_packages}
 
+# filter all items whos drop_date are in the past
+
+package_releases = {
+    package: {
+        version: dates
+        for version, dates in releases.items()
+        if dates["drop_date"] > now
+    }
+    for package, releases in package_releases.items()
+}
+
 
 # Print Gantt chart
 
@@ -111,9 +125,13 @@ for name, releases in package_releases.items():
     }
 
 
+current_quarter = pd.to_datetime(datetime.fromisoformat("1970-01-01")).to_period("Q")
 rel = dict(sorted(rel.items(), key=lambda item: item[1][1]))
 for package, dates in rel.items():
+    qt = pd.to_datetime(dates[1]).to_period("Q")
+    if qt != current_quarter:
+        print(str(qt).replace("Q", " – Quarter "), "drop support for:")
+        current_quarter = qt
     print(
-        f"On {dates[1].strftime('%b %d, %Y')} drop support for {package} "
-        f"(initially released on {dates[0].strftime('%b %d, %Y')})"
+        f"    {dates[1].strftime('%d %b %Y')} drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})"
     )
