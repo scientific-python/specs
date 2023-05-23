@@ -1,8 +1,6 @@
 from datetime import datetime, timedelta
-from glob import glob
-import json
 import requests
-from packaging.version import parse, Version
+from packaging.version import Version
 
 
 py_releases = {
@@ -70,19 +68,6 @@ def get_release_dates(package, support_time=plus24):
     return releases
 
 
-# {
-#    "python": {
-#        "3.8": {
-#            "release_date": datetime.datetime(2019, 10, 14, 0, 0),
-#            "drop_date": datetime.datetime(2022, 10, 13, 0, 0),
-#        },
-#        ...
-#    },
-#    "numpy": {
-#        ...
-#    },
-#    ...
-# }
 package_releases = {
     "python": {
         version: {
