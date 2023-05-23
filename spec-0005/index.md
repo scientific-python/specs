@@ -50,10 +50,10 @@ workflow" add the following lines as an additional step:
 
 ```
 - name: Upload wheel
-  uses: scientific-python/upload-nightly-wheel
+  uses: scientific-python/upload-nightly-action@main
   with:
-    artifact-names: dist/*.whl
-    anaconda-nightly-upload-token: ${secrets.UPLOAD_TOKEN}
+    artifacts_path: dist
+    anaconda_nightly_upload_token: ${{secrets.UPLOAD_TOKEN}}
 ```
 
 ### Core Project Endorsement
