@@ -52,7 +52,7 @@ workflow" add the following lines as an additional step:
 - name: Upload wheel
   uses: scientific-python/upload-nightly-action@main
   with:
-    artifacts_path: dist
+    artifacts_path: dist/
     anaconda_nightly_upload_token: ${{secrets.UPLOAD_TOKEN}}
 ```
 
