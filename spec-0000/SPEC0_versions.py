@@ -21,6 +21,8 @@ core_packages = [
     "scikit-image",
     "networkx",
     "scikit-learn",
+    "xarray",
+    "ipython",
 ]
 plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
