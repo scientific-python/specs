@@ -1,15 +1,14 @@
 from datetime import datetime, timedelta
-from glob import glob
-import json
 import requests
-from packaging.version import parse, Version
+from packaging.version import Version
 
 
 py_releases = {
-    # "3.7": "Jun 27, 2018",
     "3.8": "Oct 14, 2019",
     "3.9": "Oct 5, 2020",
     "3.10": "Oct 4, 2021",
+    "3.11": "Oct 24, 2022",
+    "3.12": "Oct 2, 2023",
 }
 core_packages = [
     # Path(x).stem for x in glob("../core-projects/*.md") if "_index" not in x
@@ -20,6 +19,8 @@ core_packages = [
     "scikit-image",
     "networkx",
     "scikit-learn",
+    "xarray",
+    "ipython",
 ]
 plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
@@ -67,19 +68,6 @@ def get_release_dates(package, support_time=plus24):
     return releases
 
 
-# {
-#    "python": {
-#        "3.8": {
-#            "release_date": datetime.datetime(2019, 10, 14, 0, 0),
-#            "drop_date": datetime.datetime(2022, 10, 13, 0, 0),
-#        },
-#        ...
-#    },
-#    "numpy": {
-#        ...
-#    },
-#    ...
-# }
 package_releases = {
     "python": {
         version: {
