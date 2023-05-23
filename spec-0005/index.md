@@ -2,9 +2,10 @@
 title: "SPEC 5 — CI Best Practices"
 date: 2022-09-22
 author:
-  - "Jarrod Millman <millman@berkeley.edu>"
+  - "Tim Head <betatim@gmail.com>"
   - "Marta Iborra <martaiborra24@gmail.com>"
   - "Ryan May <rmay@ucar.edu>"
+  - "Jarrod Millman <millman@berkeley.edu>"
   - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
 discussion: https://discuss.scientific-python.org/t/spec-5-ci-best-practices/507
 endorsed-by:
@@ -24,6 +25,36 @@ intended use-cases, and pseudo-code illustrating its use.
 <!--
 Discuss how this would be implemented.
 -->
+
+### Build nightly wheels
+
+By building and uploading wheel for your project you make it easier for projects
+that depend on you to test against your latest changes. They can then report problems
+they find.
+
+There are a few steps to implementing this for your project:
+
+1. Get access to the area that nightly wheels are uploaded to
+2. Setup a CI step that builds wheels for your project
+3. Setup a CI step that uploads wheels to https://anaconda.org/scientific-python-nightly-wheels/
+
+For step (1) contact XXX. Deposit the token you get as a [secret on your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets) named `UPLOAD_TOKEN`.
+
+The work for step (2) depends on your project. You are probably already doing this for your
+releases. The new thing to add is that building wheels is run on a schedule every night or
+once a week.
+
+For step (3) there is a GitHub Action that you can use. You can find the action at
+https://github.com/scientific-python/upload-nightly-action. To use it in your "build wheels
+workflow" add the following lines as an additional step:
+
+```
+- name: Upload wheel
+  uses: scientific-python/upload-nightly-wheel
+  with:
+    artifact-names: dist/*.whl
+    anaconda-nightly-upload-token: ${secrets.UPLOAD_TOKEN}
+```
 
 ### Core Project Endorsement
 
