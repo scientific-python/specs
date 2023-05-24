@@ -138,4 +138,4 @@ Discuss what it means for a project to adopt this SPEC.
 
 - Code to generate support and drop schedule tables:
 
-{{< readcode file="versions.py" lang="python" >}}
+{{< readcode file="SPEC0_versions.py" lang="python" >}}
