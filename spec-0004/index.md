@@ -88,6 +88,26 @@ workflow" add the following lines as an additional step:
 Complete examples of how projects implement this in their CI setup are linked in the Notes section.
 
 
+#### Process for Adding New Projects
+
+After someone emails nightly-wheels@scientific-python.org requesting access to upload wheels
+a human has to respond to that request.
+
+We want to be open to projects uploading wheels but at the same time need to perform some
+amount of due dilligence before giving people access. This is because once a user is given
+access they could upload wheels for any project. We assume that people are not malicious
+and we can see from the logs who misbehaved after the fact.
+
+Once you have established who the person is that contacted nightly-wheels@scientific-python.org
+and that they represent the project they say they are representing reply to the email.
+Ask the person to create an account on https://anaconda.org and tell you the username.
+You can then add them to the `scientific-python-nightly-wheels` organisation on anaconda.org.
+Let the user know that they have been added and that they can create a access token at
+https://anaconda.org/scientific-python-nightly-wheels/settings/access. The token should
+only have the "Allow uploads to Standard Python repositories" scope and use the project
+name as the token name.
+
+
 ## Core Project Endorsement
 
 <!--
