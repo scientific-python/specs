@@ -33,7 +33,6 @@ you to give feedback about upcoming changes. As with testing against nightlies o
 your dependencies this gives your dependents a chance to report problems before they
 find their way into a release.
 
-
 ## Implementation
 
 This section outlines how to implement using and building nightly wheels. We assume your
@@ -87,7 +86,6 @@ workflow" add the following lines as an additional step:
 
 Complete examples of how projects implement this in their CI setup are linked in the Notes section.
 
-
 #### Process for Adding New Projects
 
 After someone emails nightly-wheels@scientific-python.org requesting access to upload wheels
@@ -106,7 +104,6 @@ Let the user know that they have been added and that they can create a access to
 https://anaconda.org/scientific-python-nightly-wheels/settings/access. The token should
 only have the "Allow uploads to Standard Python repositories" scope and use the project
 name as the token name.
-
 
 ## Core Project Endorsement
 
@@ -127,6 +124,6 @@ Include a bulleted list of annotated links, comments,
 and other ancillary information as needed.
 -->
 
-* You can use [scikit-learn's GitHub Action wheels building workflow](https://github.com/scikit-learn/scikit-learn/blob/f034f57b1ad7bc5a7a5dd342543cea30c85e74ff/.github/workflows/wheels.yml)
-as an example of how to build wheels and upload them to the nightly area.
-* An example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
+- You can use [scikit-learn's GitHub Action wheels building workflow](https://github.com/scikit-learn/scikit-learn/blob/f034f57b1ad7bc5a7a5dd342543cea30c85e74ff/.github/workflows/wheels.yml)
+  as an example of how to build wheels and upload them to the nightly area.
+- An example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
