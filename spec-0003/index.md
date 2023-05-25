@@ -26,42 +26,42 @@ All images, figures, and media elements on the web should be provided with meani
 
 ### 2. Color
 
-- **Contrast levels** between content and the background should be enough for anyone with low vision impairments and color deficiencies to be able to read. We list here the recommended values for contrast depending on the size of the text or element on the website. Still, we recommend using an [automated tool](https://hackmd.io/VMHHxV7dR0mwuNuSYci7xw?both) to measure these values for your website. 
-    * Normal text: [Level AA](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) compliance requires a contrast ratio of 4.5:1.
-    * Large text: Level AA compliance requires a contrast ratio of 3:1.
-    * Icons: Level AA compliance requires a contrast ratio of 3.0:1.
+- **Contrast levels** between content and the background should be enough for anyone with low vision impairments and color deficiencies to be able to read. We list here the recommended values for contrast depending on the size of the text or element on the website. Still, we recommend using an [automated tool](https://hackmd.io/VMHHxV7dR0mwuNuSYci7xw?both) to measure these values for your website.
+  - Normal text: [Level AA](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) compliance requires a contrast ratio of 4.5:1.
+  - Large text: Level AA compliance requires a contrast ratio of 3:1.
+  - Icons: Level AA compliance requires a contrast ratio of 3.0:1.
 - Make sure your website/application is **colorblind friendly**. There are several ways to do this:
-    -  Convey information in some other way (not using colors).
-    -  Use [color palettes that are colorblind friendly](https://jfly.uni-koeln.de/color/#pallet), meaning that they avoid certain combinations of colors, and try to maximize the contrast between colors for a variety of common color blind conditions. 
-    
+  - Convey information in some other way (not using colors).
+  - Use [color palettes that are colorblind friendly](https://jfly.uni-koeln.de/color/#pallet), meaning that they avoid certain combinations of colors, and try to maximize the contrast between colors for a variety of common color blind conditions.
+
 ### 3. Navigation consistency (tab stops)
 
 Users must be able to interact with a software application using only a keyboard. For this, you should have properly designed [tab stops](https://accessibilityinsights.io/docs/windows/reference/tabstops/). A tab stop is where the cursor stops after the Tab key is pressed.
+
 - Provide a **visible focus** indicator on the interactive element with input focus, usually a border or other visible changes.
 - Make all **interactive elements focusable**, allowing users to tab to them unless disabled.
 - Maintain a **consistent tab order** that matches the visual hierarchy, including elements that appear in multiple views.
 
-
 ### 4. Mobile friendly
 
-* Implement a **responsive layout** for your website to ensure it adapts well to different screen sizes and devices.
-* **Optimize the speed** of your website by minimizing file sizes, leveraging caching, and optimizing images.
-* **Avoid using pop-ups** on mobile devices as they can be intrusive and disrupt the user experience.
-* Use a **large and readable font size** at least 16 pixels or larger for easy legibility on mobile screens.
-* **Simplify your website design**, removing clutter and focusing on essential elements for intuitive mobile navigation.
+- Implement a **responsive layout** for your website to ensure it adapts well to different screen sizes and devices.
+- **Optimize the speed** of your website by minimizing file sizes, leveraging caching, and optimizing images.
+- **Avoid using pop-ups** on mobile devices as they can be intrusive and disrupt the user experience.
+- Use a **large and readable font size** at least 16 pixels or larger for easy legibility on mobile screens.
+- **Simplify your website design**, removing clutter and focusing on essential elements for intuitive mobile navigation.
 
 ## Tools and Automation to help
 
 ### General tools
 
 - [Accessibility Insights](https://accessibilityinsights.io/): Automated browser-based tool that will check all of the above recommendations.
-- [Github Action testing](https://github.com/marketplace/actions/web-accessibility-evaluation) based on A11y recommendations. 
+- [Github Action testing](https://github.com/marketplace/actions/web-accessibility-evaluation) based on A11y recommendations.
 - [Axe](https://github.com/dequelabs/axe-core): Open source library (and other paid tooling) that can automate front-end testing.
 
 ### Color testing
 
-- [Color blind accessible pallets in Bokeh.]( https://docs.bokeh.org/en/latest/docs/reference/palettes.html#large-palettes)
-- [Microsoft guide]( https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/accessibility/test-color-blindness) about color blind checking via browser tools.
+- [Color blind accessible pallets in Bokeh.](https://docs.bokeh.org/en/latest/docs/reference/palettes.html#large-palettes)
+- [Microsoft guide](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/accessibility/test-color-blindness) about color blind checking via browser tools.
 
 ## Need more?
 
@@ -69,10 +69,10 @@ While the recommendations provided here cover important aspects of accessibility
 
 - The [Web Content Accessibility Guidelines (W3C)](https://www.w3.org/TR/WCAG/) provide a comprehensive set of international standards for enhancing web content accessibility.
 - The [comprehensive checklist](https://www.a11yproject.com/checklist/) published by the A11y organization offers a user-friendly description of the W3C's accessibility standards.
-- The [Numfocus Discover Cookbook](https://discover-cookbook.numfocus.org/intro.html#) is a valuable resource for understanding event/meeting accessibility and implementing inclusive practices.
+- The [Numfocus Discover Cookbook](https://discover-cookbook.numfocus.org/intro.html) is a valuable resource for understanding event/meeting accessibility and implementing inclusive practices.
 - The [Accesibility Insights YouTube channel](https://www.youtube.com/@AccessibilityInsights) provides tutorials on using Accessibility Insights tools to test and improve website accessibility.
 - The articles available on the The [axxeslab Articles website](https://axesslab.com/articles/) offer helpful information about accessibility and testing.
 
 ## Submit your feedback
 
-We value your feedback and are committed to continuously improving accessibility. If you have any concerns or suggestions regarding accessibility that you believe we may have overlooked, we encourage you to share them with us. Your input is essential to our learning and growth. Please submit your issues and specific accessibility requirements to our [SPECS repository](https://github.com/scientific-python/specs) so that we can address them effectively. 
+We value your feedback and are committed to continuously improving accessibility. If you have any concerns or suggestions regarding accessibility that you believe we may have overlooked, we encourage you to share them with us. Your input is essential to our learning and growth. Please submit your issues and specific accessibility requirements to our [SPECS repository](https://github.com/scientific-python/specs) so that we can address them effectively.
