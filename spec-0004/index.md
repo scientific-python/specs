@@ -50,10 +50,10 @@ If you spot a problem please investigate if this is due to a known deprecation o
 bug fix. If you think it is neither, please report it to the relevant upstream project.
 
 To install the nightly version of your dependencies check which of them are available
-at https://anaconda.org/scientific-python-nightly-wheels/. For example to install the NumPy, pandas and scipy nightlies use:
+at https://anaconda.org/scientific-python-nightly-wheels/. For example to install the NumPy and scipy nightlies use:
 
 ```
-pip install --pre --upgrade --extra-index https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy pandas scipy
+pip install --pre --upgrade --extra-index https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy scipy
 ```
 
 Complete examples of how projects implement this in their CI setup are linked in the Notes section.
@@ -66,7 +66,9 @@ There are a few steps to implementing this for your project:
 2. Setup a CI step that builds wheels for your project
 3. Setup a CI step that uploads wheels to https://anaconda.org/scientific-python-nightly-wheels/
 
-For step (1) contact nightly-wheels@scientific-python.org. Deposit the token you get as a [secret on your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets) named `UPLOAD_TOKEN`.
+For step (1) visit https://github.com/scientific-python/upload-nightly-action and create an issue
+requesting access. List the project you maintain and would like to upload nightlies for. Someone
+will reply to the issue and let you know what happens next.
 
 The work for step (2) depends on your project. You are probably already doing this for your
 releases. The new thing to add is that building wheels is run on a schedule every night or
@@ -88,22 +90,27 @@ Complete examples of how projects implement this in their CI setup are linked in
 
 #### Process for Adding New Projects
 
-After someone emails nightly-wheels@scientific-python.org requesting access to upload wheels
-a human has to respond to that request.
+After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
+requesting access to upload wheels a human has to respond to that request.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
 amount of due dilligence before giving people access. This is because once a user is given
 access they could upload wheels for any project. We assume that people are not malicious
 and we can see from the logs who misbehaved after the fact.
 
-Once you have established who the person is that contacted nightly-wheels@scientific-python.org
-and that they represent the project they say they are representing reply to the email.
-Ask the person to create an account on https://anaconda.org and tell you the username.
+Once you have established who the person is and that they represent the project they want
+to upload wheels for ask the person to create an account on https://anaconda.org and tell
+you the username.
+
 You can then add them to the `scientific-python-nightly-wheels` organisation on anaconda.org.
 Let the user know that they have been added and that they can create a access token at
 https://anaconda.org/scientific-python-nightly-wheels/settings/access. The token should
-only have the "Allow uploads to Standard Python repositories" scope and use the project
-name as the token name.
+only have the "Allow uploads to Standard Python repositories" and
+"Allow write access to the API site" scope. It should use the project name as the token name.
+
+You can also add new people to https://anaconda.org/scientific-python-nightly-wheels when they
+contact you privately, but it would be good if an issue is created as part of that. This helps
+with keeping track of who did what when.
 
 ## Core Project Endorsement
 
@@ -126,4 +133,5 @@ and other ancillary information as needed.
 
 - You can use [scikit-learn's GitHub Action wheels building workflow](https://github.com/scikit-learn/scikit-learn/blob/f034f57b1ad7bc5a7a5dd342543cea30c85e74ff/.github/workflows/wheels.yml)
   as an example of how to build wheels and upload them to the nightly area.
+- [numpy's GitHub Action workflow for building wheels and uploading them](https://github.com/numpy/numpy/blob/cc0abd768575d7f9e862de0b4912af27f6e9690d/.github/workflows/wheels.yml)
 - An example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
