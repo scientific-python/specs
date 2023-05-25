@@ -23,7 +23,7 @@ This SPEC describes how to test against nightly wheels of several widely used
 projects and how to create nightly wheels for your project.
 
 Regularly running your project's tests while using the nightly version of your
-dependencies allows you to spot problems caused by changes before a new release
+dependencies allows you to spot problems caused by upstream changes before a new release
 is made. This way potential issues can be resolved before they find their way
 into a release, at which point it becomes much harder to change or revert
 something.
