@@ -8,6 +8,7 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-4-nightly-wheels/474
 endorsed-by:
+  - networkx
 ---
 
 ## Description
