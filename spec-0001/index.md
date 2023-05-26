@@ -7,6 +7,7 @@ author:
   - "Dan Schult <dschult@colgate.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-1-lazy-loading-for-submodules/25
 endorsed-by:
+  - networkx
 shortcutDepth: 3
 ---
 
