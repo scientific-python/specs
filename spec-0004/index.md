@@ -2,10 +2,14 @@
 title: "SPEC 4 — Using and Creating Nightly Wheels"
 date: 2022-09-05
 author:
+  - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
+  - "Jarrod Millman <millman@berkeley.edu>"
   - "Matthew Feickert <matthew.feickert@cern.ch>"
+  - "Matthias Bussonnier <bussonniermatthias@gmail.com>"
+  - "Mridul Seth <mail@mriduls.com>"
   - "Olivier Grisel <olivier.grisel@ensta.org>"
   - "Tim Head <betatim@gmail.com>"
-  - "Jarrod Millman <millman@berkeley.edu>"
+
 discussion: https://discuss.scientific-python.org/t/spec-4-nightly-wheels/474
 endorsed-by:
 ---
