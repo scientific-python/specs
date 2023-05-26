@@ -8,6 +8,7 @@ author:
 discussion: https://discuss.scientific-python.org/t/spec-1-lazy-loading-for-submodules/25
 endorsed-by:
   - networkx
+  - scikit-image
 shortcutDepth: 3
 ---
 
