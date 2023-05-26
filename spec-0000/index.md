@@ -138,10 +138,11 @@ The situation has since improved due to improved installations via binary wheels
 ### Drop Schedule
 
 2023 – Quarter 2 drop support for:
-    28 May 2023 drop ipython 7.24.0 (initially released on May 28, 2021)
-    20 Jun 2023 drop scipy 1.7.0 (initially released on Jun 20, 2021)
-    22 Jun 2023 drop numpy 1.21.0 (initially released on Jun 22, 2021)
-    25 Jun 2023 drop ipython 7.25.0 (initially released on Jun 25, 2021)
+- 28 May 2023 drop ipython 7.24.0 (initially released on May 28, 2021)
+- 20 Jun 2023 drop scipy 1.7.0 (initially released on Jun 20, 2021)
+- 22 Jun 2023 drop numpy 1.21.0 (initially released on Jun 22, 2021)
+- 25 Jun 2023 drop ipython 7.25.0 (initially released on Jun 25, 2021)
+
 2023 – Quarter 3 drop support for:
     02 Jul 2023 drop pandas 1.3.0 (initially released on Jul 02, 2021)
     08 Jul 2023 drop networkx 2.6 (initially released on Jul 08, 2021)
