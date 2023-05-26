@@ -135,3 +135,4 @@ and other ancillary information as needed.
   as an example of how to build wheels and upload them to the nightly area.
 - [numpy's GitHub Action workflow for building wheels and uploading them](https://github.com/numpy/numpy/blob/cc0abd768575d7f9e862de0b4912af27f6e9690d/.github/workflows/wheels.yml)
 - An example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
+- An example of using [this action in NetworkX](https://github.com/networkx/networkx/blob/main/.github/workflows/nightly.yml) to publish a nightly release.
