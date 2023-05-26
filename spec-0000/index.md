@@ -138,12 +138,14 @@ The situation has since improved due to improved installations via binary wheels
 ### Drop Schedule
 
 2023 – Quarter 2 drop support for:
+
 - 28 May 2023 drop ipython 7.24.0 (initially released on May 28, 2021)
 - 20 Jun 2023 drop scipy 1.7.0 (initially released on Jun 20, 2021)
 - 22 Jun 2023 drop numpy 1.21.0 (initially released on Jun 22, 2021)
 - 25 Jun 2023 drop ipython 7.25.0 (initially released on Jun 25, 2021)
 
 2023 – Quarter 3 drop support for:
+
 - 02 Jul 2023 drop pandas 1.3.0 (initially released on Jul 02, 2021)
 - 08 Jul 2023 drop networkx 2.6 (initially released on Jul 08, 2021)
 - 23 Jul 2023 drop xarray 0.19.0 (initially released on Jul 23, 2021)
@@ -153,6 +155,7 @@ The situation has since improved due to improved installations via binary wheels
 - 25 Sep 2023 drop ipython 7.28.0 (initially released on Sep 25, 2021)
 
 2023 – Quarter 4 drop support for:
+
 - 05 Oct 2023 drop python 3.9 (initially released on Oct 05, 2020)
 - 30 Oct 2023 drop ipython 7.29.0 (initially released on Oct 30, 2021)
 - 02 Nov 2023 drop xarray 0.20.0 (initially released on Nov 02, 2021)
@@ -162,6 +165,7 @@ The situation has since improved due to improved installations via binary wheels
 - 31 Dec 2023 drop numpy 1.22.0 (initially released on Dec 31, 2021)
 
 2024 – Quarter 1 drop support for:
+
 - 05 Jan 2024 drop ipython 7.31.0 (initially released on Jan 05, 2022)
 - 12 Jan 2024 drop ipython 8.0.0 (initially released on Jan 12, 2022)
 - 22 Jan 2024 drop pandas 1.4.0 (initially released on Jan 22, 2022)
@@ -174,6 +178,7 @@ The situation has since improved due to improved installations via binary wheels
 - 26 Mar 2024 drop ipython 8.2.0 (initially released on Mar 27, 2022)
 
 2024 – Quarter 2 drop support for:
+
 - 08 Apr 2024 drop networkx 2.8 (initially released on Apr 09, 2022)
 - 28 Apr 2024 drop ipython 7.33.0 (initially released on Apr 29, 2022)
 - 28 Apr 2024 drop ipython 8.3.0 (initially released on Apr 29, 2022)
@@ -183,6 +188,7 @@ The situation has since improved due to improved installations via binary wheels
 - 21 Jun 2024 drop numpy 1.23.0 (initially released on Jun 22, 2022)
 
 2024 – Quarter 3 drop support for:
+
 - 21 Jul 2024 drop xarray 2022.6.0 (initially released on Jul 22, 2022)
 - 28 Jul 2024 drop scipy 1.9.0 (initially released on Jul 29, 2022)
 - 05 Sep 2024 drop ipython 8.5.0 (initially released on Sep 06, 2022)
@@ -191,6 +197,7 @@ The situation has since improved due to improved installations via binary wheels
 - 28 Sep 2024 drop xarray 2022.9.0 (initially released on Sep 29, 2022)
 
 2024 – Quarter 4 drop support for:
+
 - 03 Oct 2024 drop python 3.10 (initially released on Oct 04, 2021)
 - 12 Oct 2024 drop xarray 2022.10.0 (initially released on Oct 13, 2022)
 - 29 Oct 2024 drop ipython 8.6.0 (initially released on Oct 30, 2022)
@@ -201,6 +208,7 @@ The situation has since improved due to improved installations via binary wheels
 - 17 Dec 2024 drop numpy 1.24.0 (initially released on Dec 18, 2022)
 
 2025 – Quarter 1 drop support for:
+
 - 02 Jan 2025 drop ipython 8.8.0 (initially released on Jan 03, 2023)
 - 02 Jan 2025 drop scipy 1.10.0 (initially released on Jan 03, 2023)
 - 07 Jan 2025 drop networkx 3.0 (initially released on Jan 08, 2023)
@@ -215,6 +223,7 @@ The situation has since improved due to improved installations via binary wheels
 - 29 Mar 2025 drop ipython 8.12.0 (initially released on Mar 30, 2023)
 
 2025 – Quarter 2 drop support for:
+
 - 02 Apr 2025 drop pandas 2.0.0 (initially released on Apr 03, 2023)
 - 03 Apr 2025 drop networkx 3.1 (initially released on Apr 04, 2023)
 - 13 Apr 2025 drop xarray 2023.4.0 (initially released on Apr 14, 2023)
@@ -222,9 +231,11 @@ The situation has since improved due to improved installations via binary wheels
 - 18 May 2025 drop xarray 2023.5.0 (initially released on May 19, 2023)
 
 2025 – Quarter 4 drop support for:
+
 - 23 Oct 2025 drop python 3.11 (initially released on Oct 24, 2022)
 
 2026 – Quarter 4 drop support for:
+
 - 01 Oct 2026 drop python 3.12 (initially released on Oct 02, 2023)
 
 ## Implementation
