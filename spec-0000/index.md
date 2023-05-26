@@ -2,6 +2,7 @@
 title: "SPEC 0 — Minimum Supported Versions"
 date: 2020-12-17
 author:
+  - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Madicken Munk <madicken@berkeley.edu>"
   - "Matt Haberland <mhaberla@calpoly.edu>"
