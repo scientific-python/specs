@@ -9,6 +9,7 @@ discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-ver
 endorsed-by:
   - ipython
   - networkx
+  - scikit-image
 ---
 
 ## Description
