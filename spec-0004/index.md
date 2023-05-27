@@ -100,12 +100,12 @@ least an issue to be openned.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
 amount of due dilligence before giving people access. This is because once a user is given
-access they benefit the wide exposure of Scientific Python and could take this to their
-advantage to publish malicious packages.
+access their work will be broadcasted through the broad exposure of Scientific Python. This
+could be abused to publish malicious packages.
 
 Once you have established who the person is and that they represent the project they want
 to upload wheels for ask the person to create an account on https://anaconda.org and tell
-you the username. We suggest projects to have a least 2 representatives and ideally they
+you the username. We suggest that projects have a least 2 representatives and ideally they
 should not be part of the same organization to ensure a diverse community.
 
 You (as an admin) can then generate a personal access token at
