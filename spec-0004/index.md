@@ -2,10 +2,14 @@
 title: "SPEC 4 — Using and Creating Nightly Wheels"
 date: 2022-09-05
 author:
+  - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
+  - "Jarrod Millman <millman@berkeley.edu>"
   - "Matthew Feickert <matthew.feickert@cern.ch>"
+  - "Matthias Bussonnier <bussonniermatthias@gmail.com>"
+  - "Mridul Seth <mail@mriduls.com>"
   - "Olivier Grisel <olivier.grisel@ensta.org>"
   - "Tim Head <betatim@gmail.com>"
-  - "Jarrod Millman <millman@berkeley.edu>"
+
 discussion: https://discuss.scientific-python.org/t/spec-4-nightly-wheels/474
 endorsed-by:
 ---
@@ -136,3 +140,4 @@ and other ancillary information as needed.
 - [numpy's GitHub Action workflow for building wheels and uploading them](https://github.com/numpy/numpy/blob/cc0abd768575d7f9e862de0b4912af27f6e9690d/.github/workflows/wheels.yml)
 - An example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
 - An example of using [this action in NetworkX](https://github.com/networkx/networkx/blob/main/.github/workflows/nightly.yml) to publish a nightly release.
+- An example of [a Jupyter notebook based tutorial repo](https://github.com/numpy/numpy-tutorials/blob/main/tox.ini) to test with multiple version combination, including using the nightly wheels for the development version.
