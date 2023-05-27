@@ -25,7 +25,7 @@ intended use-cases, and pseudo-code illustrating its use.
 
 This SPEC describes how to test against nightly wheels of several widely used
 projects and how to create nightly wheels for your project. The document use the word
-*nightly* to refer to some semi regular interval, like daily, weekly or every three days.
+_nightly_ to refer to some semi regular interval, like daily, weekly or every three days.
 
 Regularly running your project's tests while using the nightly version of your
 dependencies allows you to spot problems caused by upstream changes before a new release
