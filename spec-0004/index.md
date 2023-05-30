@@ -95,7 +95,7 @@ requesting access to upload wheels a human/admin has to respond to that request.
 
 Admins are people from the community who are ideally not part of the same organizations nor
 project. This is to prevent malicious activities from a given group of actors and ensure a
-diverse and healthy community. Adding new people to the list requires of admins requires at
+diverse and healthy community. Adding new people to the list of admins requires at
 least an issue to be openned.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
