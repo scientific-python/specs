@@ -105,7 +105,10 @@ could be abused to publish malicious packages.
 
 Once you have established who the person is and that they represent the project they want
 to upload wheels for ask the person to create an account on https://anaconda.org and tell
-you the username. We suggest that projects have at least 2 representatives. When considering representatives, we suggest that projects nominate individuals that do not have significant community, organizational, or employer overlap with existing representatives to ensure that we have a diverse community.
+you the username. We suggest that projects have at least 2 representatives.
+When considering representatives, we suggest that projects nominate individuals
+that do not have significant community, organizational, or employer overlap
+with existing representatives to ensure that we have a diverse community.
 
 You (as an admin) can then generate a personal access token at
 https://anaconda.org/[user]/settings/access.
