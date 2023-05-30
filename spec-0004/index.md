@@ -98,26 +98,38 @@ Complete examples of how projects implement this in their CI setup are linked in
 #### Process for Adding New Projects
 
 After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
-requesting access to upload wheels a human has to respond to that request.
+requesting access to upload wheels a human/admin has to respond to that request.
+
+Admins are people from the community who are ideally not part of the same organizations nor
+project. This is to prevent malicious activities from a given group of actors and ensure a
+diverse and healthy community. Adding new people to the list of admins requires at
+least an issue to be openned.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
 amount of due dilligence before giving people access. This is because once a user is given
-access they could upload wheels for any project. We assume that people are not malicious
-and we can see from the logs who misbehaved after the fact.
+access their work will be broadcasted through the broad exposure of Scientific Python. This
+could be abused to publish malicious packages.
 
 Once you have established who the person is and that they represent the project they want
 to upload wheels for ask the person to create an account on https://anaconda.org and tell
-you the username.
+you the username. We suggest that projects have at least 2 representatives.
+When considering representatives, we suggest that projects nominate individuals
+that do not have significant community, organizational, or employer overlap
+with existing representatives to ensure that we have a diverse community.
 
-You can then add them to the `scientific-python-nightly-wheels` organisation on anaconda.org.
-Let the user know that they have been added and that they can create a access token at
-https://anaconda.org/scientific-python-nightly-wheels/settings/access. The token should
-only have the "Allow uploads to Standard Python repositories" and
-"Allow write access to the API site" scope. It should use the project name as the token name.
+You (as an admin) can then generate a personal access token at
+https://anaconda.org/[user]/settings/access.
+The token should only have the "Allow uploads to Standard Python repositories" and
+"Allow write access to the API site" scope. The creation of tokens at the organization
+level should be avoided for security reasons.
 
-You can also add new people to https://anaconda.org/scientific-python-nightly-wheels when they
-contact you privately, but it would be good if an issue is created as part of that. This helps
-with keeping track of who did what when.
+Then you need to do a first upload of a wheel to create the package listing on anaconda.org.
+Once this operation is done, you can revoke your token and add the new user to its project.
+For a given project, at leat one user should be admin of that project.
+
+At that point, let the user know that they have been added and that they can create a personal
+access token (as outlined above.) They can now upload new wheels and perform maitenance
+actions on their project.
 
 ## Core Project Endorsement
 
