@@ -119,9 +119,9 @@ with existing representatives to ensure that we have a diverse community.
 
 You (as an admin) can then generate a personal access token at
 https://anaconda.org/[user]/settings/access.
-The token should only have the "Allow uploads to Standard Python repositories" and
-"Allow write access to the API site" scope. The creation of tokens at the organization
-level should be avoided for security reasons.
+The token should only have the "Allow uploads to Standard Python repositories",
+"Allow read access to the API site" and "Allow write access to the API site" scope.
+The creation of tokens at the organization level should be avoided for security reasons.
 
 Then you need to do a first upload of a wheel to create the package listing on anaconda.org.
 Once this operation is done, you can revoke your token and add the new user to its project.
