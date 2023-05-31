@@ -8,6 +8,7 @@ author:
   - "Matt Haberland <mhaberla@calpoly.edu>"
   - "Matthias Bussonnier <bussonniermatthias@gmail.com>"
   - "Thomas A Caswell <tcaswell@gmail.com>"
+  - "Ralf Gommers <ralf.gommers@gmail.com>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
