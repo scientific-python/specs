@@ -2,9 +2,16 @@
 title: "SPEC 0 — Minimum Supported Versions"
 date: 2020-12-17
 author:
+  - "Andreas C. Mueller <andreas.mueller.ml@gmail.com>"
+  - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
   - "Jarrod Millman <millman@berkeley.edu>"
+  - "Madicken Munk <madicken@berkeley.edu>"
+  - "Matt Haberland <mhaberla@calpoly.edu>"
+  - "Matthias Bussonnier <bussonniermatthias@gmail.com>"
+  - "Ralf Gommers <ralf.gommers@gmail.com>"
   - "Ross Barnowski <rossbar@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
+  - "Thomas A Caswell <tcaswell@gmail.com>"
 discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
 endorsed-by:
   - ipython
