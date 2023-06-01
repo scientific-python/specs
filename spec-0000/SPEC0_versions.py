@@ -1,8 +1,11 @@
+import requests
+import itertools
+import collections
 from datetime import datetime, timedelta
 
 import pandas as pd
-import requests
 from packaging.version import Version
+
 
 py_releases = {
     "3.8": "Oct 14, 2019",
@@ -33,9 +36,14 @@ now = datetime.now()
 
 def get_release_dates(package, support_time=plus24):
     releases = {}
-    response = requests.get(f"https://pypi.org/pypi/{package}/json").json()
+    response = requests.get(
+        f"https://pypi.org/simple/{package}",
+        headers={"Accept": "application/vnd.pypi.simple.v1+json"},
+    ).json()
 
-    for ver, ver_files in response["releases"].items():
+    file_date = collections.defaultdict(list)
+    for f in response["files"]:
+        ver = f["filename"].split("-")[1]
         try:
             version = Version(ver)
         except:
@@ -44,23 +52,21 @@ def get_release_dates(package, support_time=plus24):
         if version.is_prerelease or version.micro != 0:
             continue
 
-        upload_time = min(
-            (release_file["upload_time_iso_8601"] for release_file in ver_files),
-            default=None,
-        )
-        if upload_time is None:
-            continue
-
         release_date = None
         for format in ["%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ"]:
             try:
-                release_date = datetime.strptime(upload_time, format)
+                release_date = datetime.strptime(f["upload-time"], format)
             except:
                 pass
 
         if not release_date:
             continue
 
+        file_date[version].append(release_date)
+
+    release_date = {v: min(file_date[v]) for v in file_date}
+
+    for ver, release_date in sorted(release_date.items()):
         drop_date = release_date + support_time
         if drop_date >= datetime.now():
             releases[ver] = {
@@ -80,10 +86,10 @@ package_releases = {
         for version, release_date in py_releases.items()
     }
 }
+
 package_releases |= {package: get_release_dates(package) for package in core_packages}
 
-# filter all items whos drop_date are in the past
-
+# filter all items whose drop_date are in the past
 package_releases = {
     package: {
         version: dates
