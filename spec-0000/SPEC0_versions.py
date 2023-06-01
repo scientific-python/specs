@@ -104,11 +104,9 @@ package_releases = {
 
 with open("chart.md", "w") as fh:
     fh.write(
-        """<!-- prettier-ignore-start -->
-{{<mermaid>}}
-gantt
-dateFormat  YYYY-MM-DD
-axisFormat  %m / %Y
+        """gantt
+dateFormat YYYY-MM-DD
+axisFormat %m / %Y
 title Support Window
 """
     )
@@ -117,11 +115,9 @@ title Support Window
         fh.write(f"\nsection {name}")
         for version, dates in releases.items():
             fh.write(
-                f"\n{version}  :     {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
+                f"\n{version} : {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
             )
-        fh.write("\n")
-
-    fh.write("{{</mermaid>}}\n<!-- prettier-ignore-end -->")
+    fh.write("\n")
 
 # Print drop schedule
 
