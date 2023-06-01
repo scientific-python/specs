@@ -8,7 +8,7 @@ HUGO_OPTS=--disableFastRender
 # those from this repository
 prepare-preview: clean
 	mkdir -p $(PREVIEW_DEST)
-	git clone https://github.com/scientific-python-specs/specs.scientific-python.org $(PREVIEW_DEST)
+	git clone https://github.com/scientific-python/scientific-python.org $(PREVIEW_DEST)
 	git -C $(PREVIEW_DEST) submodule set-url themes/scientific-python-hugo-theme https://github.com/scientific-python/scientific-python-hugo-theme.git
 	git -C $(PREVIEW_DEST) submodule update --init
 	cp -r * $(PREVIEW_DEST)/content/
