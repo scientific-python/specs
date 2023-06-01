@@ -100,10 +100,10 @@ package_releases = {
 }
 
 
-# Print Gantt chart
+# Save Gantt chart
 
-print(
-    """<!-- prettier-ignore-start -->
+with open("chart.md", "w") as fh:
+    fh.write("""<!-- prettier-ignore-start -->
 {{<mermaid>}}
 gantt
 dateFormat  YYYY-MM-DD
@@ -112,14 +112,15 @@ title Support Window
 """
 )
 
-for name, releases in package_releases.items():
-    print(f"\nsection {name}")
-    for version, dates in releases.items():
-        print(
-            f"{version}  :     {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
-        )
-
-print("{{</mermaid>}}\n<!-- prettier-ignore-end -->")
+    for name, releases in package_releases.items():
+        fh.write(f"\nsection {name}")
+        for version, dates in releases.items():
+            fh.write(
+                f"\n{version}  :     {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
+            )
+        fh.write("\n")
+    
+    fh.write("{{</mermaid>}}\n<!-- prettier-ignore-end -->")
 
 # Print drop schedule
 
