@@ -139,5 +139,5 @@ for package, dates in rel.items():
         print(str(qt).replace("Q", " – Quarter "), "drop support for:")
         current_quarter = qt
     print(
-        f"    {dates[1].strftime('%d %b %Y')} drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})"
+        f" - {dates[1].strftime('%d %b %Y')} drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})"
     )
