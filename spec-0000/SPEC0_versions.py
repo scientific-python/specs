@@ -36,10 +36,13 @@ now = datetime.now()
 
 def get_release_dates(package, support_time=plus24):
     releases = {}
+
+    print(f"Querying pypi.org for {package} versions...", end="", flush=True)
     response = requests.get(
         f"https://pypi.org/simple/{package}",
         headers={"Accept": "application/vnd.pypi.simple.v1+json"},
     ).json()
+    print("OK")
 
     file_date = collections.defaultdict(list)
     for f in response["files"]:
@@ -102,6 +105,7 @@ package_releases = {
 
 # Save Gantt chart
 
+print("Saving Mermaid chart to chart.md")
 with open("chart.md", "w") as fh:
     fh.write(
         """gantt
@@ -129,13 +133,23 @@ for name, releases in package_releases.items():
     }
 
 
-current_quarter = pd.to_datetime(datetime.fromisoformat("1970-01-01")).to_period("Q")
-rel = dict(sorted(rel.items(), key=lambda item: item[1][1]))
-for package, dates in rel.items():
-    qt = pd.to_datetime(dates[1]).to_period("Q")
-    if qt != current_quarter:
-        print(str(qt).replace("Q", " – Quarter "), "drop support for:")
-        current_quarter = qt
-    print(
-        f" - {dates[1].strftime('%d %b %Y')} drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})"
-    )
+print("Saving drop schedule to schedule.md")
+with open("schedule.md", "w") as fh:
+    current_quarter = None
+
+    # Sort by drop date
+    rel = dict(sorted(rel.items(), key=lambda item: item[1][1]))
+
+    for package, dates in rel.items():
+        qt = pd.to_datetime(dates[1]).to_period("Q")
+
+        # If drop date is in a new quarter, write out a heading
+        if qt != current_quarter:
+            if current_quarter != None:
+                fh.write("\n")
+            fh.write(f'{str(qt).replace("Q", " – Quarter ")} drop support for:\n\n')
+            current_quarter = qt
+
+        fh.write(
+            f"- {dates[1].strftime('%d %b %Y')}: drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})\n"
+        )
