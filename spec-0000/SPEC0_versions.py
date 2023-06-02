@@ -111,12 +111,11 @@ with open("chart.md", "w") as fh:
         """gantt
 dateFormat YYYY-MM-DD
 axisFormat %m / %Y
-title Support Window
-"""
+title Support Window"""
     )
 
     for name, releases in package_releases.items():
-        fh.write(f"\nsection {name}")
+        fh.write(f"\n\nsection {name}")
         for version, dates in releases.items():
             fh.write(
                 f"\n{version} : {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
