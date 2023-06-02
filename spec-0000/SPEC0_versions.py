@@ -146,7 +146,7 @@ with open("schedule.md", "w") as fh:
         if qt != current_quarter:
             if current_quarter != None:
                 fh.write("\n")
-            fh.write(f'{str(qt).replace("Q", " – Quarter ")} drop support for:\n\n')
+            fh.write(f'{str(qt).replace("Q", " – Quarter ")}:\n\n')
             current_quarter = qt
 
         fh.write(
