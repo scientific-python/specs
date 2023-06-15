@@ -101,9 +101,9 @@ The admins are drawn from active members from the scientific Python community.
 Ideally, the collection of admins comprises a broad selection of community
 members across different projects and underlying organizations.
 This is to ensure community ownership of the wheel-hosting infrastructure and
-ensure that adminstration is governed by consensus, as opposed to unilateral
+adminstration governed by consensus, as opposed to unilateral
 decision-making by any individual, project, or organization.
-Adding new people to the list of admins requires at least an issue to be opened.
+Adding new administrators requires at least an issue to be opened.
 After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
 requesting access to upload wheels a human/admin has to respond to that request.
 
@@ -112,13 +112,10 @@ amount of due dilligence before giving people access. This is because once a use
 access their work will be broadcasted through the broad exposure of Scientific Python. This
 could be abused to publish malicious packages.
 
-Once a project has chosen the person or persons who they wish to serve as
-adminstrators for the nightly wheels, those person(s) should create an
-account on https://anaconda.org and share the resulting usernames with the
+A project's chosen administrators should each create an
+account on https://anaconda.org and share their usernames with the
 project.
-We suggest that each project have at least 2 representatives for redundancy and to
-ensure that the pool of administrators is sufficiently broad and representative
-of the underlying community.
+To increase resilience, we suggest that each project have at least two administrators.
 
 You (as an admin) can then generate a personal access token at
 https://anaconda.org/[user]/settings/access.
