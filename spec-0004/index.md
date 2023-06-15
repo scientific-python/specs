@@ -97,28 +97,30 @@ Complete examples of how projects implement this in their CI setup are linked in
 
 #### Process for Adding New Projects
 
-The admins are drawn from active members from the scientific Python community.
+The site admins are drawn from active members from the scientific Python community.
 Ideally, the collection of admins comprises a broad selection of community
 members across different projects and underlying organizations.
 This is to ensure community ownership of the wheel-hosting infrastructure and
 adminstration governed by consensus, as opposed to unilateral
 decision-making by any individual, project, or organization.
 Adding new administrators requires at least an issue to be opened.
-After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
-requesting access to upload wheels a human/admin has to respond to that request.
+After a project creates an issue on https://github.com/scientific-python/upload-nightly-action
+requesting access to upload wheels a admin has to respond to that request.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
-amount of due dilligence before giving people access. This is because once a user is given
+amount of due dilligence before giving people access. This is because once a project is given
 access their work will be broadcasted through the broad exposure of Scientific Python. This
 could be abused to publish malicious packages.
 
-A project's chosen administrators should each create an
+A project's chosen representative should each create an
 account on https://anaconda.org and share their usernames with the
 project.
-To increase resilience, we suggest that each project have at least two administrators.
+To increase resilience, we suggest that each project have at least two registered
+representatives.
 
-You (as an admin) can then generate a personal access token at
-https://anaconda.org/[user]/settings/access.
+The representative can then generate a personal access token at
+https://anaconda.org/[user]/settings/access and use it in CI to upload
+wheels.
 The token should only have the "Allow uploads to Standard Python repositories",
 "Allow read access to the API site" and "Allow write access to the API site" scope.
 The creation of tokens at the organization level should be avoided for security reasons.
