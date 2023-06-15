@@ -100,19 +100,26 @@ Complete examples of how projects implement this in their CI setup are linked in
 After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
 requesting access to upload wheels a human/admin has to respond to that request.
 
-Admins are people from the community who are ideally not part of the same organizations nor
-project. This is to prevent malicious activities from a given group of actors and ensure a
-diverse and healthy community. Adding new people to the list of admins requires at
-least an issue to be openned.
+The admins are drawn from active members from the scientific Python community.
+Ideally, the collection of admins comprises a broad selection of community
+members across different projects and underlying organizations.
+This is to ensure community ownership of the wheel-hosting infrastructure and
+ensure that adminstration is governed by consensus, as opposed to unilateral
+decision-making by any individual, project, or organization.
+Adding new people to the list of admins requires at least an issue to be opened.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
 amount of due dilligence before giving people access. This is because once a user is given
 access their work will be broadcasted through the broad exposure of Scientific Python. This
 could be abused to publish malicious packages.
 
-Once you have established who the person is and that they represent the project they want
-to upload wheels for ask the person to create an account on https://anaconda.org and tell
-you the username. We suggest that projects have at least 2 representatives.
+Once a project has chosen the person or persons who they wish to serve as
+adminstrators for the nightly wheels, those person(s) should create an
+account on https://anaconda.org and share the resulting usernames with the
+project.
+We suggest that each project have at least 2 representatives for redundancy and to
+ensure that the pool of administrators is sufficiently broad and representative
+of the underlying community.
 When considering representatives, we suggest that projects nominate individuals
 that do not have significant community, organizational, or employer overlap
 with existing representatives to ensure that we have a diverse community.
