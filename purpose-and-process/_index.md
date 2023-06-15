@@ -131,7 +131,7 @@ is broadly applicable and likely to be widely adopted.
 The intent is that most SPECs will have several authors from numerous projects
 including several Core Projects.
 A SPEC is recommended for wide-spread adoption once it is endorsed by two (or more) Core Projects.
-Once a SPEC is recommended, further changes require the approval of all endorsing
+Once a SPEC is recommended, substantive changes require the approval of all endorsing
 Core Projects.
 Additional details may be found in
 [Core Project documentation]({{< relref "/core-projects" >}}).
