@@ -97,9 +97,6 @@ Complete examples of how projects implement this in their CI setup are linked in
 
 #### Process for Adding New Projects
 
-After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
-requesting access to upload wheels a human/admin has to respond to that request.
-
 The admins are drawn from active members from the scientific Python community.
 Ideally, the collection of admins comprises a broad selection of community
 members across different projects and underlying organizations.
@@ -107,6 +104,8 @@ This is to ensure community ownership of the wheel-hosting infrastructure and
 ensure that adminstration is governed by consensus, as opposed to unilateral
 decision-making by any individual, project, or organization.
 Adding new people to the list of admins requires at least an issue to be opened.
+After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
+requesting access to upload wheels a human/admin has to respond to that request.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
 amount of due dilligence before giving people access. This is because once a user is given
