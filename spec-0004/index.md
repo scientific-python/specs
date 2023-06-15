@@ -120,9 +120,6 @@ project.
 We suggest that each project have at least 2 representatives for redundancy and to
 ensure that the pool of administrators is sufficiently broad and representative
 of the underlying community.
-When considering representatives, we suggest that projects nominate individuals
-that do not have significant community, organizational, or employer overlap
-with existing representatives to ensure that we have a diverse community.
 
 You (as an admin) can then generate a personal access token at
 https://anaconda.org/[user]/settings/access.
