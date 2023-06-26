@@ -16,6 +16,7 @@ discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-ver
 endorsed-by:
   - ipython
   - networkx
+  - numpy
   - scikit-image
 ---
 
