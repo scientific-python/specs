@@ -112,7 +112,7 @@ amount of due dilligence before giving people access. This is because once a pro
 access their work will be broadcasted through the broad exposure of Scientific Python. This
 could be abused to publish malicious packages.
 
-A project's chosen representative should each create an
+A project's chosen representatives should each create an
 account on https://anaconda.org and share their usernames with the
 project.
 To increase resilience, we suggest that each project have at least two registered
