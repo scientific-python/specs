@@ -97,28 +97,30 @@ Complete examples of how projects implement this in their CI setup are linked in
 
 #### Process for Adding New Projects
 
-After someone creates an issue on https://github.com/scientific-python/upload-nightly-action
-requesting access to upload wheels a human/admin has to respond to that request.
-
-Admins are people from the community who are ideally not part of the same organizations nor
-project. This is to prevent malicious activities from a given group of actors and ensure a
-diverse and healthy community. Adding new people to the list of admins requires at
-least an issue to be openned.
+The site admins are drawn from active members from the scientific Python community.
+Ideally, the collection of admins comprises a broad selection of community
+members across different projects and underlying organizations.
+This is to ensure community ownership of the wheel-hosting infrastructure and
+adminstration governed by consensus, as opposed to unilateral
+decision-making by any individual, project, or organization.
+Adding new administrators requires at least an issue to be opened.
+After a project creates an issue on https://github.com/scientific-python/upload-nightly-action
+requesting access to upload wheels a admin has to respond to that request.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
-amount of due dilligence before giving people access. This is because once a user is given
+amount of due dilligence before giving people access. This is because once a project is given
 access their work will be broadcasted through the broad exposure of Scientific Python. This
 could be abused to publish malicious packages.
 
-Once you have established who the person is and that they represent the project they want
-to upload wheels for ask the person to create an account on https://anaconda.org and tell
-you the username. We suggest that projects have at least 2 representatives.
-When considering representatives, we suggest that projects nominate individuals
-that do not have significant community, organizational, or employer overlap
-with existing representatives to ensure that we have a diverse community.
+A project's chosen representatives should each create an
+account on https://anaconda.org and share their usernames with the
+admins of the Scientific Python organization on Anaconda.
+To increase resilience, we suggest that each project have at least two registered
+representatives.
 
-You (as an admin) can then generate a personal access token at
-https://anaconda.org/[user]/settings/access.
+The representative can then generate a personal access token at
+https://anaconda.org/[user]/settings/access and use it in CI to upload
+wheels.
 The token should only have the "Allow uploads to Standard Python repositories",
 "Allow read access to the API site" and "Allow write access to the API site" scope.
 The creation of tokens at the organization level should be avoided for security reasons.
