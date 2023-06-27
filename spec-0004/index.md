@@ -114,7 +114,7 @@ could be abused to publish malicious packages.
 
 A project's chosen representatives should each create an
 account on https://anaconda.org and share their usernames with the
-project.
+admins of the Scientific Python organization on Anaconda.
 To increase resilience, we suggest that each project have at least two registered
 representatives.
 
