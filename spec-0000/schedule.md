@@ -1,9 +1,3 @@
-2023 – Quarter 2:
-
-- 20 Jun 2023: drop scipy 1.7.0 (initially released on Jun 20, 2021)
-- 22 Jun 2023: drop numpy 1.21.0 (initially released on Jun 22, 2021)
-- 25 Jun 2023: drop ipython 7.25.0 (initially released on Jun 25, 2021)
-
 2023 – Quarter 3:
 
 - 02 Jul 2023: drop pandas 1.3.0 (initially released on Jul 02, 2021)
@@ -89,6 +83,11 @@
 - 13 Apr 2025: drop xarray 2023.4.0 (initially released on Apr 14, 2023)
 - 27 Apr 2025: drop ipython 8.13.0 (initially released on Apr 28, 2023)
 - 18 May 2025: drop xarray 2023.5.0 (initially released on May 19, 2023)
+- 01 Jun 2025: drop scikit-image 0.21.0 (initially released on Jun 02, 2023)
+- 01 Jun 2025: drop ipython 8.14.0 (initially released on Jun 02, 2023)
+- 16 Jun 2025: drop numpy 1.25.0 (initially released on Jun 17, 2023)
+- 22 Jun 2025: drop xarray 2023.6.0 (initially released on Jun 23, 2023)
+- 24 Jun 2025: drop scipy 1.11.0 (initially released on Jun 25, 2023)
 
 2025 – Quarter 4:
 
