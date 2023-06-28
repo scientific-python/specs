@@ -30,6 +30,8 @@ In particular, the Steering Committee members
 
 {{< page_gallery pages="." >}}
 
+{{< include-html "static/teams/emeritus-spec-steering-committee.html" >}}
+
 ## Implementation
 
 Public communication takes place in the
