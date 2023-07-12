@@ -43,8 +43,6 @@ links to implementations related technical discussions.
 Discuss how this would be implemented.
 -->
 
-A full description of the implementation is being written up at https://github.com/scientific-python/api-dispatch. You can also view a [rendered version of that documentation](https://api-dispatch.scientific-python.org).
-
 ### Core Project Endorsement
 
 <!--
