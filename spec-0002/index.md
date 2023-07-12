@@ -43,7 +43,6 @@ links to implementations related technical discussions.
 Discuss how this would be implemented.
 -->
 
-
 ### Core Project Endorsement
 
 <!--
