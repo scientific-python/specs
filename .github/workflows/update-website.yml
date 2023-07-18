@@ -1,0 +1,34 @@
+name: Update main website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.SPEC_UPDATE }}
+          repository: scientific-python/scientific-python.org
+
+      - name: Update SPECs submodule
+        run: |
+          git submodule update --init
+          cd content/specs
+          git pull origin main
+          git lg
+          cd ../..
+          git status
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.SPEC_UPDATE }}
+          delete-branch: true
+
+      -
