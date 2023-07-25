@@ -18,9 +18,9 @@ Early on, most scientific Python packages explicitly imported their submodules.
 For example, you would be able to do:
 
 ```python
-import scipy as sp
+import scipy
 
-sp.linalg.eig(...)
+scipy.linalg.eig(...)
 ```
 
 This was convenient: it had the simplicity of a flat namespace, but with the organization of a nested one.
@@ -80,7 +80,7 @@ This has several advantages:
    Lazy importing makes imports at any depth in the hierarchy cheap.
 
 3. It provides **direct access to submodules**, avoiding local namespace conflicts.
-   Instead of doing `import scipy.linalg as sla` to avoid clobbering a local `linalg`, one can now assign a short name to each library and access its members directly: `import scipy as sp; sp.linalg`.
+   Instead of doing `import scipy.linalg as sla` to avoid clobbering a local `linalg`, one can now import each library and access its members directly: `import scipy; scipy.linalg`.
 
 ### Usage
 
