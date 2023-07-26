@@ -18,6 +18,7 @@ endorsed-by:
   - networkx
   - numpy
   - scikit-image
+  - scipy
 ---
 
 ## Description
