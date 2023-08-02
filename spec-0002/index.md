@@ -37,23 +37,6 @@ without rewriting code.
 This SPEC focuses on the rationale for these mechanisms, and provides
 links to implementations related technical discussions.
 
-## Implementation
-
-<!--
-Discuss how this would be implemented.
--->
-
-### Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-### Ecosystem Adoption
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
 
 ## Notes
 

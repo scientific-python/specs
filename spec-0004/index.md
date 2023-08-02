@@ -42,6 +42,18 @@ you to give feedback about upcoming changes. As with testing against nightlies o
 your dependencies this gives your dependents a chance to report problems before they
 find their way into a release.
 
+### Core Project Endorsement
+
+<!--
+Discuss what it means for a core project to endorse this SPEC.
+-->
+
+### Ecosystem Adoption
+
+<!--
+Discuss what it means for a project to adopt this SPEC.
+-->
+
 ## Implementation
 
 This section outlines how to implement using and building nightly wheels. We assume your
@@ -134,18 +146,6 @@ For a given project, at least one user should be admin of that project.
 At that point, let the user know that they have been added and that they can create a personal
 access token (as outlined above.) They can now upload new wheels and perform maitenance
 actions on their project.
-
-## Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-## Ecosystem Adoption
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
 
 ## Notes
 

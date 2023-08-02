@@ -20,6 +20,18 @@ If relevant, include examples of how the new functionality would be used,
 intended use-cases, and pseudo-code illustrating its use.
 -->
 
+### Core Project Endorsement
+
+<!--
+Discuss what it means for a core project to endorse this SPEC.
+-->
+
+### Ecosystem Adoption
+
+<!--
+Discuss what it means for a project to adopt this SPEC.
+-->
+
 ## Implementation
 
 <!--
@@ -55,18 +67,6 @@ workflow" add the following lines as an additional step:
     artifacts_path: dist/
     anaconda_nightly_upload_token: ${{ secrets.UPLOAD_TOKEN }}
 ```
-
-### Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-### Ecosystem Adoption
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
 
 ## Notes
 
