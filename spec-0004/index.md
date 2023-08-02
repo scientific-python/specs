@@ -103,14 +103,14 @@ The site admins are drawn from active members from the scientific Python communi
 Ideally, the collection of admins comprises a broad selection of community
 members across different projects and underlying organizations.
 This is to ensure community ownership of the wheel-hosting infrastructure and
-adminstration governed by consensus, as opposed to unilateral
+administration governed by consensus, as opposed to unilateral
 decision-making by any individual, project, or organization.
 Adding new administrators requires at least an issue to be opened.
 After a project creates an issue on https://github.com/scientific-python/upload-nightly-action
 requesting access to upload wheels a admin has to respond to that request.
 
 We want to be open to projects uploading wheels but at the same time need to perform some
-amount of due dilligence before giving people access. This is because once a project is given
+amount of due diligence before giving people access. This is because once a project is given
 access their work will be broadcasted through the broad exposure of Scientific Python. This
 could be abused to publish malicious packages.
 
@@ -129,7 +129,7 @@ The creation of tokens at the organization level should be avoided for security 
 
 Then you need to do a first upload of a wheel to create the package listing on anaconda.org.
 Once this operation is done, you can revoke your token and add the new user to its project.
-For a given project, at leat one user should be admin of that project.
+For a given project, at least one user should be admin of that project.
 
 At that point, let the user know that they have been added and that they can create a personal
 access token (as outlined above.) They can now upload new wheels and perform maitenance
