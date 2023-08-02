@@ -44,9 +44,7 @@ This has several advantages:
 
 ### Core Project Endorsement
 
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
+Endorsing this SPEC means agreeing, in principle, with the advantages of lazy loading described above.
 
 ### Ecosystem Adoption
 
