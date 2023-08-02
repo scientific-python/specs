@@ -37,7 +37,6 @@ without rewriting code.
 This SPEC focuses on the rationale for these mechanisms, and provides
 links to implementations related technical discussions.
 
-
 ## Notes
 
 <!--

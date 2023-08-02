@@ -42,7 +42,6 @@ This has several advantages:
 3. It provides **direct access to submodules**, avoiding local namespace conflicts.
    Instead of doing `import scipy.linalg as sla` to avoid clobbering a local `linalg`, one can now import each library and access its members directly: `import scipy; scipy.linalg`.
 
-
 ### Core Project Endorsement
 
 <!--
