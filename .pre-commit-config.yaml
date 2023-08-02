@@ -33,3 +33,8 @@ repos:
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
+
+ci:
+  autofix_prs: false
+  autofix_commit_msg: "[pre-commit.ci 🤖] Apply code format tools to PR"
+  autoupdate_schedule: monthly
