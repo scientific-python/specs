@@ -8,7 +8,7 @@ def prompt(
     Parameters
     ----------
     prompt_text : str
-        Text displayed when promting user for input.
+        Text displayed when prompting user for input.
     validate : callable, f(val)
         Called to validate the input.  If this function raises or
         returns None, try again.
@@ -36,7 +36,7 @@ def prompt(
         return value
 
     default_flag = f" [{default}]" if default is not None else ""
-    while (ans := valid(input(f"{prompt_text}{default_flag}: "))) is None:
+    while (answer := valid(input(f"{prompt_text}{default_flag}: "))) is None:
         pass
 
-    return ans
+    return answer

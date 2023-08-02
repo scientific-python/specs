@@ -70,7 +70,7 @@ While the recommendations provided here cover important aspects of accessibility
 - The [Web Content Accessibility Guidelines (W3C)](https://www.w3.org/TR/WCAG/) provide a comprehensive set of international standards for enhancing web content accessibility.
 - The [comprehensive checklist](https://www.a11yproject.com/checklist/) published by the A11y organization offers a user-friendly description of the W3C's accessibility standards.
 - The [Numfocus Discover Cookbook](https://discover-cookbook.numfocus.org/intro.html) is a valuable resource for understanding event/meeting accessibility and implementing inclusive practices.
-- The [Accesibility Insights YouTube channel](https://www.youtube.com/@AccessibilityInsights) provides tutorials on using Accessibility Insights tools to test and improve website accessibility.
+- The [Accessibility Insights YouTube channel](https://www.youtube.com/@AccessibilityInsights) provides tutorials on using Accessibility Insights tools to test and improve website accessibility.
 - The articles available on the The [axxeslab Articles website](https://axesslab.com/articles/) offer helpful information about accessibility and testing.
 
 ## Submit your feedback

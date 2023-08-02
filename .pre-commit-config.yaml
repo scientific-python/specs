@@ -34,6 +34,11 @@ repos:
       - id: pyupgrade
         args: [--py38-plus]
 
+  - repo: https://github.com/codespell-project/codespell
+    rev: "355e50e14fd03fe83e4ed9aa0489824b150b3b58" # frozen: v2.2.5
+    hooks:
+      - id: codespell
+
 ci:
   autofix_prs: false
   autofix_commit_msg: "[pre-commit.ci 🤖] Apply code format tools to PR"
