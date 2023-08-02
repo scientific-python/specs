@@ -37,7 +37,7 @@ This has several advantages:
 
 2. It **avoids having to optimize for import cost**.
    Currently, developers often move imports inside of functions to avoid slowing down importing their module.
-   Lazy importing makes imports at any depth in the hierarchy cheap.
+   Lazy importing, when implemented through out a library, makes all imports cheap.
 
 3. It provides **direct access to submodules**, avoiding local namespace conflicts.
    Instead of doing `import scipy.linalg as sla` to avoid clobbering a local `linalg`, one can now import each library and access its members directly: `import scipy; scipy.linalg`.
@@ -49,6 +49,8 @@ Discuss what it means for a core project to endorse this SPEC.
 -->
 
 ### Ecosystem Adoption
+
+Adopting this SPEC means implementing, using the `lazy_loader` package or any other mechanism (such as module `__getattr__`), lazy loading of subpackages and, if desired, subpackage attributes.
 
 Lazy loading has been adopted by
 [scikit-image](https://github.com/scikit-image/scikit-image/pull/5101)
