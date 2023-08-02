@@ -111,15 +111,12 @@ eig(...)
 Python 3.7, with [PEP 562](https://www.python.org/dev/peps/pep-0562/), introduces the ability to override module `__getattr__` and `__dir__`.
 In combination, these features make it possible to again provide access to submodules, but without incurring performance penalties.
 
+### `lazy_loader`
+
 To make it easier for projects to implement lazy loading of submodules and functions, we provide a utility
-library, called `lazy_loader` that is described below.
-
-### lazy_loader
-
-Lazy loading is implemented at
+library, called `lazy_loader`. It is implemented at
 https://github.com/scientific-python/lazy_loader and is
-pip-installable as
-[lazy_loader](https://pypi.org/project/lazy_loader/).
+installable from [pypi](https://pypi.org/project/lazy_loader/) and [conda-forge](https://anaconda.org/conda-forge/lazy_loader).
 
 #### Usage
 
