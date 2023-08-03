@@ -20,14 +20,7 @@ endorsed-by:
 
 ## Description
 
-<!--
-Briefly and clearly describe the proposal.
-Explain the general need and the advantages of this specific proposal.
-If relevant, include examples of how the new functionality would be used,
-intended use-cases, and pseudo-code illustrating its use.
--->
-
-This SPEC describes how to test against nightly wheels of several widely used
+This SPEC recommends how to test against nightly wheels of several widely used
 projects and how to create nightly wheels for your project. The document use the word
 _nightly_ to refer to some semi regular interval, like daily, weekly or every three days.
 
@@ -41,6 +34,18 @@ Regularly creating nightly wheels for your project allows projects that depend o
 you to give feedback about upcoming changes. As with testing against nightlies of
 your dependencies this gives your dependents a chance to report problems before they
 find their way into a release.
+
+### Core Project Endorsement
+
+<!--
+Discuss what it means for a core project to endorse this SPEC.
+-->
+
+### Ecosystem Adoption
+
+<!--
+Discuss what it means for a project to adopt this SPEC.
+-->
 
 ## Implementation
 
@@ -134,18 +139,6 @@ For a given project, at least one user should be admin of that project.
 At that point, let the user know that they have been added and that they can create a personal
 access token (as outlined above.) They can now upload new wheels and perform maitenance
 actions on their project.
-
-## Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-## Ecosystem Adoption
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
 
 ## Notes
 

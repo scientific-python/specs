@@ -15,6 +15,58 @@ shortcutDepth: 3
 
 ## Description
 
+This SPEC recommends a lazy loading mechanism—targeted at libraries—that avoids import slowdowns
+and provides explicit submodule exports.
+
+For example, it allows the following behavior:
+
+```python
+import skimage as ski  # cheap operation; does not load submodules
+
+ski.filters  # cheap operation; loads the filters submodule, but not
+             # any of its submodules or functions
+
+ski.filters.gaussian(...)  # loads the file in which gaussian is implemented
+                           # and calls that function
+```
+
+This has several advantages:
+
+1. It exposes a **nested namespace that behaves as a flat namespace**.
+   This avoids carefully having to import exactly the right combination of submodules, and allows interactive exploration of the namespace in an interactive terminal.
+
+2. It **avoids having to optimize for import cost**.
+   Currently, developers often move imports inside of functions to avoid slowing down importing their module.
+   Lazy importing, when implemented through out a library, makes all imports cheap.
+
+3. It provides **direct access to submodules**, avoiding local namespace conflicts.
+   Instead of doing `import scipy.linalg as sla` to avoid clobbering a local `linalg`, one can now import each library and access its members directly: `import scipy; scipy.linalg`.
+
+### Core Project Endorsement
+
+Endorsing this SPEC means agreeing, in principle, with the advantages of lazy loading described above.
+
+### Ecosystem Adoption
+
+Adopting this SPEC means implementing, using the `lazy_loader` package or any other mechanism (such as module `__getattr__`), lazy loading of subpackages and, if desired, subpackage attributes.
+
+Lazy loading has been adopted by
+[scikit-image](https://github.com/scikit-image/scikit-image/pull/5101)
+and [NetworkX](https://github.com/networkx/networkx/pull/4909).
+SciPy implements a [subset of lazy
+loading](https://github.com/scipy/scipy/pull/15230) which exposes only
+subpackages lazily.
+A prototype implementation of `lazy_loader` was adapted for
+[napari](https://github.com/napari/napari/pull/2816).
+
+<!--
+Discuss what it means for a project to adopt this SPEC.
+-->
+
+## Implementation
+
+### Background
+
 Early on, most scientific Python packages explicitly imported their submodules.
 For example, you would be able to do:
 
@@ -56,39 +108,17 @@ from scipy.linalg import eig
 eig(...)
 ```
 
-This SPEC proposes a lazy loading mechanism—targeted at libraries—that avoids import slowdowns and brings back explicit submodule exports, but without slowing down imports.
-
-For example, it allows the following behavior:
-
-```python
-import skimage as ski  # cheap operation; does not load submodules
-
-ski.filters  # cheap operation; loads the filters submodule, but not
-             # any of its submodules or functions
-
-ski.filters.gaussian(...)  # loads the file in which gaussian is implemented
-                           # and calls that function
-
-```
-
-This has several advantages:
-
-1. It exposes a **nested namespace that behaves as a flat namespace**.
-   This avoids carefully having to import exactly the right combination of submodules, and allows interactive exploration of the namespace in an interactive terminal.
-
-2. It **avoids having to optimize for import cost**.
-   Currently, developers often move imports inside of functions to avoid slowing down importing their module.
-   Lazy importing makes imports at any depth in the hierarchy cheap.
-
-3. It provides **direct access to submodules**, avoiding local namespace conflicts.
-   Instead of doing `import scipy.linalg as sla` to avoid clobbering a local `linalg`, one can now import each library and access its members directly: `import scipy; scipy.linalg`.
-
-### Usage
-
 Python 3.7, with [PEP 562](https://www.python.org/dev/peps/pep-0562/), introduces the ability to override module `__getattr__` and `__dir__`.
 In combination, these features make it possible to again provide access to submodules, but without incurring performance penalties.
 
-We propose a [utility library](https://pypi.org/project/lazy_loader/) for easily setting up so-called "lazy imports" so that submodules are only loaded upon accessing them.
+### `lazy_loader`
+
+To make it easier for projects to implement lazy loading of submodules and functions, we provide a utility
+library, called `lazy_loader`. It is implemented at
+https://github.com/scientific-python/lazy_loader and is
+installable from [pypi](https://pypi.org/project/lazy_loader/) and [conda-forge](https://anaconda.org/conda-forge/lazy_loader).
+
+#### Usage
 
 As an example, we will show how to set up lazy importing for `skimage.filters`.
 In the library's main `__init__.py`, specify which submodules are lazily loaded:
@@ -243,12 +273,7 @@ This is when you define a lazily loaded function, say `my_func`, in a file of th
 Somehow, the doctest collector modifies the parent module's `__dict__` to include `my_func` (the module, not the function), essentially short circuiting the lazy loader and its ability to provide `my_module.my_func` (the function).
 Fortunately, there is an easy way to address this that already aligns with common practice: define `my_func` inside `_my_func.py` instead (note the underscore).
 
-## Implementation
-
-Lazy loading is implemented at
-https://github.com/scientific-python/lazy_loader and is
-pip-installable as
-[lazy_loader](https://pypi.org/project/lazy_loader/).
+#### YAML files
 
 Once a lazy import interface is implemented, other interesting options
 become available (but is not implemented in `lazy_loader`).
@@ -277,27 +302,6 @@ Ultimately, we hope that lazy importing will become part of Python itself, but t
 In the mean time, we now have the necessary mechanisms to implement it ourselves.
 
 [^cannon]: Cannon B., personal communication, 7 January 2021.
-
-### Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-### Ecosystem Adoption
-
-Lazy loading has been adopted by
-[scikit-image](https://github.com/scikit-image/scikit-image/pull/5101)
-and [NetworkX](https://github.com/networkx/networkx/pull/4909).
-SciPy implements a [subset of lazy
-loading](https://github.com/scipy/scipy/pull/15230) which exposes only
-subpackages lazily.
-A prototype implementation of `lazy_loader` was adapted for
-[napari](https://github.com/napari/napari/pull/2816).
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
 
 ## Notes
 

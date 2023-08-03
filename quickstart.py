@@ -2,7 +2,7 @@
 SPEC Quickstart
 ===============
 
-Quickly setup stub for new SPEC proposal.
+Quickly setup stub for new SPEC.
 """
 
 from datetime import datetime
@@ -33,28 +33,28 @@ endorsed-by:
 ## Description
 
 <!--
-Briefly and clearly describe the proposal.
-Explain the general need and the advantages of this specific proposal.
-If relevant, include examples of how the new functionality would be used,
-intended use-cases, and pseudo-code illustrating its use.
+Briefly and clearly describe the recommendation.
+-->
+
+### Core Project Endorsement
+
+<!--
+Briefly discuss what it means for a core project to endorse this SPEC.
+-->
+
+### Ecosystem Adoption
+
+<!--
+Briefly discuss what it means for a project to adopt this SPEC.
 -->
 
 ## Implementation
 
 <!--
 Discuss how this would be implemented.
--->
-
-### Core Project Endorsement
-
-<!--
-Discuss what it means for a core project to endorse this SPEC.
--->
-
-### Ecosystem Adoption
-
-<!--
-Discuss what it means for a project to adopt this SPEC.
+Explain the general need and the advantages of this specific recommendation.
+If relevant, include examples of how the new functionality would be used,
+intended use-cases, and pseudo-code illustrating its use.
 -->
 
 ## Notes

@@ -32,9 +32,19 @@ Specifically, we recommend that:
 1. Support for a given version of Python be dropped **3 years** after its initial release.
 2. Support for a given version of other core packages be dropped **2 years** after their initial release.
 
-{{< mermaid >}}
-{{< include-raw "chart.md" >}}
-{{< /mermaid >}}
+### Core Project Endorsement
+
+<!--
+Briefly discuss what it means for a core project to endorse this SPEC.
+-->
+
+### Ecosystem Adoption
+
+<!--
+Briefly discuss what it means for a project to adopt this SPEC.
+-->
+
+## Implementation
 
 ### Motivation
 
@@ -52,27 +62,15 @@ In the past, longer support cycles were common.
 There were several reasons for this, including the Python 2 / 3 transition, difficulties installing packages, and users needing to use old, operating-system provided versions of Python.
 The situation has since improved due to improved installations via binary wheels, virtual environments becoming commonplace, and support for Python 2 being dropped.
 
+### Support Window
+
+{{< mermaid >}}
+{{< include-raw "chart.md" >}}
+{{< /mermaid >}}
+
 ### Drop Schedule
 
 {{< include-md "schedule.md" >}}
-
-## Implementation
-
-<!--
-Discuss how this would be implemented.
--->
-
-<!--
-### Core Project Endorsement
-
-Discuss what it means for a core project to endorse this SPEC.
--->
-<!--
-
-### Ecosystem Adoption
-
-Discuss what it means for a project to adopt this SPEC.
--->
 
 ## Notes
 
