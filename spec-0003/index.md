@@ -18,7 +18,6 @@ As active members of the scientific Python and open-source software (OSS) commun
 
 It is important to note that accessibility is an ongoing journey, and you need not be overwhelmed by the many recommendations outlined in the provided resources. Taking an incremental approach allows for continuous improvement, ensuring that each enhancement makes technology more accessible and user-friendly.
 
-
 ### Core Project Endorsement
 
 <!--

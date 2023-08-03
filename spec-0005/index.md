@@ -23,7 +23,6 @@ Briefly and clearly describe the recommendation.
 Briefly discuss what it means for a core project to endorse this SPEC.
 -->
 
-
 ### Ecosystem Adoption
 
 <!--
