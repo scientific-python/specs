@@ -2,7 +2,7 @@
 SPEC Quickstart
 ===============
 
-Quickly setup stub for new SPEC proposal.
+Quickly setup stub for new SPEC.
 """
 
 from datetime import datetime
@@ -33,7 +33,7 @@ endorsed-by:
 ## Description
 
 <!--
-Briefly and clearly describe the proposal.
+Briefly and clearly describe the recommendation.
 -->
 
 ### Core Project Endorsement
@@ -52,7 +52,7 @@ Briefly discuss what it means for a project to adopt this SPEC.
 
 <!--
 Discuss how this would be implemented.
-Explain the general need and the advantages of this specific proposal.
+Explain the general need and the advantages of this specific recommendation.
 If relevant, include examples of how the new functionality would be used,
 intended use-cases, and pseudo-code illustrating its use.
 -->

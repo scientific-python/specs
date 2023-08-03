@@ -20,14 +20,7 @@ endorsed-by:
 
 ## Description
 
-<!--
-Briefly and clearly describe the proposal.
-Explain the general need and the advantages of this specific proposal.
-If relevant, include examples of how the new functionality would be used,
-intended use-cases, and pseudo-code illustrating its use.
--->
-
-This SPEC describes how to test against nightly wheels of several widely used
+This SPEC recommends how to test against nightly wheels of several widely used
 projects and how to create nightly wheels for your project. The document use the word
 _nightly_ to refer to some semi regular interval, like daily, weekly or every three days.
 
