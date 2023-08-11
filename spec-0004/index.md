@@ -67,7 +67,7 @@ To install the nightly version of your dependencies check which of them are avai
 at https://anaconda.org/scientific-python-nightly-wheels/. For example to install the NumPy and scipy nightlies use:
 
 ```
-python -m pip install --pre --upgrade --extra-index https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy scipy
+python -m pip install --pre --upgrade --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy scipy
 ```
 
 Complete examples of how projects implement this in their CI setup are linked in the Notes section.
