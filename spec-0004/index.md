@@ -102,6 +102,18 @@ workflow" add the following lines as an additional step:
 
 Complete examples of how projects implement this in their CI setup are linked in the Notes section.
 
+#### Artefact cleanup-policy at https://anaconda.org/scientific-python-nightly-wheels
+
+To avoid hosting outdated development versions, as well as to clean up space, we do have a
+default retention policy of:
+
+- Latest **5 versions**
+- Artefacts newer than **30 days**
+
+Any versions beyond these are automatically removed as part of a daily cron job. Projects may
+have reasons to request to be added to an exclude list, however in that case the responsibility
+of cleaning-up old, unused versions fall back on the individual project.
+
 #### Process for Adding New Projects
 
 The site admins are drawn from active members from the scientific Python community.
