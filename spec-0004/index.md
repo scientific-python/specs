@@ -102,17 +102,20 @@ workflow" add the following lines as an additional step:
 
 Complete examples of how projects implement this in their CI setup are linked in the Notes section.
 
-#### Artefact cleanup-policy at https://anaconda.org/scientific-python-nightly-wheels
+#### Artifact cleanup-policy at https://anaconda.org/scientific-python-nightly-wheels
 
 To avoid hosting outdated development versions, as well as to clean up space, we do have a
-default retention policy of:
+retention policy of:
 
-- Latest **5 versions**
-- Artefacts newer than **30 days**
+- Latest **N versions**
+- Artifacts newer than **M days**
 
 Any versions beyond these are automatically removed as part of a daily cron job. Projects may
-have reasons to request to be added to an exclude list, however in that case the responsibility
-of cleaning-up old, unused versions fall back on the individual project.
+have reasons to request to be added to the list exempt from this automated cleanup, however in that
+case the responsibility of cleaning-up old, unused versions fall back on the individual project.
+
+Note: The actual values for `N` and `M` are defined and documented in the
+https://github.com/scientific-python/upload-nightly-action repository.
 
 #### Process for Adding New Projects
 
