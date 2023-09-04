@@ -88,7 +88,7 @@ The work for step (2) depends on your project. You are probably already doing th
 releases. The part to remember is building wheels regularly, at least once a week.
 
 For step (3), there is a GitHub Action that you can use. You can find the action at
-https://github.com/scientific-python/upload-nightly-action. 
+https://github.com/scientific-python/upload-nightly-action.
 To use it in your "build wheels workflow", add the following lines as an additional step:
 
 ```
@@ -128,8 +128,8 @@ Adding new administrators requires opening an issue.
 After a project creates an issue on https://github.com/scientific-python/upload-nightly-action
 requesting access to upload wheels, an admin has to respond to the request.
 
-We wish to stay open to new projects uploading wheels with us. At the same time, we need to 
-perform some due diligence before giving access since approved projects gain the broad exposure 
+We wish to stay open to new projects uploading wheels with us. At the same time, we need to
+perform some due diligence before giving access since approved projects gain the broad exposure
 within the Scientific Python ecosystem. This could be abused by malicious actors.
 
 A project's chosen representatives should each create an
@@ -161,7 +161,7 @@ and other ancillary information as needed.
 -->
 
 - [GitHub Action workflow for building and uploading scikit-learn wheels](https://github.com/scikit-learn/scikit-learn/blob/f034f57b1ad7bc5a7a5dd342543cea30c85e74ff/.github/workflows/wheels.yml)
-as an example of how to build wheels and upload them to the nightly area.
+  as an example of how to build wheels and upload them to the nightly area.
 - [GitHub Action workflow for building and uploading NumPy wheels](https://github.com/numpy/numpy/blob/cc0abd768575d7f9e862de0b4912af27f6e9690d/.github/workflows/wheels.yml)
 - Example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
 - Example of using [this action in NetworkX](https://github.com/networkx/networkx/blob/main/.github/workflows/nightly.yml) to publish a nightly release.
