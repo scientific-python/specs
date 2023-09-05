@@ -22,7 +22,7 @@ repos:
       - id: black
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: efd8b1e16f05132acf6edcf2827eeab21e0e00db # frozen: v3.0.0
+    rev: fc260393cc4ec09f8fc0a5ba4437f481c8b55dc1  # frozen: v3.0.3
     hooks:
       - id: prettier
         files: \.(md|yml|yaml)
