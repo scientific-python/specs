@@ -20,9 +20,9 @@ endorsed-by:
 
 ## Description
 
-This SPEC recommends how to test against nightly wheels of several widely used
-projects and how to create nightly wheels for your project. The document use the word
-_nightly_ to refer to some semi regular interval, like daily, weekly or every three days.
+This SPEC describes how to test against nightly wheels of several widely used
+projects and how to create nightly wheels for your project. The document uses the word
+_nightly_ to refer to some semi regular interval, like daily, weekly, or every three days.
 
 Regularly running your project's tests while using the nightly version of your
 dependencies allows you to spot problems caused by upstream changes before a new release
@@ -51,7 +51,7 @@ Discuss what it means for a project to adopt this SPEC.
 
 This section outlines how to implement using and building nightly wheels. We assume your
 project already has some amount of CI infrastructure and that you will have to fit this
-in with the existing setup. In the notes section we link to projects who have implemented
+in with the existing setup. In the notes section we link to the projects who have implemented
 this in their setup to give you examples of complete setups.
 
 ### Test with Nightly Wheels
@@ -64,7 +64,7 @@ If you spot a problem please investigate if this is due to a known deprecation o
 bug fix. If you think it is neither, please report it to the relevant upstream project.
 
 To install the nightly version of your dependencies check which of them are available
-at https://anaconda.org/scientific-python-nightly-wheels/. For example to install the NumPy and scipy nightlies use:
+at https://anaconda.org/scientific-python-nightly-wheels/. For example to install the NumPy and SciPy nightlies use:
 
 ```
 python -m pip install --pre --upgrade --extra-index-url https://pypi.anaconda.org/scientific-python-nightly-wheels/simple numpy scipy
@@ -80,17 +80,16 @@ There are a few steps to implementing this for your project:
 2. Setup a CI step that builds wheels for your project
 3. Setup a CI step that uploads wheels to https://anaconda.org/scientific-python-nightly-wheels/
 
-For step (1) visit https://github.com/scientific-python/upload-nightly-action and create an issue
-requesting access. List the project you maintain and would like to upload nightlies for. Someone
+For step (1), visit https://github.com/scientific-python/upload-nightly-action and create an issue
+requesting access. List the project you maintain and would like to upload nightlies for. We
 will reply to the issue and let you know what happens next.
 
 The work for step (2) depends on your project. You are probably already doing this for your
-releases. The new thing to add is that building wheels is run on a schedule every night or
-once a week.
+releases. The part to remember is building wheels regularly, at least once a week.
 
-For step (3) there is a GitHub Action that you can use. You can find the action at
-https://github.com/scientific-python/upload-nightly-action. To use it in your "build wheels
-workflow" add the following lines as an additional step:
+For step (3), there is a GitHub Action that you can use. You can find the action at
+https://github.com/scientific-python/upload-nightly-action.
+To use it in your "build wheels workflow", add the following lines as an additional step:
 
 ```
 - name: Upload wheel
@@ -125,14 +124,13 @@ members across different projects and underlying organizations.
 This is to ensure community ownership of the wheel-hosting infrastructure and
 administration governed by consensus, as opposed to unilateral
 decision-making by any individual, project, or organization.
-Adding new administrators requires at least an issue to be opened.
+Adding new administrators requires opening an issue.
 After a project creates an issue on https://github.com/scientific-python/upload-nightly-action
-requesting access to upload wheels a admin has to respond to that request.
+requesting access to upload wheels, an admin has to respond to the request.
 
-We want to be open to projects uploading wheels but at the same time need to perform some
-amount of due diligence before giving people access. This is because once a project is given
-access their work will be broadcasted through the broad exposure of Scientific Python. This
-could be abused to publish malicious packages.
+We wish to stay open to new projects uploading wheels with us. At the same time, we need to
+perform some due diligence before giving access since approved projects gain the broad exposure
+within the Scientific Python ecosystem. This could be abused by malicious actors.
 
 A project's chosen representatives should each create an
 account on https://anaconda.org and share their usernames with the
@@ -147,9 +145,9 @@ The token should only have the "Allow uploads to Standard Python repositories",
 "Allow read access to the API site" and "Allow write access to the API site" scope.
 The creation of tokens at the organization level should be avoided for security reasons.
 
-Then you need to do a first upload of a wheel to create the package listing on anaconda.org.
+The next step is to make an initial upload of a wheel to create the package listing on anaconda.org.
 Once this operation is done, you can revoke your token and add the new user to its project.
-For a given project, at least one user should be admin of that project.
+Each project should have at least one user who is also an admin of the project.
 
 At that point, let the user know that they have been added and that they can create a personal
 access token (as outlined above.) They can now upload new wheels and perform maitenance
@@ -162,9 +160,9 @@ Include a bulleted list of annotated links, comments,
 and other ancillary information as needed.
 -->
 
-- You can use [scikit-learn's GitHub Action wheels building workflow](https://github.com/scikit-learn/scikit-learn/blob/f034f57b1ad7bc5a7a5dd342543cea30c85e74ff/.github/workflows/wheels.yml)
+- [GitHub Action workflow for building and uploading scikit-learn wheels](https://github.com/scikit-learn/scikit-learn/blob/f034f57b1ad7bc5a7a5dd342543cea30c85e74ff/.github/workflows/wheels.yml)
   as an example of how to build wheels and upload them to the nightly area.
-- [numpy's GitHub Action workflow for building wheels and uploading them](https://github.com/numpy/numpy/blob/cc0abd768575d7f9e862de0b4912af27f6e9690d/.github/workflows/wheels.yml)
-- An example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
-- An example of using [this action in NetworkX](https://github.com/networkx/networkx/blob/main/.github/workflows/nightly.yml) to publish a nightly release.
-- An example of [a Jupyter notebook based tutorial repo](https://github.com/numpy/numpy-tutorials/blob/main/tox.ini) to test with multiple version combination, including using the nightly wheels for the development version.
+- [GitHub Action workflow for building and uploading NumPy wheels](https://github.com/numpy/numpy/blob/cc0abd768575d7f9e862de0b4912af27f6e9690d/.github/workflows/wheels.yml)
+- Example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
+- Example of using [this action in NetworkX](https://github.com/networkx/networkx/blob/main/.github/workflows/nightly.yml) to publish a nightly release.
+- Example of [a Jupyter notebook based tutorial repo](https://github.com/numpy/numpy-tutorials/blob/main/tox.ini) to test with multiple version combination, including using the nightly wheels for the development version.
