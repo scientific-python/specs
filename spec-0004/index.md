@@ -16,6 +16,7 @@ endorsed-by:
   - numpy
   - scikit-image
   - scipy
+  - IPython
 ---
 
 ## Description
