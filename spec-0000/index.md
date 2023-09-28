@@ -29,8 +29,8 @@ All versions refer to feature releases (i.e., Python 3.8.0, NumPy 1.19.0; not Py
 
 Specifically, we recommend that:
 
-1. Support for a given version of Python be dropped **3 years** after its initial release.
-2. Support for a given version of other core packages be dropped **2 years** after their initial release.
+1. Support for Python versions be dropped **3 years** after their initial release.
+2. Support for core package dependencies be dropped **2 years** after their initial release.
 
 ### Core Project Endorsement
 
