@@ -51,8 +51,9 @@ Endorsing this SPEC means agreeing, in principle, with the advantages of lazy lo
 Adopting this SPEC means implementing, using the `lazy_loader` package or any other mechanism (such as module `__getattr__`), lazy loading of subpackages and, if desired, subpackage attributes.
 
 Lazy loading has been adopted by
-[scikit-image](https://github.com/scikit-image/scikit-image/pull/5101)
-and [NetworkX](https://github.com/networkx/networkx/pull/4909).
+[scikit-image](https://github.com/scikit-image/scikit-image/pull/5101),
+[NetworkX](https://github.com/networkx/networkx/pull/4909),
+and [MNE-Python](https://github.com/mne-tools/mne-python/pull/11838).
 SciPy implements a [subset of lazy
 loading](https://github.com/scipy/scipy/pull/15230) which exposes only
 subpackages lazily.
