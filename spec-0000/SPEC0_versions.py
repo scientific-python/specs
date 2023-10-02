@@ -149,6 +149,9 @@ with open("schedule.md", "w") as fh:
         fh.write("#### " + str(quarter).replace("Q", " - Quarter ") + ":\n\n")
         fh.write("Recommend drop support for:\n\n")
 
+        fh.write("|    |    |    |\n")
+        fh.write("|----|----|----|\n")
+
         sub = dq.loc[quarter]
         for package in sorted(set(sub.index.get_level_values(0))):
             vers = sub.loc[[package]]["version"]
@@ -161,5 +164,5 @@ with open("schedule.md", "w") as fh:
                 if rel_min == rel_max
                 else f"{rel_min.strftime('%b %Y')} and {rel_max.strftime('%b %Y')}"
             )
-            fh.write(f"    {package:<15} {version_range:<19} released {rel_range}\n")
+            fh.write(f"|{package:<15}|{version_range:<19}|released {rel_range}|\n")
         fh.write("\n")
