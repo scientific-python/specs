@@ -73,10 +73,7 @@ The situation has since improved due to improved installations via binary wheels
 Below is an auto generated schedule with recommended dates for dropping support. We suggest that the next release in a given quarter is
 considered as the one removing support for a given item.
 
-In particular for Python releases, as all releases are around October, you may
-want to delay removal of support of an older Python version until your package
-work on the newly released Python version, thus keeping the number of minor
-version of python supported the same for all releases.
+"you may want to delay the removal of support of an older Python version until your package fully works on the newly released Python, thus keeping the number of supported minor versions of Python the same for your package."
 
 {{< include-md "schedule.md" >}}
 
