@@ -161,5 +161,5 @@ with open("schedule.md", "w") as fh:
                 if rel_min == rel_max
                 else f"{rel_min.strftime('%b %Y')} and {rel_max.strftime('%b %Y')}"
             )
-            fh.write(f"   {package:<15} {version_range:<19} released {rel_range}\n")
-        fh.write("\n\n")
+            fh.write(f"    {package:<15} {version_range:<19} released {rel_range}\n")
+        fh.write("\n")
