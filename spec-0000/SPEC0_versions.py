@@ -124,31 +124,42 @@ title Support Window"""
 
 # Print drop schedule
 
-rel = {}
-for name, releases in package_releases.items():
-    rel |= {
-        " ".join([name, str(ver)]): [dates["release_date"], dates["drop_date"]]
-        for ver, dates in releases.items()
-    }
+data = []
+for k, versions in package_releases.items():
+    for v, dates in versions.items():
+        data.append(
+            (
+                k,
+                v,
+                pd.to_datetime(dates["release_date"]),
+                pd.to_datetime(dates["drop_date"]),
+            )
+        )
+
+df = pd.DataFrame(data, columns=["package", "version", "release", "drop"])
+
+df["quarter"] = df["drop"].dt.to_period("Q")
+
+dq = df.set_index(["quarter", "package"]).sort_index()
 
 
 print("Saving drop schedule to schedule.md")
 with open("schedule.md", "w") as fh:
-    current_quarter = None
+    for quarter in sorted(set(dq.index.get_level_values(0))):
+        fh.write("#### " + str(quarter).replace("Q", " - Quarter ") + ":\n\n")
+        fh.write("Recommend drop support for:\n\n")
 
-    # Sort by drop date
-    rel = dict(sorted(rel.items(), key=lambda item: item[1][1]))
-
-    for package, dates in rel.items():
-        qt = pd.to_datetime(dates[1]).to_period("Q")
-
-        # If drop date is in a new quarter, write out a heading
-        if qt != current_quarter:
-            if current_quarter != None:
-                fh.write("\n")
-            fh.write(f'{str(qt).replace("Q", " – Quarter ")}:\n\n')
-            current_quarter = qt
-
-        fh.write(
-            f"- {dates[1].strftime('%d %b %Y')}: drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})\n"
-        )
+        sub = dq.loc[quarter]
+        for package in sorted(set(sub.index.get_level_values(0))):
+            vers = sub.loc[[package]]["version"]
+            minv, maxv = min(vers), max(vers)
+            rels = sub.loc[[package]]["release"]
+            rel_min, rel_max = min(rels), max(rels)
+            version_range = str(minv) if minv == maxv else f"{minv} to {maxv}"
+            rel_range = (
+                str(rel_min.strftime("%b %Y"))
+                if rel_min == rel_max
+                else f"{rel_min.strftime('%b %Y')} and {rel_max.strftime('%b %Y')}"
+            )
+            fh.write(f"   {package:<15} {version_range:<19} released {rel_range}\n")
+        fh.write("\n\n")
