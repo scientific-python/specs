@@ -26,8 +26,6 @@ In particular, the Steering Committee members
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
-### Steering Committee
-
 {{< include-html "static/teams/spec-steering-committee.html" >}}
 
 {{< include-html "static/teams/emeritus-spec-steering-committee.html" >}}
