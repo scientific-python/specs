@@ -28,7 +28,7 @@ In particular, the Steering Committee members
 
 ### Steering Committee
 
-{{< page_gallery pages="." >}}
+{{< include-html "static/teams/spec-steering-committee.html" >}}
 
 {{< include-html "static/teams/emeritus-spec-steering-committee.html" >}}
 
