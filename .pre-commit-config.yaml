@@ -17,7 +17,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
-    rev: e87737140f32d3cd7c44ede75f02dcd58e55820e  # frozen: 23.9.1
+    rev: e87737140f32d3cd7c44ede75f02dcd58e55820e # frozen: 23.9.1
     hooks:
       - id: black
 
@@ -29,13 +29,13 @@ repos:
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: ac0449824100a11dbd880d9be7cfa55c4711b05a  # frozen: v3.14.0
+    rev: ac0449824100a11dbd880d9be7cfa55c4711b05a # frozen: v3.14.0
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
 
   - repo: https://github.com/codespell-project/codespell
-    rev: "6e41aba91fb32e9feb741a6258eefeb9c6e4a482"  # frozen: v2.2.6
+    rev: "6e41aba91fb32e9feb741a6258eefeb9c6e4a482" # frozen: v2.2.6
     hooks:
       - id: codespell
 
