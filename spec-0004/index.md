@@ -151,7 +151,7 @@ Once this operation is done, you can revoke your token and add the new user to i
 Each project should have at least one user who is also an admin of the project.
 
 At that point, let the user know that they have been added and that they can create a personal
-access token (as outlined above.) They can now upload new wheels and perform maitenance
+access token (as outlined above.) They can now upload new wheels and perform maintenance
 actions on their project.
 
 ## Notes
