@@ -17,6 +17,7 @@ endorsed-by:
   - scikit-image
   - scipy
   - IPython
+  - xarray
 ---
 
 ## Description
