@@ -147,7 +147,7 @@ print("Saving drop schedule to schedule.md")
 with open("schedule.md", "w") as fh:
     for quarter in sorted(set(dq.index.get_level_values(0))):
         fh.write("#### " + str(quarter).replace("Q", " - Quarter ") + ":\n\n")
-        fh.write("Recommend drop support for:\n\n")
+        fh.write("###### Recommend drop support for:\n\n")
 
         fh.write("|    |    |    |\n")
         fh.write("|----|----|----|\n")
