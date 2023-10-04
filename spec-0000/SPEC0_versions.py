@@ -28,10 +28,12 @@ core_packages = [
 ]
 plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
+delta6month = timedelta(days=int(365 // 2))
 
 # Release data
 
 now = datetime.now()
+cutoff = now - delta6month
 
 
 def get_release_dates(package, support_time=plus24):
@@ -71,7 +73,7 @@ def get_release_dates(package, support_time=plus24):
 
     for ver, release_date in sorted(release_date.items()):
         drop_date = release_date + support_time
-        if drop_date >= datetime.now():
+        if drop_date >= cutoff:
             releases[ver] = {
                 "release_date": release_date,
                 "drop_date": drop_date,
@@ -97,7 +99,7 @@ package_releases = {
     package: {
         version: dates
         for version, dates in releases.items()
-        if dates["drop_date"] > now
+        if dates["drop_date"] > cutoff
     }
     for package, releases in package_releases.items()
 }
@@ -145,7 +147,10 @@ dq = df.set_index(["quarter", "package"]).sort_index()
 
 print("Saving drop schedule to schedule.md")
 with open("schedule.md", "w") as fh:
-    for quarter in sorted(set(dq.index.get_level_values(0))):
+    # we collect package 6 month in the past, and drop the first quarter
+    # as we might have filtered some of the packages out depending on
+    # when we ran the script.
+    for quarter in list(sorted(set(dq.index.get_level_values(0))))[1:]:
         fh.write("#### " + str(quarter).replace("Q", " - Quarter ") + ":\n\n")
         fh.write("###### Recommend drop support for:\n\n")
 
