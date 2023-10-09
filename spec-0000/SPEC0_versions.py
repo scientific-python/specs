@@ -146,6 +146,8 @@ dq = df.set_index(["quarter", "package"]).sort_index()
 
 
 print("Saving drop schedule to schedule.md")
+
+
 with open("schedule.md", "w") as fh:
     # we collect package 6 month in the past, and drop the first quarter
     # as we might have filtered some of the packages out depending on
@@ -154,8 +156,8 @@ with open("schedule.md", "w") as fh:
         fh.write("#### " + str(quarter).replace("Q", " - Quarter ") + ":\n\n")
         fh.write("###### Recommend drop support for:\n\n")
 
-        fh.write("|    |    |    |\n")
-        fh.write("|----|----|----|\n")
+        table = "|    |    |    |\n"
+        table += "|----|----|----|\n"
 
         sub = dq.loc[quarter]
         for package in sorted(set(sub.index.get_level_values(0))):
@@ -169,5 +171,17 @@ with open("schedule.md", "w") as fh:
                 if rel_min == rel_max
                 else f"{rel_min.strftime('%b %Y')} and {rel_max.strftime('%b %Y')}"
             )
-            fh.write(f"|{package:<15}|{version_range:<19}|released {rel_range}|\n")
+            table += f"|{package:<15}|{version_range:<19}|released {rel_range}|\n"
+
+        rows = [[el.strip() for el in row.split("|")] for row in table.splitlines()]
+        col_widths = [max(map(len, column)) for column in zip(*rows)]
+        rows[1] = [
+            el if el != "----" else "-" * col_widths[i] for i, el in enumerate(rows[1])
+        ]
+        for row in rows:
+            for entry, width in zip(row, col_widths):
+                if not width:
+                    continue
+                fh.write(f"| {str.ljust(entry, width)} ")
+            fh.write("|\n")
         fh.write("\n")
