@@ -28,10 +28,12 @@ core_packages = [
 ]
 plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
+delta6month = timedelta(days=int(365 // 2))
 
 # Release data
 
 now = datetime.now()
+cutoff = now - delta6month
 
 
 def get_release_dates(package, support_time=plus24):
@@ -71,7 +73,7 @@ def get_release_dates(package, support_time=plus24):
 
     for ver, release_date in sorted(release_date.items()):
         drop_date = release_date + support_time
-        if drop_date >= datetime.now():
+        if drop_date >= cutoff:
             releases[ver] = {
                 "release_date": release_date,
                 "drop_date": drop_date,
@@ -97,7 +99,7 @@ package_releases = {
     package: {
         version: dates
         for version, dates in releases.items()
-        if dates["drop_date"] > now
+        if dates["drop_date"] > cutoff
     }
     for package, releases in package_releases.items()
 }
@@ -124,31 +126,82 @@ title Support Window"""
 
 # Print drop schedule
 
-rel = {}
-for name, releases in package_releases.items():
-    rel |= {
-        " ".join([name, str(ver)]): [dates["release_date"], dates["drop_date"]]
-        for ver, dates in releases.items()
-    }
+data = []
+for k, versions in package_releases.items():
+    for v, dates in versions.items():
+        data.append(
+            (
+                k,
+                v,
+                pd.to_datetime(dates["release_date"]),
+                pd.to_datetime(dates["drop_date"]),
+            )
+        )
+
+df = pd.DataFrame(data, columns=["package", "version", "release", "drop"])
+
+df["quarter"] = df["drop"].dt.to_period("Q")
+
+dq = df.set_index(["quarter", "package"]).sort_index()
 
 
 print("Saving drop schedule to schedule.md")
-with open("schedule.md", "w") as fh:
-    current_quarter = None
 
-    # Sort by drop date
-    rel = dict(sorted(rel.items(), key=lambda item: item[1][1]))
 
-    for package, dates in rel.items():
-        qt = pd.to_datetime(dates[1]).to_period("Q")
+def pad_table(table):
+    rows = [[el.strip() for el in row.split("|")] for row in table]
+    col_widths = [max(map(len, column)) for column in zip(*rows)]
+    rows[1] = [
+        el if el != "----" else "-" * col_widths[i] for i, el in enumerate(rows[1])
+    ]
+    padded_table = []
+    for row in rows:
+        line = ""
+        for entry, width in zip(row, col_widths):
+            if not width:
+                continue
+            line += f"| {str.ljust(entry, width)} "
+        line += f"|"
+        padded_table.append(line)
 
-        # If drop date is in a new quarter, write out a heading
-        if qt != current_quarter:
-            if current_quarter != None:
-                fh.write("\n")
-            fh.write(f'{str(qt).replace("Q", " – Quarter ")}:\n\n')
-            current_quarter = qt
+    return padded_table
 
-        fh.write(
-            f"- {dates[1].strftime('%d %b %Y')}: drop {package} (initially released on {dates[0].strftime('%b %d, %Y')})\n"
+
+def make_table(sub):
+    table = []
+    table.append("|    |    |    |")
+    table.append("|----|----|----|")
+    for package in sorted(set(sub.index.get_level_values(0))):
+        vers = sub.loc[[package]]["version"]
+        minv, maxv = min(vers), max(vers)
+        rels = sub.loc[[package]]["release"]
+        rel_min, rel_max = min(rels), max(rels)
+        version_range = str(minv) if minv == maxv else f"{minv} to {maxv}"
+        rel_range = (
+            str(rel_min.strftime("%b %Y"))
+            if rel_min == rel_max
+            else f"{rel_min.strftime('%b %Y')} and {rel_max.strftime('%b %Y')}"
         )
+        table.append(f"|{package:<15}|{version_range:<19}|released {rel_range}|")
+
+    return pad_table(table)
+
+
+def make_quarter(quarter, dq):
+    table = ["#### " + str(quarter).replace("Q", " - Quarter ") + ":\n"]
+    table.append("###### Recommend drop support for:\n")
+    sub = dq.loc[quarter]
+    table.extend(make_table(sub))
+    return "\n".join(table)
+
+
+with open("schedule.md", "w") as fh:
+    # we collect package 6 month in the past, and drop the first quarter
+    # as we might have filtered some of the packages out depending on
+    # when we ran the script.
+    tb = []
+    for quarter in list(sorted(set(dq.index.get_level_values(0))))[1:]:
+        tb.append(make_quarter(quarter, dq))
+
+    fh.write("\n\n".join(tb))
+    fh.write("\n")
