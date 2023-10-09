@@ -71,6 +71,11 @@ The situation has since improved due to improved installations via binary wheels
 
 ### Drop Schedule
 
+Below is an auto generated schedule with recommended dates for dropping support. We suggest that the next release in a given quarter is
+considered as the one removing support for a given item.
+
+You may want to delay the removal of support of an older Python version until your package fully works on the newly released Python, thus keeping the number of supported minor versions of Python the same for your package.
+
 {{< include-md "schedule.md" >}}
 
 ## Notes
