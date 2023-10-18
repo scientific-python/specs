@@ -49,6 +49,10 @@ Endorsing this SPEC means agreeing, in principle, with the advantages of lazy lo
 
 ### Ecosystem Adoption
 
+{{< notice warning >}}
+Not all projects should use lazy loading.
+{{< /notice >}}
+
 Adopting this SPEC means implementing, using the `lazy_loader` package or any other mechanism (such as module `__getattr__`), lazy loading of subpackages and, if desired, subpackage attributes.
 
 Lazy loading has been adopted by
