@@ -3,7 +3,8 @@ title: Scientific Python Ecosystem Coordination
 hide_meta: true
 ---
 
-SPECs provide operational guidelines for projects in the scientific Python ecosystem.
+SPECs provide recommendations for projects in the scientific Python ecosystem.
+Not all recommendations apply to all projects.
 All community members and ecosystem projects are welcome to participate in the SPEC process.
 The SPEC process is described in the
 [SPEC Purpose and Process]({{< relref "/purpose-and-process" >}}),
