@@ -49,9 +49,9 @@ Endorsing this SPEC means agreeing, in principle, with the advantages of lazy lo
 
 ### Ecosystem Adoption
 
-{{< notice warning >}}
+{{< admonition warning >}}
 We do not recommend lazy loading for all projects. E.g., small projects with low import overheads do not need it. Lazy loading is useful when you are concerned about subpackage import times, but also want to make those subpackages available for interactive exploration in, e.g., IPython.
-{{< /notice >}}
+{{< /admonition >}}
 
 Adopting this SPEC means implementing, using the `lazy_loader` package or any other mechanism (such as module `__getattr__`), lazy loading of subpackages and, if desired, subpackage attributes.
 
