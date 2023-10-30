@@ -98,7 +98,7 @@ its development and implementation:
 **Accept**, **Endorse**, and **Adopt**.
 
 <!-- prettier-ignore-start -->
-{{<mermaid>}}
+```mermaid
 graph LR
 
 START[ ]--> |Propose| A[Accept]
@@ -111,7 +111,7 @@ click C callback "Ecosystem Action"
 
 style START fill:#FFFFFF, stroke:#FFFFFF;
 
-{{</mermaid>}}
+```
 <!-- prettier-ignore-end -->
 
 The **accept decision** is made by the Steering Committee and means the proposed SPEC is

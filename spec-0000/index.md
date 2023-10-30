@@ -65,9 +65,9 @@ The situation has since improved due to improved installations via binary wheels
 
 ### Support Window
 
-{{< mermaid >}}
+```mermaid
 {{< include-raw "chart.md" >}}
-{{< /mermaid >}}
+```
 
 ### Drop Schedule
 
