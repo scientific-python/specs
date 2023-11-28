@@ -17,38 +17,48 @@ If relevant, include examples of how the new functionality would be used,
 intended use-cases, and pseudo-code illustrating its use.
 -->
 
-Project developers often have to share secrets, such as server passwords and social media logins.
+Projects engage with restricted resources all the time.
+Examples include access to add & remove team members, grant commit rights, or make uploads to certain hosts.
+
+**Documenting resources** is critical to ensuring uninterrupted operations.
+It is important that team members know _who_ have access to resources, and how to _gain access_ to resources.
+For example, if updated project documentation needs to be uploaded to a remote server via SSH, who are the team members that can do that, and by which process can a release manager request access?
+
+Furthermore, project developers sometimes have to **share secrets**, such as server passwords and social media logins.
 Typically, such secrets are distributed among those who need them, without any centralized system for tracking the secrets or who has access to them.
 When a server needs to be accessed, there is often a scramble to find someone with credentials.
+
 This SPEC discusses the requirements for a system to distribute secrets, provides an example implementation, and lists suitable hosted services.
+
+It should be noted that, in many cases, secrets & passwords can be avoided.
+Most online services (GitHub, PyPi, etc.), have permissioning systems through which developers can be given the required access.
+Access to servers can be given through SSH keys, which each developer has to safeguard.
+This document deals with the situation in which that is not possible, and secrets have to be shared.
 
 ## Implementation
 
 ### Principles
 
-A system for distributing project secrets must have the following properties:
+1. Restricted project resources must be documented.
 
-- Secrets are stored encrypted in a central (remote) location.
-- It must be possible to grant access to the secrets to a select group of team members.
-- It must be possible to revoke future access to the secrets.
-- The system must not rely on closed source or commercial encryption facilities, that
-  can later disappear or be made unavailable, although such a solution can be considered if it allows for all data to be exported.
+2. A system for distributing project secrets must have the following properties:
 
-_Tokens_ form a common subset of secrets stored. These should always be scoped (minimal necessary permissions), and set to expire after a reasonable time period (a year, typically). Instructions for rotating and revoking the token should be saved alongside it.
+   - Secrets are stored encrypted in a central (remote) location.
+   - It must be possible to grant access to the secrets to a select group of team members.
+   - It must be possible to revoke future access to the secrets.
+   - The system must not rely on closed source or commercial encryption facilities, that
+     can later disappear or be made unavailable, although such a solution can be considered if it allows for all data to be exported.
 
-Whichever system is chosen, its user interface should match the capabilities of the intended users.
-This reduces the risk of passwords being copied out to less secure mechanisms such as sticky notes or text files.
-If the target audience is not used to GPG or the command prompt, for example, the `pass` implementation below may not work.
+   Whichever system is chosen, its user interface should match the capabilities of the intended users.
+   This reduces the risk of passwords being copied out to less secure mechanisms such as sticky notes or text files.
+   If the target audience is not used to GPG or the command prompt, for example, the `pass` implementation below may not work, and an alternative like 1password or bitwarden should be considered.
 
-### Example implementation: pass
+3. _Tokens_ form a common subset of secrets stored. These should always be scoped (minimal necessary permissions), and set to expire after a reasonable time period (a year, typically).
+   Instructions for rotating and revoking the token should be documented.
 
-The [NumPy password vault](https://github.com/scientific-python/vault-template) is an example of an implementation that satisfies the above principles.
-The secrets are stored, encrypted, in a public Git repository.
-The vault uses [gopass](https://github.com/gopasspw/gopass), a more user friendly implementation of [pass](https://www.passwordstore.org/), to manage access via GPG keys.
-Each secret is encrypted using the public keys of all developers that should have access.
-If a developer's access is removed, the vault is re-encrypted so that that developer cannot read future copies of the repository (but secrets should be considered compromised and, thus, rotated).
+### Hosted password storage
 
-### Alternatives
+The following hosted solutions conform to the principles in (2) above.
 
 Sponsored solutions:
 
@@ -61,6 +71,14 @@ Self-hosted solutions:
 Paid solutions:
 
 - [bitwarden](https://bitwarden.com/) provides a non-profit discount of 25%
+
+### Offline password storage: pass
+
+[password vault](https://github.com/scientific-python/vault-template) is an example of an implementation that satisfies the above principles.
+The secrets are stored, encrypted, in a public Git repository.
+The vault uses [gopass](https://github.com/gopasspw/gopass), a more user friendly implementation of [pass](https://www.passwordstore.org/), to manage access via GPG keys.
+Each secret is encrypted using the public keys of all developers that should have access.
+If a developer's access is removed, the vault is re-encrypted so that that developer cannot read future copies of the repository (but secrets should be considered compromised and, thus, rotated).
 
 ### Other security considerations
 
