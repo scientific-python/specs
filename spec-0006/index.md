@@ -56,7 +56,9 @@ This document deals with the situation in which that is not possible, and secret
 3. _Tokens_ form a common subset of secrets stored. These should always be scoped (minimal necessary permissions), and set to expire after a reasonable time period (a year, typically).
    Instructions for rotating and revoking the token should be documented.
 
-### Hosted password storage
+### Password storage
+
+#### Hosted
 
 The following hosted solutions conform to the principles in (2) above.
 
@@ -72,13 +74,17 @@ Paid solutions:
 
 - [bitwarden](https://bitwarden.com/) provides a non-profit discount of 25%
 
-### Offline password storage: pass
+#### Offline (pass)
 
 [password vault](https://github.com/scientific-python/vault-template) is an example of an implementation that satisfies the above principles.
 The secrets are stored, encrypted, in a public Git repository.
 The vault uses [gopass](https://github.com/gopasspw/gopass), a more user friendly implementation of [pass](https://www.passwordstore.org/), to manage access via GPG keys.
 Each secret is encrypted using the public keys of all developers that should have access.
 If a developer's access is removed, the vault is re-encrypted so that that developer cannot read future copies of the repository (but secrets should be considered compromised and, thus, rotated).
+
+### Other common scenarios
+
+- **Publishing packages**: PyPi provides a [trusted publisher](https://docs.pypi.org/trusted-publishers/using-a-publisher/) mechanism for avoiding passwords
 
 ### Other security considerations
 
