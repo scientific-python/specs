@@ -18,6 +18,7 @@ endorsed-by:
   - scikit-image
   - scipy
   - xarray
+  - scikit-learn
 ---
 
 ## Description
