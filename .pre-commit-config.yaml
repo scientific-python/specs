@@ -17,7 +17,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
-    rev: 2a1c67e0b2f81df602ec1f6e7aeb030b9709dc7c # frozen: 23.11.0
+    rev: ec91a2be3c44d88e1a3960a4937ad6ed3b63464e # frozen: 23.12.1
     hooks:
       - id: black
 
@@ -42,4 +42,4 @@ repos:
 ci:
   autofix_prs: false
   autofix_commit_msg: "[pre-commit.ci 🤖] Apply code format tools to PR"
-  autoupdate_schedule: monthly
+  autoupdate_schedule: quarterly
