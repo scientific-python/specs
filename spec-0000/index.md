@@ -35,7 +35,7 @@ Specifically, we recommend that:
 
 {{< admonition note >}}
 Core packages may or may not to provide bug fix releases during the full 2 year period after release.
-Therefore, projects may occassionally want to drop support for core package dependencies earlier than recommended by this SPEC.
+Therefore, projects may occasionally want to drop support for core package dependencies earlier than recommended by this SPEC.
 For instance, if a newer minimum version of a core package is needed by a project due to a critical bug fix,
 which is not backported to older versions.
 {{< /admonition >}}
