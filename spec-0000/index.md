@@ -1,5 +1,5 @@
 ---
-title: "SPEC 0 — Minimum Supported Versions"
+title: "SPEC 0 — Minimum Supported Dependencies"
 date: 2020-12-17
 author:
   - "Andreas C. Mueller <andreas.mueller.ml@gmail.com>"
@@ -24,7 +24,8 @@ endorsed-by:
 
 ## Description
 
-This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping support of older Python and core package versions.
+This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping support
+for older Python and for support for older versions of core packages depended upon by those projects.
 
 All versions refer to feature releases (i.e., Python 3.8.0, NumPy 1.19.0; not Python 3.8.1, NumPy 1.19.2).
 
@@ -33,11 +34,25 @@ Specifically, we recommend that:
 1. Support for Python versions be dropped **3 years** after their initial release.
 2. Support for core package dependencies be dropped **2 years** after their initial release.
 
+{{< admonition note >}}
+Core packages may or may not to provide bug fix releases during the full 2 year period after release.
+So projects may decide to occassionally drop support for core pakage dependencies earlier than recommended by this SPEC.
+For instance, if a newer minimum version of a core package is needed by a project due to a critical bug fix,
+which is not backported to older versions.
+{{< /admonition >}}
+
 ### Core Project Endorsement
 
 <!--
 Briefly discuss what it means for a core project to endorse this SPEC.
 -->
+
+Core project endorsing this SPEC means that those projects encourage all projects across the Scientific Python ecosystem
+to limit how long they support older Python versions and older core packages versions.
+While core projects may wish to provide bug-fix releases of older versions, endorsing this SPEC does **not** imply that
+core projects will provide bug-fix releases during the full 2 year period after release.
+As many of the core projects are volunteer projects with limited developer time, core package developers may often prioritize
+new features and enhancements over long-term package maintenance.
 
 ### Ecosystem Adoption
 
