@@ -24,8 +24,7 @@ endorsed-by:
 
 ## Description
 
-This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping support
-for older Python and for support for older versions of core packages depended upon by those projects.
+This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping support for core packages depended upon by those projects, as well as older versions of Python.
 
 All versions refer to feature releases (i.e., Python 3.8.0, NumPy 1.19.0; not Python 3.8.1, NumPy 1.19.2).
 
@@ -36,7 +35,7 @@ Specifically, we recommend that:
 
 {{< admonition note >}}
 Core packages may or may not to provide bug fix releases during the full 2 year period after release.
-So projects may decide to occassionally drop support for core pakage dependencies earlier than recommended by this SPEC.
+Therefore, projects may occassionally want to drop support for core package dependencies earlier than recommended by this SPEC.
 For instance, if a newer minimum version of a core package is needed by a project due to a critical bug fix,
 which is not backported to older versions.
 {{< /admonition >}}
@@ -49,8 +48,7 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 
 Core project endorsing this SPEC means that those projects encourage all projects across the Scientific Python ecosystem
 to limit how long they support older Python versions and older core packages versions.
-While core projects may wish to provide bug-fix releases of older versions, endorsing this SPEC does **not** imply that
-core projects will provide bug-fix releases during the full 2 year period after release.
+A core project endorsing this SPEC does **not** imply that that project will provide bug-fix releases for two full years after a release.
 As many of the core projects are volunteer projects with limited developer time, core package developers may often prioritize
 new features and enhancements over long-term package maintenance.
 
