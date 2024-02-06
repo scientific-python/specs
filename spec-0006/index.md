@@ -4,7 +4,9 @@ date: 2022-12-19
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"
-discussion:
+  - "Pamphile Roy <roy.pamphile@gmail.com>"
+  - "Lars Grüter <lagru@mailbox.org>"
+discussion: https://discuss.scientific-python.org/t/spec-6-keys-to-the-castle
 endorsed-by:
 ---
 
