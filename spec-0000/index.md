@@ -47,7 +47,7 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 -->
 
 Core project endorsing this SPEC means that those projects encourage all projects across the Scientific Python ecosystem
-to limit how long they support older Python versions and older core packages versions.
+to limit how long they support older Python versions and older dependency versions.
 A core project endorsing this SPEC does **not** imply that that project will provide bug-fix releases for two full years after a release.
 
 ### Ecosystem Adoption
