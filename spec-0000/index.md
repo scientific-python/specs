@@ -20,6 +20,7 @@ endorsed-by:
   - scikit-image
   - scipy
   - xarray
+  - zarr
 ---
 
 ## Description
