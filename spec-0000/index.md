@@ -96,4 +96,4 @@ You may want to delay the removal of support of an older Python version until yo
 
 - Code to generate support and drop schedule tables:
 
-{{< readcode file="SPEC0_versions.py" lang="python" >}}
+{{< include-code "SPEC0_versions.py" "python" >}}
