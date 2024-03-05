@@ -17,7 +17,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
-    rev: ec91a2be3c44d88e1a3960a4937ad6ed3b63464e # frozen: 23.12.1
+    rev: 6fdf8a4af28071ed1d079c01122b34c5d587207a # frozen: 24.2.0
     hooks:
       - id: black
 
@@ -29,7 +29,7 @@ repos:
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: 1bbebc88c6925a4e56fd5446b830b12c38c1c24a # frozen: v3.15.0
+    rev: df17dfa3911b81b4a27190b0eea5b1debc7ffa0a # frozen: v3.15.1
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
