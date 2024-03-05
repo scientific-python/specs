@@ -169,3 +169,6 @@ and other ancillary information as needed.
 - Example of [a GitHub Action workflow that creates a tracking issue for failed CI runs](https://github.com/scikit-learn/scikit-learn/blob/689efe2f25356aa674bd0090f44b0914aae4d3a3/.github/workflows/update_tracking_issue.yml)
 - Example of using [this action in NetworkX](https://github.com/networkx/networkx/blob/main/.github/workflows/nightly.yml) to publish a nightly release.
 - Example of [a Jupyter notebook based tutorial repo](https://github.com/numpy/numpy-tutorials/blob/main/tox.ini) to test with multiple version combination, including using the nightly wheels for the development version.
+- `astropy` ships [its own nightly wheel](https://docs.astropy.org/en/latest/install.html#installing-pre-built-development-versions-of-astropy)
+  using [a workflow that relies on OpenAstronomy](https://github.com/astropy/astropy/blob/main/.github/workflows/publish.yml).
+  Its direct dependency, `pyerfa`, also has nightly wheel [here](https://pypi.anaconda.org/liberfa/simple).
