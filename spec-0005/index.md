@@ -1,5 +1,6 @@
 ---
 title: "SPEC 5 — CI Best Practices"
+number: 5
 date: 2022-09-22
 author:
   - "Tim Head <betatim@gmail.com>"

@@ -1,5 +1,6 @@
 ---
 title: "SPEC 6 — Keys to the Castle"
+number: 6
 date: 2022-12-19
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"

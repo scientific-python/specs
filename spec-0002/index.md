@@ -1,5 +1,6 @@
 ---
 title: "SPEC 2 — API Dispatch"
+number: 2
 date: 2021-12-16
 author:
   - "Ivan Yashchuk <ivan.yashchuk@quansight.com>"

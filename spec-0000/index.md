@@ -1,5 +1,6 @@
 ---
 title: "SPEC 0 — Minimum Supported Dependencies"
+number: 0
 date: 2020-12-17
 author:
   - "Andreas C. Mueller <andreas.mueller.ml@gmail.com>"
