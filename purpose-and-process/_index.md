@@ -148,6 +148,68 @@ Projects that adopt a SPEC early should engage in the collaborative process
 leading to the SPEC being endorsed by the Core Projects.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
 
+#### Badges
+
+Projects can highlight their adoption of specific SPECs with a SPEC badge.
+For example, for SPEC 0, we recommend using
+
+{{< tabs >}}
+
+{{< tab "Rendered badge" >}}
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-blue)](https://scientific-python.org/specs/spec-0000/)
+{{< /tab >}}
+
+{{< tab "Markdown" >}}
+
+```
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-blue)](https://scientific-python.org/specs/spec-0000/)
+```
+
+{{< /tab >}}
+
+{{< tab "reStructuredText" >}}
+
+```
+|SPEC 0 — Minimum Supported Dependencies|
+
+.. |SPEC 0 — Minimum Supported Dependencies| image:: https://img.shields.io/badge/SPEC-0-blue
+   :target: https://scientific-python.org/specs/spec-0000/
+```
+
+{{< /tab >}}
+
+{{< /tabs >}}
+
+Alternatively, you can use one badge to indicate adoption of multiple SPECS.
+For example, to indicate adoption of SPECs 0, 1, and 4, we recommend the following
+
+{{< tabs >}}
+
+{{< tab "Rendered badge" >}}
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-blue)](https://scientific-python.org/specs/)
+{{< /tab >}}
+
+{{< tab "Markdown" >}}
+
+```
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-blue)](https://scientific-python.org/specs/)
+```
+
+{{< /tab >}}
+
+{{< tab "reStructuredText" >}}
+
+```
+|Scientific Python Ecosystem Coordination|
+
+.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-blue
+   :target: https://scientific-python.org/specs/
+```
+
+{{< /tab >}}
+
+{{< /tabs >}}
+
 ### New SPEC Proposals
 
 A good SPEC proposal focuses on a single key recommendation or idea for

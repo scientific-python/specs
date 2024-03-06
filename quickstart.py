@@ -48,6 +48,38 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 Briefly discuss what it means for a project to adopt this SPEC.
 -->
 
+#### Badges
+
+Projects can highlight their adoption of this SPECs by including a SPEC badge.
+
+{{{{< tabs >}}}}
+
+{{{{< tab "Rendered badge" >}}}}
+[![SPEC {number} — {title}](https://img.shields.io/badge/SPEC-{number}-blue)](https://scientific-python.org/specs/spec-{number:04d}/)
+{{{{< /tab >}}}}
+
+{{{{< tab "Markdown" >}}}}
+
+```
+[![SPEC {number} — {title}](https://img.shields.io/badge/SPEC-{number}-blue)](https://scientific-python.org/specs/spec-{number:04d}/)
+```
+
+{{{{< /tab >}}}}
+
+{{{{< tab "reStructuredText" >}}}}
+
+```
+|SPEC {number} — {title}|
+.. |SPEC {number} — {title}| image:: https://img.shields.io/badge/SPEC-{number}-blue
+   :target: https://scientific-python.org/specs/spec-{number:04d}/
+```
+
+{{{{< /tab >}}}}
+
+{{{{< /tabs >}}}}
+
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
+
 ## Implementation
 
 <!--
