@@ -3,11 +3,8 @@ title: "SPEC 2 — API Dispatch"
 number: 2
 date: 2021-12-16
 author:
-  - "Ivan Yashchuk <ivan.yashchuk@quansight.com>"
-  - "Ralf Gommers <rgommers@quansight.com>"
   - "Jarrod Millman <millman@berkeley.edu>"
-  - "Stéfan van der Walt <stefanv@berkeley.edu>"
-discussion: https://discuss.scientific-python.org/t/spec-2-api-dispatch/173
+discussion:
 endorsed-by:
 ---
 
@@ -15,28 +12,57 @@ endorsed-by:
 
 <!--
 Briefly and clearly describe the recommendation.
+-->
+
+We propose mechanisms for wholesale reimplementations of library functions.
+This would allow groups outside of, say, `networkx` to (a) provide new
+functions to replace parts of `networkx`, or (b) provide data structures
+that can pass through NetworkX's existing computational pipelines.
+
+This SPEC focuses on the rationale for these mechanisms, and provides
+links to implementations related technical discussions.
+
+### Core Project Endorsement
+
+<!--
+Briefly discuss what it means for a core project to endorse this SPEC.
+-->
+
+### Ecosystem Adoption
+
+<!--
+Briefly discuss what it means for a project to adopt this SPEC.
+-->
+
+## Implementation
+
+<!--
+Discuss how this would be implemented.
 Explain the general need and the advantages of this specific recommendation.
 If relevant, include examples of how the new functionality would be used,
 intended use-cases, and pseudo-code illustrating its use.
 -->
 
-We propose mechanisms for:
+A successful prototype implementation of this SPEC (at least in spirit) is already
+available [inside NetworkX](https://networkx.org/documentation/latest/reference/utils.html#backends).
 
-(a) wholesale reimplementations of library functions, and
-(b) function dispatch based on foreign data structures.
+NetworkX has developed a dispatching layer which can plug into multiple backends.
+Currently we have backends which can dispatch to
+[CuGraph](https://github.com/rapidsai/cugraph/tree/branch-24.04/python/nx-cugraph),
+[GraphBLAS](https://github.com/python-graphblas/graphblas-algorithms) and a
+[joblib bpacked parallel
+implementation](https://github.com/networkx/nx-parallel) of algorithms in
+NetworkX.
 
-This would allow groups outside of, say, `scipy` to (a) provide new
-functions to replace parts of SciPy, or (b) provide data structures
-that can pass through SciPy's existing computational pipelines.
+One of the goals here is to provide drop in replacement for old code written with NetworkX. Users
+should be able to set a config option/env variable and dispatch their code to different backends.
+These backends could be hardware specific ones, reimplementations in other languages (hello rust!) or
+using a totally new data structure (GraphBLAS in the case of NetworkX).
 
-Concretely, (a) is akin to monkey-patching, but with the advantage
-that libraries can coordinate dispatching and report which backend is
-being used. And (b) is similar to using the [Array API standard](https://data-apis.org/array-api/latest/index.html), so that
-pure-Python algorithm implementations can operate on foreign array types
-without rewriting code.
-
-This SPEC focuses on the rationale for these mechanisms, and provides
-links to implementations related technical discussions.
+On the NetworkX side we are still ironing out more details, and we are still missing out on a detailed
+spec (or SPEC). I think other projects in the scientific python ecosystem could also benefit from some
+kind of dispatching along these lines. There is some progress towards creating an [engine API in
+scikit-learn](https://github.com/scikit-learn/scikit-learn/pull/25535) which follows similar rational.
 
 ## Notes
 
@@ -44,9 +70,3 @@ links to implementations related technical discussions.
 Include a bulleted list of annotated links, comments,
 and other ancillary information as needed.
 -->
-
-- [A vision for extensibility to GPU & distributed support for SciPy, scikit-learn, scikit-image and beyond](https://labs.quansight.org/blog/2021/11/pydata-extensibility-vision/)
-- [A proposed design for supporting multiple array types across SciPy, scikit-learn, scikit-image and beyond](https://discuss.scientific-python.org/t/a-proposed-design-for-supporting-multiple-array-types-across-scipy-scikit-learn-scikit-image-and-beyond/131)
-- [Support for array types other than NumPy](https://discuss.scientific-python.org/t/support-for-array-types-other-than-numpy/134)
-- [Default dispatching behavior for supporting multiple array types across SciPy, scikit-learn, scikit-image](https://discuss.scientific-python.org/t/default-dispatching-behavior-for-supporting-multiple-array-types-across-scipy-scikit-learn-scikit-image/135)
-- [Requirements and discussion of a type dispatcher for the ecosystem](https://discuss.scientific-python.org/t/requirements-and-discussion-of-a-type-dispatcher-for-the-ecosystem/157)
