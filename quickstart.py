@@ -23,6 +23,7 @@ title = prompt("SPEC title")
 filename = f"spec-{number:04d}/index.md"
 text = f"""---
 title: "SPEC {number} — {title}"
+number: {number}
 date: {now.strftime("%Y-%m-%d")}
 author:
   - "{author} <{email}>"

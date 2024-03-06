@@ -1,5 +1,6 @@
 ---
 title: "SPEC 4 — Using and Creating Nightly Wheels"
+number: 4
 date: 2022-09-05
 author:
   - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
