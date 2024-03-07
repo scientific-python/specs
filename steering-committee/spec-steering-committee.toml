@@ -1,0 +1,209 @@
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Anderson Banihirwe'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/13301940?u=70e16e6fe4d0b3b811b27c6d1353ac7648fbaac0&v=4"'
+alt = 'Avatar of Anderson Banihirwe'
+{{< /image >}}'''
+link = 'https://github.com/andersy005'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Brigitta Sipőcz'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/6788290?u=d9a388224b87d55106cb3e6199d02ebc1d8e0553&v=4"'
+alt = 'Avatar of Brigitta Sipőcz'
+{{< /image >}}'''
+link = 'https://github.com/bsipocz'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'M Bussonnier'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/335567?v=4"'
+alt = 'Avatar of M Bussonnier'
+{{< /image >}}'''
+link = 'https://github.com/Carreau'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Georgiana'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/7579677?u=1ebcc2526a9787b4786c9383870c6b8fbad217d8&v=4"'
+alt = 'Avatar of Georgiana'
+{{< /image >}}'''
+link = 'https://github.com/GeorgianaElena'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Inessa Pawson'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/43481325?u=8c0c0adbf3f2efd2cce72951d3554064c7bbfce3&v=4"'
+alt = 'Avatar of Inessa Pawson'
+{{< /image >}}'''
+link = 'https://github.com/InessaPawson'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Paul Ivanov'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/118211?u=df34f29e82134879f506869b2af3252e35db6bb4&v=4"'
+alt = 'Avatar of Paul Ivanov'
+{{< /image >}}'''
+link = 'https://github.com/ivanov'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Jarrod Millman'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/123428?v=4"'
+alt = 'Avatar of Jarrod Millman'
+{{< /image >}}'''
+link = 'https://github.com/jarrodmillman'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Juan Nunez-Iglesias'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/492549?v=4"'
+alt = 'Avatar of Juan Nunez-Iglesias'
+{{< /image >}}'''
+link = 'https://github.com/jni'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Joris Van den Bossche'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/1020496?u=c30d768880284601483689157e4114351815044b&v=4"'
+alt = 'Avatar of Joris Van den Bossche'
+{{< /image >}}'''
+link = 'https://github.com/jorisvandenbossche'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Juanita Gomez'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/18587879?u=83f10fabe466ae8e7052c03c5e6e9cde684a4e10&v=4"'
+alt = 'Avatar of Juanita Gomez'
+{{< /image >}}'''
+link = 'https://github.com/juanis2112'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Kira Evans'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/29165011?u=a9cad2941ed8ddec88ea9fc7523ff70433fce7e6&v=4"'
+alt = 'Avatar of Kira Evans'
+{{< /image >}}'''
+link = 'https://github.com/kne42'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Kristen Thyng'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/3487237?v=4"'
+alt = 'Avatar of Kristen Thyng'
+{{< /image >}}'''
+link = 'https://github.com/kthyng'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Lars Grüter'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/20140352?u=fa6debadd435c15847d1435c49753f349e2d3526&v=4"'
+alt = 'Avatar of Lars Grüter'
+{{< /image >}}'''
+link = 'https://github.com/lagru'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Mridul Seth'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/5363860?u=ce5c6e9388d2fd153ebf8b0bb521c928b0813608&v=4"'
+alt = 'Avatar of Mridul Seth'
+{{< /image >}}'''
+link = 'https://github.com/MridulS'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Sanket Verma'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/20305658?u=0305891289a16b2111326053c0f3746fb5218fa7&v=4"'
+alt = 'Avatar of Sanket Verma'
+{{< /image >}}'''
+link = 'https://github.com/MSanKeys963'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Madicken Munk'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/6745434?v=4"'
+alt = 'Avatar of Madicken Munk'
+{{< /image >}}'''
+link = 'https://github.com/munkm'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'P. L. Lim'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/2090236?v=4"'
+alt = 'Avatar of P. L. Lim'
+{{< /image >}}'''
+link = 'https://github.com/pllim'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Ralf Gommers'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/98330?u=22a023f8d191ba200ab13d476c83860d015cc9fe&v=4"'
+alt = 'Avatar of Ralf Gommers'
+{{< /image >}}'''
+link = 'https://github.com/rgommers'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Ross Barnowski'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/1268991?u=974707b96081a9705f3a239c0773320f353ee02f&v=4"'
+alt = 'Avatar of Ross Barnowski'
+{{< /image >}}'''
+link = 'https://github.com/rossbar'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Stefan van der Walt'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/45071?u=c779b5e06448fbc638bc987cdfe305c7f9a7175e&v=4"'
+alt = 'Avatar of Stefan van der Walt'
+{{< /image >}}'''
+link = 'https://github.com/stefanv'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+header = 'Pamphile Roy'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&v=4"'
+alt = 'Avatar of Pamphile Roy'
+{{< /image >}}'''
+link = 'https://github.com/tupui'
