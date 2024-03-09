@@ -28,7 +28,7 @@ as other community members (e.g., contributors to other ecosystem projects).
 
 ### Core Projects
 
-{{< page_gallery pages="." link=internal columns="2 3 4 5" >}}
+{{< project_grid files="." columns="2 3 5 6" >}}
 
 ## Implementation
 

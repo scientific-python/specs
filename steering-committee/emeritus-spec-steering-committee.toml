@@ -1,29 +1,29 @@
 [[item]]
 type = 'card'
 classcard = 'text-center'
-header = 'Julien Jerphanion'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/13029839?u=8ed5947e4c28ba2f19165b28b475198e3039f9f0&v=4"'
 alt = 'Avatar of Julien Jerphanion'
-{{< /image >}}'''
+{{< /image >}}
+Julien Jerphanion'''
 link = 'https://github.com/jjerphan'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-header = 'Lucy Liu'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/23182829?u=847be7a6e1eb5d5198d61c7f5ae093d11f2f9763&v=4"'
 alt = 'Avatar of Lucy Liu'
-{{< /image >}}'''
+{{< /image >}}
+Lucy Liu'''
 link = 'https://github.com/lucyleeow'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-header = 'Melissa Weber Mendonça'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/3949932?u=aacac68df60d2cf64c17c7e5aa17adf8b738aa7b&v=4"'
 alt = 'Avatar of Melissa Weber Mendonça'
-{{< /image >}}'''
+{{< /image >}}
+Melissa Weber Mendonça'''
 link = 'https://github.com/melissawm'
