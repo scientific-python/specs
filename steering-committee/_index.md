@@ -28,11 +28,11 @@ In particular, the Steering Committee members
 
 ### SPEC Steering Committee
 
-{{< grid1 file="spec-steering-committee.toml" columns="2 3 4 5" />}}
+{{< grid file="spec-steering-committee.toml" columns="2 3 4 5" />}}
 
 ### Emeritus SPEC Steering Committee
 
-{{< grid1 file="emeritus-spec-steering-committee.toml" columns="2 3 4 5" />}}
+{{< grid file="emeritus-spec-steering-committee.toml" columns="2 3 4 5" />}}
 
 ## Implementation
 
