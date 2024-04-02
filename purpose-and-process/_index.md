@@ -194,7 +194,7 @@ For example, to indicate adoption of SPECs 0, 1, and 4, we recommend the followi
 [[tab]]
 name = 'Rendered badge'
 content = '''
-[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-blue)](https://scientific-python.org/specs/)
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
 '''
 
 [[tab]]
@@ -202,7 +202,7 @@ name = 'Markdown'
 content = '''
 
 ```
-[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-blue)](https://scientific-python.org/specs/)
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
 ```
 
 '''
@@ -214,13 +214,57 @@ content = '''
 ```
 |Scientific Python Ecosystem Coordination|
 
-.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-blue
+.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038
    :target: https://scientific-python.org/specs/
 ```
 
 '''
 
 {{< /tabs >}}
+
+---
+
+#### Badges (without tabs)
+
+Projects can highlight their adoption of specific SPECs with a SPEC badge.
+For example, for SPEC 0, we recommend using
+
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
+
+In Markdown, use
+
+```
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
+```
+
+In reStructuredText, use
+
+```
+|SPEC 0 — Minimum Supported Dependencies|
+
+.. |SPEC 0 — Minimum Supported Dependencies| image:: https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038
+   :target: https://scientific-python.org/specs/spec-0000/
+```
+
+Alternatively, you can use one badge to indicate adoption of multiple SPECS.
+For example, to indicate adoption of SPECs 0, 1, and 4, we recommend the following
+
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
+
+In Markdown, use
+
+```
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
+```
+
+In reStructuredText, use
+
+```
+|Scientific Python Ecosystem Coordination|
+
+.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038
+   :target: https://scientific-python.org/specs/
+```
 
 ### New SPEC Proposals
 
