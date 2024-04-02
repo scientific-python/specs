@@ -194,7 +194,7 @@ For example, to indicate adoption of SPECs 0, 1, and 4, we recommend the followi
 [[tab]]
 name = 'Rendered badge'
 content = '''
-[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-blue)](https://scientific-python.org/specs/)
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
 '''
 
 [[tab]]
@@ -202,7 +202,7 @@ name = 'Markdown'
 content = '''
 
 ```
-[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-blue)](https://scientific-python.org/specs/)
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
 ```
 
 '''
@@ -214,7 +214,7 @@ content = '''
 ```
 |Scientific Python Ecosystem Coordination|
 
-.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-blue
+.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038
    :target: https://scientific-python.org/specs/
 ```
 
