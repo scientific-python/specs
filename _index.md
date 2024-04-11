@@ -7,9 +7,9 @@ SPECs provide recommendations for projects in the scientific Python ecosystem.
 Not all recommendations apply to all projects.
 All community members and ecosystem projects are welcome to participate in the SPEC process.
 The SPEC process is described in the
-[SPEC Purpose and Process](/purpose-and-process),
-[SPEC Steering Committee](/steering-committee), and
-[SPEC Core Projects](/core-projects) documents.
+[SPEC Purpose and Process](/specs/purpose-and-process),
+[SPEC Steering Committee](/specs/steering-committee), and
+[SPEC Core Projects](/specs/core-projects) documents.
 Community discussions take place on the
 [`SPECs` Discourse forum](https://discuss.scientific-python.org/c/specs/6).
 SPEC development takes place in the [SPEC repository](https://github.com/scientific-python/specs).
