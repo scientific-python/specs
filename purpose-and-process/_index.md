@@ -46,21 +46,21 @@ widely used in scientific research that interact well with one another and that
 follow similar norms of development, documentation, testing, and so forth.
 
 SPEC Core Projects
-: The [Core Projects]({{< relref "/core-projects" >}})
+: The [Core Projects](/core-projects)
 are a small subset of the ecosystem consisting of mature, community developed projects
 that are (a) depended upon by most of the other projects and (b) responsible for
 reviewing, discussing, implementing, and endorsing SPEC documents.
 
 SPEC Steering Committee
-: The [Steering Committee]({{< relref "/steering-committee" >}}) leads the SPEC project and
+: The [Steering Committee](/steering-committee) leads the SPEC project and
 manages the SPEC process including moderating
 the [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),
 accepting SPEC documents, and maintaining the SPEC process documents.
 
 SPEC Process
 : The SPEC process is outlined in this document and the associated
-[SPEC Steering Committee]({{< relref "/steering-committee" >}}) and
-[SPEC Core Projects]({{< relref "/core-projects" >}}) documents.
+[SPEC Steering Committee](/steering-committee) and
+[SPEC Core Projects](/core-projects) documents.
 This process is managed and overseen by the Steering Committee, and functions in collaboration
 with the Core Projects, community members, and projects across the ecosystem.
 
@@ -122,7 +122,7 @@ common concern and a general approach to a shared solution and (b) there
 are contributors (from at least two Core Projects) interested in working on the new SPEC
 and in championing it to their projects as well as the larger community.
 Additional details may be found in
-[Steering Committee documentation]({{< relref "/steering-committee" >}}).
+[Steering Committee documentation](/steering-committee).
 
 The **endorse decision** is made by the Core Projects.
 The Core Projects and interested community members revise the accepted SPEC in a
@@ -134,7 +134,7 @@ A SPEC is recommended for wide-spread adoption once it is endorsed by two (or mo
 Once a SPEC is recommended, substantive changes require the approval of all endorsing
 Core Projects.
 Additional details may be found in
-[Core Project documentation]({{< relref "/core-projects" >}}).
+[Core Project documentation](/core-projects).
 
 The **adopt decision** is made by individual projects according to their own decision-making
 processes.

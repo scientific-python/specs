@@ -11,18 +11,18 @@ author:
 The SPEC process is managed by the Steering Committee.
 The Steering Committee represents the interests of the ecosystem and the community.
 The Steering Committee also represent the interests of the
-[Core Projects]({{< relref "/core-projects" >}})
+[Core Projects](/core-projects)
 and is composed partially of individuals who are active Core Project contributors.
 In particular, the Steering Committee members
 
 - monitor the
   [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),
 - determine which proposed SPECs are accepted as described in the [SPEC
-  Purpose and Process]({{< relref "/purpose-and-process" >}}),
+  Purpose and Process](/purpose-and-process),
 - approve changes to the SPEC process including to the
-  [SPEC Purpose and Process]({{< relref "/purpose-and-process" >}}),
-  [SPEC Steering Committee]({{< relref "/steering-committee" >}}), and
-  [SPEC Core Projects]({{< relref "/core-projects" >}}), as well as
+  [SPEC Purpose and Process](/purpose-and-process),
+  [SPEC Steering Committee](/steering-committee), and
+  [SPEC Core Projects](/core-projects), as well as
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
@@ -55,9 +55,9 @@ appropriate,[^accept] objections should be rare.
 ### How is the SPEC process changed?
 
 The Steering Committee makes decisions about changing the SPEC process documents
-([SPEC Purpose and Process]({{< relref "/purpose-and-process" >}}),
-[SPEC Steering Committee]({{< relref "/steering-committee" >}}), and
-[SPEC Core Projects]({{< relref "/core-projects" >}}))
+([SPEC Purpose and Process](/purpose-and-process),
+[SPEC Steering Committee](/steering-committee), and
+[SPEC Core Projects](/core-projects))
 through group consensus and, in the very rare instance
 where no consensus can be reached, by two-thirds majority vote of those
 available to cast a vote within ten days.
