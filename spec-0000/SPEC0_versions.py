@@ -1,5 +1,4 @@
 import requests
-import itertools
 import collections
 from datetime import datetime, timedelta
 
@@ -29,12 +28,18 @@ core_packages = [
 ]
 plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
-delta6month = timedelta(days=int(365 // 2))
 
 # Release data
 
-now = datetime.now()
-cutoff = now - delta6month
+# put cutoff 3 quarters ago – we do not use "just" -9 month,
+# to avoid the content of the quarter to change depending on when we generate this
+# file during the current quarter.
+
+current_date = pd.Timestamp.now()
+current_quarter_start = pd.Timestamp(
+    current_date.year, (current_date.quarter - 1) * 3 + 1, 1
+)
+cutoff = current_quarter_start - pd.DateOffset(months=9)
 
 
 def get_release_dates(package, support_time=plus24):
