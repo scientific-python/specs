@@ -2,8 +2,8 @@
 title: "SPEC 7 — Seeding pseudo-random number generation"
 date: 2023-04-19
 author:
-  - Other participants in the discussion <not.yet@named.org>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
+  - Other participants in the discussion <not.yet@named.org>"
 discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
 ---
@@ -17,8 +17,14 @@ If relevant, include examples of how the new functionality would be used,
 intended use-cases, and pseudo-code illustrating its use.
 -->
 
-There is disparity in the APIs libraries use to seed random number generation.
-The goal of this SPEC is suggest a single, pragmatic API for the ecosystem, taking into account technical and historical factors.
+There is disparity in the APIs libraries provide to seed random number generation.
+This SPEC suggests a single, pragmatic API for the ecosystem, taking into account technical and historical factors.
+Adopting such a uniform API will simplify the user experience, especially for those who rely on multiple projects.
+
+Specifically, we recommend to:
+
+- Deprecate the use of `RandomState` and `np.random.seed`.
+- Standardize usage and interpretation of an `rng` keyword for seeding.
 
 ### Concepts
 
@@ -60,12 +66,12 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
 The following users will be affected:
 
-1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before.
+1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before. To ensure that this does not go unnoticed, NumPy will raise a `FutureWarning` when `np.random.seed` is called.
 
    Such code will, in effect, go from being seeded to being unseeded.
    To avoid that from happening, the code will have to be modified to pass in explicitly an `rng` argument on each function call.
 
-2. Those who do not seed. These users _probably_ care more about _distributions_ of pseudo-random numbers, rather than the numbers themselves. But, because they do not provide an explicit seed, their code will, after the deprecation period, use the newly proposed default.
+2. Those who do not seed. Their code will, after the deprecation period, use the newly proposed default. Since they were already not requesting repeatable sequences, and since the underlying _distributions_ of pseudo-random numbers did not change, they should be unaffected.
 
 3. Users of `random_state=...`. Support for the `random_state` argument may be dropped eventually, but meanwhile we can provide clear guidance, via deprecation warnings and documentation, on how to migrate to the new `rng` keyword.
 
