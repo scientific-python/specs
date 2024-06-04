@@ -48,8 +48,8 @@ Legacy behavior in packages such as scikit-learn (`sklearn.utils.check_random_st
 
 Two strong motivations for moving over to `Generator`s are:
 
-(1) it avoids naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
-(2) it avoids using global state for seeding.
+(1) they avoid naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
+(2) they avoid using global state (from `np.random.mtrand._rand`).
 
 Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen[^hinsen] principle.
 
