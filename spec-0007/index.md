@@ -151,6 +151,14 @@ def _prepare_rng(old_name, dep_version=None):
             return fun(*args, **kwargs)
         return wrapper
     return decorator
+
+
+@_prepare_rng("random_state")
+def library_function(/, rng=None):
+    # The decorated library function takes an `rng` argument which is
+    # guaranteed to be a either a Generator or a RandomState.
+    # `random_state=` is supported input (the old can be customized).
+    assert isinstance(rng, (np.random.Generator, np.random.RandomState))
 ```
 
 ### Core Project Endorsement
