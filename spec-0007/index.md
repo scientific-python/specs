@@ -3,6 +3,7 @@ title: "SPEC 7 — Seeding pseudo-random number generation"
 date: 2023-04-19
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
+  - "Sebastian Berg <sebastianb@nvidia.com>"
   - Other participants in the discussion <not.yet@named.org>"
 discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
@@ -66,7 +67,7 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
 The following users will be affected:
 
-1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before. To ensure that this does not go unnoticed, NumPy will raise a `FutureWarning` when `np.random.seed` is called.
+1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before. To ensure that this does not go unnoticed, the library will raise a `FutureWarning` if `np.random.seed` was called earlier.
 
    Such code will, in effect, go from being seeded to being unseeded.
    To avoid that from happening, the code will have to be modified to pass in explicitly an `rng` argument on each function call.
@@ -79,7 +80,78 @@ The following users will be affected:
 
 ### Code
 
-TODO: Add example `check_random_state` implementation.
+For example, SciPy may implement this with the following decorator to support both names.
+This is implemented using:
+1. A `check_random_state` function which normalizes the either old or new input to a `Generator` or `RandomState` object.
+   This function only gives a `FutureWarning` when users (probably) NumPy's global legacy `RandomState`.  As noted in point 1. above.
+2. A decorator to deal with the rename changes.  In future versions this will deprecate the old keyword.  At this time, it will ensure that the documentation and auto-completion only shows the new parameter name.
+   Delaying the deprecation ensures that downstream users can switch to `rng=` on all supported SciPy versions when the deprecation happens.
+
+```python
+_NoValue = object()  # singleton to indicate not explicitly passed
+
+
+def check_random_state(seed=_NoValue, rng=_NoValue):
+    if rng is not _NoValue and seed is not _NoValue:
+        raise TypeError("cannot pass both `rng=` and `random_state=` at the same time.")
+    if rng is not _NoValue:
+        return np.random.default_rng(rng)
+
+    if seed is _NoValue:
+        # If the user passed nothing, we have to reach into NumPy here:
+        # 1. If np.random.seed(None) was called (or never called), then we can
+        #    just use the default_rng (the result is random anyway).
+        # 2. If it was called, we must return the global random state object
+        #    and warn about future ignoring of seed!
+        if np.random.mtrand._rand._bit_generator._seed_seq is not None:
+            # The user did not seed, so no need to warn.
+            return np.random.default_rng()
+        warnings.warn(
+            "The NumPy global rng was seeded in call to np.random.seed() "
+            "in the future this function will ignore this seed and return "
+            "random values as if a new `np.random.default_rng()` was created.",
+            FutureWarning, stacklevel=5)
+        return np.random.mtrand._rand
+    if seed is None or seed is np.random:
+        return np.random.mtrand._rand
+    if isinstance(seed, (numbers.Integral, np.integer)):
+        return np.random.RandomState(seed)
+    if isinstance(seed, (np.random.RandomState, np.random.Generator)):
+        return seed
+
+    raise ValueError(f"'{seed}' cannot be used to seed a numpy.random.RandomState"
+                     " instance")
+
+
+def _prepare_rng(old_name, dep_version=None):
+    new_name = "rng"
+
+    def decorator(fun):
+        @functools.wraps(fun)
+        def wrapper(*args, **kwargs):
+            if old_name in kwargs:
+                if dep_version:
+                    end_version = dep_version.split('.')
+                    end_version[1] = str(int(end_version[1]) + 2)
+                    end_version = '.'.join(end_version)
+                    message = (f"Use of keyword argument `{old_name}` is "
+                               f"deprecated and replaced by `{new_name}`.  "
+                               f"Support for `{old_name}` will be removed "
+                               f"in SciPy {end_version}.")
+                    warnings.warn(message, DeprecationWarning, stacklevel=2)
+                if new_name in kwargs:
+                    message = (f"{fun.__name__}() got multiple values for "
+                               f"argument now known as `{new_name}`")
+                    raise TypeError(message)
+
+            kwargs[new_name] = check_random_state(
+                kwargs.pop(old_name, _NoValue),
+                rng=kwargs.pop(new_name, _NoValue)
+            )
+            return fun(*args, **kwargs)
+        return wrapper
+    return decorator
+```
 
 ### Core Project Endorsement
 
