@@ -14,6 +14,7 @@ author:
 discussion: https://discuss.scientific-python.org/t/spec-4-nightly-wheels/474
 endorsed-by:
   - ipython
+  - matplotlib
   - networkx
   - numpy
   - scikit-image
