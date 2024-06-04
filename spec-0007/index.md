@@ -60,7 +60,7 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
    A DeprecationWarning is raised to warn about a future change in behavior.
 3. After <X time>, use only `rng`, seeding with `default_rng(rng)`.
    Raise an error if `random_state` is provided.
-4. At a time of the lirbrary's choosing, remove any machinery related to `random_state`.
+4. At a time of the library's choosing, remove any machinery related to `random_state`.
 
 ### Impact
 
