@@ -16,6 +16,7 @@ author:
 discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
 endorsed-by:
   - ipython
+  - matplotlib
   - networkx
   - numpy
   - scikit-image
