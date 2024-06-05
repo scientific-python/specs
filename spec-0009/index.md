@@ -114,7 +114,7 @@ model; eventually, they grow and adopt more open models.
 
 A few things you should consider while choosing the right model:
 
--  **Project lifecycle stage**
+- **Project lifecycle stage**
   - Early stage
   - Growth stage
   - Mature stage
