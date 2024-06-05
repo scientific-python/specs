@@ -158,7 +158,7 @@ be followed to ensure smooth implementation and operation.
     and what it means for the community
 - **Implement the governance structure**
   - Assign initial roles and responsibilities
-  - Form any necessary commiittees, councils, or boards as defined by the
+  - Form any necessary committees, councils, or boards as defined by the
     governance model
 - **Fostering community engagement and ensuring transparency and
   accountability**
