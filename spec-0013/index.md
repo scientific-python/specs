@@ -4,7 +4,7 @@ number: 13
 date: 2024-06-05
 author:
   - "Pamphile Roy <roy.pamphile@gmail.com>"
-  - "Matthias Bussonnier <>"
+  - "Matthias Bussonnier <bussonniermatthias@gmail.com>"
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-13-recommended-targets-and-naming-conventions
 endorsed-by:
