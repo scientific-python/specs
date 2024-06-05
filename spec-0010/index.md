@@ -21,18 +21,18 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 
 ### Ecosystem Adoption
 
-The endorsement of this SPEC signifies your project's support for the guidelines 
+The endorsement of this SPEC signifies your project's support for the guidelines
 laid out in the document.
 
 ## Implementation
 
-Keeping a clear, organized, and human-readable record of notable changes for each 
-version of a Python library is essential for the project’s maintenance and sustainability. 
+Keeping a clear, organized, and human-readable record of notable changes for each
+version of a Python library is essential for the project’s maintenance and sustainability.
 It promotes transparency and trust between the project’s leadership team, developers, and users.
 
 ### What Is a Changelog?
 
-A changelog is a file which contains a curated, chronologically ordered list of 
+A changelog is a file which contains a curated, chronologically ordered list of
 notable changes for each version of a project.
 
 ### Guiding Principles
@@ -55,11 +55,13 @@ notable changes for each version of a project.
 - **Security**: Vulnerability fixes.
 
 ### Standard Changelog Format
+
 There is not one standard changelog format.
 
 ADD EXAMPLES
 
 ### Naming the Changelog File
+
 CHANGELOG, HISTORY, NEWS, or RELEASES are widely accepted names for changelog files.
 
 ### GitHub Releases
@@ -73,10 +75,11 @@ TO DO
 ### Editing a Changelog
 
 It is generally acceptable to edit a changelog for the following reasons:
-- maintaining accuracy of the records about the changes in each release (e.g., 
-adding essential information that was left out when the initial changelog was published)
-- improving clarity and readability of the change log. Try to avoid nitpicking when 
-making edits to the changelog.
+
+- maintaining accuracy of the records about the changes in each release (e.g.,
+  adding essential information that was left out when the initial changelog was published)
+- improving clarity and readability of the change log. Try to avoid nitpicking when
+  making edits to the changelog.
 
 ## Notes
 
