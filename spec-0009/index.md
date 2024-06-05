@@ -126,7 +126,7 @@ A few things you should consider while choosing the right model:
 - **Community dynamics**
   - Large, diverse communities might benefit from democratic or meritocratic
     models to represent various interests
-  - Smaller, homogenous communities are more suited for a BDFL model
+  - Smaller, homogeneous communities are more suited for a BDFL model
 - **Technical and Operational Complexity**
   - Complex projects with numerous sub-projects or components may need a
     structured governance model to manage them effectively
@@ -157,7 +157,7 @@ be followed to ensure smooth implementation and operation.
   - Provide an overview of how the governance model works, why it was chosen,
     and what it means for the community
 - **Implement the governance structure**
-  - Assign initial roles and responsibilites
+  - Assign initial roles and responsibilities
   - Form any necessary commiittees, councils, or boards as defined by the
     governance model
 - **Fostering community engagement and ensuring transparency and
