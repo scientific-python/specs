@@ -44,8 +44,6 @@ Briefly discuss what it means for a project to adopt this SPEC.
 
 ## Implementation
 
-**Governance**
-
 ### Defining governance
 
 Governance are set of rules or customs that defines who gets to do what (and how
@@ -117,9 +115,9 @@ model; eventually, they grow and adopt more open models.
 A few things you should consider while choosing the right model:
 
 -  **Project lifecycle stage**
-  -  Early stage
-  -  Growth stage
-  -  Mature stage
+  - Early stage
+  - Growth stage
+  - Mature stage
 - **Assess your project's needs and goals**
   - Project size and complexity
   - Community involvement
