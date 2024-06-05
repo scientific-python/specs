@@ -70,7 +70,7 @@ projects. We'll mention them here for reference:
 - Meritocracy / Do-ocracy
   - Decisions are made by contributors who have demonstrated merit through
     their contributions to the project. Merit is often gained through
-    contributions of code, documentation, or other significant efforts. 
+    contributions of code, documentation, or other significant efforts.
   - Meritocracy model template → http://oss-watch.ac.uk/resources/meritocraticgovernancemodel
 - Self appointing council / committee / board
   - This model appoints a board or committee to govern various aspects of a
@@ -103,7 +103,7 @@ projects. We'll mention them here for reference:
     possible.
   - Example: Node.js liberal contribution policy → https://medium.com/the-node-js-collection/healthy-open-source-967fa8be7951
 - C4 (Collective Code Construction Contract)
-  - https://rfc.zeromq.org/spec/22/ 
+  - https://rfc.zeromq.org/spec/22/
 
 ### Choosing the right governance model
 
@@ -121,7 +121,7 @@ A few things you should consider while choosing the right model:
 - **Assess your project's needs and goals**
   - Project size and complexity
   - Community involvement
-- **Evaluate available resources** 
+- **Evaluate available resources**
   - Leadership and management capacity
 - **Community dynamics**
   - Large, diverse communities might benefit from democratic or meritocratic
@@ -134,7 +134,7 @@ A few things you should consider while choosing the right model:
   - Choose a model that allows for future adjustments as the project evolves
   - Implement mechanisms for regular feedback from the community on governance
     effectiveness
-- **External Stakeholders** 
+- **External Stakeholders**
   - Consider how partnerships with other projects, organizations, or companies
     might influence governance
 - **Legal and financial considerations**
@@ -161,7 +161,7 @@ be followed to ensure smooth implementation and operation.
   - Form any necessary commiittees, councils, or boards as defined by the
     governance model
 - **Fostering community engagement and ensuring transparency and
-    accountability** 
+  accountability**
   - Provide regular updates and reports to the community on governance
     activities, decisions, and project progress
   - Establish mechanisms for the community to provide feedback on the
@@ -174,7 +174,6 @@ be followed to ensure smooth implementation and operation.
     and governance bodies. Ensure these mechanisms are fair, transparent,
     account for diversity and inclusion, and accessible to all community
     members.
-
 
 ## Notes
 
