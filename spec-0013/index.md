@@ -14,7 +14,7 @@ endorsed-by:
 
 For consistency and decreased cognitive load across the ecosystem, this SPEC recommends naming conventions around various project aspects--such as project structure, repository layout, folder names, task runner and `pyproject.toml` targets name.
 
-From a cursory survey in the Scientific Python ecosystem, we discover some frustration from contributors and maintainer when moving from one project to another and belive that consistency will make it both easier for existing maintainer to contribute to manz project as well a decreae the confusion of new developers when contributing or creating new proejcts.
+From a cursory survey in the Scientific Python ecosystem, we discover some frustration from contributors and maintainer when moving from one project to another and belive that consistency will make it both easier for existing maintainer to contribute to project as well a decrease the confusion of new developers when contributing or creating new projects.
 
 ## Implementation
 
