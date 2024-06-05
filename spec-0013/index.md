@@ -23,23 +23,30 @@ another and believe that consistency will make it both easier for existing
 maintainer to contribute to project as well a decrease the confusion of new
 developers when contributing or creating new projects.
 
+There seem to be a strong consensus with preference for `docs` in favor of
+`docs`, and a preference for `tests` in favor of `test`.
+
+We will note though that the _extra_ optional dependencies on PyPI seem to favor
+`test` (present on 7573 packages) vs `tests` (2362 times).
+
 ## Implementation
 
-We recommend that by default the targets and folder names:
+For the tie being we will not pronounce ourselves on the optional extra
+`extra` dependency for `pyproject.toml`.
 
-- related to testing be named `tests` (and not `test`)
-- related to documentation be named `docs` (and not `doc`)
-- both should be lowercase.
+For other targets and folders we recommend that:
 
-It is ok to have the singular aliases, but the plurals should always be the default.
+- Targets related to testing be named `tests` (and not `test`). For example
+  `spin tests`, `python dev.py tests`, `nox -s tests`.
+- Folders containing tests be names `tests`.
+- Targets related to documentations be named `docs` (and not `doc`). For example
+  `spin docs`, `make docs`, `tox -s docs`.
+- That the documentation `extra` optional dependency be named `docs` (and not
+  doc), so that docs dependencies can be installed with `pip install .[docs]`
+- Use lowercase.
 
-### Examples
-
-pyproj.toml
-docs folder
-pip install .[]
-spin and dev.py
-tox
+It is appropriate to have the singular aliases to ease transition, but the
+plurals should always be the default.
 
 ## Notes
 
