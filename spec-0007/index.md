@@ -67,7 +67,7 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
 The following users will be affected:
 
-1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before. To ensure that this does not go unnoticed, the library will raise a `FutureWarning` if `np.random.seed` was called earlier.
+1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before. To ensure that this does not go unnoticed, the library should raise a `FutureWarning` if `np.random.seed` was called earlier (we show how to do that further down).
 
    Such code will, in effect, go from being seeded to being unseeded.
    To avoid that from happening, the code will have to be modified to pass in explicitly an `rng` argument on each function call.
@@ -80,11 +80,11 @@ The following users will be affected:
 
 ### Code
 
-For example, SciPy may implement this with the following decorator to support both names.
+As an example, consider how SciPy would transition from the `seed` to the `rng` keyword using a decorator.
 This is implemented using:
-1. A `check_random_state` function which normalizes the either old or new input to a `Generator` or `RandomState` object.
+1. A `check_random_state` function which normalizes either old (`seed`) or new (`rng`) input to a `Generator` object.
    This function only gives a `FutureWarning` when users (probably) NumPy's global legacy `RandomState`.  As noted in point 1. above.
-2. A decorator to deal with the rename changes.  In future versions this will deprecate the old keyword.  At this time, it will ensure that the documentation and auto-completion only shows the new parameter name.
+2. A decorator to deal with the `seed` to `rng` keyword rename.  In future versions, this will deprecate the `seed` keyword. Meanwhile, it ensures that the documentation and auto-completion only advertises the new parameter name.
    Delaying the deprecation ensures that downstream users can switch to `rng=` on all supported SciPy versions when the deprecation happens.
 
 ```python
