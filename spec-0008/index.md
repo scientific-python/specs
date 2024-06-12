@@ -44,10 +44,10 @@ The release process should be clearly and fully documented in the developer docu
 
 ### Hardening workflow environment permissions
 
-Workflows that publish release artifacts should have _run triggers_ that require intentional actions by maintainers (e.g., `on workflow_dispatch` in GitHub Actions) and require multiple maintainers to approve the workflow to run (c.f. "Use GitHub Actions environments" section below).
+Workflows that publish release artifacts should have _run triggers_ that require intentional actions by maintainers (e.g., `workflow_dispatch` in GitHub Actions) and require multiple maintainers to approve the workflow to run (c.f. "Use GitHub Actions environments" section below).
 This is to safeguard the project from any one maintainer having the ability to commit to the default branch and make a release directly.
 
-It is also strongly recommended that the repository requires signed commits so that all releases have a verified commit to which they correspond.
+It is also strongly recommended that the repository requires [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) so that all releases have a verified commit to which they correspond.
 The branch from which the release is made should also be protected.
 
 #### Restrict permissions in CI runners to the minimum required
@@ -77,7 +77,7 @@ Consult [Managing GitHub Actions permissions for your repository](https://docs.g
 
 #### Use GitHub Actions environments
 
-Use a GitHub Actions environment
+Use a [GitHub Actions environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
 
 ```yaml
 environment:
@@ -120,7 +120,7 @@ updates:
 
 A component of SLSA is [software attestation](https://slsa.dev/attestation-model) which allows for public validation of software artifacts and provenance.
 GitHub provides the [`actions/attest-build-provenance`](https://github.com/actions/attest-build-provenance) GitHub Action which implements SLSA to generate signed build provenance attestations for workflow artifacts.
-Attestations are publishes to the project GitHub under `https://github.com/ORG/PROJECT/attestations/`.
+Attestations are published to the project GitHub under `https://github.com/ORG/PROJECT/attestations/`.
 
 ```yaml
 - uses: actions/attest-build-provenance@<full action commit SHA> # vX.Y.Z
@@ -171,7 +171,7 @@ jobs:
 
 ### Example workflow
 
-The following is a complete example of workflow which can be used as a starting point:
+The following is a complete example of a workflow which can be used as a starting point:
 
 ```yaml
 name: publish distributions
