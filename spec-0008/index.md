@@ -132,15 +132,15 @@ GitHub has also added the [`gh attestation verify`](https://cli.github.com/manua
 This can be used by individual users and also in GitHub Actions workflows where the GitHub CLI utility is installed by default.
 
 ```yaml
-- name: Verify sdist artifact attestation
+- name: Verify artifact attestation
   env:
     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  run: gh attestation verify dist/<package name>-*.tar.gz --repo ${{ github.repository }}
-
-- name: Verify wheel artifact attestations
-  env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  run: gh attestation verify dist/<package name>-*.whl --repo ${{ github.repository }}
+  shell: bash
+  run: |
+    for artifact in dist/*; do
+        echo "# ${artifact}"
+        gh attestation verify "${artifact}" --repo ${{ github.repository }}
+    done
 ```
 
 ### Adopt OIDC through the use of PyPI Trusted Publishers
@@ -205,15 +205,15 @@ jobs:
         with:
           subject-path: "dist/<package name>-*"
 
-      - name: Verify sdist artifact attestation
+      - name: Verify artifact attestation
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh attestation verify dist/<package name>-*.tar.gz --repo ${{ github.repository }}
-
-      - name: Verify wheel artifact attestations
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh attestation verify dist/<package name>-*.whl --repo ${{ github.repository }}
+        shell: bash
+        run: |
+          for artifact in dist/*; do
+              echo "# ${artifact}"
+              gh attestation verify "${artifact}" --repo ${{ github.repository }}
+          done
 
       - name: Publish distribution to PyPI
         uses: pypa/gh-action-pypi-publish@<full action commit SHA> # vX.Y.Z
