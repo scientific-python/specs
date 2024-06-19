@@ -61,7 +61,7 @@ When you define governance for a project, you need to identify a few things:
   play in the project?
 - What authority, duties, and privileges are associated with each role?
 - How do people get assigned to and removed from roles?
-- How decisions are made and documented within the project?
+- How are decisions made and documented within the project?
 - What are the methods for resolving conflicts?
 
 There are few **pre-defined models** for governance used across open-source
