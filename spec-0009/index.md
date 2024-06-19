@@ -85,8 +85,7 @@ projects. We'll mention them here for reference:
     model might be helpful for projects that need a sponsoring foundation,
     and establishing electoral mechanisms is challenging.
 - Electoral
-  - The electoral governance model in open-source projects is a structured
-    approach in which the community elects the leadership or decision-making
+  - The community elects the leadership or decision-making
     body. This model aims to ensure that those who guide the project's
     direction and make crucial decisions are chosen democratically,
     representing the broader community's interests.
