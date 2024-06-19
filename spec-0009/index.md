@@ -177,7 +177,6 @@ be followed to ensure smooth implementation and operation.
 
 ## Notes
 
-<!--
-Include a bulleted list of annotated links, comments,
-and other ancillary information as needed.
--->
+- OSSWatch resource on [Governance models](http://oss-watch.ac.uk/resources/governancemodels)
+
+- Chapter - [Project and Community Governance](https://www.theopensourceway.org/the_open_source_way-guidebook-2.0.html#_project_and_community_governance) from [The Open Source Way](https://www.theopensourceway.org/) Guidebook
