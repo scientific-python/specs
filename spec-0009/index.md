@@ -52,10 +52,7 @@ Briefly discuss what it means for a project to adopt this SPEC.
 
 ## Implementation
 
-### Defining governance
-
-Governance are set of rules or customs that defines who gets to do what (and how
-they are supposed to do it).
+### Choosing a governance model
 
 When you define governance for a project, you need to identify a few things:
 
