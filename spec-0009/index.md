@@ -51,7 +51,7 @@ they are supposed to do it).
 
 When you define governance for a project, you need to identify a few things:
 
-- What roles does maintainers, core-team, contributors and community members
+- What roles does maintainers, core team, contributors, and community members
   play in the project?
 - What duties, privileges, and authority are associate with each role?
 - How do people get assigned to and removed from roles?
