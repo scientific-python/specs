@@ -14,10 +14,15 @@ This SPEC describes what governance is, and offers recommendations for choosing 
 governance model for open-source projects.
 
 Open-source project communities are amalgamations of software and the humans who
-use and maintain it. We have various systems, like governance models, which
-define certain roles for participating members in the project, and a code of
-conduct, which protects and fosters a safe and collaborative environment for
-the community.
+use and maintain it. Governance models define methods for decision-making within a
+project, roles for the community members imbued with decision-making authority, and
+processes for filling (and if needed, vacating) those leadership roles.
+In the context of open-source software projects, governance models often also define the
+granting of necessary permissions or access to organization secrets necessary for the
+implementation of project-related decisions. Governance models are complementary to
+Codes of Conduct and Community Guidelines, which define the expectations and
+responsibilities of all participants in a project (including users of the software),
+regardless of their status as a project leader (cf. SPEC XXX).
 
 Having a robust system in place ensures the long-term sustainability of the
 project.
