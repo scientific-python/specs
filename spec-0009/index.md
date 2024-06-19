@@ -75,7 +75,7 @@ projects. We'll mention them here for reference:
 - Meritocracy / Do-ocracy
   - Decisions are made by contributors who have demonstrated merit through
     their contributions to the project. Merit is often gained through
-    contributions of code, documentation, or other significant efforts.
+    code contributions, documentation improvements, or other significant efforts.
   - Meritocracy model template → http://oss-watch.ac.uk/resources/meritocraticgovernancemodel
 - Self appointing council / committee / board
   - This model appoints a board or committee to govern various aspects of a
