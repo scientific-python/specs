@@ -20,7 +20,7 @@ Having a robust system in place ensures the long-term sustainability of the
 project.
 
 The OS communities interact and contribute through various mediums, such as
-GitHub, a chat platform, social media, blog posts, etc., and having guidelines
+distributed version control systems, chat platforms, social media, blog posts, etc. Having clear guidelines
 for contributions helps maintain a continuous stream of contributions.
 
 This SPEC outlines the definition of governance, various open-source governance
