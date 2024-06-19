@@ -10,6 +10,9 @@ endorsed-by:
 
 ## Description
 
+This SPEC describes what governance is, and offers recommendations for choosing a
+governance model for open-source projects.
+
 Open-source project communities are amalgamations of software and the humans who
 use and maintain it. We have various systems, like governance models, which
 define certain roles for participating members in the project, and a code of
