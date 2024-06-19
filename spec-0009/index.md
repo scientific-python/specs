@@ -111,14 +111,14 @@ projects. We'll mention them here for reference:
 - C4 (Collective Code Construction Contract)
   - https://rfc.zeromq.org/spec/22/
 
-### Choosing the right governance model
+### How to pick the appropriate governance model?
 
 Choosing the right governance model for your open-source project involves
 considering several factors to ensure the structure aligns with your project’s
 goals, community, and resources. Most open-source projects start with the BDFL
 model; eventually, they grow and adopt more open models.
 
-A few things you should consider while choosing the right model:
+A few things you should consider while choosing the appropriate model for your project:
 
 - **Project lifecycle stage**
   - Early stage
