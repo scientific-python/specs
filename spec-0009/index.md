@@ -90,10 +90,6 @@ projects. We'll mention them here for reference:
     body. This model aims to ensure that those who guide the project's
     direction and make crucial decisions are chosen democratically,
     representing the broader community's interests.
-- Corporate backed / Single vendor
-  - A single company or organization controls the project, often making
-    decisions internally. The company might appoint maintainers and decide
-    the project's direction.
 - Foundation backed
   - A non-profit foundation oversees the project, and its governance
     structures often include a board of directors, technical committees, and
