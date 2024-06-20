@@ -4,7 +4,9 @@ number: 9
 date: 2024-06-04
 author:
   - "Sanket Verma <svsanketverma5@gmail.com>"
+  - "Inessa Pawson <inessapawson@gmail.com>"
   - "Daniel McCloy <dan@mccloy.info>"
+  - "Matt Haberland <mhaberla@calpoly.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-9-governance/1229
 endorsed-by:
 ---
