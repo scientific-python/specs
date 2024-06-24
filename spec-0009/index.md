@@ -29,7 +29,7 @@ participants in a project (including users of the software), regardless of
 their status as a project leader (cf. SPEC XXX), ensuring the long-term
 sustainability of a project.
 
-The OS communities interact and contribute through various mediums, such as
+The open source communities interact and contribute through various mediums, such as
 distributed version control systems, chat platforms, social media, blog posts, etc. Having clear guidelines
 for participation helps maintain a continuous stream of contributions.
 
