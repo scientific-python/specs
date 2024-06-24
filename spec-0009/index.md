@@ -29,9 +29,10 @@ participants in a project (including users of the software), regardless of
 their status as a project leader (cf. SPEC XXX), ensuring the long-term
 sustainability of a project.
 
-The open source communities interact and contribute through various mediums, such as
-distributed version control systems, chat platforms, social media, blog posts, etc. Having clear guidelines
-for participation helps maintain a continuous stream of contributions.
+The open source communities interact and contribute through various mediums,
+such as distributed version control systems, chat platforms, blog posts,
+discussion forums, mailing lists, and social media. Having clear guidelines for
+participation helps maintain a continuous stream of contributions.
 
 This SPEC outlines the definition of governance, various open-source governance
 models, the steps to choose the right governance model, and what needs to be
