@@ -84,7 +84,7 @@ projects. We'll mention them here for reference:
     project. Those groups are often called the steering committee, committer
     council, technical operation committee, board of directors, etc. This
     model might be helpful for projects that need a sponsoring foundation,
-    and establishing electoral mechanisms is challenging.
+    and projects for which establishing electoral mechanisms is challenging.
 - Electoral
   - The community elects the leadership or decision-making
     body. This model aims to ensure that those who guide the project's
