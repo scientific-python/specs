@@ -4,6 +4,7 @@ date: 2023-04-19
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Sebastian Berg <sebastianb@nvidia.com>"
+  - "Pamphile Roy <roy.pamphile@gmail.com>"
   - Other participants in the discussion <not.yet@named.org>"
 discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
