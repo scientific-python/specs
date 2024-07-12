@@ -83,11 +83,12 @@ The following users will be affected:
 
 As an example, consider how SciPy would transition from the `seed` to the `rng` keyword using a decorator.
 This is implemented using:
+
 1. A `check_random_state` function which normalizes either old (`seed`) or new (`rng`) input to a `Generator` object.
    If neither `seed` nor `rng` was passed but the user has previously called `np.random.seed()`
    this function gives a `FutureWarning` because the behavior will change as noted in
    the Impact section point 1.
-2. A decorator to deal with the `seed` to `rng` keyword rename.  In future versions, this will deprecate the keyword-only parameter `seed`. Meanwhile, it ensures that the documentation and auto-completion only advertises the new parameter name.
+2. A decorator to deal with the `seed` to `rng` keyword rename. In future versions, this will deprecate the keyword-only parameter `seed`. Meanwhile, it ensures that the documentation and auto-completion only advertises the new parameter name.
    Delaying the deprecation ensures that downstream users can switch to `rng=` on all supported SciPy versions when the deprecation happens.
 
 ```python
