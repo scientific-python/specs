@@ -87,7 +87,7 @@ This is implemented using:
    If neither `seed` nor `rng` was passed but the user has previously called `np.random.seed()`
    this function gives a `FutureWarning` because the behavior will change as noted in
    the Impact section point 1.
-2. A decorator to deal with the `seed` to `rng` keyword rename.  In future versions, this will deprecate the `seed` keyword. Meanwhile, it ensures that the documentation and auto-completion only advertises the new parameter name.
+2. A decorator to deal with the `seed` to `rng` keyword rename.  In future versions, this will deprecate the keyword-only parameter `seed`. Meanwhile, it ensures that the documentation and auto-completion only advertises the new parameter name.
    Delaying the deprecation ensures that downstream users can switch to `rng=` on all supported SciPy versions when the deprecation happens.
 
 ```python
