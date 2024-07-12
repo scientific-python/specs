@@ -90,10 +90,11 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
 The following users will be affected:
 
-1. Those who use `np.random.seed`. The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before. To ensure that this does not go unnoticed, the library should raise a `FutureWarning` if `np.random.seed` was called earlier (we show how to do that further down).
+1. Those who use `np.random.seed`.
+   The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after a certain deprecation period, start seeing a different stream of random numbers than before.
+   To ensure that this does not go unnoticed, the library should raise a `FutureWarning` if `np.random.seed` was called earlier (we show how to do that further down).
 
-   Such code will, in effect, go from being seeded to being unseeded.
-   To avoid that from happening, the code will have to be modified to pass in explicitly an `rng` argument on each function call.
+   Code will, in effect, go from being seeded to being unseeded. To avoid that from happening, users should switch from using `np.random.seed` to specifying the `rng` argument to all functions that allow it.
 
 2. Those who do not seed. Their code will, after the deprecation period, use the newly proposed default. Since they were already not requesting repeatable sequences, and since the underlying _distributions_ of pseudo-random numbers did not change, they should be unaffected.
 
