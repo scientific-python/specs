@@ -69,6 +69,23 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
    Raise an error if `random_state` is provided.
 4. At a time of the library's choosing, remove any machinery related to `random_state`.
 
+   By now, the function signature, with type annotations, could look like this:
+
+   ```python
+   from collections.abc import Sequence
+   import numpy as np
+
+
+   SeedLike = int | np.integer | Sequence[int] | np.random.SeedSequence
+   RNGLike = np.random.Generator | np.random.BitGenerator
+
+
+   def my_func(rng: RNGLike | SeedLike | None = None):
+       rng = np.random.default_rng(rng)
+       ...
+
+   ```
+
 ### Impact
 
 The following users will be affected:
