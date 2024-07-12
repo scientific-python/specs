@@ -98,7 +98,9 @@ The following users will be affected:
 
 2. Those who do not seed. Their code will, after the deprecation period, use the newly proposed default. Since they were already not requesting repeatable sequences, and since the underlying _distributions_ of pseudo-random numbers did not change, they should be unaffected.
 
-3. Users of `random_state=...`. Support for the `random_state` argument may be dropped eventually, but meanwhile we can provide clear guidance, via deprecation warnings and documentation, on how to migrate to the new `rng` keyword.
+3. Users of `random_state=...`.
+   Support for the `random_state` argument may be dropped eventually, at which point using that keyword will raise an error.
+   Meanwhile we can provide clear guidance, via deprecation warnings and documentation, on how to migrate to the new `rng` keyword.
 
 [^hinsen]: The Hinsen principle states, loosely, that code should, whether executed now or in the future, return the same result, or raise an error.
 
