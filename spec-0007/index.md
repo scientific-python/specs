@@ -81,10 +81,23 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
 
    def my_func(rng: RNGLike | SeedLike | None = None):
+       """My function summary.
+
+       Parameters
+       ----------
+       rng : `numpy.random.Generator`, optional
+           Pseudorandom number generator state. When `rng` is None, a new
+           `numpy.random.Generator` is created using entropy from the
+           operating system. Types other than `numpy.random.Generator` are
+           passed to `numpy.random.default_rng` to instantiate a `Generator`.
+       """
        rng = np.random.default_rng(rng)
+
        ...
 
    ```
+
+   Also note the suggested language for the `rng` parameter docstring.
 
 ### Impact
 
