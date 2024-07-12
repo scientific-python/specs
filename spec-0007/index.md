@@ -23,10 +23,15 @@ There is disparity in the APIs libraries provide to seed random number generatio
 This SPEC suggests a single, pragmatic API for the ecosystem, taking into account technical and historical factors.
 Adopting such a uniform API will simplify the user experience, especially for those who rely on multiple projects.
 
-Specifically, we recommend to:
+We recommend to:
 
-- Deprecate the use of `RandomState` and `np.random.seed`.
-- Standardize usage and interpretation of an `rng` keyword for seeding.
+- Standardize the usage and interpretation of an `rng` keyword for seeding, and
+- avoid the use of global state and legacy bitstream generators.
+
+We suggest doing this by:
+
+- Passing the `rng` argument to `numpy.random.default_rng` to instantiate a `Generator`, and
+- deprecating the use of `np.seed` and `RandomState`.
 
 ### Concepts
 
