@@ -110,11 +110,10 @@ As an example, consider how SciPy would transition from the `seed` to the `rng` 
 This is implemented using:
 
 1. A `check_random_state` function which normalizes either old (`seed`) or new (`rng`) input to a `Generator` object.
-   If neither `seed` nor `rng` was passed but the user has previously called `np.random.seed()`
-   this function gives a `FutureWarning` because the behavior will change as noted in
-   the Impact section point 1.
-2. A decorator to deal with the `seed` to `rng` keyword rename. In future versions, this will deprecate the keyword-only parameter `seed`. Meanwhile, it ensures that the documentation and auto-completion only advertises the new parameter name.
-   Delaying the deprecation ensures that downstream users can switch to `rng=` on all supported SciPy versions when the deprecation happens.
+   If `np.random.seed()` was called, and neither `seed` nor `rng` is given, a `FutureWarning` is raised to let the user know that they _tried_ to set the seed but that it had no effect.
+2. A decorator to handle renaming the `seed` keyword to `rng`.
+   At a given future version, the decorator deprecates the keyword-only parameter `seed`; for now, it provides the new `rng` keyword, so users can start switching in preparation.
+   It changes the documentation and auto-completion to only advertise the new `rng` parameter.
 
 ```python
 _NoValue = object()  # singleton to indicate not explicitly passed
