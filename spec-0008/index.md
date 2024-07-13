@@ -41,6 +41,7 @@ With a focus on securing the release artifact distribution process, the followin
 ### Document the release process
 
 The release process should be clearly and fully documented in the developer documentation and describe each step to make a release and the permissions required to do so.
+It is recommended that this is a dedicated page in the developer section of the documentation website, though providing instructions in a `RELEASING.md` in the top level of the repository is also a common approach.
 
 ### Hardening workflow environment permissions
 
@@ -63,15 +64,15 @@ Elevating permissions beyond this should be done at the job level by redefining 
 
 #### Restrict permitted actions in workflows
 
-GitHub allows to restrict the actions that workflows can use via repositories settings at `https://github.com/ORG/PROJECT/settings/actions`.
-A reasonable default setup is to:
+GitHub allows restricting the actions that workflows can use via the repository actions permissions settings at `https://github.com/$ORG/$PROJECT/settings/actions`.
+A reasonable default is to select
 
-- allow actions from the repository itself and actions created by GitHub,
-- as well as an allow list of actions from third party repositories.
+> Allow $ORG, and select non-$ORG, actions and reusable workflows
 
-  ```
-  OWNER/REPOSITORY@*
-  ```
+and the suboptions:
+
+* Allow actions created by GitHub
+* Allow specified actions and reusable workflows
 
 Consult [Managing GitHub Actions permissions for your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#managing-github-actions-permissions-for-your-repository) for more details.
 
@@ -85,7 +86,7 @@ environment:
 ```
 
 and enforce additional review by at least one other maintainer to run a GitHub Actions workflow that publishes to PyPI.
-Additional reviewer requirements can be configured per GitHub Actions environment under `https://github.com/ORG/PROJECT/settings/environments/` in the "Deployment protection rules" section.
+Additional reviewer requirements can be configured per GitHub Actions environment under `https://github.com/$ORG/$PROJECT/settings/environments/` in the "Deployment protection rules" section.
 
 ![github-actions-environment](https://hackmd.io/_uploads/S1SErQ0EC.png)
 
@@ -120,7 +121,7 @@ updates:
 
 A component of SLSA is [software attestation](https://slsa.dev/attestation-model) which allows for public validation of software artifacts and provenance.
 GitHub provides the [`actions/attest-build-provenance`](https://github.com/actions/attest-build-provenance) GitHub Action which implements SLSA to generate signed build provenance attestations for workflow artifacts.
-Attestations are published to the project GitHub under `https://github.com/ORG/PROJECT/attestations/`.
+Attestations are published to the project GitHub under `https://github.com/$ORG/$PROJECT/attestations/`.
 
 ```yaml
 - uses: actions/attest-build-provenance@<full action commit SHA> # vX.Y.Z
