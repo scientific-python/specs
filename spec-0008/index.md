@@ -30,7 +30,7 @@ The Python Software Foundation (PSF) is also taking the importance of the OSSC s
 With the creation of the [Supply-chain Levels for Software Artifacts (SLSA) framework](https://slsa.dev/) and [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) standard being more widely adopted there are now high level developer tools, maintained by professional security teams, that are available with clear recommendations on how to use them.
 
 This SPEC outlines pragmatic recommendations for adopting these security tools, and recommendations on how to publish release artifacts securely.
-Securely building release artifacts will be covered in a later SPEC. This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
+Securely *building* release artifacts will be covered in a later SPEC. This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
 
 This SPEC is written with GitHub in mind, note these recommendations still apply with other services such as GitLab and we refer project to these services' documentations and guidelines.
 
