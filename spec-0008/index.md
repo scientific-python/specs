@@ -56,7 +56,7 @@ To restrict the attack surface area of arbitrary code execution in CI runners, t
 
 ```yaml
 permissions:
-  content: read
+  contents: read
 ```
 
 Elevating permissions beyond this should be done at the job level by redefining the permissions block in the job.
