@@ -30,7 +30,7 @@ The Python Software Foundation (PSF) is also taking the importance of the OSSC s
 With the [Supply-chain Levels for Software Artifacts (SLSA) framework](https://slsa.dev/) and [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) standard being widely adopted, several high level developer tools, maintained by professional security teams, have been created with clear recommendations on how to use them.
 
 This SPEC outlines pragmatic recommendations for adopting these security tools, and recommendations on how to publish release artifacts securely.
-Securely *building* release artifacts will be covered in a later SPEC. This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
+Securely _building_ release artifacts will be covered in a later SPEC. This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
 
 While this SPEC is written with GitHub in mind, the same recommendations apply to other services, such as GitLab.
 
@@ -53,7 +53,7 @@ The branch from which the release is made should also be protected.
 
 #### Restrict permissions in CI runners to the minimum required
 
-To restrict the attack surface area of arbitrary code execution in CI runners, the default permissions the runners have should be restricted to the minimum possible (read access). In the GitHub Action workflow, this is accomplished by defining the following workflow global permissions block before any jobs are defined.
+To restrict the attack surface area of arbitrary code execution in CI runners, the _default_ runner permissions should be restricted to the minimum possible (read access). In the GitHub Action workflow, this is accomplished by defining the following workflow global permissions block before any jobs are defined.
 
 ```yaml
 permissions:
@@ -65,11 +65,11 @@ Elevating permissions beyond this should be done at the job level by redefining 
 #### Restrict permitted actions in workflows
 
 GitHub allows restricting the actions that workflows can use via the repository actions permissions settings at `https://github.com/$ORG/$PROJECT/settings/actions`.
-A reasonable default is to select
+A reasonable default is to select the
 
-> Allow $ORG, and select non-$ORG, actions and reusable workflows
+* Allow $ORG, and select non-$ORG, actions and reusable workflows
 
-and the suboptions:
+option and the suboptions:
 
 * Allow actions created by GitHub
 * Allow specified actions and reusable workflows
