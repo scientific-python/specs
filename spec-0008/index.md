@@ -42,11 +42,11 @@ It is recommended that this is a dedicated page in the developer section of the 
 
 ### Hardening workflow environment permissions
 
-Workflows that publish release artifacts should have _run triggers_ that require intentional actions by maintainers (e.g., `workflow_dispatch` in GitHub Actions) and require multiple maintainers to approve the workflow to run (c.f. "Use GitHub Actions environments" section below).
+* Workflows that publish release artifacts should have _run triggers_ that require intentional actions by maintainers (e.g., `workflow_dispatch` in GitHub Actions) and require multiple maintainers to approve the workflow to run (c.f. "Use GitHub Actions environments" section below).
 This is to safeguard the project from any one maintainer having the ability to commit to the default branch and make a release directly.
 
-It is also strongly recommended that the repository requires [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) so that each release corresponds to a verified commit.
-The branch from which the release is made should also be protected.
+* It is also strongly recommended that the repository requires [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) so that each release corresponds to a verified commit.
+* The branch from which the release is made should also be protected.
 
 #### Restrict permissions in CI runners to the minimum required
 
