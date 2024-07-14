@@ -1,20 +1,17 @@
 # SPEC-8: Securing the Release Process
 
 ---
-
 title: "SPEC 8 — Securing the Release Process"
 number: 8
 date: 2024-06-04
 author:
-
-- "Matthew Feickert <matthew.feickert@cern.ch>"
-- "Pamphile Roy <roy.pamphile@gmail.com>"
-- "Juanita Gomez <juanitagomezr2112@gmail.com>"
-- "Seth Larson <sethmichaellarson@gmail.com>"
-- "Lars Grüter <lagru@mailbox.org>"
-  discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
-  endorsed-by:
-
+  - "Matthew Feickert <matthew.feickert@cern.ch>"
+  - "Pamphile Roy <roy.pamphile@gmail.com>"
+  - "Juanita Gomez <juanitagomezr2112@gmail.com>"
+  - "Seth Larson <sethmichaellarson@gmail.com>"
+  - "Lars Grüter <lagru@mailbox.org>"
+discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
+endorsed-by:
 ---
 
 ## Description
