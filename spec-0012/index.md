@@ -14,7 +14,7 @@ endorsed-by:
 PEP8 and other established styling documents do not include guidelines about
 styling mathematical expressions. This leads to individual interpretation and
 styles which may conflict with those of others. We seek to standardizing the
-way we  represent mathematics for the same reason we standardize other code: 
+way we represent mathematics for the same reason we standardize other code: 
 it brings consistency to the ecosystem and allows collaborators to focus on
 more important aspects of the code.
 
@@ -45,7 +45,7 @@ As another example, in `x + y*z`, `y*z` is a subexpression because it could be m
 explicit as in `x + (y*z)` without changing the order of operations. However, `x + y`
 would not be a subexpression because `(x + y)*z` would change the order of operations.
 Note that `x + y*z` as a whole may also be referred to as a "subexpression" rather than
-an "expression" even though `(x + y*z)` is not a "proper" subset of the whole.
+an "expression" even though `(x + y*z)` is not a proper subset of the whole.
 
 A "simple" expression is an expression involving only one operator priority level
 without considering the operators within explicit subexpressions.
@@ -61,7 +61,7 @@ regarded as `(...)`.
 - `x * y + z` is a compound expression; there are two operators and no explicit
 subexpressions that can be ignored.
 
-The acronym PEMDAS commonly refers to "parentheses", "exponential", "multiplication",
+The acronym PEMDAS commonly refers to "parentheses", "exponentiation", "multiplication",
 "division", "addition", and "subtraction". Herein, we will consider these operators
 to be "PEMDAS operators", and we will also include the unary `+`, `-`, and `~` in
 this category for convenience. The order of operations of PEMDAS operators is typically
@@ -74,11 +74,12 @@ acronym, namely MD and AS, will be used below to refer to the corresponding oper
 
 ## Implementation
 
-The following rules are not imagined to be all encompassing, and may be
+The following rules are not imagined to be all encompassing, and there may be
 syntactically valid cases in which the following rules would lead to contradictions.
 Nonetheless, we expect them to be useful in most cases, and projects that adopt the
-SPEC endeavor to use them in typical cases. These rules are intended to respect and
-complement the PEP8 rules (relevant sections includes [id20](https://www.python.org/dev/peps/pep-0008/#id20) and [id20](https://www.python.org/dev/peps/pep-0008/#id28)).
+SPEC endeavor to use them where practical. These rules are intended to respect and
+complement the PEP8 rules (relevant sections includes [id20](https://www.python.org/dev/peps/pep-0008/#id20) 
+and [id28](https://www.python.org/dev/peps/pep-0008/#id28)).
 
 0. Unless required by other rules, rely on the implicit order of operations;
    i.e., do not add extraneous parentheses. For example, prefer `u**v + y**z`
@@ -139,7 +140,7 @@ complement the PEP8 rules (relevant sections includes [id20](https://www.python.
    (t 
     + (w + (x + (y + z)))))
    ```
-   (if this break satisfies other requirements) over
+   over
    ```python3
    (t + (w + (x + (y 
                    + z)))))
@@ -162,18 +163,18 @@ complement the PEP8 rules (relevant sections includes [id20](https://www.python.
    - They conflict with other style rules. For example, there is not supposed to be
      whitepace surrounding the `**` operator, but one can imagine a chain of `**`
      operations that exhausts the character limit of a line.
-  - Domain knowledge suggests a reason. For instance, in the expression
-    `t = (x + y) - z`, it may be important to emphasize that the addition should be
-    performed first for numerical reasons or because `(x + y)` is a conceptually
-    important quantity. In such cases, consider adding a comment, e.g.
-    ```python3
-    t = (x + y) - z  # perform `x + y` first for precision
-    ```
-    or breaking the expressions into separate logical lines, e.g.
-    ```
-    w = x + y
-    t = w - z
-    ```
+   - Domain knowledge suggests a reason. For instance, in the expression
+     `t = (x + y) - z`, it may be important to emphasize that the addition should be
+     performed first for numerical reasons or because `(x + y)` is a conceptually
+     important quantity. In such cases, consider adding a comment, e.g.
+     ```python3
+     t = (x + y) - z  # perform `x + y` first for precision
+     ```
+     or breaking the expressions into separate logical lines, e.g.
+     ```python3
+     w = x + y
+     t = w - z
+     ```
 
 [^1]: There is a case for simply eliminating spaces to reinforce the implicit order
       of operations, as in `x==y or w==t`. However, if this were the rule, following
