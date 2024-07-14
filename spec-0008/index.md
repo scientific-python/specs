@@ -1,5 +1,3 @@
-# SPEC-8: Securing the Release Process
-
 ---
 title: "SPEC 8 — Securing the Release Process"
 number: 8
