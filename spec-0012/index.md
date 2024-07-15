@@ -14,7 +14,7 @@ endorsed-by:
 PEP8 and other established styling documents do not include guidelines about
 styling mathematical expressions. This leads to individual interpretation and
 styles which may conflict with those of others. We seek to standardizing the
-way we represent mathematics for the same reason we standardize other code: 
+way we represent mathematics for the same reason we standardize other code:
 it brings consistency to the ecosystem and allows collaborators to focus on
 more important aspects of the code.
 
@@ -78,34 +78,35 @@ The following rules are not imagined to be all encompassing, and there may be
 syntactically valid cases in which the following rules would lead to contradictions.
 Nonetheless, we expect them to be useful in most cases, and projects that adopt the
 SPEC endeavor to use them where practical. These rules are intended to respect and
-complement the PEP8 rules (relevant sections includes [id20](https://www.python.org/dev/peps/pep-0008/#id20) 
-and [id28](https://www.python.org/dev/peps/pep-0008/#id28)).
+complement the [PEP 8 standards](https://peps.python.org/pep-0008), such as using
+[implied line continuation](https://peps.python.org/pep-0008/#maximum-line-length) and
+and [breaking lines before binary operators](https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator).
 
-0. Unless required by other rules, rely on the implicit order of operations;
+0. Unless otherwise specified, rely on the implicit order of operations;
    i.e., do not add extraneous parentheses. For example, prefer `u**v + y**z`
-   over `(u**v) + (y**z)`, and prefer `x + y + z` over `(x + y) + z`.
+   over `(u**v) + (y**z)`, and prefer `x + y + z` over `(x + y) + z`. A full
+   list of implicit operator priority levels is given by
+   [Operator Precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence)
 1. Always use the `**` operator and unary `+`, `-`, and `~` operators *without*
    surrounding whitespace. For example, prefer `-x**4` over `- (x ** 4)`. 
 2. Always surround non-PEMDAS operators with whitespace, and always make the priority of
-   non-PEMDAS operators explicit, even if the parentheses are consistent with the
-   implicit order of operations. For example, prefer `(x == y) or (w == t)` over
+   non-PEMDAS operators explicit. For example, prefer `(x == y) or (w == t)` over
    `x==y or w==t`.[^1]
 3. Always surround AS operators with whitespace.
-4. Typically surround MD operators with whitespace, except when there are lower-priority 
-   operators (namely AS) within the same compound expression or the division operation
-   would be written mathematically as a fraction with a horizontal bar.
-   For example, prefer `z = -x * y**t` over `z = -x*y**t`, but
-   prefer `z = w + x*y**t` over `z = w + x * y**t` due to the presence of the
-   lower-priority addition operator. Also, prefer `z = t/v * x/y` over
-   `z = t / v * x / y` if this would  be written mathematically as the product of
-   two fractions.
-5. According to the other rules, only `**`, `*`, `/`, and the unary `+`, `-`, and `~`
+4. Typically, surround MD operators with whitespace, except in the following situations.
+   - When there are lower-priority operators (namely AS) within the same compound
+     expression. For example, prefer `z = -x * y**t` over `z = -x*y**t`, but
+     prefer `z = w + x*y**t` over `z = w + x * y**t` due to the presence of the
+     lower-priority addition operator.
+   - The division operation would be written mathematically as a fraction with a
+     horizontal bar. For example, prefer `z = t/v * x/y` over `z = t / v * x / y`
+     if this would  be written mathematically as the product of two fractions,
+     e.g. $\frac{t}{v} \cdot \frac{x}{y}.
+5. Considering the previous rules, only `**`, `*`, `/`, and the unary `+`, `-`, and `~`
    operators can appear in implicit subexpressions without spaces. In such expressions,
-   - Include unary operators at the left, and use at most one within an implicit
-     subexpression without spaces. 
-   - Include `**` operators at the right, and use at most one within an implicit
-     subexpression without spaces.
-  
+   - Use at most one unary operator, and if used, ensure that it is the leftmost operator.
+   - Use at most `**` operator, and if used, ensure that it is the rightmost operator.
+
    To achieve these goals, simplification or the addition of parentheses may be required.
    For example:
    - The expressions `--x` and `-~x` would be implicit subexpressions without spaces
@@ -119,21 +120,20 @@ and [id28](https://www.python.org/dev/peps/pep-0008/#id28)).
      operator due to the presence of the lower-priority addition operator. However,
      this would lead to `t**v*x**y` being an implicit subexpression without spaces
      containing more than one `**` operator. This code would be executed as 
-    `(t**v)*(x**y) + z`, but the explicit parentheses should be included for clarity.  
-6. When breaking lines at operators, always include the operator at the beginning
-   of the new line rather than at the end of the old line, and use parentheses if
-   needed to allow for implicit rather than explicit line breaks. For example, if
-   `x + y` must be broken, prefer
-   ```python3
-   (x
-    + y)
-   ```
-   over
-   ```python3
-   x + \
-   y
-   ```
-7. If required to satisfy other style requirements, include line breaks between
+    `(t**v)*(x**y) + z`, but the explicit parentheses should be included for clarity.
+   - In the expression `z + x**y/w`, no spaces are used around the division operator
+     due to the presence of the lower-priority addition operator. However, this would
+     lead to `x**y/w` being an implicit subexpression without spaces containing `**`
+     to the left of another operator. Options for refactoring include the addition of
+     parentheses (e.g. `z + (x**y)/w`) or pre-multiplying the exponential by a
+     fraction (i.e. `x + 1/w*x**y`).
+6. Simplify combinations of unary and binary `+` and `-` operators when possible.
+   For example,
+   - prefer `x + y` over `x + +y`,
+   - prefer `x + y` over `x - -y`,
+   - prefer `x - y` over `x - +y`, and
+   - prefer `x - y` over `x + -y`.
+7. If required to satisfy other style requirements, include line breaks before
    the outermost explicit subexpression possible. For example, if
    `t + (w + (x + (y + z))))` must be broken, prefer
    ```python3
@@ -147,34 +147,54 @@ and [id28](https://www.python.org/dev/peps/pep-0008/#id28)).
    ```
    If there are multiple candidates, include the break at the first opportunity.
 8. If line breaks must occur within a compound subexpression, the break should
-   be placed at the operator with lowest priority. For example, if
+   be placed before the operator with lowest priority. For example, if
    (x + y*z) must be broken, prefer
-   ```
+   ```python3
    (x
     + y*z)
    ```
    over
-   ```
+   ```python3
    (x + y
     * z)
    ```
    If there are multiple candidates, include the break at the first opportunity.
-9. All preceeding rules may be broken if there is a clear reason to do so. Examples include:
-   - They conflict with other style rules. For example, there is not supposed to be
-     whitepace surrounding the `**` operator, but one can imagine a chain of `**`
-     operations that exhausts the character limit of a line.
-   - Domain knowledge suggests a reason. For instance, in the expression
-     `t = (x + y) - z`, it may be important to emphasize that the addition should be
-     performed first for numerical reasons or because `(x + y)` is a conceptually
-     important quantity. In such cases, consider adding a comment, e.g.
-     ```python3
-     t = (x + y) - z  # perform `x + y` first for precision
-     ```
-     or breaking the expressions into separate logical lines, e.g.
-     ```python3
-     w = x + y
-     t = w - z
-     ```
+9. The packages or subpackages from which mathematical functions and constants are used
+   should be unambiguous. For instance, if `math.log`, `numpy.sin`, `scipy.special.gamma`,
+   and `mpmath.mp.ncdf` are to be used in the same file, prefer imports like
+   ```python3
+   import math
+   import numpy as np
+   from scipy import special
+   from mpmath import mp
+   mp.dps = 50
+   # use math.log, np.sin, special.gamma, mp.ncdf
+   ```
+   over
+   ```python3
+   from scipy.special import gamma
+   from mpmath import *
+   from math import log
+   from numpy import sin
+   ```
+   If all mathematical functions/constants are from the same package or subpackage, they
+   may be imported individually, e.g. `from numpy import log, sin, inf`.
+10. Any of the preceeding rules may be broken if there is a clear reason to do so. 
+    - *Conflict with other style rules*. For example, there is not supposed to be
+      whitepace surrounding the `**` operator, but one can imagine a chain of `**`
+      operations that exhausts the character limit of a line.
+    - *Domain knowledge*. For instance, in the expression
+      `t = (x + y) - z`, it may be important to emphasize that the addition should be
+      performed first for numerical reasons or because `(x + y)` is a conceptually
+      important quantity. In such cases, consider adding a comment, e.g.
+      ```python3
+      t = (x + y) - z  # perform `x + y` first for precision
+      ```
+      or breaking the expressions into separate logical lines, e.g.
+      ```python3
+      w = x + y
+      t = w - z
+      ```
 
 [^1]: There is a case for simply eliminating spaces to reinforce the implicit order
       of operations, as in `x==y or w==t`. However, if this were the rule, following
