@@ -25,7 +25,7 @@ We recommend:
 We suggest implementing these principles by:
 
 - deprecating the use of `numpy.random.seed` to control the random state,
-- deprecating the use of `random_state`/`seed` arguments in favor of an `rng` argument in all functions that require random number generation, and
+- deprecating the use of `random_state`/`seed` arguments in favor of a consistent `rng` argument, and
 - using `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`.
 
 ### Scope
@@ -63,11 +63,14 @@ Our recommendation here is a deprecation strategy which does not in _all_ cases 
 The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#issuecomment-1515248009) is:
 
 1. Accept both `rng` and `random_state`/`seed` keyword arguments.
-2. If `rng=None`, handle `random_state`/`seed` as in legacy behavior (see above), except use a compatible Generator instead of RandomState.
-   A DeprecationWarning is raised to warn about a future change in behavior.
-3. After <X time>, use only `rng`, validated with `numpy.random.default_rng`.
+2. If both are specified, raise an error.
+3. If neither is specified and `np.random.seed` has been used to set the seed, emit a `FutureWarning` about the upcoming change in behavior.
+4. If `random_state`/`seed` is passed by keyword or by position, treat it as before, but:
+  - Emit a `DeprecationWarning` if passed by keyword, warning about the deprecation of keyword `random_state` in favor of `rng`.
+  - Emit a `FutureWarning` if passed by position, warning about the change in behavior of the positional argument.
+5. If `rng` is passed by keyword, standardize it using `numpy.random.default_rng`.
+6. After the deprecation period, use only `rng`, validated with `numpy.random.default_rng`.
    Raise an error if `random_state`/`seed` is provided.
-4. At a time of the library's choosing, remove any machinery related to `random_state`/`seed`.
 
    By now, the function signature, with type annotations, could look like this:
 
@@ -111,7 +114,7 @@ There are three classes of users, which will be affected to varying degrees.
    Support for these arguments will be dropped eventually, but during the deprecation period, we can provide clear guidance, via warnings and documentation, on how to migrate to the new `rng` keyword.
 
 3. Those who use `numpy.random.seed`. 
-   The proposal will do away with that global seeding mechanism, meaning that code that relies on it will, after the deprecation period, go from being seeded to being unseeded.
+   The proposal will do away with that global seeding mechanism, meaning that code that relies on it would, after the deprecation period, go from being seeded to being unseeded.
    To ensure that this does not go unnoticed, libraries that allowed for control of the random state via `numpy.random.seed` should raise a `FutureWarning` if `np.random.seed` has been called. (See Code below for an example.)
    In response, users must switch from using `numpy.random.seed` to passing the `rng` argument explicitly to all functions that accept it.
 
