@@ -19,32 +19,34 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
       will emit a `DeprecationWarning` about the deprecation of keyword `random_state`.
     - If `random_state` is provided as a positional argument, the decorator passes
       `random_state` to the function's `rng` argument by position, but the decorator
-      will emit a `FutureWarning` about the changing behavior of the argument.
+      will emit a `FutureWarning` about the changing interpretation of the argument.
     - If `rng` is provided as a keyword argument, the decorator validates `rng` using
       `numpy.random.default_rng` before passing it to the function.
     - If neither `random_state` nor `rng` is provided, the decorator checks whether
       `np.random.seed` has been used to set the global seed. If so, it emits a
-      `FutureWarning` against use of `numpy.random.seed`. Either way, the decorator
-      calls the function without explicitly passing the `rng` argument.
+      `FutureWarning`, noting that usage of `numpy.random.seed` will eventually have
+      no effect. Either way, the decorator calls the function without explicitly
+      passing the `rng` argument.
 
     To avoid warnings, a user must pass `rng` as a keyword or pass a `Generator`
     object or `None` by position.
 
     After the deprecation period, the decorator can be removed, and the function
-    can begin to validate the `rng` argument by calling `np.random.default_rng(rng)`
-    internally.
+    can simply validate the `rng` argument by calling `np.random.default_rng(rng)`.
 
-    * Even though a `FutureWarning` is emitted when the PRNG argument is used
-      by position, the Hinsen principle is violated unless positional use is
-      deprecated.
+    * A `FutureWarning` is emitted when the PRNG argument is used by
+      position. It indicates that the "Hinsen principle" (same
+      code yielding different results in two versions of the software)
+      will be violated, unless positional use is deprecated. Specifically:
 
       - If `None` is passed by position, the function will change from being
-        seeded to being unseeded
-      - If an integer is passed by position, the random stream will change
+        seeded to being unseeded.
+      - If an integer is passed by position, the random stream will change.
 
-      This SPEC does not specify whether projects should deprecate positional
-      use or not; we just note that this decorator does *not* deprecate
-      positional use and what the implications are.
+      We recommend that projects deprecate positional use of
+      `random_state`/`rng` (i.e., change their function signatures to
+      ``def my_func(..., *, rng=None)``),
+      but this decorator does not *enforce* that.
 
     Parameters
     ----------
