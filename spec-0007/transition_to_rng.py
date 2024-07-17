@@ -9,7 +9,8 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
     Suppose the decorator is applied to a function that used to accept parameter
     `old_name='random_state'` either by keyword or as a positional argument at
     `position_name=1`. At the time of application, the name of the argument in the
-    function signature is manually changed to the new name, `rng`.
+    function signature is manually changed to the new name, `rng`. If positional
+    use was allowed before, this is not changed.*
 
     - If the function is called with both `random_state` and `rng`, the decorator
       raises an error.
@@ -32,6 +33,18 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
     After the deprecation period, the decorator can be removed, and the function
     can begin to validate the `rng` argument by calling `np.random.default_rng(rng)`
     internally.
+
+    * Even though a `FutureWarning` is emitted when the PRNG argument is used
+      by position, the Hinsen principle is violated unless positional use is
+      deprecated.
+
+      - If `None` is passed by position, the function will change from being
+        seeded to being unseeded
+      - If an integer is passed by position, the random stream will change
+
+      This SPEC does not specify whether projects should deprecate positional
+      use or not; we just note that this decorator does *not* deprecate
+      positional use and what the implications are.
 
     Parameters
     ----------
@@ -64,22 +77,28 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
 
             # Can only specify PRNG one of the three ways
             if int(as_old_kwarg) + int(as_new_kwarg) + int(as_pos_arg) > 1:
-                message = (
-                    f"{fun.__name__}() got multiple values for "
-                    f"argument now known as `{new_name}`"
-                )
+                message = (f"{fun.__name__}() got multiple values for "
+                           f"argument now known as `{new_name}`")
                 raise TypeError(message)
+
+            cmn_msg = ("To silence this warning and ensure consistent behavior in "
+                       f"SciPy {end_version}, control the RNG using argument "
+                       f"{new_name}. Arguments passed to keyword {new_name} will be "
+                       "validated by `np.random.default_rng`, so the behavior "
+                       "corresponding with a given value may change compared to use "
+                       f"of {old_name}. For example, "
+                       "1) `None` produces unpredictable random numbers, "
+                       "2) integer produces a different stream of random numbers, and "
+                       "3) `np.random` or `RandomState` instance raises an error. "
+                       "See the documentation of `default_rng` for more information.")
 
             if as_old_kwarg:  # warn about deprecated use of old kwarg
                 kwargs[new_name] = kwargs.pop(old_name)
                 if dep_version:
-                    message = (
-                        f"Use of keyword argument `{old_name}` is "
-                        f"deprecated and replaced by `{new_name}`.  "
-                        f"Support for `{old_name}` will be removed "
-                        f"in SciPy {end_version}. Use keyword `{new_name}` "
-                        "to silence this warning."
-                    )
+                    message = (f"Use of keyword argument `{old_name}` is "
+                               f"deprecated and replaced by `{new_name}`.  "
+                               f"Support for `{old_name}` will be removed "
+                               f"in SciPy {end_version}.") + cmn_msg
                     warnings.warn(message, DeprecationWarning, stacklevel=2)
 
             elif as_pos_arg and dep_version:
@@ -89,14 +108,11 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                 # argument; it only warns that the behavior will change in the future.
                 # Simultaneously transitioning to keyword-only use is another option.
 
-                message = (
-                    f"Positional use of `{new_name}` (formerly known as "
-                    f"`{old_name}`) is still allowed, but the behavior is "
-                    "changing: the argument will be validated using "
-                    "`np.random.default_rng` beginning in SciPy {end_version} "
-                    f"Ensure that `np.random.default_rng(rng)` returns "
-                    "successfully to silence this warning."
-                )
+                message = (f"Positional use of `{new_name}` (formerly known as "
+                           f"`{old_name}`) is still allowed, but the behavior is "
+                           "changing: the argument will be validated using "
+                           f"`np.random.default_rng` beginning in SciPy {end_version} "
+                           ) + cmn_msg
                 warnings.warn(message, FutureWarning, stacklevel=2)
 
             elif as_new_kwarg:  # no warnings; this is the preferred use
@@ -106,13 +122,9 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
 
             elif np.random.mtrand._rand._bit_generator._seed_seq is None:
                 # Emit FutureWarning if `np.random.seed` was used and no PRNG was passed
-                message = (
-                    "The NumPy global rng was seeded by calling "
-                    f"`np.random.seed`. Beginning in {end_version}, this "
-                    "function will no longer use the global rng. It will "
-                    "instead use the `rng` argument, if provided, or create "
-                    "a new `Generator` using `np.random.default_rng()`."
-                )
+                message = ("The NumPy global RNG was seeded by calling "
+                           f"`np.random.seed`. Beginning in {end_version}, this "
+                           "function will no longer use the global RNG.") + cmn_msg
                 warnings.warn(message, FutureWarning, stacklevel=2)
 
             return fun(*args, **kwargs)
