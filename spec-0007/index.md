@@ -60,7 +60,10 @@ Two strong motivations for moving over to `Generator`s are:
 1. they avoid naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
 2. they avoid using global state (from `numpy.random.mtrand._rand`).
 
-Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen[^hinsen] principle.
+Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen principle[^hinsen],
+although it could be made to do so by enforcing the use of `rng` as a keyword argument.
+
+[^hinsen]: The Hinsen principle states, loosely, that code should, whether executed now or in the future, return the same result, or raise an error.
 
 The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#issuecomment-1515248009) is:
 
@@ -121,8 +124,6 @@ There are three classes of users, which will be affected to varying degrees.
    The proposal will do away with that global seeding mechanism, meaning that code that relies on it would, after the deprecation period, go from being seeded to being unseeded.
    To ensure that this does not go unnoticed, libraries that allowed for control of the random state via `numpy.random.seed` should raise a `FutureWarning` if `np.random.seed` has been called. (See Code below for an example.)
    In response, users must switch from using `numpy.random.seed` to passing the `rng` argument explicitly to all functions that accept it.
-
-[^hinsen]: The Hinsen principle states, loosely, that code should, whether executed now or in the future, return the same result, or raise an error.
 
 ### Code
 
