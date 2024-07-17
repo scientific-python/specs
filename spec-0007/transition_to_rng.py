@@ -43,10 +43,11 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
         seeded to being unseeded.
       - If an integer is passed by position, the random stream will change.
 
-      We recommend that projects deprecate positional use of
+      We suggest that projects consider deprecating positional use of
       `random_state`/`rng` (i.e., change their function signatures to
-      ``def my_func(..., *, rng=None)``),
-      but this decorator does not *enforce* that.
+      ``def my_func(..., *, rng=None)``); that might not make sense
+      for all projects, so this SPEC does not make that
+      recommendation, neither does this decorator enforce it.
 
     Parameters
     ----------
