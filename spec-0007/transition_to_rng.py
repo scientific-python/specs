@@ -86,7 +86,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                        f"`{new_name}`. Arguments passed to keyword `{new_name}` will "
                        "be validated by `np.random.default_rng`, so the behavior "
                        "corresponding with a given value may change compared to use "
-                       f"of {old_name}. For example, "
+                       f"of `{old_name}`. For example, "
                        "1) `None` results in unpredictable random numbers, "
                        "2) an integer results in a different stream of random numbers,
                        "(with the same distribution), and "
