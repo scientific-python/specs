@@ -60,6 +60,9 @@ def test_rng_incorrect_usage():
     with pytest.raises(TypeError, match="SeedSequence expects"):
         library_function(1, rng=np.random.RandomState(123))
 
+    with pytest.raises(TypeError, match="multiple values"):
+        library_function(1, rng=1, random_state=1)
+
 
 if __name__ == "__main__":
     import pytest
