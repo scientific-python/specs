@@ -42,7 +42,9 @@ def test_positional_random_state():
 
 
 def test_random_state_deprecated():
-    with pytest.warns(DeprecationWarning, match="keyword argument `random_state`"):
+    with pytest.warns(
+        DeprecationWarning, match="keyword argument `random_state` is deprecated"
+    ):
         library_function(1, random_state=None)
         library_function(1, random_state=1)
 
@@ -62,6 +64,24 @@ def test_rng_incorrect_usage():
 
     with pytest.raises(TypeError, match="multiple values"):
         library_function(1, rng=1, random_state=1)
+
+
+@_transition_to_rng("random_state", dep_version="1.15.0")
+# previously, the signature of the function was
+#   library_function(arg1, random_state=None, arg2=None):
+def random_function(arg1, *, rng=None, arg2=None):
+    if isinstance(rng, (np.random.Generator, np.random.RandomState)):
+        rng = rng.random()
+    print((arg1, rng, arg2))
+
+
+def test_decorator_no_positional():
+    with pytest.warns(
+        DeprecationWarning, match="keyword argument `random_state` is deprecated"
+    ):
+        random_function(1, random_state=3)
+
+    random_function(1, rng=123)
 
 
 if __name__ == "__main__":
