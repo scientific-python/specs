@@ -62,7 +62,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
         will change is assumed to be two versions later.
 
     """
-    new_name = "rng"
+    NEW_NAME = "rng"
 
     if dep_version:
         end_version = dep_version.split(".")
@@ -74,21 +74,21 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
         def wrapper(*args, **kwargs):
             # Determine how PRNG was passed
             as_old_kwarg = old_name in kwargs
-            as_new_kwarg = new_name in kwargs
+            as_new_kwarg = NEW_NAME in kwargs
             as_pos_arg = position_num is not None and len(args) >= position_num + 1
 
             # Can only specify PRNG one of the three ways
             if int(as_old_kwarg) + int(as_new_kwarg) + int(as_pos_arg) > 1:
                 message = (
                     f"{fun.__name__}() got multiple values for "
-                    f"argument now known as `{new_name}`"
+                    f"argument now known as `{NEW_NAME}`"
                 )
                 raise TypeError(message)
 
             cmn_msg = (
                 " To silence this warning and ensure consistent behavior in "
                 f"SciPy {end_version}, control the RNG using argument "
-                f"`{new_name}`. Arguments passed to keyword `{new_name}` will "
+                f"`{NEW_NAME}`. Arguments passed to keyword `{NEW_NAME}` will "
                 "be validated by `np.random.default_rng`, so the behavior "
                 "corresponding with a given value may change compared to use "
                 f"of `{old_name}`. For example, "
@@ -100,11 +100,11 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
             )
 
             if as_old_kwarg:  # warn about deprecated use of old kwarg
-                kwargs[new_name] = kwargs.pop(old_name)
+                kwargs[NEW_NAME] = kwargs.pop(old_name)
                 if dep_version:
                     message = (
                         f"Use of keyword argument `{old_name}` is "
-                        f"deprecated and replaced by `{new_name}`.  "
+                        f"deprecated and replaced by `{NEW_NAME}`.  "
                         f"Support for `{old_name}` will be removed "
                         f"in SciPy {end_version}."
                     ) + cmn_msg
@@ -118,7 +118,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                 # Simultaneously transitioning to keyword-only use is another option.
 
                 message = (
-                    f"Positional use of `{new_name}` (formerly known as "
+                    f"Positional use of `{NEW_NAME}` (formerly known as "
                     f"`{old_name}`) is still allowed, but the behavior is "
                     "changing: the argument will be validated using "
                     f"`np.random.default_rng` beginning in SciPy {end_version}."
@@ -128,7 +128,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
             elif as_new_kwarg:  # no warnings; this is the preferred use
                 # After the removal of the decorator, validation with
                 # np.random.default_rng will be done inside the decorated function
-                kwargs[new_name] = np.random.default_rng(kwargs[new_name])
+                kwargs[NEW_NAME] = np.random.default_rng(kwargs[NEW_NAME])
 
             elif np.random.mtrand._rand._bit_generator._seed_seq is None:
                 # Emit FutureWarning if `np.random.seed` was used and no PRNG was passed
