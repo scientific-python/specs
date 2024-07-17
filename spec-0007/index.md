@@ -28,6 +28,8 @@ We suggest implementing these principles by:
 - deprecating the use of `random_state`/`seed` arguments in favor of a consistent `rng` argument, and
 - using `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`.
 
+Note that `numpy.random.default_rng` does not accept instances of `RandomState`, so use of `RandomState` to control the seed is effectively deprecated, too.
+
 ### Scope
 
 This is intended as a recommendation to all libraries that allow users to control the
@@ -35,7 +37,7 @@ state of a NumPy random number generator. It is specifically targeted toward fun
 that allow use of `numpy.random.seed` to control the random state and accept
 `RandomState` instances via an argument with a name other than `rng`, but the ideas
 are more broadly applicable. Use of random number generators other than those provided
-by NumPy are not considered at this time, but may be addressed in a future version.
+by NumPy are beyond the scope of this SPEC.
 
 ### Concepts
 
@@ -55,8 +57,8 @@ Legacy behavior in packages such as scikit-learn (`sklearn.utils.check_random_st
 
 Two strong motivations for moving over to `Generator`s are:
 
-(1) they avoid naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
-(2) they avoid using global state (from `numpy.random.mtrand._rand`).
+1. they avoid naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
+2. they avoid using global state (from `numpy.random.mtrand._rand`).
 
 Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen[^hinsen] principle.
 
@@ -110,7 +112,7 @@ There are three classes of users, which will be affected to varying degrees.
 
 1. Those who do not attempt to control the random state.
    Their code will immediately switch from using the unseeded global `RandomState` to using an unseeded `Generator`.
-   Since the underlying _distributions_ of pseudo-random numbers will not change, these users will be relatively unaffected.
+   Since the underlying _distributions_ of pseudo-random numbers will not change, these users should be unaffected.
 
 2. Users of `random_state`/`seed` arguments.
    Support for these arguments will be dropped eventually, but during the deprecation period, we can provide clear guidance, via warnings and documentation, on how to migrate to the new `rng` keyword.
