@@ -102,7 +102,7 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
    ```
 
-   Also note the suggested language for the `rng` parameter docstring, which encourages the user to pass a `Generator` or None, but allows for other types accepted by `numpy.random.default_rng`.
+   Also note the suggested language for the `rng` parameter docstring, which encourages the user to pass a `Generator` or None, but allows for other types accepted by `numpy.random.default_rng` (captured by the type annotation).
 
 ### Impact
 
