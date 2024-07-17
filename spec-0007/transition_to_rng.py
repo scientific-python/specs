@@ -81,15 +81,16 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                            f"argument now known as `{new_name}`")
                 raise TypeError(message)
 
-            cmn_msg = ("To silence this warning and ensure consistent behavior in "
+            cmn_msg = (" To silence this warning and ensure consistent behavior in "
                        f"SciPy {end_version}, control the RNG using argument "
-                       f"{new_name}. Arguments passed to keyword {new_name} will be "
-                       "validated by `np.random.default_rng`, so the behavior "
+                       f"`{new_name}`. Arguments passed to keyword `{new_name}` will "
+                       "be validated by `np.random.default_rng`, so the behavior "
                        "corresponding with a given value may change compared to use "
                        f"of {old_name}. For example, "
-                       "1) `None` produces unpredictable random numbers, "
-                       "2) integer produces a different stream of random numbers, and "
-                       "3) `np.random` or `RandomState` instance raises an error. "
+                       "1) `None` results in unpredictable random numbers, "
+                       "2) an integer results in a different stream of random numbers,
+                       "(with the same distribution), and "
+                       "3) `np.random` or `RandomState` instances result in an error. "
                        "See the documentation of `default_rng` for more information.")
 
             if as_old_kwarg:  # warn about deprecated use of old kwarg
@@ -111,7 +112,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                 message = (f"Positional use of `{new_name}` (formerly known as "
                            f"`{old_name}`) is still allowed, but the behavior is "
                            "changing: the argument will be validated using "
-                           f"`np.random.default_rng` beginning in SciPy {end_version} "
+                           f"`np.random.default_rng` beginning in SciPy {end_version}."
                            ) + cmn_msg
                 warnings.warn(message, FutureWarning, stacklevel=2)
 
