@@ -114,7 +114,7 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 There are three classes of users, which will be affected to varying degrees.
 
 1. Those who do not attempt to control the random state.
-   Their code will immediately switch from using the unseeded global `RandomState` to using an unseeded `Generator`.
+   Their code will switch from using the unseeded global `RandomState` to using an unseeded `Generator`.
    Since the underlying _distributions_ of pseudo-random numbers will not change, these users should be unaffected.
 
 2. Users of `random_state`/`seed` arguments.

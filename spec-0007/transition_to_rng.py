@@ -28,8 +28,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
       no effect. Either way, the decorator calls the function without explicitly
       passing the `rng` argument.
 
-    To avoid warnings, a user must pass `rng` as a keyword or pass a `Generator`
-    object or `None` by position.
+    To avoid warnings, a user must pass `rng` as a keyword.
 
     After the deprecation period, the decorator can be removed, and the function
     can simply validate the `rng` argument by calling `np.random.default_rng(rng)`.
