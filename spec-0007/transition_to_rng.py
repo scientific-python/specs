@@ -38,9 +38,11 @@ def _transition_to_rng(old_name, *, position_num=None, end_version):
       code yielding different results in two versions of the software)
       will be violated, unless positional use is deprecated. Specifically:
 
-      - If `None` is passed by position, the function will change from being
-        seeded to being unseeded.
+      - If `None` is passed by position and `np.random.seed` has been used,
+        the function will change from being seeded to being unseeded.
       - If an integer is passed by position, the random stream will change.
+      - If `np.random` or an instance of `RandomState` is passed by position,
+        an error will be raised.
 
       We suggest that projects consider deprecating positional use of
       `random_state`/`rng` (i.e., change their function signatures to
