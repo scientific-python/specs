@@ -66,7 +66,7 @@ def test_rng_incorrect_usage():
         library_function(1, rng=1, random_state=1)
 
 
-@_transition_to_rng("random_state", dep_version="1.15.0")
+@_transition_to_rng("random_state", end_version="1.17.0")
 # previously, the signature of the function was
 #   library_function(arg1, random_state=None, arg2=None):
 def random_function(arg1, *, rng=None, arg2=None):

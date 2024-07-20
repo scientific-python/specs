@@ -3,7 +3,7 @@ import functools
 import warnings
 
 
-def _transition_to_rng(old_name, position_num=None, dep_version=None):
+def _transition_to_rng(old_name, *, position_num=None, end_version):
     """Example decorator to transition from old PRNG usage to new `rng` behavior
 
     Suppose the decorator is applied to a function that used to accept parameter
@@ -56,18 +56,12 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
         The (0-indexed) position of the old PRNG argument (if accepted by position).
         Maintainers are welcome to eliminate this argument and use, for example,
         `inspect`, if preferred.
-    dep_version : str, optional
-        The full version number of the library in which warnings about use of the
-        old PRNG argument begin to be emitted. The version in which the behavior
-        will change is assumed to be two versions later.
+    end_version : str, optional
+        The full version number of the library when the behavior described in
+        `DeprecationWarning`s and `FutureWarning`s will take effect.
 
     """
     NEW_NAME = "rng"
-
-    if dep_version:
-        end_version = dep_version.split(".")
-        end_version[1] = str(int(end_version[1]) + 2)
-        end_version = ".".join(end_version)
 
     def decorator(fun):
         @functools.wraps(fun)
@@ -99,18 +93,20 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                 "See the documentation of `default_rng` for more information."
             )
 
+            # Check whether global random state has been set
+            global_seed_set = np.random.mtrand._rand._bit_generator._seed_seq is None
+
             if as_old_kwarg:  # warn about deprecated use of old kwarg
                 kwargs[NEW_NAME] = kwargs.pop(old_name)
-                if dep_version:
-                    message = (
-                        f"Use of keyword argument `{old_name}` is "
-                        f"deprecated and replaced by `{NEW_NAME}`.  "
-                        f"Support for `{old_name}` will be removed "
-                        f"in SciPy {end_version}."
-                    ) + cmn_msg
-                    warnings.warn(message, DeprecationWarning, stacklevel=2)
+                message = (
+                    f"Use of keyword argument `{old_name}` is "
+                    f"deprecated and replaced by `{NEW_NAME}`.  "
+                    f"Support for `{old_name}` will be removed "
+                    f"in SciPy {end_version}."
+                ) + cmn_msg
+                warnings.warn(message, DeprecationWarning, stacklevel=2)
 
-            elif as_pos_arg and dep_version:
+            elif as_pos_arg:
                 # Warn about changing meaning of positional arg
 
                 # Note that this decorator does not deprecate positional use of the
@@ -130,7 +126,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
                 # np.random.default_rng will be done inside the decorated function
                 kwargs[NEW_NAME] = np.random.default_rng(kwargs[NEW_NAME])
 
-            elif np.random.mtrand._rand._bit_generator._seed_seq is None:
+            elif global_seed_set:
                 # Emit FutureWarning if `np.random.seed` was used and no PRNG was passed
                 message = (
                     "The NumPy global RNG was seeded by calling "
@@ -147,7 +143,7 @@ def _transition_to_rng(old_name, position_num=None, dep_version=None):
 
 
 # Example usage of _prepare_rng decorator
-@_transition_to_rng("random_state", 1, "1.15.0")
+@_transition_to_rng("random_state", position_num=1, end_version="1.17.0")
 # previously, the signature of the function was
 #   library_function(arg1, random_state=None, arg2=None):
 def library_function(arg1, rng=None, arg2=None):
