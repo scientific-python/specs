@@ -35,10 +35,16 @@ def test_seeded_vs_unseeded():
 
 
 def test_positional_random_state():
+    # doesn't need to warn
+    library_function(1, None)  # seed not set
+    library_function(1, np.random.default_rng(2384924))  # Generators still accepted
+
     with pytest.warns(FutureWarning, match="Positional use of"):
-        library_function(1, None)
-        library_function(1, 1)
+        library_function(1, 1)  # behavior will change
+
+        # will raise error in the future
         library_function(1, np.random.RandomState(1))
+        library_function(1, np.random)
 
 
 def test_random_state_deprecated():

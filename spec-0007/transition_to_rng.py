@@ -113,13 +113,23 @@ def _transition_to_rng(old_name, *, position_num=None, end_version):
                 # argument; it only warns that the behavior will change in the future.
                 # Simultaneously transitioning to keyword-only use is another option.
 
-                message = (
-                    f"Positional use of `{NEW_NAME}` (formerly known as "
-                    f"`{old_name}`) is still allowed, but the behavior is "
-                    "changing: the argument will be validated using "
-                    f"`np.random.default_rng` beginning in SciPy {end_version}."
-                ) + cmn_msg
-                warnings.warn(message, FutureWarning, stacklevel=2)
+                arg = args[position_num]
+                # If the argument is None and the global seed wasn't set, or if the
+                # argument is one of a few new classes, the user will not notice change
+                # in behavior.
+                ok_classes = (np.random.Generator,
+                              np.random.SeedSequence,
+                              np.random.BitGenerator)
+                if (arg is None and not global_seed_set) or isinstance(arg, ok_classes):
+                    pass
+                else:
+                    message = (
+                        f"Positional use of `{NEW_NAME}` (formerly known as "
+                        f"`{old_name}`) is still allowed, but the behavior is "
+                        "changing: the argument will be validated using "
+                        f"`np.random.default_rng` beginning in SciPy {end_version}."
+                    ) + cmn_msg
+                    warnings.warn(message, FutureWarning, stacklevel=2)
 
             elif as_new_kwarg:  # no warnings; this is the preferred use
                 # After the removal of the decorator, validation with
