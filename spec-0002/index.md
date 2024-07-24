@@ -14,6 +14,7 @@ endorsed-by:
 <!--
 Briefly and clearly describe the recommendation.
 -->
+
 This SPEC (Scientific Python Ecosystem Coordination) recommendation for API dispatching is designed to enhance interoperability and performance within the scientific Python ecosystem, leveraging the capabilities of [Python `entry_points`](https://packaging.python.org/en/latest/specifications/entry-points/).
 
 This recommendation presents a systematic approach that enables users to redirect function calls to alternative computation backends seamlessly. This flexibility allows users to take advantage of optimized implementations simply by configuring an environment variable or adding an additional keyword argument (more on this later), rather than having to learn a new API's interface, which might not be very "python-user-friendly". Such adaptability facilitates the integration of hardware-specific optimizations, reimplementations in other programming languages (such as C or Rust), and the utilization of entirely new data structures.
@@ -43,45 +44,47 @@ A successful prototype implementation of this SPEC is already integrated into [N
 
 ### Overview : API dispatching in NetworkX
 
-1. Utilization of Python `entry_point`
+1.  Utilization of Python `entry_point`
     The `entry_point` mechanism serves as a crucial component for backend discovery and integration. By registering backends through the `networkx.backends` `entry_point` in a package's metadata, developers can enable NetworkX to recognize and utilize these backends without requiring explicit imports. Example Registration:
 
         [project.entry-points."networkx.backends"]
         your_backend_name = "your_dispatcher_class"
 
-2. Backend Requirements
+2.  Backend Requirements
     To ensure that a backend is compatible with NetworkX, it must adhere to specific structural requirements:
-        - The backend must implement a class that behaves like the `nx.Graph` object, including an attribute `__networkx_backend__` that identifies the backend.
-        - The backend should provide `convert_from_nx` and `convert_to_nx` methods to facilitate the conversion between NetworkX graphs and the backend's graph representation. 
-3. Testing the backend
+
+    1. The backend must implement a class that behaves like the `nx.Graph` object, including an attribute `__networkx_backend__` that identifies the backend.
+
+    2. The backend should provide `convert_from_nx` and `convert_to_nx` methods to facilitate the conversion between NetworkX graphs and the backend's graph representation.
+
+3.  Testing the backend
     To ensure that the backend complies with the main NetworkX's API, developers are encouraged to run the NetworkX test suite on their custom backend. Testing Setup:
 
         NETWORKX_TEST_BACKEND=<your_backend_name>
         pytest --pyargs networkx
 
-4. Currently, the following ways exist in NetworkX to dispatch a function call to a backend:
+4.  Currently, the following ways exist in NetworkX to dispatch a function call to a backend:
 
     1. Type-based dispatching
-        ```py
-        H = nx_parallel.ParallelGraph(G)
-        nx.betweenness_centrality(H)
-        ```
+       ```py
+       H = nx_parallel.ParallelGraph(G)
+       nx.betweenness_centrality(H)
+       ```
     2. Using a `backend` kwarg
-        ```py
-        nx.betweenness_centrality(G, backend=”parallel”)
-        ```
+       ```py
+       nx.betweenness_centrality(G, backend=”parallel”)
+       ```
     3. Environment variable
-        ```sh
-        export NETWORKX_AUTOMATIC_BACKENDS=parallel && python nx_code.py
-        ```
+       ```sh
+       export NETWORKX_AUTOMATIC_BACKENDS=parallel && python nx_code.py
+       ```
     4. [WIP] Specifying backend as a config parameter (ref. [PR#7485](https://github.com/networkx/networkx/pull/7485))
-        ```py
-        with nx.config(backend=”parallel”):
-            nx.betweenness_centrality(G)
-        ```
+       ```py
+       with nx.config(backend=”parallel”):
+           nx.betweenness_centrality(G)
+       ```
 
 For more, read the [NetworkX's Backend and Config docs](https://networkx.org/documentation/latest/reference/backends.html)!
-
 
 ### Interesting discussions happening in:
 
