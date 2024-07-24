@@ -17,7 +17,7 @@ Briefly and clearly describe the recommendation.
 
 This SPEC (Scientific Python Ecosystem Coordination) recommendation for API dispatching is designed to enhance interoperability and performance within the scientific Python ecosystem, leveraging the capabilities of [Python `entry_points`](https://packaging.python.org/en/latest/specifications/entry-points/).
 
-This recommendation presents a systematic approach that enables users to redirect function calls to alternative computation backends seamlessly. This flexibility allows users to take advantage of optimized implementations simply by configuring an environment variable or adding an additional keyword argument (more on this later), rather than having to learn a new API's interface, which might not be very "python-user-friendly". Such adaptability facilitates the integration of hardware-specific optimizations, reimplementations in other programming languages (such as C or Rust), and the utilization of entirely new data structures.
+This recommendation presents a systematic approach that enables users to redirect function calls to alternative computation backends seamlessly. This flexibility allows users to take advantage of optimized implementations simply by configuring an environment variable or adding an additional keyword argument (more on this later), rather than having to learn a new API's interface, which might not be very "python-user"-friendly. Such adaptability facilitates the integration of hardware-specific optimizations, reimplementations in other programming languages (such as C or Rust), and the utilization of entirely new data structures.
 
 ### Core Project Endorsement
 
