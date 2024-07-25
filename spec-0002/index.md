@@ -4,6 +4,7 @@ number: 2
 date: 2021-12-16
 author:
   - "Jarrod Millman <millman@berkeley.edu>"
+  - "Aditi Juneja <aditijuneja7@gmail.com>"
 discussion:
 is-draft: true
 endorsed-by:
