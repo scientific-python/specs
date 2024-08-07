@@ -31,6 +31,13 @@ We suggest implementing these principles by:
 Note that `numpy.random.default_rng` does not accept instances of `RandomState`, so user control of library behavior with instances of `RandomState` is effectively deprecated, too.
 That said, neither `np.random.seed` nor `np.random.RandomState` themselves are deprecated, so they may still be used in some contexts (e.g. by developers for generating unit test data).
 
+## Motivation
+
+Two strong motivations for moving over to `Generator`s are:
+
+1. they avoid naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
+2. they avoid using global state (from `numpy.random.mtrand._rand`).
+
 ### Scope
 
 This is intended as a recommendation to all libraries that allow users to control the
@@ -55,11 +62,6 @@ In practice, the seed is unfortunately also often controlled using `numpy.random
 ## Implementation
 
 Legacy behavior in packages such as scikit-learn (`sklearn.utils.check_random_state`) typically handle `None` (use the global seed state), an int (convert to `RandomState`), or `RandomState` object.
-
-Two strong motivations for moving over to `Generator`s are:
-
-1. they avoid naïve seeding strategies, such as using successive integers, via the underlying [SeedSequence](https://numpy.org/doc/stable/reference/random/parallel.html#seedsequence-spawning);
-2. they avoid using global state (from `numpy.random.mtrand._rand`).
 
 Our recommendation here is a deprecation strategy which does not in _all_ cases adhere to the Hinsen principle[^hinsen],
 although it could very nearly do so by enforcing the use of `rng` as a keyword argument.
