@@ -65,21 +65,26 @@ although it could very nearly do so by enforcing the use of `rng` as a keyword a
 
 [^hinsen]: The Hinsen principle states, loosely, that code should, whether executed now or in the future, return the same result, or raise an error.
 
-The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#issuecomment-1515248009) is:
+The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#issuecomment-1515248009) is as follows.
 
-1. Accept both `rng` and `random_state`/`seed` keyword arguments.
-2. If both are specified, raise an error.
-3. If neither is specified and `np.random.seed` has been used to set the seed, emit a `FutureWarning` about the upcoming change in behavior.
-4. If `random_state`/`seed` is passed by keyword or by position, treat it as before, but:
+Initially:
+
+- Accept both `rng` and `random_state`/`seed` keyword arguments.
+- If both are specified by the user, raise an error.
+- If `rng` is passed by keyword, validate it with `np.random.default_rng()` and use it to generate random numbers as needed.
+- If `random_state`/`seed` is specified (by keyword or position, if allowed), preserve existing behavior.
+
+After `rng` is available in all releases within the support window suggested by SPEC 0, emit warnings as follows.
+
+- If neither `rng` nor `random_state`/`seed` is specified and `np.random.seed` has been used to set the seed, emit a `FutureWarning` about the upcoming change in behavior.
+- If `random_state`/`seed` is passed by keyword or by position, treat it as before, but:
 
    - Emit a `DeprecationWarning` if passed by keyword, warning about the deprecation of keyword `random_state` in favor of `rng`.
    - Emit a `FutureWarning` if passed by position, warning about the change in behavior of the positional argument.
 
-5. If `rng` is passed by keyword, standardize it using `numpy.random.default_rng`.
-6. After the deprecation period, use only `rng`, validated with `numpy.random.default_rng`.
-   Raise an error if `random_state`/`seed` is provided.
+After the deprecation period, accept only `rng`, raising an error if `random_state`/`seed` is provided.
 
-   By now, the function signature, with type annotations, could look like this:
+By now, the function signature, with type annotations, could look like this:
 
    ```python
    from collections.abc import Sequence
