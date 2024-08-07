@@ -3,7 +3,15 @@ import contextlib
 import numpy as np
 import pytest
 
-from transition_to_rng import _transition_to_rng, library_function
+from transition_to_rng import _transition_to_rng
+
+from scipy._lib._util import check_random_state
+
+
+@_transition_to_rng("random_state", position_num=1, end_version="1.17.0")
+def library_function(arg1, rng=None, arg2=0):
+    rng = check_random_state(rng)
+    return arg1, rng.random(), arg2
 
 
 @contextlib.contextmanager
@@ -19,49 +27,49 @@ def np_random_seed(seed=0):
     np.random.mtrand._rand = rs
 
 
-def test_seeded_vs_unseeded():
-    with np_random_seed():
-        with pytest.warns(FutureWarning, match="NumPy global RNG"):
-            library_function(1)
-
-        # These behaviors should not change when the global seed is set,
-        # since they provide explicit `random_state` or `rng`
-        test_positional_random_state()
-        test_random_state_deprecated()
-        test_rng_correct_usage()
-
-    # Entirely unseeded, should proceed without warning
-    library_function(1)
-
-
 def test_positional_random_state():
     # doesn't need to warn
-    library_function(1, None)  # seed not set
     library_function(1, np.random.default_rng(2384924))  # Generators still accepted
 
-    with pytest.warns(FutureWarning, match="Positional use of"):
+    message = "Positional use of"
+    if np.random.mtrand._rand._bit_generator._seed_seq is not None:
+        library_function(1, None)  # seed not set
+    else:
+        with pytest.warns(FutureWarning, match=message):
+            library_function(1, None)  # seed set
+
+    with pytest.warns(FutureWarning, match=message):
         library_function(1, 1)  # behavior will change
 
-        # will raise error in the future
-        library_function(1, np.random.RandomState(1))
-        library_function(1, np.random)
+    with pytest.warns(FutureWarning, match=message):
+        library_function(1, np.random.RandomState(1))  # will error
+
+    with pytest.warns(FutureWarning, match=message):
+        library_function(1, np.random)  # will error
 
 
 def test_random_state_deprecated():
-    with pytest.warns(
-        DeprecationWarning, match="keyword argument `random_state` is deprecated"
-    ):
+    message = "keyword argument `random_state` is deprecated"
+
+    with pytest.warns(DeprecationWarning, match=message):
         library_function(1, random_state=None)
+
+    with pytest.warns(DeprecationWarning, match=message):
         library_function(1, random_state=1)
 
 
 def test_rng_correct_usage():
     library_function(1, rng=None)
 
-    assert library_function(1, rng=1) == library_function(1, rng=1)
-    assert library_function(1, rng=np.random.default_rng(123)) == library_function(
-        1, rng=np.random.default_rng(123)
-    )
+    rng = np.random.default_rng(1)
+    ref_random = rng.random()
+
+    res = library_function(1, rng=1)
+    assert res == (1, ref_random, 0)
+
+    rng = np.random.default_rng(1)
+    res = library_function(1, rng, arg2=2)
+    assert res == (1, ref_random, 2)
 
 
 def test_rng_incorrect_usage():
@@ -72,22 +80,46 @@ def test_rng_incorrect_usage():
         library_function(1, rng=1, random_state=1)
 
 
-@_transition_to_rng("random_state", end_version="1.17.0")
-# previously, the signature of the function was
-#   library_function(arg1, random_state=None, arg2=None):
-def random_function(arg1, *, rng=None, arg2=None):
-    if isinstance(rng, (np.random.Generator, np.random.RandomState)):
-        rng = rng.random()
-    print((arg1, rng, arg2))
+def test_seeded_vs_unseeded():
+    with np_random_seed():
+        with pytest.warns(FutureWarning, match="NumPy global RNG"):
+            library_function(1)
+
+        # These tests should still pass when the global seed is set,
+        # since they provide explicit `random_state` or `rng`
+        test_positional_random_state()
+        test_random_state_deprecated()
+        test_rng_correct_usage()
+
+    # Entirely unseeded, should proceed without warning
+    library_function(1)
 
 
 def test_decorator_no_positional():
-    with pytest.warns(
-        DeprecationWarning, match="keyword argument `random_state` is deprecated"
-    ):
-        random_function(1, random_state=3)
+    @_transition_to_rng("random_state", end_version="1.17.0")
+    def library_function(arg1, *, rng=None, arg2=None):
+        rng = check_random_state(rng)
+        return arg1, rng.random(), arg2
 
-    random_function(1, rng=123)
+    message = "keyword argument `random_state` is deprecated"
+    with pytest.warns(DeprecationWarning, match=message):
+        library_function(1, random_state=3)
+
+    library_function(1, rng=123)
+
+
+def test_decorator_no_end_version():
+    @_transition_to_rng("random_state")
+    def library_function(arg1, rng=None, *, arg2=None):
+        rng = check_random_state(rng)
+        return arg1, rng.random(), arg2
+
+    # no warnings emitted
+    library_function(1, rng=np.random.default_rng(235498235))
+    library_function(1, random_state=np.random.default_rng(235498235))
+    library_function(1, 235498235)
+    with np_random_seed():
+        library_function(1, None)
 
 
 if __name__ == "__main__":
