@@ -144,7 +144,7 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
                 # np.random.default_rng will be done inside the decorated function
                 kwargs[NEW_NAME] = np.random.default_rng(kwargs[NEW_NAME])
 
-            elif global_seed_set and _emit_warning:
+            elif global_seed_set and emit_warning:
                 # Emit FutureWarning if `np.random.seed` was used and no PRNG was passed
                 message = (
                     "The NumPy global RNG was seeded by calling "
@@ -160,11 +160,34 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
     return decorator
 
 
-# Example usage of _prepare_rng decorator
-@_transition_to_rng("random_state", position_num=1, end_version="1.17.0")
-# previously, the signature of the function was
-#   library_function(arg1, random_state=None, arg2=None):
-def library_function(arg1, rng=None, arg2=None):
-    if isinstance(rng, (np.random.Generator, np.random.RandomState)):
-        rng = rng.random()
-    print((arg1, rng, arg2))
+# Example usage of _prepare_rng decorator.
+
+# Suppose a library uses a custom random state validation function, such as
+from scipy._lib._util import check_random_state
+# https://github.com/scipy/scipy/blob/94532e74b902b569bfad504866cb53720c5f4f31/scipy/_lib/_util.py#L253
+
+# Suppose a function `library_function` is defined as:
+def library_function(arg1, random_state=None, arg2=0):
+    random_state = check_random_state(random_state)
+    return random_state.random()*arg1 + arg2
+
+# We apply the decorator and change the function signature at the same time.
+# The use of `random_state` throughout the function may be replaced with `rng`,
+# or the variable may be defined as `random_state = rng`.
+@_transition_to_rng("random_state", position_num=1)
+def library_function(arg1, rng=None, arg2=0):
+    rng = check_random_state(rng)
+    return rng.random()*arg1 + arg2
+
+# After `rng` is available in all releases within the support window suggested by
+# SPEC 0, we pass the `end_version` param to the decorator to emit warnings.
+@_transition_to_rng("random_state", position_num=1, end_version='1.17.0')
+def library_function(arg1, rng=None, arg2=0):
+    rng = check_random_state(rng)
+    return rng.random()*arg1 + arg2
+
+# At the end of the deprecation period, remove the decorator, and validate
+# `rng` with` np.random.default_rng`.
+def library_function(arg1, rng=None, arg2=0):
+    rng = np.random.default_rng(rng)
+    return rng.random()*arg1 + arg2
