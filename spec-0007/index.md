@@ -24,11 +24,12 @@ We recommend:
 
 We suggest implementing these principles by:
 
-- deprecating the use of `numpy.random.seed` to control the random state,
+- deprecating user control of downstream library behavior with `numpy.random.seed`,
 - deprecating the use of `random_state`/`seed` arguments in favor of a consistent `rng` argument, and
 - using `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`.
 
-Note that `numpy.random.default_rng` does not accept instances of `RandomState`, so use of `RandomState` to control the seed is effectively deprecated, too.
+Note that `numpy.random.default_rng` does not accept instances of `RandomState`, so user control of library behavior with instances of `RandomState` is effectively deprecated, too.
+That said, neither `np.random.seed` nor `np.random.RandomState` themselves are deprecated, so they may still be used in some contexts (e.g. by developers for generating unit test data).
 
 ### Scope
 
