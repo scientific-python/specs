@@ -68,6 +68,19 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
     """
     NEW_NAME = "rng"
 
+    cmn_msg = (
+        "To silence this warning and ensure consistent behavior in SciPy "
+        f"{end_version}, control the RNG using argument `{NEW_NAME}`. Arguments passed "
+        f"to keyword `{NEW_NAME}` will be validated by `np.random.default_rng`, so the "
+        "behavior corresponding with a given value may change compared to use of "
+        f"`{old_name}`. For example, "
+        "1) `None` will result in unpredictable random numbers, "
+        "2) an integer will result in a different stream of random numbers, (with the "
+        "same distribution), and "
+        "3) `np.random` or `RandomState` instances will result in an error. "
+        "See the documentation of `default_rng` for more information."
+    )
+
     def decorator(fun):
         @functools.wraps(fun)
         def wrapper(*args, **kwargs):
@@ -84,20 +97,6 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
                     f"argument now known as `{NEW_NAME}`"
                 )
                 raise TypeError(message)
-
-            cmn_msg = (
-                " To silence this warning and ensure consistent behavior in "
-                f"SciPy {end_version}, control the RNG using argument "
-                f"`{NEW_NAME}`. Arguments passed to keyword `{NEW_NAME}` will "
-                "be validated by `np.random.default_rng`, so the behavior "
-                "corresponding with a given value may change compared to use "
-                f"of `{old_name}`. For example, "
-                "1) `None` results in unpredictable random numbers, "
-                "2) an integer results in a different stream of random numbers, "
-                "(with the same distribution), and "
-                "3) `np.random` or `RandomState` instances result in an error. "
-                "See the documentation of `default_rng` for more information."
-            )
 
             # Check whether global random state has been set
             global_seed_set = np.random.mtrand._rand._bit_generator._seed_seq is None
