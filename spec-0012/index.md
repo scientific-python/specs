@@ -11,7 +11,8 @@ endorsed-by:
 
 ## Description
 
-PEP8 and other established styling documents do not include guidelines about
+[PEP 8](https://peps.python.org/pep-0008)
+and other established styling documents do not include guidelines about
 styling mathematical expressions. This leads to individual interpretation and
 styles which may conflict with those of others. We seek to standardizing the
 way we represent mathematics for the same reason we standardize other code:
