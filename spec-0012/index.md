@@ -160,27 +160,7 @@ permitted by this SPEC.
     * z)
    ```
    If there are multiple candidates, include the break at the first opportunity.
-9. The packages or subpackages from which mathematical functions and constants are used
-   should be unambiguous. For instance, if `math.log`, `numpy.sin`, `scipy.special.gamma`,
-   and `mpmath.mp.ncdf` are to be used in the same file, prefer imports like
-   ```python3
-   import math
-   import numpy as np
-   from scipy import special
-   from mpmath import mp
-   mp.dps = 50
-   # use math.log, np.sin, special.gamma, mp.ncdf
-   ```
-   over
-   ```python3
-   from scipy.special import gamma
-   from mpmath import *
-   from math import log
-   from numpy import sin
-   ```
-   If all mathematical functions/constants are from the same package or subpackage, they
-   may be imported individually, e.g. `from numpy import log, sin, inf`.
-10. Any of the preceeding rules may be broken if there is a clear reason to do so. 
+9. Any of the preceeding rules may be broken if there is a clear reason to do so.
     - *Conflict with other style rules*. For example, there is not supposed to be
       whitepace surrounding the `**` operator, but one can imagine a chain of `**`
       operations that exhausts the character limit of a line.
