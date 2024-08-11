@@ -74,13 +74,13 @@ acronym, namely MD and AS, will be used below to refer to the corresponding oper
 
 ## Implementation
 
-The following rules are not imagined to be all encompassing, and there may be
-syntactically valid cases in which the following rules would lead to contradictions.
-Nonetheless, we expect them to be useful in most cases, and projects that adopt the
-SPEC endeavor to use them where practical. These rules are intended to respect and
+These rules are intended to respect and
 complement the [PEP 8 standards](https://peps.python.org/pep-0008), such as using
 [implied line continuation](https://peps.python.org/pep-0008/#maximum-line-length) and
 and [breaking lines before binary operators](https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator).
+Although examples do not show the use of hanging indent, any of the indentation styles
+allowed by [PEP 8 Indentation](https://peps.python.org/pep-0008/#indentation) are
+permitted by this SPEC.
 
 0. Unless otherwise specified, rely on the implicit order of operations;
    i.e., do not add extraneous parentheses. For example, prefer `u**v + y**z`
@@ -105,7 +105,7 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
 5. Considering the previous rules, only `**`, `*`, `/`, and the unary `+`, `-`, and `~`
    operators can appear in implicit subexpressions without spaces. In such expressions,
    - Use at most one unary operator, and if used, ensure that it is the leftmost operator.
-   - Use at most `**` operator, and if used, ensure that it is the rightmost operator.
+   - Use at most one `**` operator, and if used, ensure that it is the rightmost operator.
 
    To achieve these goals, simplification or the addition of parentheses may be required.
    For example:
