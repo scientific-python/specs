@@ -133,14 +133,17 @@
 
 ###### Recommend drop support for:
 
-|              |          |                   |
-| ------------ | -------- | ----------------- |
-| ipython      | 8.24.0   | released Apr 2024 |
-| networkx     | 3.3      | released Apr 2024 |
-| scikit-image | 0.23.0   | released Apr 2024 |
-| scipy        | 1.13.0   | released Apr 2024 |
-| xarray       | 2024.5.0 | released May 2024 |
-| zarr         | 2.18.0   | released May 2024 |
+|              |                      |                                |
+| ------------ | -------------------- | ------------------------------ |
+| ipython      | 8.24.0 to 8.25.0     | released Apr 2024 and May 2024 |
+| matplotlib   | 3.9.0                | released May 2024              |
+| networkx     | 3.3                  | released Apr 2024              |
+| numpy        | 2.0.0                | released Jun 2024              |
+| scikit-image | 0.23.0 to 0.24.0     | released Apr 2024 and Jun 2024 |
+| scikit-learn | 1.5.0                | released May 2024              |
+| scipy        | 1.13.0               | released Apr 2024              |
+| xarray       | 2024.5.0 to 2024.6.0 | released May 2024 and Jun 2024 |
+| zarr         | 2.18.0               | released May 2024              |
 
 #### 2026 - Quarter 4:
 
