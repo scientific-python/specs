@@ -1,5 +1,6 @@
 ---
 title: "SPEC 7 — Seeding pseudo-random number generation"
+number: 7
 date: 2023-04-19
 author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
@@ -24,7 +25,7 @@ We recommend:
 
 We suggest implementing these principles by:
 
-- deprecating the use of `random_state`/`seed` arguments in favor of a consistent `rng` argument,
+- deprecating uses of an existing seed argument (commonly `random_state` or `seed`) in favor of a consistent `rng` argument,
 - using `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`[^no-RandomState], and
 - deprecating the use of `numpy.random.seed` to control the random state.
 
@@ -41,7 +42,7 @@ We are primarily concerned with API uniformity, but also encourage libraries to 
 
 This is intended as a recommendation to all libraries that allow users to control the state of a NumPy random number generator.
 It is specifically targeted toward functions that currently accept `RandomState` instances via an argument other than `rng`, or allow `numpy.random.seed` to control the random state, but the ideas are more broadly applicable.
-Use of random number generators other than those provided by NumPy are beyond the scope of this SPEC.
+Random number generators other than those provided by NumPy could also be accommodated by an `rng` keyword, but that is beyond the scope of this SPEC.
 
 ### Concepts
 
@@ -93,7 +94,7 @@ SeedLike = int | np.integer | Sequence[int] | np.random.SeedSequence
 RNGLike = np.random.Generator | np.random.BitGenerator
 
 
-def my_func(rng: RNGLike | SeedLike | None = None):
+def my_func(*, rng: RNGLike | SeedLike | None = None):
     """My function summary.
 
     Parameters
@@ -118,7 +119,8 @@ There are three classes of users, which will be affected to varying degrees.
 
 1. Those who do not attempt to control the random state.
    Their code will switch from using the unseeded global `RandomState` to using an unseeded `Generator`.
-   Since the underlying _distributions_ of pseudo-random numbers will not change, these users should be unaffected.
+   Since the underlying _distributions_ of pseudo-random numbers will not change, these users should be largely unaffected.
+   While _technically_ this change does not adhere to the Hinsen principle, its impact should be minimal.
 
 2. Users of `random_state`/`seed` arguments.
    Support for these arguments will be dropped eventually, but during the deprecation period, we can provide clear guidance, via warnings and documentation, on how to migrate to the new `rng` keyword.
@@ -126,7 +128,8 @@ There are three classes of users, which will be affected to varying degrees.
 3. Those who use `numpy.random.seed`.
    The proposal will do away with that global seeding mechanism, meaning that code that relies on it would, after the deprecation period, go from being seeded to being unseeded.
    To ensure that this does not go unnoticed, libraries that allowed for control of the random state via `numpy.random.seed` should raise a `FutureWarning` if `np.random.seed` has been called. (See [Code](#code) below for an example.)
-   In response, users must switch from using `numpy.random.seed` to passing the `rng` argument explicitly to all functions that accept it.
+   To fully adhere to the Hinsen principle, these warnings should instead be raised as errors.
+   In response, users will have to switch from using `numpy.random.seed` to passing the `rng` argument explicitly to all functions that accept it.
 
 ### Code
 
