@@ -145,7 +145,7 @@ they may **endorse** it.
 Once a SPEC is endorsed, substantive changes require the approval of
 all endorsing Core Projects.
 
-A SPEC is recommended for wide-spread adoption once it is endorsed by
+A SPEC is _recommended_ for wide-spread adoption once it is endorsed by
 two (or more) Core Projects.
 Additional details may be found in [Core Project
 documentation](/specs/core-projects).
