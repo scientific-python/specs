@@ -139,10 +139,7 @@ As an example, consider how a SciPy function would transition from a `random_sta
 
 ### Core Project Endorsement
 
-Endorsement of this SPEC means that a project intends to:
-
-- standardize the usage and interpretation of an `rng` keyword for seeding, and
-- avoid the use of global state and legacy bitstream generators.
+Endorsement of this SPEC means that a project considers the standardization and interpretation of the `rng` keyword, as well as avoiding use of global state and legacy bitstream generators, good ideas that are worth implemented widely.
 
 ### Ecosystem Adoption
 
