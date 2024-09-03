@@ -28,6 +28,7 @@ date: {now.strftime("%Y-%m-%d")}
 author:
   - "{author} <{email}>"
 discussion: https://discuss.scientific-python.org/t/
+is-draft: true
 endorsed-by:
 ---
 
