@@ -9,6 +9,7 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
 discussion: https://discuss.scientific-python.org/t/spec-5-ci-best-practices/507
+is-draft: true
 endorsed-by:
 ---
 

@@ -93,86 +93,103 @@ and provide guidance for how to get started with a new SPEC proposal.
 
 ### Decision Points
 
-A SPEC passes through three decision points over the course of
+A SPEC passes through four decision points over the course of
 its development and implementation:
-**Accept**, **Endorse**, and **Adopt**.
+**Accept**, **Publish**, **Endorse**, and **Adopt**.
 
 <!-- prettier-ignore-start -->
 ```mermaid
 graph LR
 
 START[ ]--> |Propose| A[Accept]
-A--> |Draft| B[Endorse]
-B--> |Recommend| C[Adopt]
+A--> |Develop| B[Publish]
+B--> |Canvass| C[Endorse]
+C--> |Recommend| D[Adopt]
 
 click A callback "Steering Committee Action"
-click B callback "Core Project Action"
-click C callback "Ecosystem Action"
+click B callback "Author Action"
+click C callback "Core Project Action"
+click D callback "Ecosystem Action"
 
 style START fill:#FFFFFF, stroke:#FFFFFF;
 
 ```
 <!-- prettier-ignore-end -->
 
-The **accept decision** is made by the Steering Committee and means the proposed SPEC is
-accepted as a draft and added to the main branch of the
-[SPEC repository](https://github.com/scientific-python/specs).
-Proposed SPECs are accepted once (a) the draft is written to clearly explain the area of
-common concern and a general approach to a shared solution and (b) there
-are contributors (from at least two Core Projects) interested in working on the new SPEC
-and in championing it to their projects as well as the larger community.
-Additional details may be found in
-[Steering Committee documentation](/specs/steering-committee).
+The authors starts by _proposing_ a SPEC, as outlined in [New SPEC
+Proposals](#new-spec-proposals).
+The decision to **accept** a SPEC is made by the Steering Committee,
+at which point it is added to the main branch of the [SPEC
+repository](https://github.com/scientific-python/specs), clearly
+labeled as a draft.
+Proposed SPECs are accepted once (a) the draft is written to clearly
+explain the area of common concern and a general approach to a shared
+solution and (b) there are contributors (from at least two Core
+Projects) interested in working on the new SPEC and in championing it
+to their projects as well as the larger community.
+Additional details may be found in [Steering Committee
+documentation](/specs/steering-committee).
 
-The **endorse decision** is made by the Core Projects.
-The Core Projects and interested community members revise the accepted SPEC in a
-collabortive and iterative process focused on ensuring the SPEC implementation plan that
-is broadly applicable and likely to be widely adopted.
-The intent is that most SPECs will have several authors from numerous projects
-including several Core Projects.
-A SPEC is recommended for wide-spread adoption once it is endorsed by two (or more) Core Projects.
-Once a SPEC is recommended, substantive changes require the approval of all endorsing
-Core Projects.
-Additional details may be found in
-[Core Project documentation](/specs/core-projects).
+In the accepted phase, the authors _develop_ their SPEC, in
+consultation with Core Projects and interested community members.
+This is done in a collabortive and iterative process, focused on
+ensuring that the SPEC is broadly applicable and likely to be widely
+adopted.
+The intent is that most SPECs will have authors from several projects,
+including Core Projects.
+Once authors consider their SPEC complete, they **publish** it,
+removing its draft status.
 
-The **adopt decision** is made by individual projects according to their own decision-making
-processes.
-Any project in the ecosystem is welcome to adopt a SPEC at any point.
-However, it may make sense to wait until a SPEC is endorsed by several Core Projects.
-This ensures that the SPEC has been vetted and deemed stable enough for widespread adoption.
-Once a SPEC is endorsed by several Core Projects it may still evolve,
-but the barrier for modifying the SPEC will increase substantially
-(since all endorsing projects would need to agree to changes).
-Projects that adopt a SPEC early should engage in the collaborative process
-leading to the SPEC being endorsed by the Core Projects.
+The author now _canvasses_ their project with the Core Projects, so
+they may **endorse** it.
+Once a SPEC is endorsed, substantive changes require the approval of
+all endorsing Core Projects.
+
+A SPEC is _recommended_ for wide-spread adoption once it is endorsed by
+two (or more) Core Projects.
+Additional details may be found in [Core Project
+documentation](/specs/core-projects).
+Individual projects choose to **adopt** the SPEC according to their
+own decision-making processes.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
+Ecosystem projects are welcome to adopt a SPEC at any point in the
+process, however, it may make sense to wait until a SPEC is endorsed
+by several Core Projects to ensure that the SPEC has been vetted and
+is deemed stable enough for widespread adoption.
+Once a SPEC is endorsed, it may still evolve, but the barrier for
+modifying the SPEC will increase substantially (since all endorsing
+projects would need to agree to changes).
+Projects that adopt a SPEC early should engage in the collaborative
+process leading to the SPEC being endorsed by the Core Projects, to
+ensure that their use cases are incorporated.
 
 ### New SPEC Proposals
 
-A good SPEC proposal focuses on a single key recommendation or idea for
-coordinating projects in the scientific Python ecosystem.
-Before proposing a SPEC, we highly recommended that you first **vet the idea**
-by doing one or more of the following:
+A good SPEC proposal focuses on a single key recommendation or idea
+for coordinating projects in the scientific Python ecosystem.
+Before proposing a SPEC, we highly recommended that you first **vet
+the idea** by doing one or more of the following:
 
 1. discuss the idea with at least one project in the ecosystem,
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
 
-Before a proposed SPEC can be accepted, the idea must be discussed on the
-discussion forum under the [`SPECS/Ideas` topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-Thereafter a new SPEC document must be submitted
-as a pull request to the [SPEC repository](https://github.com/scientific-python/specs).
+Before a proposed SPEC can be accepted, the idea must be discussed on
+the discussion forum under the [`SPECS/Ideas`
+topic](https://discuss.scientific-python.org/c/specs/ideas/9).
+Thereafter a new SPEC document must be submitted as a pull request to
+the [SPEC repository](https://github.com/scientific-python/specs).
 
 Use the `quickstart.py` script to create the new SPEC document.
-Located at the top-level of the
-[SPEC repository](https://github.com/scientific-python/specs),
-the script will ask you a few questions[^newspec] and then create a new file
-appropriately named with a basic template for you to complete (e.g., `spec-0000/index.md`).
+Located at the top-level of the [SPEC
+repository](https://github.com/scientific-python/specs), the script
+will ask you a few questions[^newspec] and then create a new file
+appropriately named with a basic template for you to complete (e.g.,
+`spec-0000/index.md`).
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
-The Steering Committee then considers the SPEC as presented
-in the pull request and will provide additional guidance.
+The Steering Committee then considers the SPEC as presented in the
+pull request and will provide additional guidance.
 
 ## Notes
 
