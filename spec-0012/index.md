@@ -59,7 +59,7 @@ same priority level. There are no explicit subexpressions to be ignored.
 between `x` and the explicit subexpression `(y + z)`; we ignore the contents - and
 especially the operator - within the explicit subexpression; conceptually, it may
 regarded as `(...)`.
-- `x * y + z` is a compound expression; there are two operators and no explicit
+- `x*y + z` is a compound expression; there are two operators and no explicit
 subexpressions that can be ignored.
 
 The acronym PEMDAS commonly refers to "parentheses", "exponentiation", "multiplication",
