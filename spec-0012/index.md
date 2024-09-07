@@ -39,7 +39,7 @@ operations. In the example above, `j` and `range(1, i + 1)` can also be
 referred to as explicit subexpressions of  the whole expression, and `1` and
 `i + 1` are explicit subexpressions of the expression `range(1, i + 1)`. `i` and
 `1` are "implicit" subexpressions of `i + 1`: they could be written as explicit
-subexpressions `(i)` and `(1)` without affecting the order  of operations, but they
+subexpressions `(i)` and `(1)` without affecting the order of operations, but they
 are not explicit as written.
 
 As another example, in `x + y*z`, `y*z` is a subexpression because it could be made
