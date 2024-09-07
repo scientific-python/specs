@@ -107,6 +107,7 @@ permitted by this SPEC.
    operators can appear in implicit subexpressions without spaces. In such expressions,
    - Use at most one unary operator, and if used, ensure that it is the leftmost operator.
    - Use at most one `**` operator, and if used, ensure that it is the rightmost operator.
+   - Use at most one `/` operator, and if used, ensure that it is the rightmost operator except for `**`.
 
    To achieve these goals, simplification or the addition of parentheses may be required.
    For example:
