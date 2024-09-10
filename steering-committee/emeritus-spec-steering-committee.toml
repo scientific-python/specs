@@ -27,3 +27,63 @@ alt = 'Avatar of Melissa Weber Mendonça'
 {{< /image >}}
 Melissa Weber Mendonça'''
 link = 'https://github.com/melissawm'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/13301940?u=70e16e6fe4d0b3b811b27c6d1353ac7648fbaac0&v=4"'
+alt = 'Avatar of Anderson Banihirwe'
+{{< /image >}}
+Anderson Banihirwe'''
+link = 'https://github.com/andersy005'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/7579677?u=1ebcc2526a9787b4786c9383870c6b8fbad217d8&v=4"'
+alt = 'Avatar of Georgiana'
+{{< /image >}}
+Georgiana'''
+link = 'https://github.com/GeorgianaElena'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/492549?v=4"'
+alt = 'Avatar of Juan Nunez-Iglesias'
+{{< /image >}}
+Juan Nunez-Iglesias'''
+link = 'https://github.com/jni'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/1020496?u=c30d768880284601483689157e4114351815044b&v=4"'
+alt = 'Avatar of Joris Van den Bossche'
+{{< /image >}}
+Joris Van den Bossche'''
+link = 'https://github.com/jorisvandenbossche'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/29165011?u=a9cad2941ed8ddec88ea9fc7523ff70433fce7e6&v=4"'
+alt = 'Avatar of Kira Evans'
+{{< /image >}}
+Kira Evans'''
+link = 'https://github.com/kne42'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/3487237?v=4"'
+alt = 'Avatar of Kristen Thyng'
+{{< /image >}}
+Kristen Thyng'''
+link = 'https://github.com/kthyng'

@@ -44,11 +44,17 @@ This document deals with the situation in which that is not possible, and secret
 
    Examples include servers that host services or web pages, and the processes for adding/removing project members on GitHub, chat, mailing lists, etc.
 
-2. Assign the lowest privilege needed for a developer to do their work meaningfully.
+2. Assign the lowest privileges needed for a developer to do their work meaningfully.
 
-   Review permissions regularly (say, every six months) to maintain minimal permissions.
+   Review permissions regularly (say, every year) to maintain minimal permissions.
 
-3. A system for distributing project secrets must have the following properties:
+   _Tokens_ are a typical example of a stored secret that should be scoped (minimal necessary permissions), and set to expire after a reasonable time period (a year, typically).
+   Instructions for rotating and revoking such tokens must be documented.
+
+3. Project assets should, wherever possible, be accessible by at least two maintainers.
+   This ensures access to assets, even when a key team member leaves the project or becomes indisposed.
+
+4. A system for distributing project secrets must have the following properties:
 
    - Secrets are stored encrypted in a central (remote) location.
    - It must be possible to grant access to the secrets to a select group of team members.
@@ -59,9 +65,6 @@ This document deals with the situation in which that is not possible, and secret
    Whichever system is chosen, its user interface should match the capabilities of the intended users.
    This reduces the risk of passwords being copied out to less secure mechanisms such as sticky notes or text files.
    If the target audience is not used to GPG or the command prompt, for example, the `pass` implementation below may not work, and an alternative like 1password or bitwarden should be considered.
-
-4. _Tokens_ form a common subset of secrets stored. These should always be scoped (minimal necessary permissions), and set to expire after a reasonable time period (a year, typically).
-   Instructions for rotating and revoking the token must be documented.
 
 [^future-access]: Revoking access to a service implies both (a) revoking access to secrets and (b) re-generating those secrets, since the actor could have copied them.
 
