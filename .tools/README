@@ -1,0 +1,3 @@
+This directory contains scripts and tools to be used for example for generating new SPEC documents from the template.
+
+Tools that support specific SPECs and/or their implementation should be located in the directory of the given SPEC.
