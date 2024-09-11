@@ -7,7 +7,6 @@ author:
   - "Sebastian Berg <sebastianb@nvidia.com>"
   - "Pamphile Roy <roy.pamphile@gmail.com>"
   - "Matt Haberland <mhaberla@calpoly.edu>"
-  - Other participants in the discussion <not.yet@named.org>"
 discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
 ---
