@@ -11,6 +11,7 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
 endorsed-by:
+  - scikit-image
 ---
 
 ## Description
