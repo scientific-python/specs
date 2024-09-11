@@ -8,6 +8,7 @@ author:
   - "Juanita Gomez <juanitagomezr2112@gmail.com>"
   - "Seth Larson <sethmichaellarson@gmail.com>"
   - "Lars Grüter <lagru@mailbox.org>"
+  - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
 endorsed-by:
 ---
@@ -28,6 +29,12 @@ This SPEC outlines pragmatic recommendations for adopting these security tools a
 Securely _building_ release artifacts will be covered in a later SPEC. This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
 
 While this SPEC is written with GitHub in mind, the same recommendations apply to other services, such as GitLab.
+
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="8" title="Securing the Release Process" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
 ## Implementation
 

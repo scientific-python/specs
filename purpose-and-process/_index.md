@@ -201,7 +201,7 @@ content = '''
 
 {{< /tabs >}}
 
-Alternatively, you can use one badge to indicate adoption of multiple SPECS.
+Alternatively, you can use one badge to indicate adoption of multiple SPECs.
 For example, to indicate adoption of SPECs 0, 1, and 4, we recommend the following
 
 {{< tabs >}}

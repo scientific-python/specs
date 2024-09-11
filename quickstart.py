@@ -52,7 +52,7 @@ Briefly discuss what it means for a project to adopt this SPEC.
 
 #### Badges
 
-Projects can highlight their adoption of this SPECs by including a SPEC badge.
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
 
 {{{{< spec_badge number="{number}" title="{title}" >}}}}
 

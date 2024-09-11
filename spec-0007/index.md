@@ -56,6 +56,24 @@ NumPy, SciPy, scikit-learn, scikit-image, and NetworkX all implement pseudo-rand
 Common keyword arguments include `random_state` and `seed`.
 In practice, the seed is also often controllable using `numpy.random.seed`.
 
+### Core Project Endorsement
+
+Endorsement of this SPEC means that a project considers the standardization and interpretation of the `rng` keyword, as well as avoiding use of global state and legacy bitstream generators, good ideas that are worth implemented widely.
+
+### Ecosystem Adoption
+
+To adopt this SPEC, a project should:
+
+- deprecate the use of `random_state`/`seed` arguments in favor of an `rng` argument in all functions where users need to control pseudo-random number generation,
+- use `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`, and
+- deprecate the use of `numpy.random.seed` to control the random state.
+
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="7" title="Seeding pseudo-random number generation" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
+
 ## Implementation
 
 Legacy behavior in packages such as scikit-learn (`sklearn.utils.check_random_state`) typically handle `None` (use the global seed state), an int (convert to `RandomState`), or `RandomState` object.
@@ -137,16 +155,5 @@ As an example, consider how a SciPy function would transition from a `random_sta
 
 {{< include-code "transition_to_rng.py" "python" >}}
 
-### Core Project Endorsement
-
-Endorsement of this SPEC means that a project considers the standardization and interpretation of the `rng` keyword, as well as avoiding use of global state and legacy bitstream generators, good ideas that are worth implemented widely.
-
-### Ecosystem Adoption
-
-To adopt this SPEC, a project should:
-
-- deprecate the use of `random_state`/`seed` arguments in favor of an `rng` argument in all functions where users need to control pseudo-random number generation,
-- use `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`, and
-- deprecate the use of `numpy.random.seed` to control the random state.
 
 ## Notes
