@@ -163,6 +163,80 @@ Projects that adopt a SPEC early should engage in the collaborative
 process leading to the SPEC being endorsed by the Core Projects, to
 ensure that their use cases are incorporated.
 
+#### Badges
+
+Projects can highlight their adoption of specific SPECs with a SPEC badge.
+For example, for SPEC 0, we recommend using
+
+{{< tabs >}}
+
+[[tab]]
+name = 'Rendered badge'
+content = '''
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
+'''
+
+[[tab]]
+name = 'Markdown'
+content = '''
+
+```
+[![SPEC 0 — Minimum Supported Dependencies](https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/spec-0000/)
+```
+
+'''
+
+[[tab]]
+name = 'reStructuredText'
+content = '''
+
+```
+|SPEC 0 — Minimum Supported Dependencies|
+
+.. |SPEC 0 — Minimum Supported Dependencies| image:: https://img.shields.io/badge/SPEC-0-green?labelColor=%23004811&color=%235CA038
+   :target: https://scientific-python.org/specs/spec-0000/
+```
+
+'''
+
+{{< /tabs >}}
+
+Alternatively, you can use one badge to indicate adoption of multiple SPECs.
+For example, to indicate adoption of SPECs 0, 1, and 4, we recommend the following
+
+{{< tabs >}}
+
+[[tab]]
+name = 'Rendered badge'
+content = '''
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
+'''
+
+[[tab]]
+name = 'Markdown'
+content = '''
+
+```
+[![Scientific Python Ecosystem Coordination](https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038)](https://scientific-python.org/specs/)
+```
+
+'''
+
+[[tab]]
+name = 'reStructuredText'
+content = '''
+
+```
+|Scientific Python Ecosystem Coordination|
+
+.. |Scientific Python Ecosystem Coordination| image:: https://img.shields.io/badge/SPEC-0,1,4-green?labelColor=%23004811&color=%235CA038
+   :target: https://scientific-python.org/specs/
+```
+
+'''
+
+{{< /tabs >}}
+
 ### New SPEC Proposals
 
 A good SPEC proposal focuses on a single key recommendation or idea

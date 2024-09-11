@@ -32,6 +32,12 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 Briefly discuss what it means for a project to adopt this SPEC.
 -->
 
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="3" title="Accessibility" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
+
 ## Implementation
 
 ### 1. Alt text

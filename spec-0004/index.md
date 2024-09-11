@@ -52,6 +52,12 @@ Discuss what it means for a core project to endorse this SPEC.
 Discuss what it means for a project to adopt this SPEC.
 -->
 
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="4" title="Using and Creating Nightly Wheels" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
+
 ## Implementation
 
 This section outlines how to implement using and building nightly wheels. We assume your

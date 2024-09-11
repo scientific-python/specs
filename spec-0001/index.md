@@ -6,6 +6,7 @@ author:
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Jon Crall <jon.crall@kitware.com>"
   - "Dan Schult <dschult@colgate.edu>"
+  - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-1-lazy-loading-for-submodules/25
 endorsed-by:
   - ipython
@@ -66,9 +67,11 @@ subpackages lazily.
 A prototype implementation of `lazy_loader` was adapted for
 [napari](https://github.com/napari/napari/pull/2816).
 
-<!--
-Discuss what it means for a project to adopt this SPEC.
--->
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="1" title="Lazy Loading of Submodules and Functions" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
 ## Implementation
 

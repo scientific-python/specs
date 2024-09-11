@@ -7,6 +7,7 @@ author:
   - "Inessa Pawson <inessapawson@gmail.com>"
   - "Daniel McCloy <dan@mccloy.info>"
   - "Matt Haberland <mhaberla@calpoly.edu>"
+  - "Jarrod Millman <millman@berkeley.edu>"
 discussion: https://discuss.scientific-python.org/t/spec-9-governance/1229
 is-draft: true
 endorsed-by:
@@ -53,6 +54,12 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 <!--
 Briefly discuss what it means for a project to adopt this SPEC.
 -->
+
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="9" title="Governance" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
 ## Implementation
 
