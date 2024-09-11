@@ -155,5 +155,4 @@ As an example, consider how a SciPy function would transition from a `random_sta
 
 {{< include-code "transition_to_rng.py" "python" >}}
 
-
 ## Notes
