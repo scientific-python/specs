@@ -58,7 +58,7 @@ Briefly discuss what it means for a project to adopt this SPEC.
 #### Badges
 
 Projects can highlight their adoption of this SPEC by including a SPEC badge.
-{{< spec_badge number="0" title="Minimum Supported Dependencies" >}}
+{{< spec_badge number="9" title="Governance" >}}
 To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
 ## Implementation
