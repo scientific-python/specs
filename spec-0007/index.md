@@ -10,6 +10,7 @@ author:
   - Other participants in the discussion <not.yet@named.org>"
 discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
+  - scikit-image
 ---
 
 ## Description
