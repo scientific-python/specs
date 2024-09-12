@@ -1,5 +1,5 @@
 ---
-title: "SPEC 7 — Seeding pseudo-random number generation"
+title: "SPEC 7 — Seeding Pseudo-Random Number Generation"
 number: 7
 date: 2023-04-19
 author:
