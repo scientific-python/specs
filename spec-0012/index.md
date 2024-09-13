@@ -27,16 +27,18 @@ An "explicit" expression is a code expression enclosed within parentheses or
 otherwise syntactically separated from other expressions (i.e. by code other
 than operators, whitespace, literals, or variables). For example, in the list
 comprehension:
+
 ```python3
 for j in range(1, i + 1)
 ```
+
 The output expression `j` is one explicit expression and the input sequence
-`range(1, i + 1)` is another. 
+`range(1, i + 1)` is another.
 
 A "subexpression" is subset of an expression that is either explicit or could
 be made explicit (i.e. with parentheses) without affecting the order of
 operations. In the example above, `j` and `range(1, i + 1)` can also be
-referred to as explicit subexpressions of  the whole expression, and `1` and
+referred to as explicit subexpressions of the whole expression, and `1` and
 `i + 1` are explicit subexpressions of the expression `range(1, i + 1)`. `i` and
 `1` are "implicit" subexpressions of `i + 1`: they could be written as explicit
 subexpressions `(i)` and `(1)` without affecting the order of operations, but they
@@ -52,15 +54,16 @@ A "simple" expression is an expression involving only one operator priority leve
 without considering the operators within explicit subexpressions.
 A "compound" expression is an expression involving more than one operator
 priority level without considering the contents of explicit subexpressions.
-For example, 
+For example,
+
 - `x + y - z` is a simple expression because `+` and `-` have the
-same priority level. There are no explicit subexpressions to be ignored.
+  same priority level. There are no explicit subexpressions to be ignored.
 - `x * (y + z)` is also a simple expression because there is only one operator
-between `x` and the explicit subexpression `(y + z)`; we ignore the contents - and
-especially the operator - within the explicit subexpression; conceptually, it may
-regarded as `(...)`.
+  between `x` and the explicit subexpression `(y + z)`; we ignore the contents - and
+  especially the operator - within the explicit subexpression; conceptually, it may
+  regarded as `(...)`.
 - `x*y + z` is a compound expression; there are two operators and no explicit
-subexpressions that can be ignored.
+  subexpressions that can be ignored.
 
 The acronym PEMDAS commonly refers to "parentheses", "exponentiation", "multiplication",
 "division", "addition", and "subtraction". Herein, we will consider these operators
@@ -88,8 +91,8 @@ permitted by this SPEC.
    over `(u**v) + (y**z)`, and prefer `x + y + z` over `(x + y) + z`. A full
    list of implicit operator priority levels is given by
    [Operator Precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence)
-1. Always use the `**` operator and unary `+`, `-`, and `~` operators *without*
-   surrounding whitespace. For example, prefer `-x**4` over `- (x ** 4)`. 
+1. Always use the `**` operator and unary `+`, `-`, and `~` operators _without_
+   surrounding whitespace. For example, prefer `-x**4` over `- (x ** 4)`.
 2. Always surround non-PEMDAS operators with whitespace, and always make the priority of
    non-PEMDAS operators explicit. For example, prefer `(x == y) or (w == t)` over
    `x==y or w==t`.[^1]
@@ -101,16 +104,18 @@ permitted by this SPEC.
      lower-priority addition operator.
    - The division operation would be written mathematically as a fraction with a
      horizontal bar. For example, prefer `z = t/v * x/y` over `z = t / v * x / y`
-     if this would  be written mathematically as the product of two fractions,
+     if this would be written mathematically as the product of two fractions,
      e.g. $\frac{t}{v} \cdot \frac{x}{y}.
 5. Considering the previous rules, only `**`, `*`, `/`, and the unary `+`, `-`, and `~`
    operators can appear in implicit subexpressions without spaces. In such expressions,
+
    - Use at most one unary operator, and if used, ensure that it is the leftmost operator.
    - Use at most one `**` operator, and if used, ensure that it is the rightmost operator.
    - Use at most one `/` operator, and if used, ensure that it is the rightmost operator except for `**`.
 
    To achieve these goals, simplification or the addition of parentheses may be required.
    For example:
+
    - The expressions `--x` and `-~x` would be implicit subexpressions without spaces
      containing more than one unary operator. The former can be simplified to `+x` or
      simply `x`, and the latter requires explicit parentheses, i.e. `-(~x)`.
@@ -121,14 +126,15 @@ permitted by this SPEC.
    - In the expression `t**v*x**y + z`, no spaces are used around the multiplication
      operator due to the presence of the lower-priority addition operator. However,
      this would lead to `t**v*x**y` being an implicit subexpression without spaces
-     containing more than one `**` operator. This code would be executed as 
-    `(t**v)*(x**y) + z`, but the explicit parentheses should be included for clarity.
+     containing more than one `**` operator. This code would be executed as
+     `(t**v)*(x**y) + z`, but the explicit parentheses should be included for clarity.
    - In the expression `z + x**y/w`, no spaces are used around the division operator
      due to the presence of the lower-priority addition operator. However, this would
      lead to `x**y/w` being an implicit subexpression without spaces containing `**`
      to the left of another operator. Options for refactoring include the addition of
      parentheses (e.g. `z + (x**y)/w`) or pre-multiplying the exponential by a
      fraction (i.e. `x + 1/w*x**y`).
+
 6. Simplify combinations of unary and binary `+` and `-` operators when possible.
    For example,
    - prefer `x + y` over `x + +y`,
@@ -139,18 +145,18 @@ permitted by this SPEC.
    the outermost explicit subexpression possible. For example, if
    `t + (w + (x + (y + z))))` must be broken, prefer
    ```python3
-   (t 
+   (t
     + (w + (x + (y + z)))))
    ```
    over
    ```python3
-   (t + (w + (x + (y 
+   (t + (w + (x + (y
                    + z)))))
    ```
    If there are multiple candidates, include the break at the first opportunity.
 8. If line breaks must occur within a compound subexpression, the break should
    be placed before the operator with lowest priority. For example, if
-   (x + y*z) must be broken, prefer
+   (x + y\*z) must be broken, prefer
    ```python3
    (x
     + y*z)
@@ -161,26 +167,27 @@ permitted by this SPEC.
     * z)
    ```
    If there are multiple candidates, include the break at the first opportunity.
-9. Any of the preceeding rules may be broken if there is a clear reason to do so.
-    - *Conflict with other style rules*. For example, there is not supposed to be
-      whitepace surrounding the `**` operator, but one can imagine a chain of `**`
-      operations that exhausts the character limit of a line.
-    - *Domain knowledge*. For instance, in the expression
-      `t = (x + y) - z`, it may be important to emphasize that the addition should be
-      performed first for numerical reasons or because `(x + y)` is a conceptually
-      important quantity. In such cases, consider adding a comment, e.g.
-      ```python3
-      t = (x + y) - z  # perform `x + y` first for precision
-      ```
-      or breaking the expressions into separate logical lines, e.g.
-      ```python3
-      w = x + y
-      t = w - z
-      ```
+9. Any of the preceding rules may be broken if there is a clear reason to do so.
+   - _Conflict with other style rules_. For example, there is not supposed to be
+     whitepace surrounding the `**` operator, but one can imagine a chain of `**`
+     operations that exhausts the character limit of a line.
+   - _Domain knowledge_. For instance, in the expression
+     `t = (x + y) - z`, it may be important to emphasize that the addition should be
+     performed first for numerical reasons or because `(x + y)` is a conceptually
+     important quantity. In such cases, consider adding a comment, e.g.
+     ```python3
+     t = (x + y) - z  # perform `x + y` first for precision
+     ```
+     or breaking the expressions into separate logical lines, e.g.
+     ```python3
+     w = x + y
+     t = w - z
+     ```
 
-[^1]: There is a case for simply eliminating spaces to reinforce the implicit order
-      of operations, as in `x==y or w==t`. However, if this were the rule, following
-      the rule would require users to remember the full order of operations hierarchy
-      and apply it without mistakes. Use of explicit parentheses with non-PEMDAS
-      operators leads to simpler rules, is more explicit, and is not uncommon in
-      existing code.
+[^1]:
+    There is a case for simply eliminating spaces to reinforce the implicit order
+    of operations, as in `x==y or w==t`. However, if this were the rule, following
+    the rule would require users to remember the full order of operations hierarchy
+    and apply it without mistakes. Use of explicit parentheses with non-PEMDAS
+    operators leads to simpler rules, is more explicit, and is not uncommon in
+    existing code.
