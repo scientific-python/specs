@@ -169,7 +169,7 @@ permitted by this SPEC.
    If there are multiple candidates, include the break at the first opportunity.
 9. Any of the preceding rules may be broken if there is a clear reason to do so.
    - _Conflict with other style rules_. For example, there is not supposed to be
-     whitepace surrounding the `**` operator, but one can imagine a chain of `**`
+     whitespace surrounding the `**` operator, but one can imagine a chain of `**`
      operations that exhausts the character limit of a line.
    - _Domain knowledge_. For instance, in the expression
      `t = (x + y) - z`, it may be important to emphasize that the addition should be
