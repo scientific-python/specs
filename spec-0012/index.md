@@ -105,7 +105,7 @@ permitted by this SPEC.
    - The division operation would be written mathematically as a fraction with a
      horizontal bar. For example, prefer `z = t/v * x/y` over `z = t / v * x / y`
      if this would be written mathematically as the product of two fractions,
-     e.g. $\frac{t}{v} \cdot \frac{x}{y}.
+     e.g. $\frac{t}{v} \cdot \frac{x}{y}$.
 5. Considering the previous rules, only `**`, `*`, `/`, and the unary `+`, `-`, and `~`
    operators can appear in implicit subexpressions without spaces. In such expressions,
 
