@@ -9,6 +9,7 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Brigitta Sipőcz <brigitta.sipocz@gmail.com>"
 discussion: https://discuss.scientific-python.org/t/spec-5-ci-best-practices/507
+is-draft: true
 endorsed-by:
 ---
 
@@ -29,6 +30,12 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 <!--
 Briefly discuss what it means for a project to adopt this SPEC.
 -->
+
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+{{< spec_badge number="5" title="CI Best Practices" >}}
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
 ## Implementation
 

@@ -28,6 +28,7 @@ date: {now.strftime("%Y-%m-%d")}
 author:
   - "{author} <{email}>"
 discussion: https://discuss.scientific-python.org/t/
+is-draft: true
 endorsed-by:
 ---
 
@@ -48,6 +49,14 @@ Briefly discuss what it means for a core project to endorse this SPEC.
 <!--
 Briefly discuss what it means for a project to adopt this SPEC.
 -->
+
+#### Badges
+
+Projects can highlight their adoption of this SPEC by including a SPEC badge.
+
+{{{{< spec_badge number="{number}" title="{title}" >}}}}
+
+To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
 ## Implementation
 
