@@ -142,7 +142,7 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
                     warnings.warn(message, FutureWarning, stacklevel=2)
 
             elif as_new_kwarg:  # no warnings; this is the preferred use
-                # After the removal of the decorator, normalized with
+                # After the removal of the decorator, normalization with
                 # np.random.default_rng will be done inside the decorated function
                 kwargs[NEW_NAME] = np.random.default_rng(kwargs[NEW_NAME])
 
@@ -193,7 +193,7 @@ def library_function(arg1, rng=None, arg2=0):
     return rng.random() * arg1 + arg2
 
 
-# At the end of the deprecation period, remove the decorator, and  normalize
+# At the end of the deprecation period, remove the decorator, and normalize
 # `rng` with` np.random.default_rng`.
 def library_function(arg1, rng=None, arg2=0):
     rng = np.random.default_rng(rng)
