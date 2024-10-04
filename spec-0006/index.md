@@ -10,6 +10,7 @@ author:
 discussion: https://discuss.scientific-python.org/t/spec-6-keys-to-the-castle
 endorsed-by:
   - scikit-image
+  - ipython
 ---
 
 ## Description
@@ -35,7 +36,7 @@ When a server needs to be accessed, there is often a scramble to find someone wi
 This SPEC discusses the requirements for a system to distribute secrets, provides an example implementation, and lists suitable hosted services.
 
 It should be noted that, in many cases, secrets & passwords can be avoided.
-Most online services (GitHub, PyPi, etc.), have permissioning systems through which developers can be given the required access.
+Most online services (GitHub, PyPI, etc.), have permissioning systems through which developers can be given the required access.
 Access to servers can be given through SSH keys, which each developer has to safeguard.
 This document deals with the situation in which that is not possible, and secrets have to be shared.
 
