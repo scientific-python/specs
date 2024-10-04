@@ -62,7 +62,7 @@ ADD EXAMPLES
 
 ### Naming the Changelog File
 
-CHANGELOG, HISTORY, NEWS, or RELEASES are widely accepted names for changelog files.
+CHANGELOG, CHANGES, HISTORY, NEWS, or RELEASES are widely accepted names for changelog files.
 
 ### GitHub Releases
 
