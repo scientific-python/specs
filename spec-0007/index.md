@@ -10,8 +10,8 @@ author:
 discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
   - scikit-image
+  - ipython
   - scipy
----
 
 ## Description
 
