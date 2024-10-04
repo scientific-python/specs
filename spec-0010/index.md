@@ -43,7 +43,7 @@ notable changes for each version of a project.
 - Make versions and sections linkable.
 - List the most recent version first.
 - Display the release date for each version.
-- Indicate if you follow Semantic Versioning.
+- Indicate the type of release: minor, patch, pre-, ...
 
 ### Types of Changes
 
