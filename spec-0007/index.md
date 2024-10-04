@@ -12,6 +12,7 @@ endorsed-by:
   - scikit-image
   - ipython
   - scipy
+---
 
 ## Description
 
