@@ -71,7 +71,42 @@ CHANGELOG, CHANGES, HISTORY, NEWS, or RELEASES are widely accepted names for cha
 
 ### GitHub Releases
 
-TO DO
+GitHub offers a lot of flexibility in terms of creating release documentation.
+
+The most common approaches are:
+
+**1. Auto-Generated Release Notes:**
+
+GitHub's "Auto-Generate Release Notes" feature allows automatically generate release notes that
+include a list of merged pull requests, a list of contributors to the release, and a link to a
+full changelog (if created). 
+
+You can also customize your automated release notes, using labels to create custom categories to 
+organize pull requests you want to include and exclude certain labels and users (e.g., bots) from 
+appearing in the output.
+
+This approach is adopted by ADD PROJECTS
+
+**2. Changelog-First Strategy:**
+
+Maintaining a detailed changelog file that is referenced in the GitHub release notes.
+
+This approach is adopted by ADD PROJECTS
+
+**3. Combined Approach:**
+
+Use auto-generated GitHub release notes alongside a manually maintained changelog. This provides
+both details (from the automated notes) and curated insights (from the changelog). To direct users
+to the curated changelog for additional information, include a note (e.g.,
+"Also see changelog for more details")  on top of the generated text.
+
+This approach is adopted by ADD PROJECTS
+
+The selected approach often depends on a project's size, the community's needs, and the maintainers' 
+resources and personal preferences.
+
+For more info about releasing projects on GitHub, 
+refer to: https://docs.github.com/en/repositories/releasing-projects-on-github
 
 ### Automation
 
