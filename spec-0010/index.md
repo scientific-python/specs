@@ -52,12 +52,12 @@ mentioned above.
 
 ### Types of Changes
 
-- **Added**: New features.
-- **Changed**: Modifications in existing functionality.
-- **Deprecated**: Soon-to-be-removed features.
-- **Removed**: Features that are now removed.
-- **Fixed**: Bug fixes.
-- **Security**: Vulnerability fixes.
+- **New features**: Updates that expand/improve the existing features
+- **Changed**: Could be further categorized as Removed, Deprecated, and Changed
+- **Fixed**: Bug fixes and security patches, could be grouped separately
+- **Documentation**: Updates and improvements to the library documentation
+- **Infrastructure**: Updates related to the library infrastructure and tooling
+- **Maintenance**: Internal updates that do not impact users directly
 
 ### Standard Changelog Format
 
