@@ -32,7 +32,7 @@ It promotes transparency and trust between the project’s leadership team, deve
 
 ### What Is a Changelog?
 
-A changelog is a file which contains a curated, chronologically ordered list of
+A changelog is a file which contains a curated list of
 notable changes for each version of a project.
 
 ### Guiding Principles
@@ -44,7 +44,10 @@ notable changes for each version of a project.
 - List the most recent version first.
 - Display the release date for each version.
 - Indicate the type of release: minor, patch, pre-, ...
-
+- Give credit to contributors. It’s a good idea to include contributions that are rarely
+captured by version control systems, e.g., issue and PR triage, thoughtful feedback via comments,
+community support work, etc.
+  
 ### Types of Changes
 
 - **Added**: New features.
