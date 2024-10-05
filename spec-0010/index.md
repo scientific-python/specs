@@ -47,7 +47,9 @@ notable changes for each version of a project.
 - Give credit to contributors. It’s a good idea to include contributions that are rarely
 captured by version control systems, e.g., issue and PR triage, thoughtful feedback via comments,
 community support work, etc.
-  
+- Automate the release process to the fullest extent while adhering to the guiding principles
+mentioned above.
+
 ### Types of Changes
 
 - **Added**: New features.
