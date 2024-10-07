@@ -45,10 +45,10 @@ notable changes for each version of a project.
 - Display the release date for each version.
 - Indicate the type of release: minor, patch, pre-, ...
 - Give credit to contributors. It’s a good idea to include contributions that are rarely
-captured by version control systems, e.g., issue and PR triage, thoughtful feedback via comments,
-community support work, etc.
+  captured by version control systems, e.g., issue and PR triage, thoughtful feedback via comments,
+  community support work, etc.
 - Automate the release process to the fullest extent while adhering to the guiding principles
-mentioned above.
+  mentioned above.
 
 ### Types of Changes
 
@@ -79,10 +79,10 @@ The most common approaches are:
 
 GitHub's "Auto-Generate Release Notes" feature allows automatically generate release notes that
 include a list of merged pull requests, a list of contributors to the release, and a link to a
-full changelog (if created). 
+full changelog (if created).
 
-You can also customize your automated release notes, using labels to create custom categories to 
-organize pull requests you want to include and exclude certain labels and users (e.g., bots) from 
+You can also customize your automated release notes, using labels to create custom categories to
+organize pull requests you want to include and exclude certain labels and users (e.g., bots) from
 appearing in the output.
 
 This approach is adopted by ADD PROJECTS
@@ -98,14 +98,14 @@ This approach is adopted by ADD PROJECTS
 Use auto-generated GitHub release notes alongside a manually maintained changelog. This provides
 both details (from the automated notes) and curated insights (from the changelog). To direct users
 to the curated changelog for additional information, include a note (e.g.,
-"Also see changelog for more details")  on top of the generated text.
+"Also see changelog for more details") on top of the generated text.
 
 This approach is adopted by ADD PROJECTS
 
-The selected approach often depends on a project's size, the community's needs, and the maintainers' 
+The selected approach often depends on a project's size, the community's needs, and the maintainers'
 resources and personal preferences.
 
-For more info about releasing projects on GitHub, 
+For more info about releasing projects on GitHub,
 refer to: https://docs.github.com/en/repositories/releasing-projects-on-github
 
 ### Automation
