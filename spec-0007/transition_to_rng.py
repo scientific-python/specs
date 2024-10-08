@@ -134,7 +134,7 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
                     message = (
                         f"Positional use of `{NEW_NAME}` (formerly known as "
                         f"`{old_name}`) is still allowed, but the behavior is "
-                        "changing: the argument will be validated using "
+                        "changing: the argument will be normalized using "
                         f"`np.random.default_rng` beginning in SciPy {end_version}, "
                         "and the resulting `Generator` will be used to generate "
                         "random numbers."
@@ -142,7 +142,7 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
                     warnings.warn(message, FutureWarning, stacklevel=2)
 
             elif as_new_kwarg:  # no warnings; this is the preferred use
-                # After the removal of the decorator, validation with
+                # After the removal of the decorator, normalization with
                 # np.random.default_rng will be done inside the decorated function
                 kwargs[NEW_NAME] = np.random.default_rng(kwargs[NEW_NAME])
 
@@ -164,7 +164,7 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
 
 # Example usage of _prepare_rng decorator.
 
-# Suppose a library uses a custom random state validation function, such as
+# Suppose a library uses a custom random state normalisation function, such as
 from scipy._lib._util import check_random_state
 
 # https://github.com/scipy/scipy/blob/94532e74b902b569bfad504866cb53720c5f4f31/scipy/_lib/_util.py#L253
@@ -193,7 +193,7 @@ def library_function(arg1, rng=None, arg2=0):
     return rng.random() * arg1 + arg2
 
 
-# At the end of the deprecation period, remove the decorator, and validate
+# At the end of the deprecation period, remove the decorator, and normalize
 # `rng` with` np.random.default_rng`.
 def library_function(arg1, rng=None, arg2=0):
     rng = np.random.default_rng(rng)

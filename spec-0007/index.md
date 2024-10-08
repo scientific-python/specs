@@ -27,7 +27,7 @@ We recommend:
 We suggest implementing these principles by:
 
 - deprecating uses of an existing seed argument (commonly `random_state` or `seed`) in favor of a consistent `rng` argument,
-- using `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`[^no-RandomState], and
+- using `numpy.random.default_rng` to normalize the `rng` argument and instantiate a `Generator`[^no-RandomState], and
 - deprecating the use of `numpy.random.seed` to control the random state.
 
 We are primarily concerned with API uniformity, but also encourage libraries to move towards using [NumPy pseudo-random `Generator`s](https://numpy.org/doc/stable/reference/random/generator.html) because:
@@ -66,7 +66,7 @@ Endorsement of this SPEC means that a project considers the standardization and 
 To adopt this SPEC, a project should:
 
 - deprecate the use of `random_state`/`seed` arguments in favor of an `rng` argument in all functions where users need to control pseudo-random number generation,
-- use `numpy.random.default_rng` to validate the `rng` argument and instantiate a `Generator`, and
+- use `numpy.random.default_rng` to normalize the `rng` argument and instantiate a `Generator`, and
 - deprecate the use of `numpy.random.seed` to control the random state.
 
 #### Badges
@@ -89,7 +89,7 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 **Initially**, accept both `rng` and the existing `random_state`/`seed`/`...` keyword arguments.
 
 - If both are specified by the user, raise an error.
-- If `rng` is passed by keyword, validate it with `np.random.default_rng()` and use it to generate random numbers as needed.
+- If `rng` is passed by keyword, normalize it with `np.random.default_rng()` and use it to generate random numbers as needed.
 - If `random_state`/`seed`/`...` is specified (by keyword or position, if allowed), preserve existing behavior.
 
 **After `rng` becomes available** in all releases within the support window suggested by SPEC 0, emit warnings as follows:
