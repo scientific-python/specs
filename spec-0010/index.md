@@ -10,7 +10,7 @@ endorsed-by:
 
 ## Description
 
-SPEC 10 provides guidelines and best practices for maintaining a changelog file
+SPEC 10 provides guidelines for creating and maintaining documentation related to releases 
 for libraries in the Scientific Python ecosystem.
 
 ### Core Project Endorsement
