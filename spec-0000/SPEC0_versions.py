@@ -12,6 +12,7 @@ py_releases = {
     "3.10": "Oct 4, 2021",
     "3.11": "Oct 24, 2022",
     "3.12": "Oct 2, 2023",
+    "3.13": "Oct 7, 2024",
 }
 core_packages = [
     # Path(x).stem for x in glob("../core-projects/*.md") if "_index" not in x
