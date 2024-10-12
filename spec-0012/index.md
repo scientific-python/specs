@@ -13,6 +13,7 @@ endorsed-by:
 
 [PEP 8](https://peps.python.org/pep-0008)
 and other established styling documents either
+
 - lack comprehensive guidelines about mathematical expressions, or
 - provide simple rules that ignore the relationship between formatting and readability.
 
@@ -51,6 +52,7 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
      e.g. $\frac{t}{v} \cdot \frac{x}{y}$.
 5. Considering the previous rules, only `**`, `*`, `/`, and the unary `+`, `-`, and `~`
    operators can appear in implicit subexpressions[^4] without spaces. In such expressions,
+
    - Use at most one unary operator, and if used, ensure that it is the leftmost operator.
    - Use at most one `**` operator, and if used, ensure that it is the rightmost operator.
    - Use at most one `/` operator, and if used, ensure that it is the rightmost operator except for `**`.
@@ -170,24 +172,31 @@ For example,
 - `x*y + z` is a compound expression; there are two operators and no explicit
   subexpressions that can be ignored.
 
-[^1]: Although examples do not show the use of hanging indent, any of the indentation styles
-      allowed by [PEP 8 Indentation](https://peps.python.org/pep-0008/#indentation) are permitted
-      by this SPEC.
-[^2]: The acronym PEMDAS commonly refers to "parentheses", "exponentiation", "multiplication",
-      "division", "addition", and "subtraction". Herein, we will consider these operators
-      to be "PEMDAS operators", and we will also include the unary `+`, `-`, and `~` in
-      this category for convenience. The order of operations of PEMDAS operators is typically
-      taught in primary school and reinforced throughout a programmer's training and
-      experience, so it is assumed that most programmers are comfortable relying on the
-      implicit order of operations of expressions involving a few PEMDAS operations. Implicit
-      order of operations becomes less obvious as the number of distinct operator priority
-      levels increases and when multiple non-PEMDAS operators are involved. Portions of this
-      acronym, namely MD and AS, will be used to refer to the corresponding operators.
-[^3]: There is a case for simply eliminating spaces to reinforce the implicit order
-      of operations, as in `x==y or w==t`. However, if this were the rule, following
-      the rule would require users to remember the full order of operations hierarchy
-      and apply it without mistakes. Use of explicit parentheses with non-PEMDAS
-      operators leads to simpler rules, is more explicit, and is not uncommon in
-      existing code.
-[^4]: For definitions of "explicit"/"implicit" and "simple"/"compound"
-      "expressions"/"subexpressions", see Terminology.
+[^1]:
+    Although examples do not show the use of hanging indent, any of the indentation styles
+    allowed by [PEP 8 Indentation](https://peps.python.org/pep-0008/#indentation) are permitted
+    by this SPEC.
+
+[^2]:
+    The acronym PEMDAS commonly refers to "parentheses", "exponentiation", "multiplication",
+    "division", "addition", and "subtraction". Herein, we will consider these operators
+    to be "PEMDAS operators", and we will also include the unary `+`, `-`, and `~` in
+    this category for convenience. The order of operations of PEMDAS operators is typically
+    taught in primary school and reinforced throughout a programmer's training and
+    experience, so it is assumed that most programmers are comfortable relying on the
+    implicit order of operations of expressions involving a few PEMDAS operations. Implicit
+    order of operations becomes less obvious as the number of distinct operator priority
+    levels increases and when multiple non-PEMDAS operators are involved. Portions of this
+    acronym, namely MD and AS, will be used to refer to the corresponding operators.
+
+[^3]:
+    There is a case for simply eliminating spaces to reinforce the implicit order
+    of operations, as in `x==y or w==t`. However, if this were the rule, following
+    the rule would require users to remember the full order of operations hierarchy
+    and apply it without mistakes. Use of explicit parentheses with non-PEMDAS
+    operators leads to simpler rules, is more explicit, and is not uncommon in
+    existing code.
+
+[^4]:
+    For definitions of "explicit"/"implicit" and "simple"/"compound"
+    "expressions"/"subexpressions", see Terminology.
