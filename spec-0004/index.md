@@ -18,9 +18,9 @@ endorsed-by:
   - networkx
   - numpy
   - scikit-image
+  - scikit-learn
   - scipy
   - xarray
-  - scikit-learn
 ---
 
 ## Description

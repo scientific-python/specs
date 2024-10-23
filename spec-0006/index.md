@@ -9,8 +9,8 @@ author:
   - "Lars Grüter <lagru@mailbox.org>"
 discussion: https://discuss.scientific-python.org/t/spec-6-keys-to-the-castle
 endorsed-by:
-  - scikit-image
   - ipython
+  - scikit-image
 ---
 
 ## Description
