@@ -100,7 +100,7 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
    If there are multiple candidates, include the break at the first opportunity.
 8. If line breaks must occur within a compound subexpression, the break should
    be placed before the operator with lowest priority. For example, if
-   (x + y\*z) must be broken, prefer
+   (x + y*z) must be broken, prefer
    ```python3
    (x
     + y*z)
@@ -136,7 +136,7 @@ than operators, whitespace, literals, or variables). For example, in the list
 comprehension:
 
 ```python3
-for j in range(1, i + 1)
+[j for j in range(1, i + 1)]
 ```
 
 The output expression `j` is one explicit expression and the input sequence
