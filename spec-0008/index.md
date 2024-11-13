@@ -12,6 +12,7 @@ author:
 discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
 endorsed-by:
   - networkx
+  - numpy
   - scikit-image
 ---
 
