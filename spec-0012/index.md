@@ -44,9 +44,9 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
 4. Typically, surround MD[^2] operators with whitespace, except in the following situations.
    - When there are lower-priority operators (namely AS) within the same compound
      expression[^4]. For example, prefer `z = -x * y**t` over `z = -x*y**t`, but
-     prefer `z = w + x*y**t` over `z = w + x * y**t` due to the presence of the
+     prefer `z = w - x*y**t` over `z = w - x * y**t` due to the presence of the
      lower-priority addition operator.
-   - The division operation would be written mathematically as a fraction with a
+   - When the division operation would be written mathematically as a fraction with a
      horizontal bar. For example, prefer `z = t/v * x/y` over `z = t / v * x / y`
      if this would be written mathematically as the product of two fractions,
      e.g. $\frac{t}{v} \cdot \frac{x}{y}$.
@@ -75,9 +75,8 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
    - In the expression `z + x**y/w`, no spaces are used around the division operator
      due to the presence of the lower-priority addition operator. However, this would
      lead to `x**y/w` being an implicit subexpression without spaces containing `**`
-     to the left of another operator. Options for refactoring include the addition of
-     parentheses (e.g. `z + (x**y)/w`) or pre-multiplying the exponential by a
-     fraction (i.e. `x + 1/w*x**y`).
+     to the left of another operator. This code would be executed as `z + (x**y)/w`,
+     but the explicit parentheses should be included for clarity.
 
 6. Simplify combinations of unary and binary `+` and `-` operators when possible.
    For example,
