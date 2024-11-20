@@ -11,6 +11,7 @@ discussion: https://discuss.scientific-python.org/t/spec-1-lazy-loading-for-subm
 endorsed-by:
   - ipython
   - networkx
+  - numpy
   - scikit-image
   - scipy
 shortcutDepth: 3

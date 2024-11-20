@@ -12,6 +12,7 @@ author:
 discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
 endorsed-by:
   - networkx
+  - numpy
   - scikit-image
 ---
 
@@ -71,7 +72,7 @@ Elevating permissions beyond this should be done at the job level by redefining 
 GitHub allows restricting the actions that workflows can use via the repository actions permissions settings at `https://github.com/$ORG/$PROJECT/settings/actions`.
 A reasonable default is to select the
 
-- Allow $ORG, and select non-$ORG, actions and reusable workflows
+- Allow `$ORG`, and select `non-$ORG`, actions and reusable workflows
 
 option and the suboptions:
 
