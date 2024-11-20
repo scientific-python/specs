@@ -11,6 +11,7 @@ discussion: https://discuss.scientific-python.org/t/spec-6-keys-to-the-castle
 endorsed-by:
   - ipython
   - networkx
+  - numpy
   - scikit-image
 ---
 
