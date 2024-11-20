@@ -36,7 +36,7 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
    list of implicit operator priority levels is given by
    [Operator Precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence).
 1. Always use the `**` operator and unary `+`, `-`, and `~` operators _without_
-   surrounding whitespace. For example, prefer `-x**4` over `- (x ** 4)`.
+   surrounding whitespace. For example, prefer `y = -x**4` over `y = - (x ** 4)`.
 2. Always surround non-PEMDAS[^2] operators with whitespace, and always make the priority of
    non-PEMDAS operators explicit. For example, prefer `(x == y) or (w == t)` over
    `x==y or w==t`.[^3]
