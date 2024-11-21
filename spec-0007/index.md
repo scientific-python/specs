@@ -11,6 +11,7 @@ discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
   - ipython
   - networkx
+  - numpy
   - scikit-image
   - scipy
 ---
