@@ -44,8 +44,9 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
         the function will change from being seeded to being unseeded.
       - If an integer is passed by position, the random stream will change.
       - If an instance of `RandomState` is passed by position, either an
-        error will be raised (pre-NumPy 2.2.0) or the random stream may
-        change (NumPy 2.2.0+).
+        error will be raised (NumPy < 2.2.0), or it will be accepted
+        (NumPy >= 2.2.0) but the random numbers generated may be different
+        from those that would be produced by the original `RandomState`.
       - If `np.random` is passed by position, an error will be raised.
 
       We suggest that projects consider deprecating positional use of

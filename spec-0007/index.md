@@ -125,7 +125,7 @@ def my_func(*, rng: RNGLike | SeedLike | None = None):
         Pseudorandom number generator state. When `rng` is None, a new
         `numpy.random.Generator` is created using entropy from the
         operating system. Types other than `numpy.random.Generator` are
-        passed to `numpy.random.default_rng` to instantiate a `Generator`.
+        passed to `numpy.random.default_rng` to instantiate a ``Generator``.
     """
     rng = np.random.default_rng(rng)
 
