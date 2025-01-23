@@ -21,6 +21,7 @@ endorsed-by:
   - scikit-learn
   - scipy
   - xarray
+  - zarr
 ---
 
 ## Description
