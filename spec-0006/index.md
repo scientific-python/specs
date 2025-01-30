@@ -7,7 +7,6 @@ author:
   - "Jarrod Millman <millman@berkeley.edu>"
   - "Pamphile Roy <roy.pamphile@gmail.com>"
   - "Lars Grüter <lagru@mailbox.org>"
-discussion: https://discuss.scientific-python.org/t/spec-6-keys-to-the-castle
 endorsed-by:
   - ipython
   - networkx

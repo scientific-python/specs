@@ -9,7 +9,6 @@ author:
   - "Seth Larson <sethmichaellarson@gmail.com>"
   - "Lars Grüter <lagru@mailbox.org>"
   - "Jarrod Millman <millman@berkeley.edu>"
-discussion: https://discuss.scientific-python.org/t/spec-8-supply-chain-security
 endorsed-by:
   - networkx
   - numpy
