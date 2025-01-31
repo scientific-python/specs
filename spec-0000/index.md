@@ -13,7 +13,6 @@ author:
   - "Ross Barnowski <rossbar@berkeley.edu>"
   - "Stéfan van der Walt <stefanv@berkeley.edu>"
   - "Thomas A Caswell <tcaswell@gmail.com>"
-discussion: https://discuss.scientific-python.org/t/spec-0-minimum-supported-versions/33
 endorsed-by:
   - ipython
   - matplotlib

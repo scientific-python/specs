@@ -8,7 +8,6 @@ author:
   - "Daniel McCloy <dan@mccloy.info>"
   - "Matt Haberland <mhaberla@calpoly.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"
-discussion: https://discuss.scientific-python.org/t/spec-9-governance/1229
 is-draft: true
 endorsed-by:
 ---
