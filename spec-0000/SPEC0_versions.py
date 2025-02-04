@@ -1,4 +1,5 @@
 import requests
+import json
 import collections
 from datetime import datetime, timedelta
 
@@ -150,6 +151,24 @@ df = pd.DataFrame(data, columns=["package", "version", "release", "drop"])
 df["quarter"] = df["drop"].dt.to_period("Q")
 
 dq = df.set_index(["quarter", "package"]).sort_index()
+
+lower_bounds = (
+    df.copy().groupby(["quarter", "package"]).agg({"version": "max"}).reset_index()
+)
+
+# we want to build a dict with the structure {start_date: {package: lower_bound}}
+lower_bounds_dict = {}
+for q, packages in lower_bounds.groupby("quarter"):
+    package_lower_bounds = {
+        p: str(v) for p, v in packages.drop("quarter", axis=1).itertuples(index=False)
+    }
+    quarter_start_time_str = str(q.start_time.isoformat())
+    lower_bounds_dict[quarter_start_time_str] = package_lower_bounds
+
+print("Saving drop schedule to schedule.json")
+
+with open("schedule.json", "w") as f:
+    f.write(json.dumps(lower_bounds_dict, sort_keys=True))
 
 
 print("Saving drop schedule to schedule.md")
