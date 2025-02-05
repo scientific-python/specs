@@ -159,19 +159,22 @@ new_min_versions = (
 )
 
 
-# we want to build a dict with the structure {start_date: {package: lower_bound}}
-new_min_versions_dict = {}
+# we want to build a dict with the structure [{start_date: timestamp, packages: {package: lower_bound}}]
+new_min_versions_list = []
 for q, packages in new_min_versions.groupby("quarter"):
     package_lower_bounds = {
         p: str(v) for p, v in packages.drop("quarter", axis=1).itertuples(index=False)
     }
-    quarter_start_time_str = str(q.start_time.isoformat())
-    new_min_versions_dict[quarter_start_time_str] = package_lower_bounds
+    # jq is really insistent the Z should be there
+    quarter_start_time_str = str(q.start_time.isoformat()) + "Z"
+    new_min_versions_list.append(
+        {"start_date": quarter_start_time_str, "packages": package_lower_bounds}
+    )
 
 print("Saving drop schedule to schedule.json")
 
 with open("schedule.json", "w") as f:
-    f.write(json.dumps(new_min_versions_dict, sort_keys=True))
+    f.write(json.dumps(new_min_versions_list, sort_keys=True))
 
 
 print("Saving drop schedule to schedule.md")
