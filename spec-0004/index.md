@@ -10,8 +10,6 @@ author:
   - "Mridul Seth <mail@mriduls.com>"
   - "Olivier Grisel <olivier.grisel@ensta.org>"
   - "Tim Head <betatim@gmail.com>"
-
-discussion: https://discuss.scientific-python.org/t/spec-4-nightly-wheels/474
 endorsed-by:
   - ipython
   - matplotlib
@@ -21,6 +19,7 @@ endorsed-by:
   - scikit-learn
   - scipy
   - xarray
+  - zarr
 ---
 
 ## Description
