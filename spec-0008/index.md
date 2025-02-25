@@ -13,6 +13,7 @@ endorsed-by:
   - networkx
   - numpy
   - scikit-image
+  - scikit-learn
 ---
 
 ## Description
