@@ -143,7 +143,7 @@ done
 You can create a GH action that runs every quarter like so
 
 ```yaml
-name: Pixi auto update
+name: Update SPEC 0 dependencies
 
 on:
   schedule:
