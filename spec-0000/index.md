@@ -129,15 +129,55 @@ jq 'map(select(.start_date |fromdateiso8601 |tonumber  < now))| sort_by("start_d
 If you use a package manager like pixi you could update the dependencies with a bash script like this:
 
 ```sh
-
 curl -Ls -o schedule.json https://raw.githubusercontent.com/scientific-python/specs/main/spec-0000/schedule.json
 for line in $(jq 'map(select(.start_date |fromdateiso8601 |tonumber  < now))| sort_by("start_date") | reverse | .[0].packages | to_entries | map(.key + ":" + .value)[]' --raw-output schedule.json); do
 	package=$(echo "$line" | cut -d ':' -f 1)
 	version=$(echo "$line" | cut -d ':' -f 2)
-	pixi add "$package>=$version"
-
+  if pixi list -x "^$package" &>/dev/null| grep "No packages" -q; then
+  	pixi add "$package>=$version";
+  fi
 done
 
+```
+
+You can create a GH action that runs every quarter like so
+
+```yaml
+name: Pixi auto update
+
+on:
+  schedule:
+    # At 00:00 on day-of-month 1 in every 3rd month. (i.e. every quarter)
+    - cron: "0 0 1 */3 *"
+  # on demand
+  workflow_dispatch:
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: update
+        run: |
+
+          curl -Ls -o schedule.json https://raw.githubusercontent.com/scientific-python/specs/main/spec-0000/schedule.json
+          for line in $(jq 'map(select(.start_date |fromdateiso8601 |tonumber  < now))| sort_by("start_date") | reverse | .[0].packages | to_entries | map(.key + ":" + .value)[]' --raw-output schedule.json); do
+          	package=$(echo "$line" | cut -d ':' -f 1)
+          	version=$(echo "$line" | cut -d ':' -f 2)
+
+            # don't add packages that aren't already added.
+            if pixi list -x "^$package" &>/dev/null| grep "No packages" -q; then
+            	pixi add "$package>=$version";
+            fi
+          done
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/spec-0
+          title: Drop support for packages according to SPEC 0
+          commit-message: "Update dependencies"
+          body: Increase minimum version of .
+          author: "GitHub <noreply@github.com>"
 ```
 
 ## Notes
