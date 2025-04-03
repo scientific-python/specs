@@ -10,9 +10,10 @@ endorsed-by:
 
 ## Description
 
-Core Projects are depended upon by most of the other projects,
+Core Projects are depended upon by many of the other projects,
 and often provide basic data structures, drawing primitives,
-or implementations of fundamental algorithms.
+implementations of fundamental algorithms, or are metapackages for a subecosystem
+representing a particular scientific field or domain.
 Due to their central position in the ecosystem, the policies, practices, and tooling
 used by the Core Projects are widely seen by the ecosystem
 and impact many other projects.
@@ -43,9 +44,10 @@ scientific Python ecosystem overlaps with the PyData ecosystem---which has a
 stronger focus on solving problems in industry.
 
 Core Projects are **widely used in the scientific Python ecosystem**.
-They are depended upon by most of the other projects,
+They are depended upon by many of the other projects,
 often providing basic data structures, drawing primitives,
-or implementations of fundamental algorithms.
+implementations of fundamental algorithms, or are metapackages for a subecosystem
+representing a particular scientific field or domain.
 
 Core Projects are **developed using shared community practices**.
 They have a version control system, a bug tracker, a
