@@ -1,16 +1,3 @@
-#### 2024 - Quarter 3:
-
-###### Recommend drop support for:
-
-|            |                      |                                |
-| ---------- | -------------------- | ------------------------------ |
-| ipython    | 8.5.0                | released Sep 2022              |
-| matplotlib | 3.6.0                | released Sep 2022              |
-| pandas     | 1.5.0                | released Sep 2022              |
-| scipy      | 1.9.0                | released Jul 2022              |
-| xarray     | 2022.6.0 to 2022.9.0 | released Jul 2022 and Sep 2022 |
-| zarr       | 2.13.0               | released Sep 2022              |
-
 #### 2024 - Quarter 4:
 
 ###### Recommend drop support for:
@@ -136,10 +123,20 @@
 
 ###### Recommend drop support for:
 
-|        |          |                   |
-| ------ | -------- | ----------------- |
-| scipy  | 1.15.0   | released Jan 2025 |
-| xarray | 2025.1.0 | released Jan 2025 |
+|         |                      |                                |
+| ------- | -------------------- | ------------------------------ |
+| ipython | 8.32.0 to 9.0.0      | released Jan 2025 and Mar 2025 |
+| scipy   | 1.15.0               | released Jan 2025              |
+| xarray  | 2025.1.0 to 2025.3.0 | released Jan 2025 and Mar 2025 |
+| zarr    | 3.0.0                | released Jan 2025              |
+
+#### 2027 - Quarter 2:
+
+###### Recommend drop support for:
+
+|         |                 |                                |
+| ------- | --------------- | ------------------------------ |
+| ipython | 8.35.0 to 9.1.0 | released Apr 2025 and Apr 2025 |
 
 #### 2027 - Quarter 4:
 
