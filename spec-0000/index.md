@@ -97,6 +97,89 @@ You may want to delay the removal of support of an older Python version until yo
 
 {{< include-md "schedule.md" >}}
 
+### Automatically updating dependencies
+
+To help projects stay compliant with this spec, we additionally provide a `schedule.json` file that can be used by CI systems to deterime new version boundaries. The structure of the file is as follows:
+
+```json
+[
+  {
+    "start_date": "iso8601_timestamp",
+    "packages": {
+      "package_name": "version"
+    }
+  }
+]
+```
+
+All information in the json file is in a string format that should be easy to use. The date is the first timestamp of the relevant quarter. Thus a workflow for using this file could be:
+
+1. fetch `schedule.json`
+2. determine maximum date that is smaller than current date
+3. update packages listed with new minimum versions
+
+You can obtain the new versions you should set by using this `jq` expression:
+
+```sh
+
+jq 'map(select(.start_date |fromdateiso8601 |tonumber  < now))| sort_by("start_date") | reverse | .[0].packages ' schedule.json
+
+```
+
+If you use a package manager like pixi you could update the dependencies with a bash script like this:
+
+```sh
+curl -Ls -o schedule.json https://raw.githubusercontent.com/scientific-python/specs/main/spec-0000/schedule.json
+for line in $(jq 'map(select(.start_date |fromdateiso8601 |tonumber  < now))| sort_by("start_date") | reverse | .[0].packages | to_entries | map(.key + ":" + .value)[]' --raw-output schedule.json); do
+	package=$(echo "$line" | cut -d ':' -f 1)
+	version=$(echo "$line" | cut -d ':' -f 2)
+  if pixi list -x "^$package" &>/dev/null| grep "No packages" -q; then
+  	pixi add "$package>=$version";
+  fi
+done
+
+```
+
+You can create a GH action that runs every quarter like so
+
+```yaml
+name: Update SPEC 0 dependencies
+
+on:
+  schedule:
+    # At 00:00 on day-of-month 1 in every 3rd month. (i.e. every quarter)
+    - cron: "0 0 1 */3 *"
+  # on demand
+  workflow_dispatch:
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: update
+        run: |
+
+          curl -Ls -o schedule.json https://raw.githubusercontent.com/scientific-python/specs/main/spec-0000/schedule.json
+          for line in $(jq 'map(select(.start_date |fromdateiso8601 |tonumber  < now))| sort_by("start_date") | reverse | .[0].packages | to_entries | map(.key + ":" + .value)[]' --raw-output schedule.json); do
+          	package=$(echo "$line" | cut -d ':' -f 1)
+          	version=$(echo "$line" | cut -d ':' -f 2)
+
+            # don't add packages that aren't already added.
+            if pixi list -x "^$package" &>/dev/null| grep "No packages" -q; then
+            	pixi add "$package>=$version";
+            fi
+          done
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/spec-0
+          title: Drop support for packages according to SPEC 0
+          commit-message: "Update dependencies"
+          body: Increase minimum version of .
+          author: "GitHub <noreply@github.com>"
+```
+
 ## Notes
 
 - This document builds on [NEP 29](https://numpy.org/neps/nep-0029-deprecation_policy.html), which describes several alternatives including ad hoc version support, all CPython supported versions, default version on Linux distribution, N minor versions of Python, and time window from the X.Y.1 Python release.
