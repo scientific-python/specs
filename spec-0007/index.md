@@ -9,6 +9,7 @@ author:
   - "Matt Haberland <mhaberla@calpoly.edu>"
 endorsed-by:
   - ipython
+  - networkx
   - numpy
   - scikit-image
   - scipy
