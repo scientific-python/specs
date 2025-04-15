@@ -53,7 +53,7 @@ It is recommended that this is a dedicated page in the developer section of the 
 - Workflows that publish release artifacts should have _run triggers_ that require intentional actions by the release team (e.g., `workflow_dispatch` in GitHub Actions) and require multiple release team members to approve the workflow to run (c.f. "Use GitHub Actions environments" section below).
   This is to safeguard the project from any one maintainer having the ability to commit to the default branch and make a release directly.
 
-- It is also strongly recommended that the repository requires [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) so that each release corresponds to a verified commit.
+- It is also strongly recommended that release managers use [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits), so that each release corresponds to a verified commit. Note that it can be difficult to enforce this via GitHub permissions without requiring all contributors to also sign their commits, which may be undesirable for many projects.
 - The branch from which the release is made should also be protected.
 
 #### Restrict permissions in CI runners to the minimum required
