@@ -45,7 +45,7 @@ and [breaking lines before binary operators](https://peps.python.org/pep-0008/#s
    - When there are lower-priority operators (namely AS) within the same compound
      expression[^4]. For example, prefer `z = -x * y**t` over `z = -x*y**t`, but
      prefer `z = w - x*y**t` over `z = w - x * y**t` due to the presence of the
-     lower-priority addition operator.
+     lower-priority subtraction operator.
    - When the division operation would be written mathematically as a fraction with a
      horizontal bar. For example, prefer `z = t/v * x/y` over `z = t / v * x / y`
      if this would be written mathematically as the product of two fractions,
