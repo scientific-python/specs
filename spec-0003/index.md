@@ -5,7 +5,6 @@ date: 2022-02-14
 author:
   - "Juanita Gomez <juanitagomezr2112@gmail.com>"
   - "Sarah Kaiser <sckaiser@sckaiser.com>"
-discussion: https://discuss.scientific-python.org/t/spec-3-accessibility/63
 is-draft: true
 endorsed-by:
 ---
