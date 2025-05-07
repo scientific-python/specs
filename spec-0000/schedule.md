@@ -1,41 +1,3 @@
-#### 2024 - Quarter 1:
-
-###### Recommend drop support for:
-
-|          |                    |                                |
-| -------- | ------------------ | ------------------------------ |
-| ipython  | 7.31.0 to 8.2.0    | released Jan 2022 and Mar 2022 |
-| networkx | 2.7                | released Feb 2022              |
-| pandas   | 1.4.0              | released Jan 2022              |
-| scipy    | 1.8.0              | released Feb 2022              |
-| xarray   | 0.21.0 to 2022.3.0 | released Jan 2022 and Mar 2022 |
-| zarr     | 2.11.0             | released Feb 2022              |
-
-#### 2024 - Quarter 2:
-
-###### Recommend drop support for:
-
-|              |                 |                                |
-| ------------ | --------------- | ------------------------------ |
-| ipython      | 7.33.0 to 8.4.0 | released Apr 2022 and May 2022 |
-| networkx     | 2.8             | released Apr 2022              |
-| numpy        | 1.23.0          | released Jun 2022              |
-| scikit-learn | 1.1.0           | released May 2022              |
-| zarr         | 2.12.0          | released Jun 2022              |
-
-#### 2024 - Quarter 3:
-
-###### Recommend drop support for:
-
-|            |                      |                                |
-| ---------- | -------------------- | ------------------------------ |
-| ipython    | 8.5.0                | released Sep 2022              |
-| matplotlib | 3.6.0                | released Sep 2022              |
-| pandas     | 1.5.0                | released Sep 2022              |
-| scipy      | 1.9.0                | released Jul 2022              |
-| xarray     | 2022.6.0 to 2022.9.0 | released Jul 2022 and Sep 2022 |
-| zarr       | 2.13.0               | released Sep 2022              |
-
 #### 2024 - Quarter 4:
 
 ###### Recommend drop support for:
@@ -136,16 +98,50 @@
 
 ###### Recommend drop support for:
 
-|         |          |                   |
-| ------- | -------- | ----------------- |
-| ipython | 8.27.0   | released Aug 2024 |
-| numpy   | 2.1.0    | released Aug 2024 |
-| xarray  | 2024.7.0 | released Jul 2024 |
+|         |                      |                                |
+| ------- | -------------------- | ------------------------------ |
+| ipython | 8.27.0               | released Aug 2024              |
+| numpy   | 2.1.0                | released Aug 2024              |
+| xarray  | 2024.7.0 to 2024.9.0 | released Jul 2024 and Sep 2024 |
 
 #### 2026 - Quarter 4:
 
 ###### Recommend drop support for:
 
+|              |                        |                                |
+| ------------ | ---------------------- | ------------------------------ |
+| ipython      | 8.28.0 to 8.31.0       | released Oct 2024 and Dec 2024 |
+| matplotlib   | 3.10.0                 | released Dec 2024              |
+| networkx     | 3.4                    | released Oct 2024              |
+| numpy        | 2.2.0                  | released Dec 2024              |
+| python       | 3.12                   | released Oct 2023              |
+| scikit-image | 0.25.0                 | released Dec 2024              |
+| scikit-learn | 1.6.0                  | released Dec 2024              |
+| xarray       | 2024.10.0 to 2024.11.0 | released Oct 2024 and Nov 2024 |
+
+#### 2027 - Quarter 1:
+
+###### Recommend drop support for:
+
+|         |                      |                                |
+| ------- | -------------------- | ------------------------------ |
+| ipython | 8.32.0 to 9.0.0      | released Jan 2025 and Mar 2025 |
+| scipy   | 1.15.0               | released Jan 2025              |
+| xarray  | 2025.1.0 to 2025.3.0 | released Jan 2025 and Mar 2025 |
+| zarr    | 3.0.0                | released Jan 2025              |
+
+#### 2027 - Quarter 2:
+
+###### Recommend drop support for:
+
+|         |                 |                                |
+| ------- | --------------- | ------------------------------ |
+| ipython | 8.35.0 to 9.1.0 | released Apr 2025 and Apr 2025 |
+
+#### 2027 - Quarter 4:
+
+###### Recommend drop support for:
+
 |        |      |                   |
 | ------ | ---- | ----------------- |
-| python | 3.12 | released Oct 2023 |
+| python | 3.13 | released Oct 2024 |
