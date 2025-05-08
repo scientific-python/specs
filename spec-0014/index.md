@@ -10,6 +10,7 @@ author:
   - "Melissa Weber Mendonça <melissawm@gmail.com>"
   - "Ralf Gommers <ralf.gommers@gmail.com>"
 is-draft: true
+discussion: https://discuss.scientific-python.org/t/spec-14-interactive-documentation/1910
 endorsed-by:
   # TODO: ask for formal approval from projects that have adopted interactive docs during/after SPEC review/merging.
   - scikit-learn
