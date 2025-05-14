@@ -11,8 +11,8 @@ endorsed-by:
 
 ## Description
 
-A security policy in a GitHub repository helps users know how to report vulnerabilities responsibly and enables maintainers to respond effectively to security issues. This prevents senstive issues from being disclosed publicly before they are addressed.
- 
+A security policy in a GitHub repository helps users know how to report vulnerabilities responsibly and enables maintainers to respond effectively to security issues. This prevents sensitive issues from being disclosed publicly before they are addressed.
+
 This spec provides guidance for creating and maintaining a clear and accessible `SECURITY.md ` file in the repository, which serves as the project's security policy.
 
 ### Core Project Endorsement
@@ -31,21 +31,22 @@ Projects can highlight their adoption of this SPEC by including a SPEC badge.
 {{< spec_badge number="15" title="Security Policy" >}}
 To indicate adoption of multiple SPECS with one badge, see [this](../purpose-and-process/#badges).
 
-
 ## Implementation
 
 To add a security policy:
+
 - For a single repository: create a `SECURITY.md `file in the root of the repo.
-- For all repositories in an organization: create a `.github` repository and add a `SECURITY.md` file there. It will automatically apply to all repos without their own policy. 
+- For all repositories in an organization: create a `.github` repository and add a `SECURITY.md` file there. It will automatically apply to all repos without their own policy.
 
 > [!NOTE]
 > With this approach individual repositories can edit the `SECURITY.md` as needed.)
- 
-Once added, GitHub displays the security policy under the "Security" tab of each repository, making it easy for users to find and follow. 
- 
+
+Once added, GitHub displays the security policy under the "Security" tab of each repository, making it easy for users to find and follow.
+
 A good `SECURITY.md` file should include the following sections:
-- **Supported Versions**: Specify the range of versions that your project currently supports with security updates. 
-- **Contact information**: List an email address or other method users can use to reach the security team or maintainer.  Ideally, use a dedicated address like `security@{PROJECT_NAME}.com` to manage security reports separately from general inquiries. *
+
+- **Supported Versions**: Specify the range of versions that your project currently supports with security updates.
+- **Contact information**: List an email address or other method users can use to reach the security team or maintainer. Ideally, use a dedicated address like `security@{PROJECT_NAME}.com` to manage security reports separately from general inquiries. \*
 
 > [!NOTE]
 > Sometimes the security contact is an external vendor or a vulnerability program.
@@ -80,4 +81,3 @@ We aim to respond to vulnerability reports within **72 hours**, and follow [Resp
 ## Notes
 
 - [More information on adding a security policy to a GitHub repository](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
-
