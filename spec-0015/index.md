@@ -38,8 +38,9 @@ To add a security policy:
 - For a single repository: create a `SECURITY.md `file in the root of the repo.
 - For all repositories in an organization: create a `.github` repository and add a `SECURITY.md` file there. It will automatically apply to all repos without their own policy.
 
-> [!NOTE]
-> With this approach individual repositories can edit the `SECURITY.md` as needed.)
+{{< admonition note >}}
+With this approach individual repositories can edit the `SECURITY.md` as needed.)
+{{< /admonition >}}
 
 Once added, GitHub displays the security policy under the "Security" tab of each repository, making it easy for users to find and follow.
 
@@ -48,8 +49,9 @@ A good `SECURITY.md` file should include the following sections:
 - **Supported Versions**: Specify the range of versions that your project currently supports with security updates.
 - **Contact information**: List an email address or other method users can use to reach the security team or maintainer. Ideally, use a dedicated address like `security@{PROJECT_NAME}.com` to manage security reports separately from general inquiries. \*
 
-> [!NOTE]
-> Sometimes the security contact is an external vendor or a vulnerability program.
+{{< admonition note >}}
+Sometimes the security contact is an external vendor or a vulnerability program.
+{{< /admonition >}}
 
 - **Reporting a Vulnerability**: Document how can users report a security issue (e.g., email address or link to a form). You can also enable [private vulnerability reporting on GitHub](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository), which allows users to create private issues to report vulnerabilities directly and securely through the GitHub interface. In this case, your security policy should document how users can [privately report a vulnerability using GitHub](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
 - **Expected Response Time**: Let users know how quickly you plan to respond (e.g., "within 72 hours").
