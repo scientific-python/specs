@@ -94,6 +94,10 @@ The situation has since improved due to improved installations via binary wheels
 
 ### Support Window
 
+{{< admonition note >}}
+For LTS, add 1 year to the support window.
+{{< /admonition >}}
+
 ```mermaid
 {{< include-raw "chart.md" >}}
 ```

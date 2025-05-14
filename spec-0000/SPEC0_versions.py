@@ -89,6 +89,13 @@ def get_release_dates(package, support_time=plus24):
     return releases
 
 
+def shift_drop_dates(p):
+    versions = list(p.keys())
+    for i in range(len(versions) - 1):
+        p[versions[i]]["drop_date"] = p[versions[i + 1]]["drop_date"]
+    return p
+
+
 package_releases = {
     "python": {
         version: {
@@ -111,6 +118,11 @@ package_releases = {
     for package, releases in package_releases.items()
 }
 
+# FIXME: This should appear before the above line, but it is temporarily here.
+package_releases = {
+    package: shift_drop_dates(releases)
+    for package, releases in package_releases.items()
+}
 
 # Save Gantt chart
 
