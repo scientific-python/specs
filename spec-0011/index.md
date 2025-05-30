@@ -37,68 +37,68 @@ The project should provide a mechanism for researchers to submit GPG encrypted
 vulnerability reports, for vulnerabilities with a higher degree of
 sensitivity.
 
-The project should ensure that a _Security Response Team_ (SRT) exists. This
+The project should ensure that a _Security Incident Response Team_ (SIRT) exists. This
 team could be shared with other projects in the same organization, or within
-the same ecosystem. SRT has the following responsibilities:
+the same ecosystem. The SIRT has the following responsibilities:
 
 - Triage: assess the impact of any vulnerability. Can the vulnerability be
   replicated? Which projects are affected? What is the blast radius? Who is
   responsible for the fix? Is there a need for coordinated disclosure between
   multiple projects?
-- Infrastructure: create security advisories, ensure teams working on fixing a
+- Command: create security advisories, ensure teams working on fixing a
   vulnerability can work in private, create tests for the vulnerability and
   its variants.
-- Disclosure: handle public messaging around the vulenrability by drafting an
-  advisory to document the impact, how to upgrade, how to mitigate if upgrade
+- Disclosure: handle public messaging around the vulnerability by drafting an
+  advisory to document the impact, how to upgrade, how to mitigate if upgrading
   is not possible.
 - Release: create patch releases containing the fix and notify the public.
 
-For each vulnerability, the SRT should follow these steps:
+For each vulnerability, the SIRT should follow these steps:
 
-1. **Acknowledge the report**: The SRT should respond to any report in at most
-   24 hours. For this, there should be inventory of all the places where
-   vulnerabilities can be reported, and SRT should monitor all of these (via
-   automation and dashboards where possible). The SRT will handle
-   communication with the reporter throughout the vulnerability fixing
+1. **Acknowledge the report**: The SIRT should respond to any report in at most
+   48 hours. For this, there should be inventory of all the places where
+   vulnerabilities can be reported, and SIRT should monitor all of these (via
+   automation and dashboards where possible). The SIRT will handle
+   communication with the reporter throughout the vulnerability remediation
    process, updating the reporter on the disclosure timeline.
-2. **Triage the vulnerability**: The SRT should attempt to reproduce the
-   vulnerabiltiy and analyze its impact. The SRT should rate the impact and
+2. **Triage the vulnerability**: The SIRT should attempt to reproduce the
+   vulnerabiltiy and analyze its impact. The SIRT should rate the impact and
    consider coordinated disclosure based on
    [the traffic light protocol (TLP)](https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage).
-3. **Assign the vulnerability fix to fixing team**: The SRT is not responsible
+3. **Assign the vulnerability fix to fixing team**: The SIRT is not responsible
    for fixing all vulnerabilities themselves. They should delegate to a team
-   that has the most accurate knowledge of the involved codebase. In general,
-   the fixing team should be formed from maintainers of the affected projects.
+   that has the most accurate knowledge of the affected codebase. In general,
+   the fixing team should include maintainers from the affected projects.
    Depending on TLP level, other members of the project could be brought in,
-   as needed, but only after consulting the SRT.
+   as needed, but only after consulting the SIRT.
 4. **Prepare a disclosure timeline**: Judging based on severity, complexity of
-   the code base, development time, release work, dependencies on upstream,
-   the SRT should create a timeline for when the vulnerability fix should be
+   the code base, development time, release work, upstream dependencies,
+   the SIRT should create a timeline for when the vulnerability fix should be
    released and the public would be notified about the vulnerability. If the
    vulnerability has a low severity, the timeline can be extended to slow the
    release process to account for holidays, developer bandwidth, etc.
-5. **Request and prepare a CVE**: The SRT would prepare a
+5. **Request and prepare a CVE**: The SIRT should prepare a
    [security advisory](https://docs.github.com/en/code-security/security-advisories)
    in the affected repositories and obtain CVE numbers for the
    vulnerabilities. As many details as possible should be entered into the
    advisory. Each time new information is discovered, the advisory should be
-   update. A vulnerability severity score, computed using
-   [CVSS](https://www.first.org/cvss/) should be added. Members of the fixing
+   updated. A vulnerability severity score, computed using
+   [CVSS](https://www.first.org/cvss/) should be added. Members of the remediation
    team should be added to the advisory, to contribute details.
-6. **Create a private fork[^1]** for the fixing team to fix the vulnerability
+6. **Create a private fork[^1]** for the remediation team to fix the vulnerability
    in private. This is a temporary fork and should be deleted once the
    vulnerability is fixed. It should only be created to ensure CI can run on
    code fixing the vulnerability without accidentally disclosing the
    vulnerability[^2].
 7. **Plan and perform the patch release**. Once the fixing team has submitted
-   all necessary fixes for the vulnerability and its variants and the SRT has
+   all necessary fixes for the vulnerability and its variants and the SIRT has
    verified that the work is completed, the two teams agree on a release
    timeline and perform the release as well as announce the vulnerability to
    the public[^3].
 
-On the release day, the SRT and the fixing team:
+On the release day, the SIRT and the remediation team:
 
-1. merge all the commits from the private fork into the project repository
+1. merge all the commits from the private fork onto the project repository
 2. start patch releases for all affected versions in the supported range
 3. publish all release binaries and packages
 4. publish the security advisory
@@ -114,7 +114,7 @@ To: ...
 
 Hello $PROJECT Community,
 
-The Security Response Team and maintainers of $PROJECT would like
+The Security Incident Response Team and maintainers of $PROJECT would like
 to announce the availability of $PROJECT $VERSION.
 
 This addresses the following CVE(s):
@@ -151,8 +151,8 @@ advisory. -->
 
 ## Notes
 
-A few days after the release, the SRT could write a retrospective of the
-vulnerability and fixing process, with details on everyone involved, links to
+A few days after the release, the SIRT could write a retrospective of the
+vulnerability and the remediation process, with details on everyone involved, links to
 PRs, and other relevant information. This is to encourage learning, preventing
 future similar vulnerabilities and providing opportunities for improving the
 disclosure process.
