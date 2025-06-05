@@ -58,7 +58,7 @@ These external resources may be GitHub repositories, external websites, etc.
 If you find yourself wanting to _disseminate information_ across the
 ecosystem, it may be better to write a blog post on
 https://blog.scientific-python.org or to contribute to an existing
-piece of documentation, such as https://learn.scientific-python.org.
+piece of documentation, such as https://learn.scientific-python.org/development/.
 A blog post is also a good mechanism to get initial engagement around
 an idea that is not mature enough, or in scope, to become a SPEC.
 {{< /admonition >}}
@@ -142,7 +142,7 @@ The authors starts by _proposing_ a SPEC idea, as outlined in [New
 SPEC Proposals](#new-spec-proposals)—please read that section carefully before
 proposing a new SPEC.
 
-The decision to **accept** (and number) a SPEC is made by the Steering Committee,
+The decision to **accept** (and number) a SPEC into draft state is made by the Steering Committee,
 at which point it is added to the main branch of the [SPEC
 repository](https://github.com/scientific-python/specs), clearly
 labeled as a draft.
