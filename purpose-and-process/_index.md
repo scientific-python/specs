@@ -38,6 +38,31 @@ several projects—and their authority stems from the extent to which they are.
 Participants in the SPEC process must adhere to our
 [Code of Conduct](https://scientific-python.org/code_of_conduct/).
 
+## What is a SPEC?
+
+A SPEC (Scientific Python Ecosystem Coordination) is a document that captures an idea.
+A SPEC is the product of discussions with developers across the ecosystem.
+SPECs capture the following types of narratives:
+
+- We recommend that you do X (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
+- Some projects may need to do X. If you do X, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
+- If you do X, you should be aware of the following (we don't have any such advisories yet).
+
+{{< admonition important >}}
+**What a SPEC is not**
+
+SPECs are _not_ meant to be extensive technical documents that capture a large amount of detail.
+SPECs typically _summarize_ an idea, referring to external sources for further detail.
+These external resources may be GitHub repositories, external websites, etc.
+
+If you find yourself wanting to _disseminate information_ across the
+ecosystem, it may be better to write a blog post on
+https://blog.scientific-python.org or to contribute to an existing
+piece of documentation, such as https://learn.scientific-python.org.
+A blog post is also a good mechanism to get initial engagement around
+an idea that is not mature enough, or in scope, to become a SPEC.
+{{< /admonition >}}
+
 ### Key Terms
 
 Scientific Python Ecosystem
@@ -113,9 +138,11 @@ style START fill:#FFFFFF, stroke:#FFFFFF;
 ```
 <!-- prettier-ignore-end -->
 
-The authors starts by _proposing_ a SPEC, as outlined in [New SPEC
-Proposals](#new-spec-proposals).
-The decision to **accept** a SPEC is made by the Steering Committee,
+The authors starts by _proposing_ a SPEC idea, as outlined in [New
+SPEC Proposals](#new-spec-proposals)—please read that section carefully before
+proposing a new SPEC.
+
+The decision to **accept** (and number) a SPEC is made by the Steering Committee,
 at which point it is added to the main branch of the [SPEC
 repository](https://github.com/scientific-python/specs), clearly
 labeled as a draft.
@@ -238,19 +265,26 @@ content = '''
 ### New SPEC Proposals
 
 A good SPEC proposal focuses on a single key recommendation or idea
-for coordinating projects in the scientific Python ecosystem.
-Before proposing a SPEC, we highly recommended that you first **vet
+for coordinating projects in the scientific Python ecosystem. Please
+also see the [What is a SPEC?](#what-is-a-spec) section above.
+
+**Before proposing** a SPEC, we highly recommended that you first **vet
 the idea** by doing one or more of the following:
 
 1. discuss the idea with at least one project in the ecosystem,
 2. discuss the idea with at least one other member of the ecosystem, or
-3. create a minimal, proof of concept prototype.
+3. if it is a technical idea, create a minimal proof of concept.
 
-Before a proposed SPEC can be accepted:
+**Before submitting** a proposed SPEC:
 
-1. The idea must be proposed on the discussion forum under the [`SPECS/Ideas`
+1. The **idea must be proposed** on the discussion forum under the [`SPECS/Ideas`
    topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-2. A draft SPEC document must be submitted via pull request to the [SPEC repository](https://github.com/scientific-python/specs).
+
+2. If the SPEC committee considers the idea suitable for a SPEC, a
+   number will be allocated.
+
+At this point, you should **draft your SPEC document and submit it**
+via pull request to the [SPEC repository](https://github.com/scientific-python/specs).
 
 Use the `quickstart.py` script to create the new SPEC document.
 Located at the top-level of the [SPEC
@@ -258,24 +292,16 @@ repository](https://github.com/scientific-python/specs), the script
 will ask you a few questions[^newspec] and then create a new file
 appropriately named with a basic template for you to complete (e.g.,
 `spec-0000/index.md`).
+Leave the `draft` field set to `true` and the `endorsed-by` field empty.
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
 
 ## Notes
 
 [^newspec]:
-    When asked to enter the SPEC number, choose the next available number that
-    has not yet been used.
-    Before the SPEC is merged, the Steering Committee may ask you to change the SPEC number so
-    that it doesn't conflict with another pull request.
-    If so, just rename the file as appropriate and update the SPEC number in the
-    `title` field of the SPEC header.
-
     The script currently only supports adding one author.
     If you need to add additional authors, just edit the text file.
 
     Additional files associated with a SPEC document may be kept in the directory
     containing the SPEC.
     For example, files associated with `spec-0000/index.md` are in `spec-0000/`.
-
-    Leave the `draft` field set to `true` and the `endorsed-by` field empty.
