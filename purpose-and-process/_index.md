@@ -44,9 +44,9 @@ A SPEC (Scientific Python Ecosystem Coordination) is a document that captures an
 A SPEC is the product of discussions with developers across the ecosystem.
 SPECs capture the following types of narratives:
 
-- We recommend that you do X (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
-- Some projects may need to do X. If you do X, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
-- If you do X, you should be aware of the following (we don't have any such advisories yet).
+- We recommend that you do Y (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
+- Some projects may need to do Y. If you do Y, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
+- If you do Y, you should be aware of the following (we don't have any such advisories yet).
 
 {{< admonition important >}}
 **What a SPEC is not**
