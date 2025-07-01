@@ -7,12 +7,12 @@ author:
   - "Jon Crall <jon.crall@kitware.com>"
   - "Dan Schult <dschult@colgate.edu>"
   - "Jarrod Millman <millman@berkeley.edu>"
-discussion: https://discuss.scientific-python.org/t/spec-1-lazy-loading-for-submodules/25
 endorsed-by:
   - ipython
   - networkx
   - numpy
   - scikit-image
+  - scikit-learn
   - scipy
 shortcutDepth: 3
 ---

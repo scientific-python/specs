@@ -7,7 +7,6 @@ author:
   - "Sebastian Berg <sebastianb@nvidia.com>"
   - "Pamphile Roy <roy.pamphile@gmail.com>"
   - "Matt Haberland <mhaberla@calpoly.edu>"
-discussion: https://github.com/scipy/scipy/issues/14322
 endorsed-by:
   - ipython
   - networkx
@@ -39,13 +38,14 @@ We are primarily concerned with API uniformity, but also encourage libraries to 
 2. their use avoids relying on global state—which can make code execution harder to track, and may cause problems in parallel processing scenarios.
 
 [^no-RandomState]:
-    Note that `numpy.random.default_rng` does not accept instances of `RandomState`, so use of `RandomState` to control the seed is effectively deprecated, too.
-    That said, neither `np.random.seed` nor `np.random.RandomState` _themselves_ are deprecated, so they may still be used in some contexts (e.g. by developers for generating unit test data).
+    Note that in NumPy versions prior to 2.2.0, `numpy.random.default_rng` does not accept instances of `RandomState`.
+    In more recent versions, `numpy.random.default_rng` will convert `RandomState` instances to `Generator`s, which may not behave identically even with identical method calls.
+    That said, neither `np.random.seed` nor `np.random.RandomState` _themselves_ are deprecated, so they may still be used directly in some contexts (e.g. by developers for generating unit test data).
 
 ### Scope
 
 This is intended as a recommendation to all libraries that allow users to control the state of a NumPy random number generator.
-It is specifically targeted toward functions that currently accept `RandomState` instances via an argument other than `rng`, or allow `numpy.random.seed` to control the random state, but the ideas are more broadly applicable.
+It is specifically targeted toward functions that currently accept random number seeds using an argument other than `rng`, rely on the particular behavior of `RandomState` methods, or allow `numpy.random.seed` to control the random state, but the ideas are more broadly applicable.
 Random number generators other than those provided by NumPy could also be accommodated by an `rng` keyword, but that is beyond the scope of this SPEC.
 
 ### Concepts
@@ -125,7 +125,7 @@ def my_func(*, rng: RNGLike | SeedLike | None = None):
         Pseudorandom number generator state. When `rng` is None, a new
         `numpy.random.Generator` is created using entropy from the
         operating system. Types other than `numpy.random.Generator` are
-        passed to `numpy.random.default_rng` to instantiate a `Generator`.
+        passed to `numpy.random.default_rng` to instantiate a ``Generator``.
     """
     rng = np.random.default_rng(rng)
 

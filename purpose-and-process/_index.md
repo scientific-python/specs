@@ -54,7 +54,7 @@ reviewing, discussing, implementing, and endorsing SPEC documents.
 SPEC Steering Committee
 : The [Steering Committee](/specs/steering-committee) leads the SPEC project and
 manages the SPEC process including moderating
-the [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/6),
+the [SPECs discussion forum](https://discuss.scientific-python.org/c/specs/),
 accepting SPEC documents, and maintaining the SPEC process documents.
 
 SPEC Process
@@ -79,10 +79,7 @@ The SPEC documents are converted to HTML by code in the
 [scientific-python.org repository](https://github.com/scientific-python/scientific-python.org/) using
 [Hugo](https://gohugo.io/) and deployed to
 [https://scientific-python.org/specs/](https://scientific-python.org/specs/).
-Each SPEC has a corresponding
-[discussion](https://discuss.scientific-python.org/c/specs/accepted/15)
-with the same title, where anyone can comment, ask questions, or vote on
-existing comments.
+Each SPEC has two corresponding discussions: one under [SPECS → Ideas](https://discuss.scientific-python.org/c/specs/ideas), where the SPEC committee discussed its viability, and another under [SPECS → Web Comments](https://discuss.scientific-python.org/c/specs/web-comments), where public comments from https://scientific-python.org/specs are stored.
 
 ## Implementation
 
@@ -122,9 +119,10 @@ The decision to **accept** a SPEC is made by the Steering Committee,
 at which point it is added to the main branch of the [SPEC
 repository](https://github.com/scientific-python/specs), clearly
 labeled as a draft.
-Proposed SPECs are accepted once (a) the draft is written to clearly
-explain the area of common concern and a general approach to a shared
-solution and (b) there are contributors (from at least two Core
+Proposed SPECs are accepted once (a) there is agreement that the SPEC
+concept is applicable to the ecosystem, (b) a draft pull request is
+written to clearly explain the area of common concern and a general
+approach to a shared solution, and (c) there are contributors (from at least two Core
 Projects) interested in working on the new SPEC and in championing it
 to their projects as well as the larger community.
 Additional details may be found in [Steering Committee
@@ -248,11 +246,11 @@ the idea** by doing one or more of the following:
 2. discuss the idea with at least one other member of the ecosystem, or
 3. create a minimal, proof of concept prototype.
 
-Before a proposed SPEC can be accepted, the idea must be discussed on
-the discussion forum under the [`SPECS/Ideas`
-topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-Thereafter a new SPEC document must be submitted as a pull request to
-the [SPEC repository](https://github.com/scientific-python/specs).
+Before a proposed SPEC can be accepted:
+
+1. The idea must be proposed on the discussion forum under the [`SPECS/Ideas`
+   topic](https://discuss.scientific-python.org/c/specs/ideas/9).
+2. A draft SPEC document must be submitted via pull request to the [SPEC repository](https://github.com/scientific-python/specs).
 
 Use the `quickstart.py` script to create the new SPEC document.
 Located at the top-level of the [SPEC
@@ -262,8 +260,6 @@ appropriately named with a basic template for you to complete (e.g.,
 `spec-0000/index.md`).
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
-The Steering Committee then considers the SPEC as presented in the
-pull request and will provide additional guidance.
 
 ## Notes
 
