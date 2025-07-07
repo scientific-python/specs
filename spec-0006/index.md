@@ -59,7 +59,6 @@ This document deals with the situation in which that is not possible, and secret
    This ensures access to assets, even when a key team member leaves the project or becomes indisposed.
 
 4. A system for distributing project secrets must have the following properties:
-
    - Secrets are stored encrypted in a central (remote) location.
    - It must be possible to grant access to the secrets to a select group of team members.
    - It must be possible to revoke future access to the secrets.[^future-access]

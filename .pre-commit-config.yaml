@@ -22,14 +22,14 @@ repos:
       - id: black
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: 5ba47274f9b181bce26a5150a725577f3c336011  # frozen: v3.6.2
+    rev: 5ba47274f9b181bce26a5150a725577f3c336011 # frozen: v3.6.2
     hooks:
       - id: prettier
         files: \.(md|yml|yaml)
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: 37bfa06d791fd38fb4e54910b36a2ff57641b074  # frozen: v3.20.0
+    rev: 37bfa06d791fd38fb4e54910b36a2ff57641b074 # frozen: v3.20.0
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
