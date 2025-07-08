@@ -58,7 +58,6 @@ A successful prototype implementation of this SPEC is already integrated into [N
 
 2.  Backend Requirements
     To ensure that a backend is compatible with NetworkX, it must adhere to specific structural requirements:
-
     1. The backend must implement a class that behaves like the `nx.Graph` object, including an attribute `__networkx_backend__` that identifies the backend.
 
     2. The backend should provide `convert_from_nx` and `convert_to_nx` methods to facilitate the conversion between NetworkX graphs and the backend's graph representation.
@@ -70,7 +69,6 @@ A successful prototype implementation of this SPEC is already integrated into [N
         pytest --pyargs networkx
 
 4.  Currently, the following ways exist in NetworkX to dispatch a function call to a backend:
-
     1. Type-based dispatching
        ```py
        H = nx_parallel.ParallelGraph(G)

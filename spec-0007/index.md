@@ -99,7 +99,6 @@ The [deprecation strategy](https://github.com/scientific-python/specs/pull/180#i
 
 - If neither `rng` nor `random_state`/`seed`/`...` is specified and `np.random.seed` has been used to set the seed, emit a `FutureWarning` about the upcoming change in behavior.
 - If `random_state`/`seed`/`...` is passed by keyword or by position, treat it as before, but:
-
   - Emit a `DeprecationWarning` if passed by keyword, warning about the deprecation of keyword `random_state` in favor of `rng`.
   - Emit a `FutureWarning` if passed by position, warning about the change in behavior of the positional argument.
 
