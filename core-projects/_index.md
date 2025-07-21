@@ -71,7 +71,7 @@ The 3-clause (also called "modified" or "new") BSD license is by far the most co
 
 ### How does a Core Project endorse a SPEC?
 
-See [purpose and process](/specs/purpose-and-process#endorsing-a-spec).
+See [purpose and process](/specs/purpose-and-process/#endorsing-a-spec).
 
 ### How many Core Projects should there be?
 

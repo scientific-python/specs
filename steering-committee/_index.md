@@ -49,7 +49,7 @@ to consensus-seeking and voting.
 <!-- This is a focused distillation of purpose-and-process#decision-points for the SPEC committee. -->
 
 Also refer to [SPEC Purpose and Process: New
-Proposals](/specs/purpose-and-process#new-spec-proposals), a summary
+Proposals](/specs/purpose-and-process/#new-spec-proposals), a summary
 of steps for SPEC authors.
 
 To accept a SPEC requires two members of the Steering Committee to
