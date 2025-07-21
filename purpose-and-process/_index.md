@@ -40,27 +40,24 @@ Participants in the SPEC process must adhere to our
 
 ## What is a SPEC?
 
-A SPEC (Scientific Python Ecosystem Coordination) is a document that captures an idea.
-A SPEC is the product of discussions with developers across the ecosystem.
-SPECs capture the following types of narratives:
+A SPEC (Scientific Python Ecosystem Coordination) is a document that captures an idea applicable to multiple projects.
+It is the product of discussions with developers across the ecosystem, and captures one of the following types of narratives:
 
-- We recommend that you do Y (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
-- Some projects may need to do Y. If you do Y, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
-- If you do Y, you should be aware of the following (we don't have any such advisories yet).
+- **Recommendation:** We recommend that you do Y (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
+- **Guideline:** Some projects may need to do Y. If you do Y, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
+- **Advisory:** If you do Y, you should be aware of the following (we don't have any such advisories yet).
 
 {{< admonition important >}}
 **What a SPEC is not**
 
-SPECs are _not_ meant to be extensive technical documents that capture a large amount of detail.
-SPECs typically _summarize_ an idea, referring to external sources for further detail.
-These external resources may be GitHub repositories, external websites, etc.
+SPECs are _not_ meant to be extensive technical documents that cover a large amount of detail.
+They typically _summarize_ an idea, referring to external sources, such as GitHub repositories or websites, for further detail.
 
 If you find yourself wanting to _disseminate information_ across the
 ecosystem, it may be better to write a blog post on
 https://blog.scientific-python.org or to contribute to an existing
 piece of documentation, such as https://learn.scientific-python.org/development/.
-A blog post is also a good mechanism to get initial engagement around
-an idea that is not mature enough, or in scope, to become a SPEC.
+A blog post is also a good way to generate initial engagement around an idea that is not yet mature enough, or within scope, to become a SPEC.
 {{< /admonition >}}
 
 ### Key Terms
