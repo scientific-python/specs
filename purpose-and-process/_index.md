@@ -274,8 +274,8 @@ here.
 **Before proposing** a SPEC, we highly recommended that you first **vet
 the idea** by doing one or more of the following:
 
-1. discuss the idea with at least one project in the ecosystem,
-2. discuss the idea with at least one other member of a [Core Project](/specs/core-projects), or
+1. Discuss the idea with at least one project in the ecosystem—for example, by posting to project mailing lists or by having a birds-of-a-feather discussion at a community conference like SciPy;
+2. discuss the idea with at least one other member of a [Core Project](/specs/core-projects); or
 3. if it is a technical idea, create a minimal proof of concept.
 
 **Before submitting** a proposed SPEC:
