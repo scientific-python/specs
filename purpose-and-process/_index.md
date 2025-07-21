@@ -30,10 +30,10 @@ will benefit the ecosystem as a whole.
 
 Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
-A SPEC may not be a good fit for every single project, and thus there is no
-expectation that all SPECs must be adopted by all projects.
-That said, SPECs serve their purpose through being adopted by
-several projects—and their authority stems from the extent to which they are.
+They may look towards endorsements by [Core Projects](/specs/core-projects) as a signal to help them decide.
+A SPEC may not be a good fit for a project, and thus there is no
+expectation that all SPECs must be adopted by all projects (in fact, even Core Projects that endorse a SPEC—i.e., signaling that they think it is a good idea—may choose not to adopt it themselves).
+Still, SPECs best serve their purpose of communicating cross-project concepts when adopted by numerous projects—and their authority stems from the extent to which they are.
 
 Participants in the SPEC process must adhere to our
 [Code of Conduct](https://scientific-python.org/code_of_conduct/).
@@ -295,6 +295,18 @@ appropriately named with a basic template for you to complete (e.g.,
 Leave the `draft` field set to `true` and the `endorsed-by` field empty.
 Once the SPEC is in reasonable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
+
+## Endorsing a SPEC
+
+[Core Projects](/specs/core-projects) may signal their approval of a SPEC by _endorsing_ it.
+This endorsement makes it more likely that other projects will _adopt_ it.
+Endorsing a SPEC does _not_, however, mean that a Core Project needs to _adopt_ a SPEC, although they typically would if feasible.
+Core Projects use their project-specific discussion and decision making mechanisms to decide whether to endorse a SPEC.
+
+Once a Core Project decides to endorse a SPEC, they add their project
+name to the `endorsed-by` field in the SPEC header via a pull request against
+the [scientific-python/specs](https://github.com/scientific-python/specs)
+repository.
 
 ## Notes
 

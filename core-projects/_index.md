@@ -71,14 +71,7 @@ The 3-clause (also called "modified" or "new") BSD license is by far the most co
 
 ### How does a Core Project endorse a SPEC?
 
-Core Projects use their project-specific discussion and decision making mechanisms to decide whether to support a SPEC.
-Certain SPECs may, for example, require Core Projects to create their _own_ enhancement
-proposals to expand on implementation details.
-
-Once a Core Project decides to endorse a SPEC, they add their project
-name to the `endorsed-by` field in the SPEC header via a pull request against
-the [scientific-python/specs](https://github.com/scientific-python/specs)
-repository.
+See [purpose and process](/specs/purpose-and-process#endorsing-a-spec).
 
 ### How many Core Projects should there be?
 

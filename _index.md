@@ -15,4 +15,5 @@ Community discussions take place on the
 SPEC development takes place in the [SPEC repository](https://github.com/scientific-python/specs).
 
 If you want to **contribute a SPEC**, start by reading [SPEC Purpose and Process](/specs/purpose-and-process).
+Core projects may also want to [endorse a SPEC](/specs/purpose-and-process#endorsing-a-spec).
 Contributors must adhere to our [code of conduct](https://scientific-python.org/code_of_conduct/).
