@@ -45,7 +45,7 @@ It is the product of discussions with developers across the ecosystem, and captu
 
 - **Recommendation:** We recommend that you do Y (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
 - **Guideline:** Some projects may need to do Y. If you do Y, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
-- **Advisory:** If you do Y, you should be aware of the following (we don't have any such advisories yet).
+- **Memorandum:** If you do Y, you should be aware of the following (we don't have any such advisories yet).
 
 {{< admonition important >}}
 **What a SPEC is not**
