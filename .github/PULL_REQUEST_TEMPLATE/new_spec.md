@@ -15,13 +15,6 @@ Insert a link to this proposal's initial viability discussion thread in
 https://discuss.scientific-python.org/c/specs/ideas
 -->
 
-## Link to "public comments" discussion thread (required)
-
-<!--
-insert a link to this proposal's community-wide discussion thread in
-https://discuss.scientific-python.org/c/specs/web-comments
--->
-
 ## Description of (or link to) exploratory discussions/POCs (optional)
 
 <!--
