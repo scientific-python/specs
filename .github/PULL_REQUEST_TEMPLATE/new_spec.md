@@ -2,7 +2,7 @@
 
 ## Attestation
 
-- [ ] I have read and understood the [SPEC Purpose and Process](https://scientific-python.org/specs/purpose-and-process/) guidelines
+- [ ] I have read and understood the [SPEC Purpose and Process](https://scientific-python.org/specs/purpose-and-process/) guidelines.
 
 ## Description
 
