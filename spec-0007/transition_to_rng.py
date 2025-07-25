@@ -1,5 +1,6 @@
 import numpy as np
 import functools
+import inspect
 import warnings
 
 
@@ -159,6 +160,17 @@ def _transition_to_rng(old_name, *, position_num=None, end_version=None):
                 warnings.warn(message, FutureWarning, stacklevel=2)
 
             return fun(*args, **kwargs)
+
+        # Add the old parameter name to the function signature
+        wrapped_signature = inspect.signature(fun)
+        wrapper.__signature__ = wrapped_signature.replace(
+            parameters=[
+                *wrapped_signature.parameters.values(),
+                inspect.Parameter(
+                    old_name, inspect.Parameter.KEYWORD_ONLY, default=None
+                ),
+            ]
+        )
 
         return wrapper
 
