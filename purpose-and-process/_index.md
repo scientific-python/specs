@@ -30,13 +30,35 @@ will benefit the ecosystem as a whole.
 
 Projects decide for themselves whether to adopt any given SPEC—often, this
 would be through team consensus.
-A SPEC may not be a good fit for every single project, and thus there is no
-expectation that all SPECs must be adopted by all projects.
-That said, SPECs serve their purpose through being adopted by
-several projects—and their authority stems from the extent to which they are.
+They may look towards endorsements by [Core Projects](/specs/core-projects) as a signal to help them decide.
+A SPEC may not be a good fit for a project, and thus there is no
+expectation that all SPECs must be adopted by all projects (in fact, even Core Projects that endorse a SPEC—i.e., signaling that they think it is a good idea—may choose not to adopt it themselves).
+Still, SPECs best serve their purpose of communicating cross-project concepts when adopted by numerous projects—and their authority stems from the extent to which they are.
 
 Participants in the SPEC process must adhere to our
 [Code of Conduct](https://scientific-python.org/code_of_conduct/).
+
+## What is a SPEC?
+
+A SPEC (Scientific Python Ecosystem Coordination) is a document that captures an idea applicable to multiple projects.
+It is the product of discussions with developers across the ecosystem, and captures one of the following types of narratives:
+
+- **Recommendation:** We recommend that you do Y (e.g., [SPEC 8 — Securing the Release Process](https://scientific-python.org/specs/spec-0008/)).
+- **Guideline:** Some projects may need to do Y. If you do Y, we recommend that you do it as follows (e.g., [SPEC 1 — Lazy Loading](https://scientific-python.org/specs/spec-0001/)).
+- **Memorandum:** If you do Y, you should be aware of the following (we don't have any such advisories yet).
+
+{{< admonition important >}}
+**What a SPEC is not**
+
+SPECs are _not_ meant to be extensive technical documents that cover a large amount of detail.
+They typically _summarize_ an idea, referring to external sources, such as GitHub repositories or websites, for further detail.
+
+If you find yourself wanting to _disseminate information_ across the
+ecosystem, it may be better to write a blog post on
+https://blog.scientific-python.org or to contribute to an existing
+piece of documentation, such as https://learn.scientific-python.org/development/.
+A blog post is also a good way to generate initial engagement around an idea that is not yet mature enough, or within scope, to become a SPEC.
+{{< /admonition >}}
 
 ### Key Terms
 
@@ -113,28 +135,27 @@ style START fill:#FFFFFF, stroke:#FFFFFF;
 ```
 <!-- prettier-ignore-end -->
 
-The authors starts by _proposing_ a SPEC, as outlined in [New SPEC
-Proposals](#new-spec-proposals).
-The decision to **accept** a SPEC is made by the Steering Committee,
-at which point it is added to the main branch of the [SPEC
-repository](https://github.com/scientific-python/specs), clearly
-labeled as a draft.
-Proposed SPECs are accepted once (a) there is agreement that the SPEC
-concept is applicable to the ecosystem, (b) a draft pull request is
-written to clearly explain the area of common concern and a general
-approach to a shared solution, and (c) there are contributors (from at least two Core
-Projects) interested in working on the new SPEC and in championing it
-to their projects as well as the larger community.
-Additional details may be found in [Steering Committee
-documentation](/specs/steering-committee).
+The authors start by _proposing_ a SPEC idea, as outlined in [New
+SPEC Proposals](#new-spec-proposals)—please read that section carefully before
+proposing a new SPEC.
+
+The decision to **accept** (and number) a SPEC is made by the Steering
+Committee, once there is agreement that the SPEC concept is
+applicable, and it has been confirmed that there are at least two
+authors from two different projects interested in working on the new
+SPEC and championing it to various projects.
+At this point, the authors may submit a first version of the SPEC as a
+PR to the [SPEC
+repository](https://github.com/scientific-python/specs).
+This version may be merged to the main branch whenever the authors
+consider it ready, clearly labeled as a draft (see `is-draft` header
+field).
 
 In the accepted phase, the authors _develop_ their SPEC, in
 consultation with Core Projects and interested community members.
-This is done in a collabortive and iterative process, focused on
+This is done in a collaborative and iterative process, focused on
 ensuring that the SPEC is broadly applicable and likely to be widely
 adopted.
-The intent is that most SPECs will have authors from several projects,
-including Core Projects.
 Once authors consider their SPEC complete, they **publish** it,
 removing its draft status.
 
@@ -237,20 +258,37 @@ content = '''
 
 ### New SPEC Proposals
 
+<!-- This is a focused distillation of #decision-points for authors. -->
+
 A good SPEC proposal focuses on a single key recommendation or idea
-for coordinating projects in the scientific Python ecosystem.
-Before proposing a SPEC, we highly recommended that you first **vet
+for coordinating projects in the scientific Python ecosystem, as
+discussed under [What is a SPEC?](#what-is-a-spec).
+
+As a SPEC moves through the process, it goes through different states,
+as discussed under [Decision Points](#decision-points) and summarized
+here.
+
+**Before proposing** a SPEC, we highly recommended that you first **vet
 the idea** by doing one or more of the following:
 
-1. discuss the idea with at least one project in the ecosystem,
-2. discuss the idea with at least one other member of the ecosystem, or
-3. create a minimal, proof of concept prototype.
+1. Discuss the idea with at least one project in the ecosystem—for example, by posting to a project mailing list, attending a community call, or by having a birds-of-a-feather discussion at a conference like SciPy;
+2. discuss the idea with at least one other member of a [Core Project](/specs/core-projects); or
+3. if it is a technical idea, create a minimal proof of concept.
 
-Before a proposed SPEC can be accepted:
+**Before submitting** a proposed SPEC:
 
-1. The idea must be proposed on the discussion forum under the [`SPECS/Ideas`
+1. Ensure that the SPEC has at least two authors from two different projects,
+   to show cross-project interest.
+
+2. The **idea must be proposed** on the discussion forum under the [`SPECS/Ideas`
    topic](https://discuss.scientific-python.org/c/specs/ideas/9).
-2. A draft SPEC document must be submitted via pull request to the [SPEC repository](https://github.com/scientific-python/specs).
+   Please list your co-authors.
+
+If the SPEC committee considers the idea suitable for a SPEC, the spec
+is **approved** and a number is allocated.
+
+At this point, you should **draft your SPEC document and submit it**
+via pull request to the [SPEC repository](https://github.com/scientific-python/specs).
 
 Use the `quickstart.py` script to create the new SPEC document.
 Located at the top-level of the [SPEC
@@ -258,24 +296,41 @@ repository](https://github.com/scientific-python/specs), the script
 will ask you a few questions[^newspec] and then create a new file
 appropriately named with a basic template for you to complete (e.g.,
 `spec-0000/index.md`).
-Once the SPEC is in reasonable shape, file a pull request against the
+Leave the `draft` field set to `true` and the `endorsed-by` field empty.
+Once the SPEC is in readable shape, file a pull request against the
 [SPEC repository](https://github.com/scientific-python/specs).
+Let the SPEC committee know when you are ready for your PR to be
+merged.
+Once they do so, the SPEC will appear in draft form at
+<https://scientific-python.org/specs>.
+
+Your job now is to refine the SPEC iteratively and collaboratively
+with the community, using follow-up PRs.
+You should focus on ensuring that the SPEC is broadly applicable and
+likely to be widely adopted.
+Once you consider your SPEC complete, **publish** it by making a PR to
+remove its draft status.
+
+## Endorsing a SPEC
+
+<!-- This is a focused distillation of #decision-points for Core Projects. -->
+
+[Core Projects](/specs/core-projects) may signal their approval of a SPEC by _endorsing_ it.
+This endorsement makes it more likely that other projects will _adopt_ it.
+Endorsing a SPEC does _not_, however, mean that a Core Project needs to _adopt_ a SPEC, although it typically would if feasible.
+Core Projects use their project-specific discussion and decision making mechanisms to decide whether to endorse a SPEC.
+
+Once a Core Project decides to endorse a SPEC, they add their project
+name to the `endorsed-by` field in the SPEC header via a pull request against
+the [scientific-python/specs](https://github.com/scientific-python/specs)
+repository.
 
 ## Notes
 
 [^newspec]:
-    When asked to enter the SPEC number, choose the next available number that
-    has not yet been used.
-    Before the SPEC is merged, the Steering Committee may ask you to change the SPEC number so
-    that it doesn't conflict with another pull request.
-    If so, just rename the file as appropriate and update the SPEC number in the
-    `title` field of the SPEC header.
-
     The script currently only supports adding one author.
     If you need to add additional authors, just edit the text file.
 
     Additional files associated with a SPEC document may be kept in the directory
     containing the SPEC.
     For example, files associated with `spec-0000/index.md` are in `spec-0000/`.
-
-    Leave the `draft` field set to `true` and the `endorsed-by` field empty.
