@@ -46,11 +46,26 @@ to consensus-seeking and voting.
 
 ### How are SPECs accepted?
 
-To accept a SPEC (i.e., assigning it a SPEC number, marking its discussion
-`Accepted`, and merging the pull request) requires two members of the Steering
-Committee to approve and no members objecting.
-Since the role of the Steering Committee is mainly to ensure that SPEC proposals are
-appropriate,[^accept] objections should be rare.
+<!-- This is a focused distillation of purpose-and-process#decision-points for the SPEC committee. -->
+
+Also refer to [SPEC Purpose and Process: New
+Proposals](/specs/purpose-and-process/#new-spec-proposals), a summary
+of steps for SPEC authors.
+
+To accept a SPEC requires two members of the Steering Committee to
+approve and no members objecting.
+
+Verify that:
+
+1. The SPEC has two authors from two projects; and
+2. that the idea is widely applicable to the ecosystem (i.e., it makes sense to
+   write this up as a SPEC).
+
+Assign the SPEC a number, and ask the authors to submit a draft PR
+with a preliminary write-up.
+
+The role of the Steering Committee is mainly to ensure that SPEC
+proposals are appropriate, so objections should be rare.
 
 ### How is the SPEC process changed?
 
@@ -102,11 +117,3 @@ then they should
 [Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members), and
 (3) be removed from the
 [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/spec-steering-committee).
-
-## Notes
-
-[^accept]:
-    Proposed SPECs are accepted once (a) the draft is written to clearly explain the area of
-    common concern and a general approach to a shared solution and (b) there
-    are contributors (from at least two Core Projects) interested in working on the new SPEC
-    and in championing it to their projects as well as the larger community.
