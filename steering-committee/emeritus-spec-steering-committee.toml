@@ -87,3 +87,13 @@ alt = 'Avatar of Kristen Thyng'
 {{< /image >}}
 Kristen Thyng'''
 link = 'https://github.com/kthyng'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''{{< image >}}
+src = 'https://avatars.githubusercontent.com/u/2090236?v=4"'
+alt = 'Avatar of P. L. Lim'
+{{< /image >}}
+P. L. Lim'''
+link = 'https://github.com/pllim'

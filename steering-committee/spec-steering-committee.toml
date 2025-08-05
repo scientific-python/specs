@@ -102,16 +102,6 @@ link = 'https://github.com/munkm'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/2090236?v=4"'
-alt = 'Avatar of P. L. Lim'
-{{< /image >}}
-P. L. Lim'''
-link = 'https://github.com/pllim'
-
-[[item]]
-type = 'card'
-classcard = 'text-center'
-body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/98330?u=22a023f8d191ba200ab13d476c83860d015cc9fe&v=4"'
 alt = 'Avatar of Ralf Gommers'
 {{< /image >}}
