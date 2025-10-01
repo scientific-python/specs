@@ -59,7 +59,7 @@ def get_release_dates(package, support_time=plus24):
         try:
             version = Version(ver)
         except InvalidVersion as e:
-            print(f"Error: '{ver}' is an invalid version. Reason: {e}")
+            print(f"Error: '{ver}' is an invalid version for '{package}'. Reason: {e}")
             continue
 
         if version.is_prerelease or version.micro != 0:
