@@ -90,14 +90,27 @@ def get_release_dates(package, support_time=plus24):
     return releases
 
 
+def shift_drop_dates(p):
+    versions = list(p.keys())
+    for i in range(len(versions) - 1):
+        p[versions[i]]["drop_date"] = p[versions[i + 1]]["drop_date"]
+    return p
+
+
 package_releases = {
     "python": {
         version: {
             "release_date": datetime.strptime(release_date, "%b %d, %Y"),
-            "drop_date": datetime.strptime(release_date, "%b %d, %Y") + plus36,
+            "drop_date": datetime.strptime(release_date, "%b %d, %Y") + plus24,
         }
         for version, release_date in py_releases.items()
     }
+}
+
+# FIXME: This should appear before the above line, but it is temporarily here.
+package_releases = {
+    package: shift_drop_dates(releases)
+    for package, releases in package_releases.items()
 }
 
 package_releases |= {package: get_release_dates(package) for package in core_packages}

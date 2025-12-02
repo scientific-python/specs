@@ -88,7 +88,7 @@
 | matplotlib   | 3.10.0                 | released Dec 2024              |
 | networkx     | 3.4                    | released Oct 2024              |
 | numpy        | 2.2.0                  | released Dec 2024              |
-| python       | 3.12                   | released Oct 2023              |
+| python       | 3.12 to 3.13           | released Oct 2023 and Oct 2024 |
 | scikit-image | 0.25.0                 | released Dec 2024              |
 | scikit-learn | 1.6.0                  | released Dec 2024              |
 | xarray       | 2024.10.0 to 2024.11.0 | released Oct 2024 and Nov 2024 |
@@ -132,6 +132,8 @@
 
 ###### Recommend drop support for:
 
-|        |      |                   |
-| ------ | ---- | ----------------- |
-| python | 3.13 | released Oct 2024 |
+|          |                        |                                |
+| -------- | ---------------------- | ------------------------------ |
+| ipython  | 9.7.0                  | released Nov 2025              |
+| networkx | 3.6                    | released Nov 2025              |
+| xarray   | 2025.10.0 to 2025.11.0 | released Oct 2025 and Nov 2025 |

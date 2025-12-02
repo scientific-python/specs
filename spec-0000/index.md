@@ -32,13 +32,13 @@ All versions refer to feature releases (i.e., Python 3.8.0, NumPy 1.19.0; not Py
 
 Specifically, we recommend that:
 
-1. Support for Python versions be dropped **3 years** after their initial release.
-2. Support for core package dependencies be dropped **2 years** after their initial release.
+1. Support for a given version of Python to be dropped **2 years** after the next version of Python is released.
+2. Support for a given version of a Python package be dropped **1.5 years** after the next version of that package is released.
 
 {{< admonition note >}}
-Core packages may or may not decide to provide bug fix releases during the full 2 year period after release.
-Therefore, projects may occasionally want to drop support for core package dependencies earlier than recommended by this SPEC.
-For instance, if a newer minimum version of a core package is needed by a project due to a critical bug fix,
+Packages may or may not provide bug fix releases during the full support period.
+Therefore, projects may occasionally want to drop support for package dependencies earlier than recommended by this SPEC.
+For instance, if a newer minimum version of a package is needed by a project due to a critical bug fix,
 which is not backported to older versions.
 {{< /admonition >}}
 
