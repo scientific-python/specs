@@ -132,6 +132,17 @@
 
 ###### Recommend drop support for:
 
+|          |                        |                                |
+| -------- | ---------------------- | ------------------------------ |
+| ipython  | 9.7.0                  | released Nov 2025              |
+| networkx | 3.6                    | released Nov 2025              |
+| python   | 3.13                   | released Oct 2024              |
+| xarray   | 2025.10.0 to 2025.11.0 | released Oct 2025 and Nov 2025 |
+
+#### 2028 - Quarter 4:
+
+###### Recommend drop support for:
+
 |        |      |                   |
 | ------ | ---- | ----------------- |
-| python | 3.13 | released Oct 2024 |
+| python | 3.14 | released Oct 2025 |
