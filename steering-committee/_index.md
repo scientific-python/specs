@@ -49,7 +49,7 @@ The Chair is also responsible for ensuring the Steering Committee is familiar wi
 
 SPEC Planning Meetings are regular gatherings organized to discuss ongoing and upcoming SPEC proposals, procedural updates, and any other matters relevant to the Steering Committee or the broader community.
 The Chair is responsible for scheduling and coordinating these meetings.
-Information about upcoming SPEC Planning Meetings, including dates and details for joining, can be found on the [Scientific Python Calendar](https://scientific-python.org/calendars/).
+Information about upcoming SPEC Planning Meetings, including dates and details for joining, can be found on the [SPEC Steering Committee](https://scientific-python.org/calendars/specs.ics) calendar hosted at the [Scientific Python Calendars](https://scientific-python.org/calendars/).
 
 The meetings are open to all community members.
 [Meeting notes](https://hackmd.io/@stefanv/SPEC-meetings/edit) and outcomes are documented and shared via public community channels as appropriate.
