@@ -26,6 +26,17 @@ In particular, the Steering Committee members
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
+The SPEC Committee is led by the SPEC Steering Committee Chair.
+The SPEC Steering Committee Chair is a designated member of the Steering Committee, selected by the Steering Committee.
+The Chair serves at the discretion of the Steering Committee and may be replaced by the committee at any time.
+The primary responsibility of the Chair is to organize and facilitate the SPEC Planning Meetings.
+In addition to coordinating these meetings, the Chair may assist in managing meeting agendas and ensuring effective communication within the committee.
+The Chair is also responsible for ensuring the Steering Committee is familiar with and following the SPEC Process.
+
+### SPEC Steering Committee Chair
+
+{{< grid file="spec-steering-committee-chair.toml" columns="2 3 4 5" />}}
+
 ### SPEC Steering Committee
 
 {{< grid file="spec-steering-committee.toml" columns="2 3 4 5" />}}
@@ -33,6 +44,15 @@ In particular, the Steering Committee members
 ### Emeritus SPEC Steering Committee
 
 {{< grid file="emeritus-spec-steering-committee.toml" columns="2 3 4 5" />}}
+
+## SPEC Planning Meetings
+
+SPEC Planning Meetings are regular gatherings organized to discuss ongoing and upcoming SPEC proposals, procedural updates, and any other matters relevant to the Steering Committee or the broader community.
+The Chair is responsible for scheduling and coordinating these meetings.
+Information about upcoming SPEC Planning Meetings, including dates and details for joining, can be found on the [SPEC Steering Committee](https://scientific-python.org/calendars/specs.ics) calendar hosted at the [Scientific Python Calendars](https://scientific-python.org/calendars/).
+
+The meetings are open to all community members.
+[Meeting notes](https://hackmd.io/@stefanv/SPEC-meetings/edit) and outcomes are documented and shared via public community channels as appropriate.
 
 ## Implementation
 
@@ -67,7 +87,7 @@ with a preliminary write-up.
 The role of the Steering Committee is mainly to ensure that SPEC
 proposals are appropriate, so objections should be rare.
 
-### How is the SPEC process changed?
+### How does the SPEC Committee make decisions?
 
 The Steering Committee makes decisions about changing the SPEC process documents
 ([SPEC Purpose and Process](/specs/purpose-and-process),
