@@ -2,7 +2,7 @@
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/6788290?u=d9a388224b87d55106cb3e6199d02ebc1d8e0553&v=4\""
+    src="https://avatars.githubusercontent.com/u/6788290?u=d9a388224b87d55106cb3e6199d02ebc1d8e0553&v=4"
     alt="Avatar of Brigitta Sipőcz"
 >}}
 Brigitta Sipőcz'''
@@ -12,7 +12,7 @@ link = 'https://github.com/bsipocz'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/335567?v=4\""
+    src="https://avatars.githubusercontent.com/u/335567?v=4"
     alt="Avatar of M Bussonnier"
 >}}
 M Bussonnier'''
@@ -21,20 +21,20 @@ link = 'https://github.com/Carreau'
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/7454015?u=d9704641f89c00ce86f8207e59aedb554109d7fa&v=4"'
-alt = 'Avatar of Guillaume Lemaitre'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/7454015?u=d9704641f89c00ce86f8207e59aedb554109d7fa&v=4"
+  alt="Avatar of Guillaume Lemaitre"
+>}}
 Guillaume Lemaitre'''
 link = 'https://github.com/glemaitre'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/43481325?u=8c0c0adbf3f2efd2cce72951d3554064c7bbfce3&v=4"'
-alt = 'Avatar of Inessa Pawson'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/43481325?u=8c0c0adbf3f2efd2cce72951d3554064c7bbfce3&v=4"
+  alt="Avatar of Inessa Pawson"
+>}}
 Inessa Pawson'''
 link = 'https://github.com/InessaPawson'
 
@@ -42,7 +42,7 @@ link = 'https://github.com/InessaPawson'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/118211?u=df34f29e82134879f506869b2af3252e35db6bb4&v=4\""
+    src="https://avatars.githubusercontent.com/u/118211?u=df34f29e82134879f506869b2af3252e35db6bb4&v=4"
     alt="Avatar of Paul Ivanov"
 >}}
 Paul Ivanov'''
@@ -52,7 +52,7 @@ link = 'https://github.com/ivanov'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/123428?v=4\""
+    src="https://avatars.githubusercontent.com/u/123428?v=4"
     alt="Avatar of Jarrod Millman"
 >}}
 Jarrod Millman'''
@@ -62,7 +62,7 @@ link = 'https://github.com/jarrodmillman'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/18587879?u=83f10fabe466ae8e7052c03c5e6e9cde684a4e10&v=4\""
+    src="https://avatars.githubusercontent.com/u/18587879?u=83f10fabe466ae8e7052c03c5e6e9cde684a4e10&v=4"
     alt="Avatar of Juanita Gomez"
 >}}
 Juanita Gomez'''
@@ -71,50 +71,50 @@ link = 'https://github.com/juanis2112'
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/20140352?u=0f68b3b14560c1ac9a5b6cad15e2b8e5f5efc4d3&v=4"'
-alt = 'Avatar of Lars Grüter'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/20140352?u=0f68b3b14560c1ac9a5b6cad15e2b8e5f5efc4d3&v=4"
+  alt="Avatar of Lars Grüter"
+>}}
 Lars Grüter'''
 link = 'https://github.com/lagru'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/6570539?u=cfb3e218754e85c4fac18064d7cfdce0b67ddaa6&v=4"'
-alt = 'Avatar of Matt Haberland'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/6570539?u=cfb3e218754e85c4fac18064d7cfdce0b67ddaa6&v=4"
+  alt="Avatar of Matt Haberland"
+>}}
 Matt Haberland'''
 link = 'https://github.com/mdhaber'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/5363860?u=ce5c6e9388d2fd153ebf8b0bb521c928b0813608&v=4"'
-alt = 'Avatar of Mridul Seth'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/5363860?u=ce5c6e9388d2fd153ebf8b0bb521c928b0813608&v=4"
+  alt="Avatar of Mridul Seth"
+>}}
 Mridul Seth'''
 link = 'https://github.com/MridulS'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/6745434?v=4"'
-alt = 'Avatar of Madicken Munk'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/6745434?v=4"
+  alt="Avatar of Madicken Munk"
+>}}
 Madicken Munk'''
 link = 'https://github.com/munkm'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/98330?u=22a023f8d191ba200ab13d476c83860d015cc9fe&v=4"'
-alt = 'Avatar of Ralf Gommers'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/98330?u=22a023f8d191ba200ab13d476c83860d015cc9fe&v=4"
+  alt="Avatar of Ralf Gommers"
+>}}
 Ralf Gommers'''
 link = 'https://github.com/rgommers'
 
@@ -122,7 +122,7 @@ link = 'https://github.com/rgommers'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/1268991?u=974707b96081a9705f3a239c0773320f353ee02f&v=4\""
+    src="https://avatars.githubusercontent.com/u/1268991?u=974707b96081a9705f3a239c0773320f353ee02f&v=4"
     alt="Avatar of Ross Barnowski"
 >}}
 Ross Barnowski'''
@@ -131,20 +131,20 @@ link = 'https://github.com/rossbar'
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/20305658?u=0305891289a16b2111326053c0f3746fb5218fa7&v=4"'
-alt = 'Avatar of Sanket Verma'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/20305658?u=0305891289a16b2111326053c0f3746fb5218fa7&v=4"
+  alt="Avatar of Sanket Verma"
+>}}
 Sanket Verma'''
 link = 'https://github.com/sanketverma1704'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/45071?u=ef2af0a29229833cd2ae0e5aeb90283881e8c1e0&v=4"'
-alt = 'Avatar of Stefan van der Walt'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/45071?u=ef2af0a29229833cd2ae0e5aeb90283881e8c1e0&v=4"
+  alt="Avatar of Stefan van der Walt"
+>}}
 Stefan van der Walt'''
 link = 'https://github.com/stefanv'
 
@@ -152,7 +152,7 @@ link = 'https://github.com/stefanv'
 type = 'card'
 classcard = 'text-center'
 body = '''{{< image
-    src="https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&v=4\""
+    src="https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&v=4"
     alt="Avatar of Pamphile Roy"
 >}}
 Pamphile Roy'''
