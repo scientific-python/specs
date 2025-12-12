@@ -1,9 +1,9 @@
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''{{< image >}}
-src = 'https://avatars.githubusercontent.com/u/123428?v=4"'
-alt = 'Avatar of Jarrod Millman'
-{{< /image >}}
+body = '''{{< image
+  src="https://avatars.githubusercontent.com/u/123428?v=4"
+  alt="Avatar of Jarrod Millman"
+>}}
 Jarrod Millman'''
 link = 'https://github.com/jarrodmillman'
