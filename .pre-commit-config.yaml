@@ -3,7 +3,7 @@
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b # frozen: v5.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # frozen: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -16,23 +16,19 @@ repos:
       - id: check-toml
       - id: check-added-large-files
 
-  - repo: https://github.com/psf/black
-    rev: 8a737e727ac5ab2f1d4cf5876720ed276dc8dc4b # frozen: 25.1.0
-    hooks:
-      - id: black
-
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: 787fb9f542b140ba0b2aced38e6a3e68021647a3 # frozen: v3.5.3
+    rev: 5ba47274f9b181bce26a5150a725577f3c336011 # frozen: v3.6.2
     hooks:
       - id: prettier
         files: \.(md|yml|yaml)
         args: [--prose-wrap=preserve]
 
-  - repo: https://github.com/asottile/pyupgrade
-    rev: ce40a160603ab0e7d9c627ae33d7ef3906e2d2b2 # frozen: v3.19.1
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 9c89adb347f6b973f4905a4be0051eb2ecf85dea # frozen: v0.13.3
     hooks:
-      - id: pyupgrade
-        args: [--py38-plus]
+      - id: ruff
+        args: ["--fix", "--show-fixes", "--exit-non-zero-on-fix"]
+      - id: ruff-format
 
   - repo: https://github.com/codespell-project/codespell
     rev: "63c8f8312b7559622c0d82815639671ae42132ac" # frozen: v2.4.1

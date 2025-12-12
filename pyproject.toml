@@ -1,0 +1,3 @@
+[tool.ruff]
+target-version = "py313"
+exclude = ["spec-0007/transition_to_rng.py"]

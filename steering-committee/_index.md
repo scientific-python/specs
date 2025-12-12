@@ -26,6 +26,17 @@ In particular, the Steering Committee members
 - serve as a communication channel to and from projects they contribute to as
   well as the larger ecosystem.
 
+The SPEC Committee is led by the SPEC Steering Committee Chair.
+The SPEC Steering Committee Chair is a designated member of the Steering Committee, selected by the Steering Committee.
+The Chair serves at the discretion of the Steering Committee and may be replaced by the committee at any time.
+The primary responsibility of the Chair is to organize and facilitate the SPEC Planning Meetings.
+In addition to coordinating these meetings, the Chair may assist in managing meeting agendas and ensuring effective communication within the committee.
+The Chair is also responsible for ensuring the Steering Committee is familiar with and following the SPEC Process.
+
+### SPEC Steering Committee Chair
+
+{{< grid file="spec-steering-committee-chair.toml" columns="2 3 4 5" />}}
+
 ### SPEC Steering Committee
 
 {{< grid file="spec-steering-committee.toml" columns="2 3 4 5" />}}
@@ -33,6 +44,15 @@ In particular, the Steering Committee members
 ### Emeritus SPEC Steering Committee
 
 {{< grid file="emeritus-spec-steering-committee.toml" columns="2 3 4 5" />}}
+
+## SPEC Planning Meetings
+
+SPEC Planning Meetings are regular gatherings organized to discuss ongoing and upcoming SPEC proposals, procedural updates, and any other matters relevant to the Steering Committee or the broader community.
+The Chair is responsible for scheduling and coordinating these meetings.
+Information about upcoming SPEC Planning Meetings, including dates and details for joining, can be found on the [SPEC Steering Committee](https://scientific-python.org/calendars/specs.ics) calendar hosted at the [Scientific Python Calendars](https://scientific-python.org/calendars/).
+
+The meetings are open to all community members.
+[Meeting notes](https://hackmd.io/@stefanv/SPEC-meetings/edit) and outcomes are documented and shared via public community channels as appropriate.
 
 ## Implementation
 
@@ -46,13 +66,28 @@ to consensus-seeking and voting.
 
 ### How are SPECs accepted?
 
-To accept a SPEC (i.e., assigning it a SPEC number, marking its discussion
-`Accepted`, and merging the pull request) requires two members of the Steering
-Committee to approve and no members objecting.
-Since the role of the Steering Committee is mainly to ensure that SPEC proposals are
-appropriate,[^accept] objections should be rare.
+<!-- This is a focused distillation of purpose-and-process#decision-points for the SPEC committee. -->
 
-### How is the SPEC process changed?
+Also refer to [SPEC Purpose and Process: New
+Proposals](/specs/purpose-and-process/#new-spec-proposals), a summary
+of steps for SPEC authors.
+
+To accept a SPEC requires two members of the Steering Committee to
+approve and no members objecting.
+
+Verify that:
+
+1. The SPEC has two authors from two projects; and
+2. that the idea is widely applicable to the ecosystem (i.e., it makes sense to
+   write this up as a SPEC).
+
+Assign the SPEC a number, and ask the authors to submit a draft PR
+with a preliminary write-up.
+
+The role of the Steering Committee is mainly to ensure that SPEC
+proposals are appropriate, so objections should be rare.
+
+### How does the SPEC Committee make decisions?
 
 The Steering Committee makes decisions about changing the SPEC process documents
 ([SPEC Purpose and Process](/specs/purpose-and-process),
@@ -102,11 +137,3 @@ then they should
 [Steering Committee Team](https://github.com/orgs/scientific-python/teams/spec-steering-committee/members), and
 (3) be removed from the
 [Steering Committee Discourse Group](https://discuss.scientific-python.org/g/spec-steering-committee).
-
-## Notes
-
-[^accept]:
-    Proposed SPECs are accepted once (a) the draft is written to clearly explain the area of
-    common concern and a general approach to a shared solution and (b) there
-    are contributors (from at least two Core Projects) interested in working on the new SPEC
-    and in championing it to their projects as well as the larger community.

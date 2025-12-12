@@ -85,7 +85,6 @@ and other ancillary information as needed.
 - Recommend that CI running against PRs be expected to pass--if it fails, it should be important
 
 - Schedule regular runs of CI against nightlies/pre-releases
-
   - Good for other checks that don't need to run on every PR
   - Could use for pins
   - Can use labels to trigger additional runs of "exotic" jobs
