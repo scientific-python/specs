@@ -120,7 +120,7 @@ its development and implementation:
 ```mermaid
 graph LR
 
-START[ ]--> |Propose| A[Accept]
+START--> |Propose| A[Accept]
 A--> |Develop| B[Publish]
 B--> |Canvass| C[Endorse]
 C--> |Recommend| D[Adopt]
@@ -129,8 +129,6 @@ click A callback "Steering Committee Action"
 click B callback "Author Action"
 click C callback "Core Project Action"
 click D callback "Ecosystem Action"
-
-style START fill:#FFFFFF, stroke:#FFFFFF;
 
 ```
 <!-- prettier-ignore-end -->
