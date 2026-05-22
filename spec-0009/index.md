@@ -189,4 +189,4 @@ be followed to ensure smooth implementation and operation.
 
 - OSSWatch resource on [Governance models](http://oss-watch.ac.uk/resources/governancemodels)
 
-- Chapter - [Project and Community Governance](https://www.theopensourceway.org/the_open_source_way-guidebook-2.0.html#_project_and_community_governance) from [The Open Source Way](https://www.theopensourceway.org/) Guidebook
+- Chapter - [Project and Community Governance](https://guidebook.theopensourceway.org/growing-contributors/project-and-community-governance) from [The Open Source Way](https://www.theopensourceway.org/) Guidebook

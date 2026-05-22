@@ -11,7 +11,7 @@ endorsed-by:
 
 ## Description
 
-Technology is a great tool to make the world accessible to the full range of human experience, which includes [those with disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html). The reach of accessibility guidelines extends beyond the scientific Python ecosystem including the [Web Content Accessibility Guidelines (W3C)](https://www.w3.org/TR/WCAG/), a comprehensive set of international standards designed to make web content more accessible.
+Technology is a great tool to make the world accessible to the full range of human experience, which includes [those with disabilities](https://www.cdc.gov/disability-and-health/articles-documents/disability-impacts-all-of-us-infographic.html). The reach of accessibility guidelines extends beyond the scientific Python ecosystem including the [Web Content Accessibility Guidelines (W3C)](https://www.w3.org/TR/WCAG/), a comprehensive set of international standards designed to make web content more accessible.
 
 The primary objective of this SPEC (Scientific Python Accessibility) is to provide fundamental recommendations for the Scientific Python communities and their projects. These recommendations aim to ensure accessibility and inclusivity for individuals with disabilities, particularly regarding web-based content and tools.
 
