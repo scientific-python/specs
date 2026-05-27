@@ -1,6 +1,6 @@
 ---
 title: "Astropy"
-avatar: https://avatars.githubusercontent.com/u/847984?s=48&v=4
+avatar: https://avatars.githubusercontent.com/u/847984
 homepage: https://astropy.org
 repository: https://github.com/astropy/astropy
 pypi: https://pypi.org/project/astropy
