@@ -7,5 +7,5 @@ pypi: https://pypi.org/project/mne
 libraries-io: https://libraries.io/pypi/mne
 license: https://github.com/mne-tools/mne-python/blob/main/LICENSE.txt
 license-type: 3-clause BSD
-contact: drammock,larsoner,britta-wstnr
+contact: @drammock,@larsoner,@britta-wstnr
 ---
