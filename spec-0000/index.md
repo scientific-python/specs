@@ -18,6 +18,7 @@ endorsed-by:
   - matplotlib
   - networkx
   - numpy
+  - pysal
   - scikit-image
   - scipy
   - xarray
