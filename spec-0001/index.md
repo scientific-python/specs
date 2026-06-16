@@ -10,6 +10,7 @@ author:
 endorsed-by:
   - ipython
   - networkx
+  - pysal
   - numpy
   - scikit-image
   - scikit-learn
