@@ -11,6 +11,7 @@ endorsed-by:
   - ipython
   - networkx
   - numpy
+  - pysal
   - scikit-image
   - scipy
 ---

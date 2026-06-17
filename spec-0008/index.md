@@ -12,6 +12,7 @@ author:
 endorsed-by:
   - networkx
   - numpy
+  - pysal
   - scikit-image
   - scikit-learn
 ---
