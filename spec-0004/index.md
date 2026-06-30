@@ -15,6 +15,7 @@ endorsed-by:
   - matplotlib
   - networkx
   - numpy
+  - pysal
   - scikit-image
   - scikit-learn
   - scipy
