@@ -42,6 +42,16 @@ For instance, if a newer minimum version of a core package is needed by a projec
 which is not backported to older versions.
 {{< /admonition >}}
 
+{{< admonition note >}}
+Certain projects (e.g., projects that have more resources) may wish to provide long-term support (LTS) of an additional year.
+
+Specifically, for projects wishing to provide LTS we recommend that:
+
+1. Support for Python versions be dropped **4 years** after their initial release.
+2. Support for core package dependencies be dropped **3 years** after their initial release.
+
+{{< /admonition >}}
+
 ### Core Project Endorsement
 
 <!--
@@ -83,6 +93,10 @@ There were several reasons for this, including the Python 2 / 3 transition, diff
 The situation has since improved due to improved installations via binary wheels, virtual environments becoming commonplace, and support for Python 2 being dropped.
 
 ### Support Window
+
+{{< admonition note >}}
+For LTS, add 1 year to the support window.
+{{< /admonition >}}
 
 ```mermaid
 {{< include-raw "chart.md" >}}
