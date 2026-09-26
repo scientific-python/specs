@@ -10,7 +10,7 @@ prepare-preview: clean
 	mkdir -p $(PREVIEW_DEST)
 	git clone https://github.com/scientific-python/scientific-python.org $(PREVIEW_DEST)
 	git -C $(PREVIEW_DEST) submodule set-url themes/scientific-python-hugo-theme https://github.com/scientific-python/scientific-python-hugo-theme.git
-	git -C $(PREVIEW_DEST) submodule update --init
+	git -C $(PREVIEW_DEST) submodule update --init --recursive
 	rm -rf $(PREVIEW_DEST)/content/specs/*
 	cp -r * $(PREVIEW_DEST)/content/specs
 
