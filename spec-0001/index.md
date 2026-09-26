@@ -24,7 +24,7 @@ This SPEC recommends a lazy loading mechanism—targeted at libraries—that avo
 and provides explicit submodule exports.
 
 {{< admonition note >}}
-Python 3.15 introduces explicit native lazy imports through [PEP 810, Explicit Lazy Imports](https://peps.python.org/pep-0810/).
+Python 3.15 introduces [explicit native lazy imports](https://peps.python.org/pep-0810/).
 Until this support has been evaluated across Scientific Python projects, we recommend continuing to use `lazy-loader`, which supports older Python versions and is already widely deployed.
 
 We are exploring whether `lazy-loader` can use native lazy imports where appropriate on Python 3.15 and later.
