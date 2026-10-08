@@ -21,7 +21,6 @@
 | scikit-learn | 1.4.0                | released Jan 2024              |
 | scipy        | 1.12.0               | released Jan 2024              |
 | xarray       | 2024.1.0 to 2024.3.0 | released Jan 2024 and Mar 2024 |
-| zarr         | 2.17.0               | released Feb 2024              |
 
 #### 2026 - Quarter 2:
 
@@ -37,7 +36,6 @@
 | scikit-learn | 1.5.0                | released May 2024              |
 | scipy        | 1.13.0 to 1.14.0     | released Apr 2024 and Jun 2024 |
 | xarray       | 2024.5.0 to 2024.6.0 | released May 2024 and Jun 2024 |
-| zarr         | 2.18.0               | released May 2024              |
 
 #### 2026 - Quarter 3:
 
@@ -73,7 +71,6 @@
 | ipython | 8.32.0 to 9.0.0      | released Jan 2025 and Mar 2025 |
 | scipy   | 1.15.0               | released Jan 2025              |
 | xarray  | 2025.1.0 to 2025.3.0 | released Jan 2025 and Mar 2025 |
-| zarr    | 3.0.0                | released Jan 2025              |
 
 #### 2027 - Quarter 2:
 
@@ -97,7 +94,6 @@
 | ------- | -------------------- | ------------------------------ |
 | ipython | 9.4.0 to 9.6.0       | released Jul 2025 and Sep 2025 |
 | xarray  | 2025.7.0 to 2025.9.0 | released Jul 2025 and Sep 2025 |
-| zarr    | 3.1.0                | released Jul 2025              |
 
 #### 2027 - Quarter 4:
 

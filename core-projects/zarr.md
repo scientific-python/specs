@@ -7,5 +7,5 @@ pypi: https://pypi.org/project/zarr
 libraries-io: https://libraries.io/pypi/zarr
 license: https://github.com/zarr-developers/zarr-python/blob/main/LICENSE.txt
 license-type: MIT
-contact: msankeys963
+contact: d-v-b
 ---
