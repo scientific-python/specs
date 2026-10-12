@@ -26,7 +26,6 @@ core_packages = [
     "scikit-learn",
     "xarray",
     "ipython",
-    "zarr",
 ]
 plus36 = timedelta(days=int(365 * 3))
 plus24 = timedelta(days=int(365 * 2))
