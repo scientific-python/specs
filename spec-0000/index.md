@@ -24,6 +24,12 @@ endorsed-by:
   - zarr
 ---
 
+{{< admonition note >}}
+SPECs provide shared recommendations, not rigid requirements.
+Projects decide whether and how to adopt them in light of their users, technical constraints, and maintainer resources.
+The "Ecosystem Adoption" section explains what adoption of this SPEC means.
+{{< /admonition >}}
+
 ## Description
 
 This SPEC recommends that all projects across the Scientific Python ecosystem adopt a common time-based policy for dropping dependencies. From the perspective of this SPEC, the dependencies in question are core packages as well as older Python versions.
