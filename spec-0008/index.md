@@ -191,6 +191,7 @@ permissions: {}
 jobs:
   publish:
     name: Publish Python distributions to PyPI
+    # Distributions will have been built in a previous job
     needs: build
     runs-on: ubuntu-latest
     environment:
