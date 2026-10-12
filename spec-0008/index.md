@@ -61,7 +61,7 @@ It is recommended that this is a dedicated page in the developer section of the 
 #### Separate building from publishing
 
 Release artifacts should be built in a separate job from the job that publishes them.
-The build job should upload the completed distributions as workflow artifacts, and the publishing job should only download those artifacts and upload them to PyPI, conda, or another distribution service.
+The build job should upload the completed distributions as workflow artifacts, and the publishing job should only download those artifacts and upload them to a package index, e.g. PyPI.
 This separation ensures that build and test code does not run with publishing credentials and that the artifacts tested are the same artifacts that are published.
 
 When a workflow checks out the repository, set `persist-credentials: false` unless later steps explicitly require the checkout credentials.
