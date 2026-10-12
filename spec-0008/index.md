@@ -124,7 +124,7 @@ Use a tool, like zizmor, to ensure that hashes are actually from the repository 
 ```
 
 Dependabot can be used to automatically propose updates to the hashes.
-It is important that updates are reviewed and merged together when the actions are expected to remain in sync.
+It is important that updates are carefully reviewed before being merged.
 
 ```yaml
 # .github/dependabot.yml
@@ -189,31 +189,6 @@ concurrency:
 permissions: {}
 
 jobs:
-  build:
-    name: Build Python distributions
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@<full action commit SHA> # vX.Y.Z
-        with:
-          persist-credentials: false
-
-      - name: Set up Python
-        uses: actions/setup-python@<full action commit SHA> # vX.Y.Z
-        with:
-          python-version: "3.x"
-
-      - name: Build sdist and wheel
-        run: |
-          python -m pip install build
-          python -m build
-
-      - name: Upload distributions
-        uses: actions/upload-artifact@<full action commit SHA> # vX.Y.Z
-
   publish:
     name: Publish Python distributions to PyPI
     needs: build
