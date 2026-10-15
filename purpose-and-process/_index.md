@@ -30,7 +30,7 @@ will benefit the ecosystem as a whole.
 
 Projects decide whether and how to adopt a SPEC through their own decision-making processes.
 They may use endorsements by [Core Projects](/specs/core-projects) to inform that decision.
-SPECs are shared recommendations, not compliance standards, and projects may adapt them to their users, technical constraints, and maintainer resources.
+SPECs are shared recommendations, not compliance standards, and projects may adapt them to their specific use-cases, technical constraints, and maintainer resources.
 Not every SPEC will suit every project, and endorsement does not require adoption.
 SPECs gain their practical value and authority through use across the ecosystem.
 
@@ -184,7 +184,7 @@ Unless a SPEC explicitly defines conformance criteria, adoption does not imply e
 
 Projects may adopt a SPEC at any stage, but waiting for endorsement by several Core Projects gives them a more thoroughly reviewed and stable recommendation.
 After endorsement, substantive changes require approval from all endorsing Core Projects.
-Projects that adopt a SPEC early should participate in its development so their use cases can inform the recommendation.
+We encourage projects that adopt a SPEC early to participate in its development so their use cases can inform the recommendation.
 
 #### Badges
 
