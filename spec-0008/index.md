@@ -35,9 +35,9 @@ This SPEC offers pragmatic recommendations for publishing release artifacts secu
 Specifically, we recommend:
 
 - Document the release process.
-- Require another maintainer's approval before publishing.
+- Require a second maintainer's approval before publishing.
 - Separate building tasks from publishing, and give each job only the permissions it needs.
-- Use approved workflow components pinned to immutable revisions, and review updates.
+- Use workflow components approved by the project's maintainers, pin them to immutable revisions, and review updates.
 - Authenticate publishing workflows with short-lived credentials rather than stored, long-lived tokens.
 - Publish digital attestations that allow others to verify the publishing identity and artifact integrity.
 
