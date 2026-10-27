@@ -34,7 +34,8 @@ The [Supply-chain Levels for Software Artifacts (SLSA) framework](https://slsa.d
 This SPEC offers pragmatic recommendations for publishing release artifacts securely.
 Specifically, we recommend:
 
-- Document the release process and require another maintainer's approval before publishing.
+- Document the release process.
+- Require another maintainer's approval before publishing.
 - Separate building from publishing, and give each job only the permissions it needs.
 - Use approved workflow components pinned to immutable revisions, and review updates.
 - Authenticate publishing workflows with short-lived credentials rather than stored, long-lived tokens.
@@ -43,7 +44,8 @@ Specifically, we recommend:
 Securely _building_ release artifacts will be covered in a later SPEC.
 These recommendations complement [SPEC 6 --- Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
 
-While the implementation examples focus on GitHub, the general recommendations also apply to other services, such as GitLab.
+The implementation examples use GitHub Actions and PyPI, but the general recommendations apply more broadly to release workflows and distribution services.
+The specific mechanisms depend on the services used.
 
 #### Badges
 
