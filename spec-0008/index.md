@@ -8,6 +8,7 @@ author:
   - "Juanita Gomez <juanitagomezr2112@gmail.com>"
   - "Seth Larson <sethmichaellarson@gmail.com>"
   - "Lars Grüter <lagru@mailbox.org>"
+  - "Henry Schreiner <HenrySchreinerIII@gmail.com>"
   - "Jarrod Millman <millman@berkeley.edu>"
 endorsed-by:
   - networkx
@@ -57,16 +58,31 @@ It is recommended that this is a dedicated page in the developer section of the 
 - It is also strongly recommended that release managers use [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits), so that each release corresponds to a verified commit. Note that it can be difficult to enforce this via GitHub permissions without requiring all contributors to also sign their commits, which may be undesirable for many projects.
 - The branch from which the release is made should also be protected.
 
-#### Restrict permissions in CI runners to the minimum required
+#### Separate building from publishing
 
-To restrict the attack surface area of arbitrary code execution in CI runners, the _default_ runner permissions should be restricted to the minimum possible (read access). In the GitHub Action workflow, this is accomplished by defining the following workflow global permissions block before any jobs are defined.
+Release artifacts should be built in a separate job from the job that publishes them.
+The build job should upload the completed distributions as workflow artifacts, and the publishing job should only download those artifacts and upload them to a package index, e.g. PyPI.
+This separation ensures that build and test code does not run with publishing credentials and that the artifacts tested are the same artifacts that are published.
+
+When a workflow checks out the repository, set `persist-credentials: false` unless later steps explicitly require the checkout credentials.
 
 ```yaml
-permissions:
-  contents: read
+- uses: actions/checkout@<full action commit SHA> # vX.Y.Z
+  with:
+    persist-credentials: false
 ```
 
-Elevating permissions beyond this should be done at the job level by redefining the permissions block in the job.
+#### Restrict permissions in CI runners to the minimum required
+
+To restrict the attack surface area of arbitrary code execution in CI runners, the _default_ runner permissions should be set to none.
+In the GitHub Actions workflow, this is accomplished by defining the following workflow-level permissions block before any jobs are defined.
+
+```yaml
+permissions: {}
+```
+
+Each job should then grant only the permissions it requires.
+For example, a build job that checks out a private repository may need `contents: read`, while the PyPI publishing job needs `id-token: write` for trusted publishing.
 
 #### Restrict permitted actions in workflows
 
@@ -80,7 +96,7 @@ option and the suboptions:
 - Allow actions created by GitHub
 - Allow specified actions and reusable workflows
 
-Consult [Managing GitHub Actions permissions for your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#managing-github-actions-permissions-for-your-repository) for more details.
+Consult [Managing GitHub Actions permissions for your repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) for more details.
 
 #### Use GitHub Actions environments
 
@@ -98,17 +114,19 @@ Additional reviewer requirements can be configured per GitHub Actions environmen
 
 ### Pin GitHub Actions release workflows to their full release commit SHAs
 
-GitHub actions must be pinned using full commit SHA corresponding to the release version being used.
-Using versions or small hashes is susceptible to attacks.
+GitHub Actions must be pinned using the full commit SHA corresponding to the release version being used.
+Using versions, branches, tags, or abbreviated hashes is susceptible to attacks.
+Include the corresponding release version in a comment, and update pinned actions regularly through a reviewed process so that related actions remain compatible.
+Use a tool, like zizmor, to ensure that hashes are actually from the repository and not from a fork.
 
 ```yaml
-- uses: actions/some-action@1fe14e04876783b259436247a3898d2fe7d5548f #vX.Y.Z
+- uses: actions/some-action@1fe14e04876783b259436247a3898d2fe7d5548f # vX.Y.Z
 ```
 
-Dependabot can be used to automatically update the hashes.
-It is important that this happens as part of a reviewed process.
+Dependabot can be used to automatically propose updates to the hashes.
+It is important that updates are carefully reviewed before being merged.
 
-```yaml!
+```yaml
 # .github/dependabot.yml
 version: 2
 updates:
@@ -123,39 +141,14 @@ updates:
           - "*"
 ```
 
-### Adopt SLSA through use of GitHub Attestations
-
-A component of SLSA is [software attestation](https://slsa.dev/attestation-model) which allows for public validation of software artifacts and provenance.
-GitHub provides the [`actions/attest-build-provenance`](https://github.com/actions/attest-build-provenance) GitHub Action which implements SLSA to generate signed build provenance attestations for workflow artifacts.
-Attestations are published to the project GitHub under `https://github.com/$ORG/$PROJECT/attestations/`.
-
-```yaml
-- uses: actions/attest-build-provenance@<full action commit SHA> # vX.Y.Z
-  with:
-    subject-path: "dist/<package name>-*"
-```
-
-GitHub has also added the [`gh attestation verify`](https://cli.github.com/manual/gh_attestation_verify) command to the GitHub CLI utility, which verifies the integrity and provenance of an artifact using its associated cryptographically signed attestations.
-This can be used by individual users and also in GitHub Actions workflows where the GitHub CLI utility is installed by default.
-
-```yaml
-- name: Verify artifact attestation
-  env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  shell: bash
-  run: |
-    for artifact in dist/*; do
-        echo "# ${artifact}"
-        gh attestation verify "${artifact}" --repo ${{ github.repository }}
-    done
-```
-
 ### Adopt OIDC through the use of PyPI Trusted Publishers
 
-[Trusted Publishers](https://docs.pypi.org/trusted-publishers/) provide a way to securely establish a short lived authentication token between a project repository and a distribution platform &mdash; such as PyPI.
-It replaces the need to use a long lived token to authenticate, reducing the security risks associated with authentication tokens (e.g., tokens being compromised, the need to rotate tokens).
+[Trusted Publishers](https://docs.pypi.org/trusted-publishers/) provide a way to securely establish a short-lived authentication token between a project repository and a distribution platform &mdash; such as PyPI.
+This replaces the need to use a long-lived token to authenticate, reducing the security risks associated with authentication tokens (e.g., tokens being compromised or needing to be rotated).
 
 Trusted Publishers can be used in GitHub Actions by using the [`pypa/gh-action-pypi-publish`](https://github.com/pypa/gh-action-pypi-publish) GitHub Action defaults in a GitHub Actions environment.
+When used with Trusted Publishing, this action generates and uploads [PEP 740](https://peps.python.org/pep-0740/) digital attestations by default, so a separate attestation step is not required.
+The published provenance can be retrieved through PyPI's [Integrity API](https://docs.pypi.org/api/integrity/) and verified using tools such as [`pypi-attestations`](https://github.com/pypa/pypi-attestations).
 
 ```yaml
 jobs:
@@ -167,7 +160,7 @@ jobs:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
     steps:
-      # retrieve your distributions here
+      # Download distributions built by a separate job here.
       # ...
 
       - name: Publish distribution to PyPI
@@ -175,6 +168,9 @@ jobs:
         with:
           print-hash: true
 ```
+
+Projects that cannot use Trusted Publishing should still generate and publish provenance attestations where their build and distribution services support them.
+For example, GitHub's [`actions/attest-build-provenance`](https://github.com/actions/attest-build-provenance) can generate SLSA build provenance for artifacts produced by GitHub Actions.
 
 ### Example workflow
 
@@ -190,39 +186,27 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   publish:
-    name: Publish Python distribution to PyPI
+    name: Publish Python distributions to PyPI
+    # Distributions will have been built in a previous job
+    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      attestations: write
     environment:
       name: publish-package
+    permissions:
+      id-token: write
 
     steps:
-      # - name: Collect built artifacts
-      # ...
-
-      - name: Generate artifact attestation for sdist and wheels
-        uses: actions/attest-build-provenance@<full action commit SHA> # vX.Y.Z
+      - name: Download distributions
+        uses: actions/download-artifact@<full action commit SHA> # vX.Y.Z
         with:
-          subject-path: "dist/<package name>-*"
+          name: python-package-distributions
+          path: dist/
 
-      - name: Verify artifact attestation
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: bash
-        run: |
-          for artifact in dist/*; do
-              echo "# ${artifact}"
-              gh attestation verify "${artifact}" --repo ${{ github.repository }}
-          done
-
-      - name: Publish distribution to PyPI
+      - name: Publish distributions to PyPI
         uses: pypa/gh-action-pypi-publish@<full action commit SHA> # vX.Y.Z
         with:
           print-hash: true
@@ -231,4 +215,6 @@ jobs:
 ## Notes
 
 - [Concise Guide for Developing More Secure Software from the OpenSSF](https://best.openssf.org/Concise-Guide-for-Developing-More-Secure-Software)
-- [GitHub Blog: Introducing Artifact Attestations–now in public beta](https://github.blog/2024-05-02-introducing-artifact-attestations-now-in-public-beta/)
+- [PyPI Trusted Publishers](https://docs.pypi.org/trusted-publishers/)
+- [PyPI Digital Attestations](https://docs.pypi.org/attestations/)
+- [PyPI Integrity API](https://docs.pypi.org/api/integrity/)
