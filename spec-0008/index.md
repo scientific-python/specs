@@ -66,7 +66,7 @@ It is recommended that this is a dedicated page in the developer section of the 
   This is to safeguard the project from any one maintainer having the ability to commit to the default branch and make a release directly.
 
 - It is also strongly recommended that release managers use [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits), so that each release corresponds to a verified commit.
-  Note that it can be difficult to enforce this via GitHub permissions without requiring all contributors to also sign their commits, which may be undesirable for many projects.
+  It can be difficult to enforce this via GitHub permissions without requiring all contributors to sign their commits.
 - The branch from which the release is made should also be protected.
 
 #### Separate building from publishing
