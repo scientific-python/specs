@@ -25,13 +25,15 @@ Briefly and clearly describe the recommendation.
 https://github.com/scientific-python/summit-2024/issues/9
 -->
 
-Open source libraries constitute a significant portion of the world's digital infrastructure. Securing the Open Source supply chain (OSSC) is therefore an increasing concern, with examples of sophisticated attacks against the ecosystem (e.g., the 2024 [`xz` utils backdoor](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)) and [malware attacks on PyPI](https://blog.pypi.org/posts/2024-04-10-domain-abuse/) highlighting the need for supply chain security to be taken seriously.
+Open source libraries constitute a significant portion of the world's digital infrastructure.
+Securing the Open Source supply chain (OSSC) is therefore an increasing concern, with examples of sophisticated attacks against the ecosystem (e.g., the 2024 [`xz` utils backdoor](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)) and [malware attacks on PyPI](https://blog.pypi.org/posts/2024-04-10-domain-abuse/) highlighting the need for supply chain security to be taken seriously.
 The Python Software Foundation (PSF) is also taking the importance of the OSSC seriously, as demonstrated by the [creation of the PSF Security Developer in Residence position in 2023](https://pyfound.blogspot.com/2023/06/announcing-our-new-security-developer.html).
 
 With the [Supply-chain Levels for Software Artifacts (SLSA) framework](https://slsa.dev/) and [OpenID Connect (OIDC) standard](https://openid.net/developers/how-connect-works/) being widely adopted, several high level developer tools, maintained by professional security teams, have been created with clear recommendations on how to use them.
 
 This SPEC outlines pragmatic recommendations for adopting these security tools and recommendations on how to publish release artifacts securely.
-Securely _building_ release artifacts will be covered in a later SPEC. This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
+Securely _building_ release artifacts will be covered in a later SPEC.
+This set of recommendations complements the recommendations from [SPEC 6 — Keys to the Castle](https://github.com/scientific-python/specs/blob/main/spec-0006/index.md).
 
 While this SPEC is written with GitHub in mind, the same recommendations apply to other services, such as GitLab.
 
@@ -55,7 +57,8 @@ It is recommended that this is a dedicated page in the developer section of the 
 - Workflows that publish release artifacts should have _run triggers_ that require intentional actions by the release team (e.g., `workflow_dispatch` in GitHub Actions) and require multiple release team members to approve the workflow to run (c.f. "Use GitHub Actions environments" section below).
   This is to safeguard the project from any one maintainer having the ability to commit to the default branch and make a release directly.
 
-- It is also strongly recommended that release managers use [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits), so that each release corresponds to a verified commit. Note that it can be difficult to enforce this via GitHub permissions without requiring all contributors to also sign their commits, which may be undesirable for many projects.
+- It is also strongly recommended that release managers use [signed commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits), so that each release corresponds to a verified commit.
+  Note that it can be difficult to enforce this via GitHub permissions without requiring all contributors to also sign their commits, which may be undesirable for many projects.
 - The branch from which the release is made should also be protected.
 
 #### Separate building from publishing
