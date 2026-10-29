@@ -88,6 +88,12 @@ The situation has since improved due to improved installations via binary wheels
 {{< include-raw "chart.md" >}}
 ```
 
+<script type="module">
+{{< include-html "content/specs/spec-0000/past-versions.js" >}}
+</script>
+
+Versions after their drop date show in red.
+
 ### Drop Schedule
 
 Below is an auto generated schedule with recommended dates for dropping support. We suggest that the next release in a given quarter is
