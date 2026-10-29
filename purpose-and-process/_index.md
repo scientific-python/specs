@@ -28,12 +28,11 @@ SPECs may, for example, capture established practices so that new projects can
 learn from them; or they may propose a new practice that the authors believe
 will benefit the ecosystem as a whole.
 
-Projects decide for themselves whether to adopt any given SPEC—often, this
-would be through team consensus.
-They may look towards endorsements by [Core Projects](/specs/core-projects) as a signal to help them decide.
-A SPEC may not be a good fit for a project, and thus there is no
-expectation that all SPECs must be adopted by all projects (in fact, even Core Projects that endorse a SPEC—i.e., signaling that they think it is a good idea—may choose not to adopt it themselves).
-Still, SPECs best serve their purpose of communicating cross-project concepts when adopted by numerous projects—and their authority stems from the extent to which they are.
+Projects decide whether and how to adopt a SPEC through their own decision-making processes.
+They may use endorsements by [Core Projects](/specs/core-projects) to inform that decision.
+SPECs are shared recommendations, not compliance standards, and projects may adapt them to their specific use-cases, technical constraints, and maintainer resources.
+Not every SPEC will suit every project, and endorsement does not require adoption.
+SPECs gain their practical value and authority through use across the ecosystem.
 
 Participants in the SPEC process must adhere to our
 [Code of Conduct](https://scientific-python.org/code_of_conduct/).
@@ -169,16 +168,23 @@ documentation](/specs/core-projects).
 Individual projects choose to **adopt** the SPEC according to their
 own decision-making processes.
 Each SPEC describes what adopting it means in its _Ecosystem Adoption_ section.
-Ecosystem projects are welcome to adopt a SPEC at any point in the
-process, however, it may make sense to wait until a SPEC is endorsed
-by several Core Projects to ensure that the SPEC has been vetted and
-is deemed stable enough for widespread adoption.
-Once a SPEC is endorsed, it may still evolve, but the barrier for
-modifying the SPEC will increase substantially (since all endorsing
-projects would need to agree to changes).
-Projects that adopt a SPEC early should engage in the collaborative
-process leading to the SPEC being endorsed by the Core Projects, to
-ensure that their use cases are incorporated.
+
+The following terms distinguish support for a SPEC from its use in a project:
+
+| Concept | Meaning |
+|---|---|
+| Endorsement | A Core Project signals that a SPEC is valuable for the ecosystem; endorsement does not require adoption. |
+| Adoption | A project uses a SPEC as its default policy or implementation approach, as described in that SPEC's "Ecosystem Adoption" section. |
+| Adapted adoption | A project follows a SPEC's central recommendation with documented, material project-specific variations. |
+| Conformance | A claim that an implementation meets criteria explicitly defined by a SPEC, such as interoperability or compatibility requirements. |
+
+Projects may adapt a SPEC to their circumstances.
+They should document material variations that affect users or other projects.
+Unless a SPEC explicitly defines conformance criteria, adoption does not imply exact implementation or certification.
+
+Projects may adopt a SPEC at any stage, but waiting for endorsement by several Core Projects gives them a more thoroughly reviewed and stable recommendation.
+After endorsement, substantive changes require approval from all endorsing Core Projects.
+We encourage projects that adopt a SPEC early to participate in its development so their use cases can inform the recommendation.
 
 #### Badges
 
