@@ -112,8 +112,8 @@ from collections.abc import Sequence
 import numpy as np
 
 
-SeedLike = int | np.integer | Sequence[int] | np.random.SeedSequence
-RNGLike = np.random.Generator | np.random.BitGenerator
+type SeedLike = int | np.integer | Sequence[int] | np.random.SeedSequence
+type RNGLike = np.random.Generator | np.random.BitGenerator
 
 
 def my_func(*, rng: RNGLike | SeedLike | None = None):
