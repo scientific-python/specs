@@ -119,7 +119,14 @@ package_releases = {
 print("Saving Mermaid chart to chart.md")
 with open("chart.md", "w") as fh:
     fh.write(
-        """gantt
+        """---
+config:
+  gantt:
+    topAxis: true
+    gridLineStartPadding: 50
+  themeCSS: '.grid .tick text[dy="0em"] { transform: translateY(-4px); }'
+---
+gantt
 dateFormat YYYY-MM-DD
 axisFormat %m / %Y
 title Support Window"""

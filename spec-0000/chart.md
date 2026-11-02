@@ -1,3 +1,10 @@
+---
+config:
+  gantt:
+    topAxis: true
+    gridLineStartPadding: 50
+  themeCSS: '.grid .tick text[dy="0em"] { transform: translateY(-4px); }'
+---
 gantt
 dateFormat YYYY-MM-DD
 axisFormat %m / %Y
