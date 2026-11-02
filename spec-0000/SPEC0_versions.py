@@ -129,7 +129,7 @@ title Support Window"""
         fh.write(f"\n\nsection {name}")
         for version, dates in releases.items():
             fh.write(
-                f"\n{version} : {dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
+                f"\n{version} : {name}-{version},{dates['release_date'].strftime('%Y-%m-%d')},{dates['drop_date'].strftime('%Y-%m-%d')}"
             )
     fh.write("\n")
 
