@@ -161,7 +161,7 @@ This replaces the need to use a long-lived token to authenticate, reducing the s
 
 Trusted Publishers can be used in GitHub Actions by using the [`pypa/gh-action-pypi-publish`](https://github.com/pypa/gh-action-pypi-publish) GitHub Action defaults in a GitHub Actions environment.
 When used with Trusted Publishing, this action generates and uploads [PEP 740](https://peps.python.org/pep-0740/) digital attestations by default, so a separate attestation step is not required.
-The published provenance can be retrieved through PyPI's [Integrity API](https://docs.pypi.org/api/integrity/) and verified using tools such as [`pypi-attestations`](https://github.com/pypa/pypi-attestations).
+The published provenance can be retrieved through PyPI's [Integrity API](https://docs.pypi.org/api/integrity/) and verified using tools such as [`pypi-attestations`](https://github.com/pypi/pypi-attestations).
 
 ```yaml
 jobs:
