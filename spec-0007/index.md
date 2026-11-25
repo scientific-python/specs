@@ -9,6 +9,7 @@ author:
   - "Matt Haberland <mhaberla@calpoly.edu>"
 endorsed-by:
   - ipython
+  - mne-python
   - networkx
   - numpy
   - pysal
