@@ -16,6 +16,7 @@ author:
 endorsed-by:
   - ipython
   - matplotlib
+  - mne-python
   - networkx
   - numpy
   - scikit-image

@@ -13,6 +13,7 @@ author:
 endorsed-by:
   - ipython
   - matplotlib
+  - mne-python
   - networkx
   - numpy
   - pysal
